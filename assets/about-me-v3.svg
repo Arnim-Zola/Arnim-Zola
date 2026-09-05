@@ -17,9 +17,9 @@
       }
       .bt {
         font-family: 'Caacupe One', cursive, sans-serif;
-        font-size: 20px;
+        font-size: 19px;
         font-weight: 400;
-        letter-spacing: 0.5px;
+        letter-spacing: 0.3px;
         fill: #e6edf3;
       }
       .hi {
@@ -38,16 +38,16 @@
     <!-- Left emerald accent bar -->
     <rect x="0" y="0" width="5" height="128" rx="2" ry="2" fill="#39d353"/>
 
-    <!-- Line 1 -->
-    <text x="20" y="24" class="bt"><tspan>I am a 3rd-year Computer Science &amp; Engineering undergraduate at </tspan><tspan class="hi">DSATM, Bengaluru (Class of 2028)</tspan><tspan>,</tspan></text>
+    <!-- Line 1: ~110 chars -->
+    <text x="20" y="24" class="bt"><tspan>I am a 3rd-year Computer Science &amp; Engineering undergraduate at </tspan><tspan class="hi">DSATM, Bengaluru (Class of 2028)</tspan><tspan>, building at</tspan></text>
 
-    <!-- Line 2: "intersection of" and "core CS" on the SAME line -->
-    <text x="20" y="52" class="bt"><tspan>building at the intersection of </tspan><tspan class="hi">core CS systems (DSA, OS, DBMS, Networks)</tspan><tspan> and </tspan><tspan class="hi">production-grade GenAI &amp;</tspan></text>
+    <!-- Line 2: ~101 chars -->
+    <text x="20" y="52" class="bt"><tspan>the intersection of </tspan><tspan class="hi">core CS systems (DSA, OS, DBMS, Networks)</tspan><tspan> and </tspan><tspan class="hi">production-grade GenAI &amp; Full-Stack</tspan></text>
 
-    <!-- Line 3 -->
-    <text x="20" y="80" class="bt"><tspan class="hi">Full-Stack engineering</tspan><tspan>. My work bridges resilient, low-latency agentic workflows (</tspan><tspan class="hi">FastAPI, Celery, Redis,</tspan></text>
+    <!-- Line 3: ~104 chars -->
+    <text x="20" y="80" class="bt"><tspan class="hi">engineering</tspan><tspan>. My work bridges resilient, low-latency agentic workflows (</tspan><tspan class="hi">FastAPI, Celery, Redis, pgvector</tspan><tspan>)</tspan></text>
 
-    <!-- Line 4 -->
-    <text x="20" y="108" class="bt"><tspan class="hi">pgvector</tspan><tspan>) with interactive, high-performance web applications (</tspan><tspan class="hi">TypeScript, React, Next.js, Three.js</tspan><tspan>).</tspan></text>
+    <!-- Line 4: ~91 chars -->
+    <text x="20" y="108" class="bt"><tspan>with interactive, high-performance web applications (</tspan><tspan class="hi">TypeScript, React, Next.js, Three.js</tspan><tspan>).</tspan></text>
   </g>
 </svg>
