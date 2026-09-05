@@ -21,7 +21,7 @@
 
 <img src="assets/about-me-perfect.svg" alt="About Me &amp; Identity" width="100%" />
 
-<img src="assets/terminal-profile-v2.svg" alt="Terminal Profile &amp; Midnight Vault" width="100%" />
+<img src="assets/terminal-profile-v3.svg" alt="Terminal Profile &amp; Background Midnight Bookshelf Flashlight" width="100%" />
 
 | Pillar & Domain | Real-World Architecture & Integration (Eden & Portfolio) | Core Stack |
 | :--- | :--- | :--- |
