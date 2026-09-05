@@ -66,26 +66,26 @@ def generate_about_me_svg():
   </defs>
 
   <!-- Section Heading -->
-  <text x="0" y="{heading_y}" class="sh">ABOUT ME &amp; IDENTITY</text>
+  <text x="{vbox_w // 2}" y="{heading_y}" text-anchor="middle" class="sh">ABOUT ME &amp; IDENTITY</text>
 
   <!-- Quote Box -->
   <g transform="translate(0, {box_top})">
-    <!-- Subtle green tint background -->
-    <rect x="0" y="0" width="{vbox_w}" height="{box_height}" rx="6" ry="6" fill="rgba(57,211,83,0.05)"/>
+    <!-- Subtle green tint background with subtle border -->
+    <rect x="0" y="0" width="{vbox_w}" height="{box_height}" rx="8" ry="8" fill="rgba(57,211,83,0.05)" stroke="rgba(57,211,83,0.2)" stroke-width="1"/>
     <!-- Left emerald accent bar -->
-    <rect x="0" y="0" width="5" height="{box_height}" rx="2" ry="2" fill="#39d353"/>
+    <rect x="0" y="0" width="4" height="{box_height}" rx="2" ry="2" fill="#39d353"/>
 
-    <!-- Line 1: ~110 chars -->
-    <text x="20" y="{y1}" class="bt"><tspan>I am a 3rd-year Computer Science &amp; Engineering undergraduate at </tspan><tspan class="hi">DSATM, Bengaluru (Class of 2028)</tspan><tspan>, building at</tspan></text>
+    <!-- Line 1: Centered -->
+    <text x="{vbox_w // 2}" y="{y1}" text-anchor="middle" class="bt"><tspan>I am a 3rd-year Computer Science &amp; Engineering undergraduate at </tspan><tspan class="hi">DSATM, Bengaluru (Class of 2028)</tspan><tspan>, building at</tspan></text>
 
-    <!-- Line 2: ~101 chars -->
-    <text x="20" y="{y2}" class="bt"><tspan>the intersection of </tspan><tspan class="hi">core CS systems (DSA, OS, DBMS, Networks)</tspan><tspan> and </tspan><tspan class="hi">production-grade GenAI &amp; Full-Stack</tspan></text>
+    <!-- Line 2: Centered -->
+    <text x="{vbox_w // 2}" y="{y2}" text-anchor="middle" class="bt"><tspan>the intersection of </tspan><tspan class="hi">core CS systems (DSA, OS, DBMS, Networks)</tspan><tspan> and </tspan><tspan class="hi">production-grade GenAI &amp; Full-Stack</tspan></text>
 
-    <!-- Line 3: ~104 chars -->
-    <text x="20" y="{y3}" class="bt"><tspan class="hi">engineering</tspan><tspan>. My work bridges resilient, low-latency agentic workflows (</tspan><tspan class="hi">FastAPI, Celery, Redis, pgvector</tspan><tspan>)</tspan></text>
+    <!-- Line 3: Centered -->
+    <text x="{vbox_w // 2}" y="{y3}" text-anchor="middle" class="bt"><tspan class="hi">engineering</tspan><tspan>. My work bridges resilient, low-latency agentic workflows (</tspan><tspan class="hi">FastAPI, Celery, Redis, pgvector</tspan><tspan>)</tspan></text>
 
-    <!-- Line 4: ~91 chars -->
-    <text x="20" y="{y4}" class="bt"><tspan>with interactive, high-performance web applications (</tspan><tspan class="hi">TypeScript, React, Next.js, Three.js</tspan><tspan>).</tspan></text>
+    <!-- Line 4: Centered -->
+    <text x="{vbox_w // 2}" y="{y4}" text-anchor="middle" class="bt"><tspan>with interactive, high-performance web applications (</tspan><tspan class="hi">TypeScript, React, Next.js, Three.js</tspan><tspan>).</tspan></text>
   </g>
 </svg>
 """

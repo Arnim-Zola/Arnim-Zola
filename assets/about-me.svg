@@ -29,25 +29,25 @@
   </defs>
 
   <!-- Section Heading -->
-  <text x="0" y="22" class="sh">ABOUT ME &amp; IDENTITY</text>
+  <text x="460" y="22" text-anchor="middle" class="sh">ABOUT ME &amp; IDENTITY</text>
 
   <!-- Quote Box -->
   <g transform="translate(0, 36)">
-    <!-- Subtle green tint background -->
-    <rect x="0" y="0" width="920" height="128" rx="6" ry="6" fill="rgba(57,211,83,0.05)"/>
+    <!-- Subtle green tint background with subtle border -->
+    <rect x="0" y="0" width="920" height="128" rx="8" ry="8" fill="rgba(57,211,83,0.05)" stroke="rgba(57,211,83,0.2)" stroke-width="1"/>
     <!-- Left emerald accent bar -->
-    <rect x="0" y="0" width="5" height="128" rx="2" ry="2" fill="#39d353"/>
+    <rect x="0" y="0" width="4" height="128" rx="2" ry="2" fill="#39d353"/>
 
-    <!-- Line 1: ~110 chars -->
-    <text x="20" y="24" class="bt"><tspan>I am a 3rd-year Computer Science &amp; Engineering undergraduate at </tspan><tspan class="hi">DSATM, Bengaluru (Class of 2028)</tspan><tspan>, building at</tspan></text>
+    <!-- Line 1: Centered -->
+    <text x="460" y="24" text-anchor="middle" class="bt"><tspan>I am a 3rd-year Computer Science &amp; Engineering undergraduate at </tspan><tspan class="hi">DSATM, Bengaluru (Class of 2028)</tspan><tspan>, building at</tspan></text>
 
-    <!-- Line 2: ~101 chars -->
-    <text x="20" y="52" class="bt"><tspan>the intersection of </tspan><tspan class="hi">core CS systems (DSA, OS, DBMS, Networks)</tspan><tspan> and </tspan><tspan class="hi">production-grade GenAI &amp; Full-Stack</tspan></text>
+    <!-- Line 2: Centered -->
+    <text x="460" y="52" text-anchor="middle" class="bt"><tspan>the intersection of </tspan><tspan class="hi">core CS systems (DSA, OS, DBMS, Networks)</tspan><tspan> and </tspan><tspan class="hi">production-grade GenAI &amp; Full-Stack</tspan></text>
 
-    <!-- Line 3: ~104 chars -->
-    <text x="20" y="80" class="bt"><tspan class="hi">engineering</tspan><tspan>. My work bridges resilient, low-latency agentic workflows (</tspan><tspan class="hi">FastAPI, Celery, Redis, pgvector</tspan><tspan>)</tspan></text>
+    <!-- Line 3: Centered -->
+    <text x="460" y="80" text-anchor="middle" class="bt"><tspan class="hi">engineering</tspan><tspan>. My work bridges resilient, low-latency agentic workflows (</tspan><tspan class="hi">FastAPI, Celery, Redis, pgvector</tspan><tspan>)</tspan></text>
 
-    <!-- Line 4: ~91 chars -->
-    <text x="20" y="108" class="bt"><tspan>with interactive, high-performance web applications (</tspan><tspan class="hi">TypeScript, React, Next.js, Three.js</tspan><tspan>).</tspan></text>
+    <!-- Line 4: Centered -->
+    <text x="460" y="108" text-anchor="middle" class="bt"><tspan>with interactive, high-performance web applications (</tspan><tspan class="hi">TypeScript, React, Next.js, Three.js</tspan><tspan>).</tspan></text>
   </g>
 </svg>
