@@ -1,28 +1,28 @@
 <div align="center">
 
-  <!-- Dynamic Waving Cyberpunk Header Banner -->
-  <img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=12,18,24,30&height=220&section=header&text=MOHAMMED%20SAHIL&fontSize=42&fontAlignY=38&fontColor=ffffff&desc=FULL-STACK%20%7C%20GENAI%20SYSTEMS%20%7C%20MULTIMODAL%20AI&descSize=14&descAlignY=62&descAlign=50&animation=fadeIn" width="100%" />
+  <!-- Seamless GitHub Dark & Emerald Green Waving Banner -->
+  <img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=0d1117,161b22,0e4429,006d32,26a641,39d353&height=220&section=header&text=MOHAMMED%20SAHIL&fontSize=42&fontAlignY=38&fontColor=ffffff&desc=FULL-STACK%20%7C%20GENAI%20SYSTEMS%20%7C%20MULTIMODAL%20AI&descSize=14&descAlignY=62&descAlign=50&descColor=8b949e&animation=fadeIn" width="100%" />
 
-  <!-- Real-Time Looping Typing Subtitle -->
+  <!-- Real-Time Looping Typing Subtitle (GitHub Green) -->
   <a href="https://github.com/Arnim-Zola/Eden">
-    <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=20&duration=3000&pause=1000&color=C084FC&center=true&vCenter=true&width=750&lines=Creator+of+Eden+%F0%9F%8C%BF+Multimodal+AI+Misinformation+Engine;Ingesting+Reels+%7C+OpenCV+Frames+%7C+Whisper+Audio+%7C+LLM+Verification;Architecting+Autonomous+Multi-Agent+Pipelines+%26+Sub-Second+RAG;Creator+of+CampusCart+%F0%9F%9B%92+%26+Zemo+%E2%9A%A1+Analytics+Engine;1st+Place+Grand+Winner+%40+HackBangalore+2025+%F0%9F%8F%86;National+Finalist+%40+Flipkart+GRiD+6.0+%F0%9F%8E%AF" alt="Mohammed Sahil Dynamic Typing" />
+    <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=20&duration=3000&pause=1000&color=39D353&center=true&vCenter=true&width=750&lines=Creator+of+Eden+%F0%9F%8C%BF+Multimodal+AI+Misinformation+Engine;Ingesting+Reels+%7C+OpenCV+Frames+%7C+Whisper+Audio+%7C+LLM+Verification;Architecting+Autonomous+Multi-Agent+Pipelines+%26+Sub-Second+RAG;Creator+of+CampusCart+%F0%9F%9B%92+%26+Zemo+%E2%9A%A1+Analytics+Engine;1st+Place+Grand+Winner+%40+HackBangalore+2025+%F0%9F%8F%86;National+Finalist+%40+Flipkart+GRiD+6.0+%F0%9F%8E%AF" alt="Mohammed Sahil Dynamic Typing" />
   </a>
 
   <br/><br/>
 
-  <!-- Status HUD Badges -->
+  <!-- Status HUD Badges (GitHub Dark & Emerald Green) -->
   <p align="center">
     <a href="https://github.com/Arnim-Zola/Eden">
-      <img src="https://img.shields.io/badge/FLAGSHIP-EDEN%20MULTIMODAL%20AI-9d4edd?style=for-the-badge&logo=openai&logoColor=white" />
+      <img src="https://img.shields.io/badge/FLAGSHIP-EDEN%20MULTIMODAL%20AI-238636?style=for-the-badge&logo=openai&logoColor=white" />
     </a>
-    <img src="https://img.shields.io/badge/LOCATION-BENGALURU%2C%20IN-7928CA?style=for-the-badge&logo=googlemaps&logoColor=white" />
-    <img src="https://img.shields.io/badge/STATUS-OPERATIONAL-00FF66?style=for-the-badge&logo=statuspage&logoColor=black" />
+    <img src="https://img.shields.io/badge/LOCATION-BENGALURU%2C%20IN-161b22?style=for-the-badge&logo=googlemaps&logoColor=39d353" />
+    <img src="https://img.shields.io/badge/STATUS-OPERATIONAL-2ea043?style=for-the-badge&logo=statuspage&logoColor=white" />
   </p>
 
   <!-- Quick Social Connect Pills -->
   <p align="center">
-    <a href="https://github.com/Arnim-Zola/Portfolio"><img src="https://img.shields.io/badge/🌐_Quantum_Portfolio-000?style=for-the-badge&logo=vercel&logoColor=white&color=000000" /></a>
-    <a href="https://www.linkedin.com/in/mohammed-sahil-2b0583336/"><img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" /></a>
+    <a href="https://github.com/Arnim-Zola/Portfolio"><img src="https://img.shields.io/badge/🌐_Quantum_Portfolio-0d1117?style=for-the-badge&logo=vercel&logoColor=39d353&color=161b22" /></a>
+    <a href="https://www.linkedin.com/in/mohammed-sahil-2b0583336/"><img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" /></a>
     <a href="mailto:mohammedsahil0003@gmail.com"><img src="https://img.shields.io/badge/Email-EA4335?style=for-the-badge&logo=gmail&logoColor=white" /></a>
     <a href="https://leetcode.com/"><img src="https://img.shields.io/badge/LeetCode-FFA116?style=for-the-badge&logo=leetcode&logoColor=black" /></a>
     <a href="https://hackerrank.com/"><img src="https://img.shields.io/badge/HackerRank-2EC866?style=for-the-badge&logo=hackerrank&logoColor=white" /></a>
@@ -37,7 +37,7 @@
 
 <div align="center">
   <a href="https://github.com/Arnim-Zola/Eden">
-    <img src="https://img.shields.io/badge/EDEN-Autonomous%20Multimodal%20Misinformation%20Engine-9d4edd?style=for-the-badge&logo=github&logoColor=white" width="100%" />
+    <img src="https://img.shields.io/badge/EDEN-Autonomous%20Multimodal%20Misinformation%20Engine-238636?style=for-the-badge&logo=github&logoColor=white" width="100%" />
   </a>
 </div>
 
@@ -68,8 +68,8 @@
 
 #### ⚙️ Eden Architectural Innovations
 - 👁️ **Multimodal Perception**: Synchronized **EasyOCR** (on-screen text/captions) + **OpenAI Whisper** (speech transcription) + **OpenCV** (keyframe sampling).
-- 🧠 **Dual-Path Fallback Orchestration**: Asynchronous task chaining via **Celery + Redis** with graceful degradation under API quota limits.
-- 💻 **Forensic Command HUD**: Cyberpunk threat index telemetry, ⌘K command palette, and one-click PDF intelligence dossier generation.
+- 🧠 **Dual-Path Fallback Orchestraction**: Asynchronous task chaining via **Celery + Redis** with graceful degradation under API quota limits.
+- 💻 **Forensic Command HUD**: Threat index telemetry, ⌘K command palette, and one-click PDF intelligence dossier generation.
 - 🐳 **Infrastructure**: Fully containerized multi-container deployment with **Docker Compose**, **Django REST Framework**, and **React 18**.
 
 👉 **[Explore Eden Source Code & Architecture →](https://github.com/Arnim-Zola/Eden)**
@@ -140,16 +140,16 @@ Open Source & Mentorship:
 
 <div align="center">
 
-  <!-- GitHub Streak Stats -->
-  <img src="https://github-readme-streak-stats.herokuapp.com/?user=Arnim-Zola&theme=radical&background=0D1117&border=C084FC&stroke=C084FC&ring=9D4EDD&fire=C084FC&currStreakLabel=C084FC" alt="GitHub Streak" width="48%" />
+  <!-- GitHub Streak Stats (GitHub Dark & Green Theme) -->
+  <img src="https://github-readme-streak-stats.herokuapp.com/?user=Arnim-Zola&theme=dark&background=0D1117&border=238636&stroke=238636&ring=39D353&fire=39D353&currStreakLabel=39D353" alt="GitHub Streak" width="48%" />
   
-  <!-- GitHub Overall Stats -->
-  <img src="https://github-readme-stats.vercel.app/api?username=Arnim-Zola&show_icons=true&theme=radical&bg_color=0D1117&border_color=C084FC&icon_color=C084FC&title_color=FFFFFF&text_color=9CA3AF" alt="GitHub Stats" width="48%" />
+  <!-- GitHub Overall Stats (GitHub Dark & Green Theme) -->
+  <img src="https://github-readme-stats.vercel.app/api?username=Arnim-Zola&show_icons=true&theme=dark&bg_color=0D1117&border_color=238636&icon_color=39D353&title_color=39D353&text_color=C9D1D9" alt="GitHub Stats" width="48%" />
 
   <br/><br/>
 
-  <!-- Top Languages Card -->
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=Arnim-Zola&layout=compact&theme=radical&bg_color=0D1117&border_color=C084FC&title_color=FFFFFF&text_color=9CA3AF" alt="Top Languages" width="60%" />
+  <!-- Top Languages Card (GitHub Dark & Green Theme) -->
+  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=Arnim-Zola&layout=compact&theme=dark&bg_color=0D1117&border_color=238636&title_color=39D353&text_color=C9D1D9" alt="Top Languages" width="60%" />
 
 </div>
 
@@ -157,5 +157,5 @@ Open Source & Mentorship:
 
 <div align="center">
   <p><b>⚡ Engineered by Mohammed Sahil • 2nd Year CSE @ DSATM, Bengaluru ⚡</b></p>
-  <img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=30,24,18,12&height=90&section=footer" width="100%" />
+  <img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=39d353,26a641,006d32,0e4429,161b22,0d1117&height=90&section=footer" width="100%" />
 </div>
