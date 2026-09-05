@@ -1,7 +1,9 @@
 <div align="center">
 
-  <!-- Seamless GitHub Dark & Emerald Green Waving Banner -->
-  <img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=0d1117,161b22,0e4429,006d32,26a641,39d353&height=220&section=header&text=MOHAMMED%20SAHIL&fontSize=42&fontAlignY=38&fontColor=ffffff&desc=FULL-STACK%20%7C%20GENAI%20SYSTEMS%20%7C%20MULTIMODAL%20AI&descSize=14&descAlignY=62&descAlign=50&descColor=8b949e&animation=fadeIn" width="100%" />
+  <!-- Native Animated Cyberpunk GitHub Dark & Emerald Green Banner -->
+  <a href="https://github.com/Arnim-Zola">
+    <img src="./assets/banner.svg" alt="Mohammed Sahil - Full-Stack & GenAI Engineer" width="100%" />
+  </a>
 
   <!-- Real-Time Looping Typing Subtitle (GitHub Green) -->
   <a href="https://github.com/Arnim-Zola/Eden">
