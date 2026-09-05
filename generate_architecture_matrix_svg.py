@@ -13,13 +13,13 @@ def generate_architecture_matrix_svg():
     font_face_css = font_match.group(0) if font_match else ""
 
     vbox_w = 920
-    header_h = 48
-    row_h = 102
-    total_h = header_h + row_h * 5  # 48 + 510 = 558
+    header_h = 52
+    row_h = 114
+    total_h = header_h + row_h * 5  # 52 + 570 = 622
 
     col1_w = 205
-    col2_w = 480
-    col3_w = vbox_w - (col1_w + col2_w)  # 235
+    col2_w = 475
+    col3_w = vbox_w - (col1_w + col2_w)  # 240
     col2_x = col1_w
     col3_x = col1_w + col2_w
 
@@ -33,8 +33,8 @@ def generate_architecture_matrix_svg():
                 ('with rate-limit resilient retry fallbacks.',)
             ],
             "badges": [
-                [("FastAPI", 58), ("Celery", 52), ("Redis", 48)],
-                [("Asyncio", 58)]
+                [("FastAPI", 62), ("Celery", 56), ("Redis", 50)],
+                [("Asyncio", 60)]
             ]
         },
         {
@@ -45,8 +45,8 @@ def generate_architecture_matrix_svg():
                 ('caching for high-frequency queries.',)
             ],
             "badges": [
-                [("PostgreSQL", 78), ("pgvector", 64)],
-                [("HNSW", 48), ("Redis", 48)]
+                [("PostgreSQL", 84), ("pgvector", 68)],
+                [("HNSW", 50), ("Redis", 50)]
             ]
         },
         {
@@ -57,8 +57,8 @@ def generate_architecture_matrix_svg():
                 ('LLM agents into an authenticity truth index.',)
             ],
             "badges": [
-                [("OpenCV", 58), ("Whisper", 58), ("EasyOCR", 62)],
-                [("Multi-Agent RAG", 116)]
+                [("OpenCV", 60), ("Whisper", 60), ("EasyOCR", 64)],
+                [("Multi-Agent RAG", 120)]
             ]
         },
         {
@@ -69,8 +69,8 @@ def generate_architecture_matrix_svg():
                 ('<tspan class="hi">shaders</tspan> at 60FPS alongside Web Audio API synthesis.',)
             ],
             "badges": [
-                [("Next.js 15", 68), ("React 19", 62)],
-                [("Three.js", 62), ("GLSL Shaders", 86)]
+                [("Next.js 15", 72), ("React 19", 66)],
+                [("Three.js", 66), ("GLSL Shaders", 92)]
             ]
         },
         {
@@ -81,8 +81,8 @@ def generate_architecture_matrix_svg():
                 ('into reproducible networks.',)
             ],
             "badges": [
-                [("Docker Compose", 102), ("Linux/Bash", 78)],
-                [("Nginx", 50), ("Git", 38)]
+                [("Docker Compose", 108), ("Linux/Bash", 82)],
+                [("Nginx", 52), ("Git", 40)]
             ]
         }
     ]
@@ -98,29 +98,29 @@ def generate_architecture_matrix_svg():
         if len(p_lines) == 1:
             p_svg = f'<text x="20" y="{y_mid + 5}" class="pillar-text">{p_lines[0]}</text>'
         else:
-            p_y1 = y_mid - 8
-            p_y2 = y_mid + 14
+            p_y1 = y_mid - 9
+            p_y2 = y_mid + 15
             p_svg = f'<text x="20" y="{p_y1}" class="pillar-text">{p_lines[0]}</text>\n      <text x="20" y="{p_y2}" class="pillar-text">{p_lines[1]}</text>'
 
         # Desc lines (Col 2)
-        desc_start_y = y_top + 28
+        desc_start_y = y_top + 32
         d_svg_list = []
         for d_idx, d_line in enumerate(r["desc"]):
-            dy = desc_start_y + d_idx * 22
+            dy = desc_start_y + d_idx * 25
             d_svg_list.append(f'<text x="{col2_x + 18}" y="{dy}" class="desc-text">{d_line[0]}</text>')
         desc_svg = "\n      ".join(d_svg_list)
 
         # Badges (Col 3)
         badge_rows = r["badges"]
         badge_svg_list = []
-        b_start_y = y_top + 26
+        b_start_y = y_top + 28
         for b_row_idx, b_list in enumerate(badge_rows):
-            by = b_start_y + b_row_idx * 34
+            by = b_start_y + b_row_idx * 36
             bx = col3_x + 12
             for label, bw in b_list:
                 badge_svg_list.append(f'''<g transform="translate({bx}, {by})">
-        <rect width="{bw}" height="24" rx="6" class="badge-bg" />
-        <text x="{bw/2}" y="16.5" class="badge-text">{label}</text>
+        <rect width="{bw}" height="26" rx="6" class="badge-bg" />
+        <text x="{bw/2}" y="17.5" class="badge-text">{label}</text>
       </g>''')
                 bx += bw + 6
         badges_svg = "\n      ".join(badge_svg_list)
@@ -152,29 +152,28 @@ def generate_architecture_matrix_svg():
 
       .th-text {{
         font-family: 'Caacupe One', cursive, sans-serif;
-        font-size: 15px;
-        font-weight: 700;
-        letter-spacing: 0.5px;
-        fill: #ffffff;
+        font-size: 17px;
+        font-weight: 400;
+        letter-spacing: 0.6px;
+        fill: #7ee787;
       }}
       .pillar-text {{
         font-family: 'Caacupe One', cursive, sans-serif;
-        font-size: 14.5px;
-        font-weight: 700;
-        letter-spacing: 0.3px;
+        font-size: 16px;
+        font-weight: 400;
+        letter-spacing: 0.2px;
         fill: #00ff66;
         filter: drop-shadow(0 1px 2px rgba(0,0,0,0.8));
       }}
       .desc-text {{
         font-family: 'Caacupe One', cursive, sans-serif;
-        font-size: 13.5px;
+        font-size: 15px;
         font-weight: 400;
         letter-spacing: 0.2px;
         fill: #ffffff;
       }}
       .hi {{
         fill: #00ff66;
-        font-weight: 700;
       }}
       .badge-bg {{
         fill: #06170d;
@@ -184,8 +183,8 @@ def generate_architecture_matrix_svg():
       }}
       .badge-text {{
         font-family: 'Caacupe One', cursive, sans-serif;
-        font-size: 12px;
-        font-weight: 700;
+        font-size: 13px;
+        font-weight: 400;
         letter-spacing: 0.3px;
         fill: #39d353;
         text-anchor: middle;
@@ -204,9 +203,9 @@ def generate_architecture_matrix_svg():
   <path d="M 0 10 Q 0 0 10 0 L {vbox_w - 10} 0 Q {vbox_w} 0 {vbox_w} 10 L {vbox_w} {header_h} L 0 {header_h} Z" fill="#07150c" />
 
   <!-- Header Titles -->
-  <text x="24" y="30" class="th-text">Pillar &amp; Domain</text>
-  <text x="{col2_x + 20}" y="30" class="th-text">Real-World Architecture &amp; Integration (Eden &amp; Portfolio)</text>
-  <text x="{col3_x + 16}" y="30" class="th-text">Core Stack</text>
+  <text x="20" y="32" class="th-text">Pillar &amp; Domain</text>
+  <text x="{col2_x + 18}" y="32" class="th-text">Real-World Architecture &amp; Integration (Eden &amp; Portfolio)</text>
+  <text x="{col3_x + 12}" y="32" class="th-text">Core Stack</text>
 
   <!-- Horizontal Grid Lines -->
   <line x1="0" y1="{header_h}" x2="{vbox_w}" y2="{header_h}" class="grid-line" stroke="#184225" stroke-width="1.2" />
@@ -224,7 +223,7 @@ def generate_architecture_matrix_svg():
 </svg>
 """
 
-    for fname in ["architecture-matrix.svg", "architecture-matrix-v2.svg"]:
+    for fname in ["architecture-matrix.svg", "architecture-matrix-v2.svg", "architecture-matrix-v3.svg"]:
         out_path = os.path.join(assets_dir, fname)
         with open(out_path, "w", encoding="utf-8") as f:
             f.write(svg_content)

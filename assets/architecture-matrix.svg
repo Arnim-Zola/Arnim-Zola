@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 920 558" width="100%" height="558" fill="none">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 920 622" width="100%" height="622" fill="none">
   <defs>
     <style>
       @font-face {
@@ -10,29 +10,28 @@
 
       .th-text {
         font-family: 'Caacupe One', cursive, sans-serif;
-        font-size: 15px;
-        font-weight: 700;
-        letter-spacing: 0.5px;
-        fill: #ffffff;
+        font-size: 17px;
+        font-weight: 400;
+        letter-spacing: 0.6px;
+        fill: #7ee787;
       }
       .pillar-text {
         font-family: 'Caacupe One', cursive, sans-serif;
-        font-size: 14.5px;
-        font-weight: 700;
-        letter-spacing: 0.3px;
+        font-size: 16px;
+        font-weight: 400;
+        letter-spacing: 0.2px;
         fill: #00ff66;
         filter: drop-shadow(0 1px 2px rgba(0,0,0,0.8));
       }
       .desc-text {
         font-family: 'Caacupe One', cursive, sans-serif;
-        font-size: 13.5px;
+        font-size: 15px;
         font-weight: 400;
         letter-spacing: 0.2px;
         fill: #ffffff;
       }
       .hi {
         fill: #00ff66;
-        font-weight: 700;
       }
       .badge-bg {
         fill: #06170d;
@@ -42,8 +41,8 @@
       }
       .badge-text {
         font-family: 'Caacupe One', cursive, sans-serif;
-        font-size: 12px;
-        font-weight: 700;
+        font-size: 13px;
+        font-weight: 400;
         letter-spacing: 0.3px;
         fill: #39d353;
         text-anchor: middle;
@@ -56,60 +55,60 @@
   </defs>
 
   <!-- Container Box -->
-  <rect x="0" y="0" width="920" height="558" rx="10" fill="#040906" stroke="#163d22" stroke-width="1.5" />
+  <rect x="0" y="0" width="920" height="622" rx="10" fill="#040906" stroke="#163d22" stroke-width="1.5" />
 
   <!-- Table Header Background -->
-  <path d="M 0 10 Q 0 0 10 0 L 910 0 Q 920 0 920 10 L 920 48 L 0 48 Z" fill="#07150c" />
+  <path d="M 0 10 Q 0 0 10 0 L 910 0 Q 920 0 920 10 L 920 52 L 0 52 Z" fill="#07150c" />
 
   <!-- Header Titles -->
-  <text x="24" y="30" class="th-text">Pillar &amp; Domain</text>
-  <text x="225" y="30" class="th-text">Real-World Architecture &amp; Integration (Eden &amp; Portfolio)</text>
-  <text x="701" y="30" class="th-text">Core Stack</text>
+  <text x="20" y="32" class="th-text">Pillar &amp; Domain</text>
+  <text x="223" y="32" class="th-text">Real-World Architecture &amp; Integration (Eden &amp; Portfolio)</text>
+  <text x="692" y="32" class="th-text">Core Stack</text>
 
   <!-- Horizontal Grid Lines -->
-  <line x1="0" y1="48" x2="920" y2="48" class="grid-line" stroke="#184225" stroke-width="1.2" />
-  <line x1="0" y1="150" x2="920" y2="150" class="grid-line" />
-  <line x1="0" y1="252" x2="920" y2="252" class="grid-line" />
-  <line x1="0" y1="354" x2="920" y2="354" class="grid-line" />
-  <line x1="0" y1="456" x2="920" y2="456" class="grid-line" />
+  <line x1="0" y1="52" x2="920" y2="52" class="grid-line" stroke="#184225" stroke-width="1.2" />
+  <line x1="0" y1="166" x2="920" y2="166" class="grid-line" />
+  <line x1="0" y1="280" x2="920" y2="280" class="grid-line" />
+  <line x1="0" y1="394" x2="920" y2="394" class="grid-line" />
+  <line x1="0" y1="508" x2="920" y2="508" class="grid-line" />
 
   <!-- Vertical Column Lines -->
-  <line x1="205" y1="0" x2="205" y2="558" class="grid-line" />
-  <line x1="685" y1="0" x2="685" y2="558" class="grid-line" />
+  <line x1="205" y1="0" x2="205" y2="622" class="grid-line" />
+  <line x1="680" y1="0" x2="680" y2="622" class="grid-line" />
 
   <!-- Rows Content -->
   <!-- Row 1 -->
   <g>
     <!-- Col 1: Pillar -->
     <g>
-      <text x="20" y="91.0" class="pillar-text">Distributed Systems &amp;</text>
-      <text x="20" y="113.0" class="pillar-text">Async Tasks</text>
+      <text x="20" y="100.0" class="pillar-text">Distributed Systems &amp;</text>
+      <text x="20" y="124.0" class="pillar-text">Async Tasks</text>
     </g>
 
     <!-- Col 2: Real-World Architecture -->
     <g>
-      <text x="223" y="76" class="desc-text">In <tspan class="hi">Eden</tspan>, video ingestion and frame extraction are offloaded to asynchronous</text>
-      <text x="223" y="98" class="desc-text">background worker pools via <tspan class="hi">Celery + Redis</tspan>, preventing HTTP server bottlenecks</text>
-      <text x="223" y="120" class="desc-text">with rate-limit resilient retry fallbacks.</text>
+      <text x="223" y="84" class="desc-text">In <tspan class="hi">Eden</tspan>, video ingestion and frame extraction are offloaded to asynchronous</text>
+      <text x="223" y="109" class="desc-text">background worker pools via <tspan class="hi">Celery + Redis</tspan>, preventing HTTP server bottlenecks</text>
+      <text x="223" y="134" class="desc-text">with rate-limit resilient retry fallbacks.</text>
     </g>
 
     <!-- Col 3: Core Stack Badges -->
     <g>
-      <g transform="translate(697, 74)">
-        <rect width="58" height="24" rx="6" class="badge-bg" />
-        <text x="29.0" y="16.5" class="badge-text">FastAPI</text>
+      <g transform="translate(692, 80)">
+        <rect width="62" height="26" rx="6" class="badge-bg" />
+        <text x="31.0" y="17.5" class="badge-text">FastAPI</text>
       </g>
-      <g transform="translate(761, 74)">
-        <rect width="52" height="24" rx="6" class="badge-bg" />
-        <text x="26.0" y="16.5" class="badge-text">Celery</text>
+      <g transform="translate(760, 80)">
+        <rect width="56" height="26" rx="6" class="badge-bg" />
+        <text x="28.0" y="17.5" class="badge-text">Celery</text>
       </g>
-      <g transform="translate(819, 74)">
-        <rect width="48" height="24" rx="6" class="badge-bg" />
-        <text x="24.0" y="16.5" class="badge-text">Redis</text>
+      <g transform="translate(822, 80)">
+        <rect width="50" height="26" rx="6" class="badge-bg" />
+        <text x="25.0" y="17.5" class="badge-text">Redis</text>
       </g>
-      <g transform="translate(697, 108)">
-        <rect width="58" height="24" rx="6" class="badge-bg" />
-        <text x="29.0" y="16.5" class="badge-text">Asyncio</text>
+      <g transform="translate(692, 116)">
+        <rect width="60" height="26" rx="6" class="badge-bg" />
+        <text x="30.0" y="17.5" class="badge-text">Asyncio</text>
       </g>
     </g>
   </g>
@@ -118,34 +117,34 @@
   <g>
     <!-- Col 1: Pillar -->
     <g>
-      <text x="20" y="193.0" class="pillar-text">Relational &amp; Vector Search</text>
-      <text x="20" y="215.0" class="pillar-text">Architecture</text>
+      <text x="20" y="214.0" class="pillar-text">Relational &amp; Vector Search</text>
+      <text x="20" y="238.0" class="pillar-text">Architecture</text>
     </g>
 
     <!-- Col 2: Real-World Architecture -->
     <g>
-      <text x="223" y="178" class="desc-text">In <tspan class="hi">Eden</tspan>, forensic claims are embedded and indexed in <tspan class="hi">PostgreSQL (pgvector)</tspan></text>
-      <text x="223" y="200" class="desc-text">using <tspan class="hi">HNSW graphs</tspan> for sub-120ms nearest-neighbor retrieval, paired with <tspan class="hi">Redis</tspan></text>
-      <text x="223" y="222" class="desc-text">caching for high-frequency queries.</text>
+      <text x="223" y="198" class="desc-text">In <tspan class="hi">Eden</tspan>, forensic claims are embedded and indexed in <tspan class="hi">PostgreSQL (pgvector)</tspan></text>
+      <text x="223" y="223" class="desc-text">using <tspan class="hi">HNSW graphs</tspan> for sub-120ms nearest-neighbor retrieval, paired with <tspan class="hi">Redis</tspan></text>
+      <text x="223" y="248" class="desc-text">caching for high-frequency queries.</text>
     </g>
 
     <!-- Col 3: Core Stack Badges -->
     <g>
-      <g transform="translate(697, 176)">
-        <rect width="78" height="24" rx="6" class="badge-bg" />
-        <text x="39.0" y="16.5" class="badge-text">PostgreSQL</text>
+      <g transform="translate(692, 194)">
+        <rect width="84" height="26" rx="6" class="badge-bg" />
+        <text x="42.0" y="17.5" class="badge-text">PostgreSQL</text>
       </g>
-      <g transform="translate(781, 176)">
-        <rect width="64" height="24" rx="6" class="badge-bg" />
-        <text x="32.0" y="16.5" class="badge-text">pgvector</text>
+      <g transform="translate(782, 194)">
+        <rect width="68" height="26" rx="6" class="badge-bg" />
+        <text x="34.0" y="17.5" class="badge-text">pgvector</text>
       </g>
-      <g transform="translate(697, 210)">
-        <rect width="48" height="24" rx="6" class="badge-bg" />
-        <text x="24.0" y="16.5" class="badge-text">HNSW</text>
+      <g transform="translate(692, 230)">
+        <rect width="50" height="26" rx="6" class="badge-bg" />
+        <text x="25.0" y="17.5" class="badge-text">HNSW</text>
       </g>
-      <g transform="translate(751, 210)">
-        <rect width="48" height="24" rx="6" class="badge-bg" />
-        <text x="24.0" y="16.5" class="badge-text">Redis</text>
+      <g transform="translate(748, 230)">
+        <rect width="50" height="26" rx="6" class="badge-bg" />
+        <text x="25.0" y="17.5" class="badge-text">Redis</text>
       </g>
     </g>
   </g>
@@ -154,34 +153,34 @@
   <g>
     <!-- Col 1: Pillar -->
     <g>
-      <text x="20" y="295.0" class="pillar-text">Multimodal Perception &amp;</text>
-      <text x="20" y="317.0" class="pillar-text">Fact RAG</text>
+      <text x="20" y="328.0" class="pillar-text">Multimodal Perception &amp;</text>
+      <text x="20" y="352.0" class="pillar-text">Fact RAG</text>
     </g>
 
     <!-- Col 2: Real-World Architecture -->
     <g>
-      <text x="223" y="280" class="desc-text">In <tspan class="hi">Eden</tspan>, parallel streams demux visual frames (<tspan class="hi">OpenCV</tspan>) for OCR scanning and</text>
-      <text x="223" y="302" class="desc-text">audio (<tspan class="hi">OpenAI Whisper</tspan>) for speech transcription, synthesized by deep reasoning</text>
-      <text x="223" y="324" class="desc-text">LLM agents into an authenticity truth index.</text>
+      <text x="223" y="312" class="desc-text">In <tspan class="hi">Eden</tspan>, parallel streams demux visual frames (<tspan class="hi">OpenCV</tspan>) for OCR scanning and</text>
+      <text x="223" y="337" class="desc-text">audio (<tspan class="hi">OpenAI Whisper</tspan>) for speech transcription, synthesized by deep reasoning</text>
+      <text x="223" y="362" class="desc-text">LLM agents into an authenticity truth index.</text>
     </g>
 
     <!-- Col 3: Core Stack Badges -->
     <g>
-      <g transform="translate(697, 278)">
-        <rect width="58" height="24" rx="6" class="badge-bg" />
-        <text x="29.0" y="16.5" class="badge-text">OpenCV</text>
+      <g transform="translate(692, 308)">
+        <rect width="60" height="26" rx="6" class="badge-bg" />
+        <text x="30.0" y="17.5" class="badge-text">OpenCV</text>
       </g>
-      <g transform="translate(761, 278)">
-        <rect width="58" height="24" rx="6" class="badge-bg" />
-        <text x="29.0" y="16.5" class="badge-text">Whisper</text>
+      <g transform="translate(758, 308)">
+        <rect width="60" height="26" rx="6" class="badge-bg" />
+        <text x="30.0" y="17.5" class="badge-text">Whisper</text>
       </g>
-      <g transform="translate(825, 278)">
-        <rect width="62" height="24" rx="6" class="badge-bg" />
-        <text x="31.0" y="16.5" class="badge-text">EasyOCR</text>
+      <g transform="translate(824, 308)">
+        <rect width="64" height="26" rx="6" class="badge-bg" />
+        <text x="32.0" y="17.5" class="badge-text">EasyOCR</text>
       </g>
-      <g transform="translate(697, 312)">
-        <rect width="116" height="24" rx="6" class="badge-bg" />
-        <text x="58.0" y="16.5" class="badge-text">Multi-Agent RAG</text>
+      <g transform="translate(692, 344)">
+        <rect width="120" height="26" rx="6" class="badge-bg" />
+        <text x="60.0" y="17.5" class="badge-text">Multi-Agent RAG</text>
       </g>
     </g>
   </g>
@@ -190,34 +189,34 @@
   <g>
     <!-- Col 1: Pillar -->
     <g>
-      <text x="20" y="397.0" class="pillar-text">Full-Stack &amp; 60FPS 3D</text>
-      <text x="20" y="419.0" class="pillar-text">WebGL</text>
+      <text x="20" y="442.0" class="pillar-text">Full-Stack &amp; 60FPS 3D</text>
+      <text x="20" y="466.0" class="pillar-text">WebGL</text>
     </g>
 
     <!-- Col 2: Real-World Architecture -->
     <g>
-      <text x="223" y="382" class="desc-text">In <tspan class="hi">Quantum OS (In Progress / Active Build)</tspan>, architecting an interactive cyberpunk</text>
-      <text x="223" y="404" class="desc-text">terminal portfolio with <tspan class="hi">Next.js 15</tspan> and <tspan class="hi">Three.js</tspan>, running custom GPU <tspan class="hi">GLSL fragment</tspan></text>
-      <text x="223" y="426" class="desc-text"><tspan class="hi">shaders</tspan> at 60FPS alongside Web Audio API synthesis.</text>
+      <text x="223" y="426" class="desc-text">In <tspan class="hi">Quantum OS (In Progress / Active Build)</tspan>, architecting an interactive cyberpunk</text>
+      <text x="223" y="451" class="desc-text">terminal portfolio with <tspan class="hi">Next.js 15</tspan> and <tspan class="hi">Three.js</tspan>, running custom GPU <tspan class="hi">GLSL fragment</tspan></text>
+      <text x="223" y="476" class="desc-text"><tspan class="hi">shaders</tspan> at 60FPS alongside Web Audio API synthesis.</text>
     </g>
 
     <!-- Col 3: Core Stack Badges -->
     <g>
-      <g transform="translate(697, 380)">
-        <rect width="68" height="24" rx="6" class="badge-bg" />
-        <text x="34.0" y="16.5" class="badge-text">Next.js 15</text>
+      <g transform="translate(692, 422)">
+        <rect width="72" height="26" rx="6" class="badge-bg" />
+        <text x="36.0" y="17.5" class="badge-text">Next.js 15</text>
       </g>
-      <g transform="translate(771, 380)">
-        <rect width="62" height="24" rx="6" class="badge-bg" />
-        <text x="31.0" y="16.5" class="badge-text">React 19</text>
+      <g transform="translate(770, 422)">
+        <rect width="66" height="26" rx="6" class="badge-bg" />
+        <text x="33.0" y="17.5" class="badge-text">React 19</text>
       </g>
-      <g transform="translate(697, 414)">
-        <rect width="62" height="24" rx="6" class="badge-bg" />
-        <text x="31.0" y="16.5" class="badge-text">Three.js</text>
+      <g transform="translate(692, 458)">
+        <rect width="66" height="26" rx="6" class="badge-bg" />
+        <text x="33.0" y="17.5" class="badge-text">Three.js</text>
       </g>
-      <g transform="translate(765, 414)">
-        <rect width="86" height="24" rx="6" class="badge-bg" />
-        <text x="43.0" y="16.5" class="badge-text">GLSL Shaders</text>
+      <g transform="translate(764, 458)">
+        <rect width="92" height="26" rx="6" class="badge-bg" />
+        <text x="46.0" y="17.5" class="badge-text">GLSL Shaders</text>
       </g>
     </g>
   </g>
@@ -226,34 +225,34 @@
   <g>
     <!-- Col 1: Pillar -->
     <g>
-      <text x="20" y="499.0" class="pillar-text">Containerization &amp;</text>
-      <text x="20" y="521.0" class="pillar-text">Multi-Service Infra</text>
+      <text x="20" y="556.0" class="pillar-text">Containerization &amp;</text>
+      <text x="20" y="580.0" class="pillar-text">Multi-Service Infra</text>
     </g>
 
     <!-- Col 2: Real-World Architecture -->
     <g>
-      <text x="223" y="484" class="desc-text">Orchestrated the full multi-service architecture with <tspan class="hi">Docker Compose</tspan>, isolating</text>
-      <text x="223" y="506" class="desc-text">FastAPI/Django API layers, Celery workers, Redis brokers, and React frontends</text>
-      <text x="223" y="528" class="desc-text">into reproducible networks.</text>
+      <text x="223" y="540" class="desc-text">Orchestrated the full multi-service architecture with <tspan class="hi">Docker Compose</tspan>, isolating</text>
+      <text x="223" y="565" class="desc-text">FastAPI/Django API layers, Celery workers, Redis brokers, and React frontends</text>
+      <text x="223" y="590" class="desc-text">into reproducible networks.</text>
     </g>
 
     <!-- Col 3: Core Stack Badges -->
     <g>
-      <g transform="translate(697, 482)">
-        <rect width="102" height="24" rx="6" class="badge-bg" />
-        <text x="51.0" y="16.5" class="badge-text">Docker Compose</text>
+      <g transform="translate(692, 536)">
+        <rect width="108" height="26" rx="6" class="badge-bg" />
+        <text x="54.0" y="17.5" class="badge-text">Docker Compose</text>
       </g>
-      <g transform="translate(805, 482)">
-        <rect width="78" height="24" rx="6" class="badge-bg" />
-        <text x="39.0" y="16.5" class="badge-text">Linux/Bash</text>
+      <g transform="translate(806, 536)">
+        <rect width="82" height="26" rx="6" class="badge-bg" />
+        <text x="41.0" y="17.5" class="badge-text">Linux/Bash</text>
       </g>
-      <g transform="translate(697, 516)">
-        <rect width="50" height="24" rx="6" class="badge-bg" />
-        <text x="25.0" y="16.5" class="badge-text">Nginx</text>
+      <g transform="translate(692, 572)">
+        <rect width="52" height="26" rx="6" class="badge-bg" />
+        <text x="26.0" y="17.5" class="badge-text">Nginx</text>
       </g>
-      <g transform="translate(753, 516)">
-        <rect width="38" height="24" rx="6" class="badge-bg" />
-        <text x="19.0" y="16.5" class="badge-text">Git</text>
+      <g transform="translate(750, 572)">
+        <rect width="40" height="26" rx="6" class="badge-bg" />
+        <text x="20.0" y="17.5" class="badge-text">Git</text>
       </g>
     </g>
   </g>
