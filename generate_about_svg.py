@@ -66,31 +66,31 @@ def generate_about_me_svg():
   </defs>
 
   <!-- Section Heading -->
-  <text x="{vbox_w // 2}" y="{heading_y}" text-anchor="middle" class="sh">ABOUT ME &amp; IDENTITY</text>
+  <text x="0" y="{heading_y}" class="sh">ABOUT ME &amp; IDENTITY</text>
 
   <!-- Quote Box -->
   <g transform="translate(0, {box_top})">
-    <!-- Subtle green tint background with subtle border -->
-    <rect x="0" y="0" width="{vbox_w}" height="{box_height}" rx="8" ry="8" fill="rgba(57,211,83,0.05)" stroke="rgba(57,211,83,0.2)" stroke-width="1"/>
+    <!-- Subtle green tint background -->
+    <rect x="0" y="0" width="{vbox_w}" height="{box_height}" rx="6" ry="6" fill="rgba(57,211,83,0.05)"/>
     <!-- Left emerald accent bar -->
     <rect x="0" y="0" width="4" height="{box_height}" rx="2" ry="2" fill="#39d353"/>
 
-    <!-- Line 1: Centered -->
-    <text x="{vbox_w // 2}" y="{y1}" text-anchor="middle" class="bt"><tspan>I am a 3rd-year Computer Science &amp; Engineering undergraduate at </tspan><tspan class="hi">DSATM, Bengaluru (Class of 2028)</tspan><tspan>, building at</tspan></text>
+    <!-- Line 1: Justified -->
+    <text x="20" y="{y1}" textLength="880" lengthAdjust="spacing" class="bt"><tspan>I am a 3rd-year Computer Science &amp; Engineering undergraduate at </tspan><tspan class="hi">DSATM, Bengaluru (Class of 2028)</tspan><tspan>, building at</tspan></text>
 
-    <!-- Line 2: Centered -->
-    <text x="{vbox_w // 2}" y="{y2}" text-anchor="middle" class="bt"><tspan>the intersection of </tspan><tspan class="hi">core CS systems (DSA, OS, DBMS, Networks)</tspan><tspan> and </tspan><tspan class="hi">production-grade GenAI &amp; Full-Stack</tspan></text>
+    <!-- Line 2: Justified -->
+    <text x="20" y="{y2}" textLength="880" lengthAdjust="spacing" class="bt"><tspan>the intersection of </tspan><tspan class="hi">core CS systems (DSA, OS, DBMS, Networks)</tspan><tspan> and </tspan><tspan class="hi">production-grade GenAI &amp; Full-Stack</tspan></text>
 
-    <!-- Line 3: Centered -->
-    <text x="{vbox_w // 2}" y="{y3}" text-anchor="middle" class="bt"><tspan class="hi">engineering</tspan><tspan>. My work bridges resilient, low-latency agentic workflows (</tspan><tspan class="hi">FastAPI, Celery, Redis, pgvector</tspan><tspan>)</tspan></text>
+    <!-- Line 3: Justified -->
+    <text x="20" y="{y3}" textLength="880" lengthAdjust="spacing" class="bt"><tspan class="hi">engineering</tspan><tspan>. My work bridges resilient, low-latency agentic workflows (</tspan><tspan class="hi">FastAPI, Celery, Redis, pgvector</tspan><tspan>)</tspan></text>
 
-    <!-- Line 4: Centered -->
-    <text x="{vbox_w // 2}" y="{y4}" text-anchor="middle" class="bt"><tspan>with interactive, high-performance web applications (</tspan><tspan class="hi">TypeScript, React, Next.js, Three.js</tspan><tspan>).</tspan></text>
+    <!-- Line 4: Natural left-aligned finish -->
+    <text x="20" y="{y4}" class="bt"><tspan>with interactive, high-performance web applications (</tspan><tspan class="hi">TypeScript, React, Next.js, Three.js</tspan><tspan>).</tspan></text>
   </g>
 </svg>
 """
 
-    for fname in ["about-me.svg", "about-me-v2.svg", "about-me-v3.svg", "about-me-centered.svg"]:
+    for fname in ["about-me.svg", "about-me-v2.svg", "about-me-v3.svg", "about-me-centered.svg", "about-me-justified.svg"]:
         path = os.path.join(assets_dir, fname)
         with open(path, "w", encoding="utf-8") as f:
             f.write(svg_content)
