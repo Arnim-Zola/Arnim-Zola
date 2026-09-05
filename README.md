@@ -21,16 +21,7 @@
 
 <img src="assets/about-me-perfect.svg" alt="About Me &amp; Identity" width="100%" />
 
-```yaml
-Terminal Profile:
-  Engineer:        "Mohammed Sahil (@Arnim-Zola)"
-  Institution:     "3rd Year B.E. Computer Science & Engineering @ DSATM (Class of 2028)"
-  Location:        "Bengaluru, Karnataka, India"
-  Target Roles:    "Full-Stack AI Developer / GenAI Engineer • SDE"
-  Core Pillars:    "DSA • OS & Systems • DBMS • Computer Networks • OOP"
-  Daily Drivers:   "FastAPI, pgvector, OpenCV, Whisper RAG, Next.js 15, Docker"
-  Active Pursuits: "Competitive Hackathons, Research Papers, Problem Solving & Full-Stack Projects"
-```
+<img src="assets/terminal-profile-torch.svg" alt="Terminal Profile &amp; Midnight Vault" width="100%" />
 
 | Pillar & Domain | Real-World Architecture & Integration (Eden & Portfolio) | Core Stack |
 | :--- | :--- | :--- |
@@ -39,12 +30,6 @@ Terminal Profile:
 | **Multimodal Perception & Fact RAG** | In **Eden**, parallel streams demux visual frames (**OpenCV**) for OCR scanning and audio (**OpenAI Whisper**) for speech transcription, synthesized by deep reasoning LLM agents into an authenticity truth index. | `OpenCV` `Whisper` `EasyOCR` `Multi-Agent RAG` |
 | **Full-Stack & 60FPS 3D WebGL** | In **Quantum OS** *(In Progress / Active Build)*, architecting an interactive cyberpunk terminal portfolio with **Next.js 15** and **Three.js**, running custom GPU **GLSL fragment shaders** at 60FPS alongside Web Audio API synthesis. | `Next.js 15` `React 19` `Three.js` `GLSL Shaders` |
 | **Containerization & Multi-Service Infra** | Orchestrated the full multi-service architecture with **Docker Compose**, isolating FastAPI/Django API layers, Celery workers, Redis brokers, and React frontends into reproducible networks. | `Docker Compose` `Linux/Bash` `Nginx` `Git` |
-
----
-
-### 📚 MIDNIGHT ARCHIVES &amp; RESEARCH VAULT
-
-<img src="assets/bookshelf-torch.svg" alt="Midnight Archives &amp; Research Vault • Flashlight Radar" width="100%" />
 
 ---
 
