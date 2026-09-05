@@ -144,10 +144,6 @@ def generate_terminal_bookshelf_green_torch():
         animation: flashlight-circle 20s ease-in-out infinite;
       }}
 
-      .torch-ring {{
-        animation: flashlight-transform 20s ease-in-out infinite;
-      }}
-
       @keyframes flashlight-circle {{
         0% {{ clip-path: circle(135px at -100px 30px); }}
         35% {{ clip-path: circle(135px at 520px 40px); }}
@@ -163,23 +159,6 @@ def generate_terminal_bookshelf_green_torch():
         72% {{ clip-path: circle(135px at 560px 120px); }}
         75% {{ clip-path: circle(135px at 560px 120px); }}
         100% {{ clip-path: circle(135px at 1050px 60px); }}
-      }}
-
-      @keyframes flashlight-transform {{
-        0% {{ transform: translate(-100px, 30px); }}
-        35% {{ transform: translate(520px, 40px); }}
-        39% {{ transform: translate(560px, 120px); opacity: 1; }}
-        40% {{ transform: translate(560px, 120px); opacity: 0.2; }}
-        41% {{ transform: translate(560px, 120px); opacity: 1; }}
-        42% {{ transform: translate(560px, 120px); opacity: 0.2; }}
-        54% {{ transform: translate(560px, 120px); opacity: 0.2; }}
-        55% {{ transform: translate(560px, 120px); opacity: 1; }}
-        59% {{ transform: translate(560px, 120px); opacity: 1; }}
-        64% {{ transform: translate(320px, 80px); }}
-        68% {{ transform: translate(720px, 130px); }}
-        72% {{ transform: translate(560px, 120px); }}
-        75% {{ transform: translate(560px, 120px); }}
-        100% {{ transform: translate(1050px, 60px); }}
       }}
 
       @keyframes bg-eyes {{
@@ -209,18 +188,13 @@ def generate_terminal_bookshelf_green_torch():
     {dark_books_svg}
   </g>
 
-  <!-- Layer 2: Vivid Green Books Lit Inside Flashlight (Multiple shades of green) -->
+  <!-- Layer 2: Vivid Green Books Lit Inside Flashlight (Seamless, borderless green light) -->
   <g class="torch-lit-layer">
     <!-- Green background light fill inside the circle -->
     <rect x="0" y="0" width="{vbox_w}" height="{vbox_h}" fill="#04180c" />
     <rect x="6" y="115" width="{vbox_w - 12}" height="6" rx="1" fill="#143d20" stroke="#00ff66" stroke-width="0.5" />
     <rect x="6" y="230" width="{vbox_w - 12}" height="6" rx="1" fill="#143d20" stroke="#00ff66" stroke-width="0.5" />
     {color_books_svg}
-  </g>
-
-  <!-- Cartoon Flashlight Outline Ring -->
-  <g class="torch-ring" pointer-events="none">
-    <circle cx="0" cy="0" r="135" fill="none" stroke="#00ff66" stroke-width="2" opacity="0.8" />
   </g>
 
   <!-- Spooky Eyes Hidden between Books -->
@@ -239,7 +213,7 @@ def generate_terminal_bookshelf_green_torch():
 </svg>
 """
 
-    for fname in ["terminal-profile-bg-torch.svg", "terminal-profile-v3.svg", "terminal-profile-cartoon.svg", "terminal-profile-green-torch.svg"]:
+    for fname in ["terminal-profile-bg-torch.svg", "terminal-profile-v3.svg", "terminal-profile-cartoon.svg", "terminal-profile-green-torch.svg", "terminal-profile-final.svg"]:
         out_path = os.path.join(assets_dir, fname)
         with open(out_path, "w", encoding="utf-8") as f:
             f.write(svg_content)
