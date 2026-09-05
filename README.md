@@ -10,8 +10,6 @@
     <img src="assets/taglines.svg?v=1.2" alt="Mohammed Sahil Technical Taglines - Iris Reveal Animation" width="100%" />
   </a>
 
-  <br/><br/>
-
   <!-- Unified Emerald Green Social Connect HUD -->
   <p align="center">
     <a href="https://www.linkedin.com/in/mohammed-sahil-2b0583336/">
