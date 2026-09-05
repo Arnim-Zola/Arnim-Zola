@@ -22,23 +22,22 @@ def generate_about_me_svg():
     # L3 (~104): "Full-Stack engineering. My work bridges ... (FastAPI, Celery, Redis,"
     # L4 (~101): "pgvector) with interactive ... (TypeScript, React, Next.js, Three.js)."
 
-    vbox_w     = 800
-    font_size  = 17.5
-    line_h     = 26    # line height in px
-    top_pad    = 22    # first line y from box top
-    bot_pad    = 18    # padding below last line
-    num_lines  = 4
+    vbox_w     = 920
+    font_size  = 17
+    line_h     = 27    # line height in px
+    top_pad    = 24    # first line y from box top
+    bot_pad    = 20    # padding below last line
+    num_lines  = 3
 
-    box_height = top_pad + (num_lines - 1) * line_h + bot_pad   # 22+78+18 = 118
+    box_height = top_pad + (num_lines - 1) * line_h + bot_pad   # 24+54+20 = 98
     heading_y  = 20
     box_top    = 32
-    svg_height = box_top + box_height + 2                        # 32+118+2 = 152
+    svg_height = box_top + box_height + 2                        # 32+98+2 = 132
 
     # line y positions (relative to the box group)
     y1 = top_pad
     y2 = top_pad + line_h
     y3 = top_pad + 2 * line_h
-    y4 = top_pad + 3 * line_h
 
     svg_content = f"""<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 {vbox_w} {svg_height}" width="100%" height="{svg_height}" fill="none">
   <defs>
@@ -56,7 +55,7 @@ def generate_about_me_svg():
         font-family: 'Caacupe One', cursive, sans-serif;
         font-size: {font_size}px;
         font-weight: 400;
-        letter-spacing: 0.3px;
+        letter-spacing: 0.2px;
         fill: #e6edf3;
       }}
       .hi {{
@@ -75,22 +74,19 @@ def generate_about_me_svg():
     <!-- Left emerald accent bar -->
     <rect x="0" y="0" width="4" height="{box_height}" rx="2" ry="2" fill="#39d353"/>
 
-    <!-- Line 1: Uniform natural font kerning -->
-    <text x="20" y="{y1}" class="bt"><tspan>I am a 3rd-year Computer Science &amp; Engineering undergraduate at </tspan><tspan class="hi">DSATM, Bengaluru (Class of 2028)</tspan><tspan>, building at</tspan></text>
+    <!-- Line 1 (137 chars, justified) -->
+    <text x="20" y="{y1}" textLength="880" lengthAdjust="spacing" class="bt"><tspan>I am a 3rd-year Computer Science &amp; Engineering undergraduate at </tspan><tspan class="hi">DSATM, Bengaluru (Class of 2028)</tspan><tspan>, building at the intersection of </tspan><tspan class="hi">core CS</tspan></text>
 
-    <!-- Line 2: Uniform natural font kerning -->
-    <text x="20" y="{y2}" class="bt"><tspan>the intersection of </tspan><tspan class="hi">core CS systems (DSA, OS, DBMS, Networks)</tspan><tspan> and </tspan><tspan class="hi">production-grade GenAI &amp; Full-Stack</tspan></text>
+    <!-- Line 2 (133 chars, justified) -->
+    <text x="20" y="{y2}" textLength="880" lengthAdjust="spacing" class="bt"><tspan class="hi">systems (DSA, OS, DBMS, Networks)</tspan><tspan> and </tspan><tspan class="hi">production-grade GenAI &amp; Full-Stack engineering</tspan><tspan>. My work bridges resilient, low-latency agentic</tspan></text>
 
-    <!-- Line 3: Uniform natural font kerning -->
-    <text x="20" y="{y3}" class="bt"><tspan class="hi">engineering</tspan><tspan>. My work bridges resilient, low-latency agentic workflows (</tspan><tspan class="hi">FastAPI, Celery, Redis, pgvector</tspan><tspan>)</tspan></text>
-
-    <!-- Line 4: Uniform natural font kerning -->
-    <text x="20" y="{y4}" class="bt"><tspan>with interactive, high-performance web applications (</tspan><tspan class="hi">TypeScript, React, Next.js, Three.js</tspan><tspan>).</tspan></text>
+    <!-- Line 3 (136 chars, justified) -->
+    <text x="20" y="{y3}" textLength="880" lengthAdjust="spacing" class="bt"><tspan>workflows (</tspan><tspan class="hi">FastAPI, Celery, Redis, pgvector</tspan><tspan>) with interactive, high-performance web applications (</tspan><tspan class="hi">TypeScript, React, Next.js, Three.js</tspan><tspan>).</tspan></text>
   </g>
 </svg>
 """
 
-    for fname in ["about-me.svg", "about-me-v2.svg", "about-me-v3.svg", "about-me-centered.svg", "about-me-justified.svg", "about-me-v5.svg", "about-me-v6.svg"]:
+    for fname in ["about-me.svg", "about-me-v2.svg", "about-me-v3.svg", "about-me-centered.svg", "about-me-justified.svg", "about-me-v5.svg", "about-me-v6.svg", "about-me-justified-final.svg"]:
         path = os.path.join(assets_dir, fname)
         with open(path, "w", encoding="utf-8") as f:
             f.write(svg_content)
@@ -101,3 +97,4 @@ def generate_about_me_svg():
 
 if __name__ == "__main__":
     generate_about_me_svg()
+
