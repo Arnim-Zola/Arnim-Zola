@@ -1,90 +1,41 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 170 42" width="170" height="42">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 165 42" width="165" height="42">
   <defs>
-    <linearGradient id="bgGradIn" x1="0%" y1="0%" x2="100%" y2="100%">
+    <linearGradient id="bgIn" x1="0%" y1="0%" x2="100%" y2="100%">
       <stop offset="0%" stop-color="#238636"/>
-      <stop offset="100%" stop-color="#144d20"/>
+      <stop offset="100%" stop-color="#1a6328"/>
     </linearGradient>
-    <clipPath id="pillClipIn">
-      <rect x="2" y="2" width="166" height="38" rx="19" ry="19"/>
-    </clipPath>
   </defs>
 
   <style>
-    .btn-pill {
-      fill: url(#bgGradIn);
+    .pill {
+      fill: url(#bgIn);
       stroke: #39d353;
-      stroke-width: 1.75;
-      rx: 19;
-      ry: 19;
-      animation: borderPulseIn 6s ease-in-out infinite;
+      stroke-width: 2;
+      rx: 21;
+      ry: 21;
+      filter: drop-shadow(0 4px 10px rgba(35, 134, 54, 0.35));
     }
-    .btn-text {
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Space Grotesk", Roboto, sans-serif;
+    .label {
+      font-family: 'Space Grotesk', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
       font-size: 13px;
       font-weight: 700;
       letter-spacing: 1.5px;
       fill: #ffffff;
-      text-shadow: 1px 1px 2px rgba(0,0,0,0.8);
-      text-anchor: middle;
+      text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
       dominant-baseline: central;
-    }
-    .text-play {
-      animation: textSlide1 6s cubic-bezier(0.2, 0.8, 0.25, 1) infinite;
-    }
-    .text-now {
-      animation: textSlide2 6s cubic-bezier(0.2, 0.8, 0.25, 1) infinite;
-    }
-    .icon-wrap {
-      transform-origin: 26px 21px;
-      animation: iconMorphIn 6s cubic-bezier(0.2, 0.8, 0.25, 1) infinite;
-    }
-    .shimmer {
-      opacity: 0.15;
-      animation: sweepIn 6s ease-in-out infinite;
-    }
-
-    @keyframes textSlide1 {
-      0%, 42% { opacity: 1; transform: translateX(0); }
-      48%, 92% { opacity: 0; transform: translateX(50px); }
-      98%, 100% { opacity: 1; transform: translateX(0); }
-    }
-    @keyframes textSlide2 {
-      0%, 42% { opacity: 0; transform: translateX(-50px); }
-      48%, 92% { opacity: 1; transform: translateX(0); }
-      98%, 100% { opacity: 0; transform: translateX(50px); }
-    }
-    @keyframes iconMorphIn {
-      0%, 42% { transform: scale(1); opacity: 1; }
-      48%, 92% { transform: scale(2.6) translate(18px, 0); opacity: 0.18; }
-      98%, 100% { transform: scale(1); opacity: 1; }
-    }
-    @keyframes borderPulseIn {
-      0%, 42% { stroke: #39d353; }
-      48%, 92% { stroke: #00ff66; }
-      98%, 100% { stroke: #39d353; }
-    }
-    @keyframes sweepIn {
-      0%, 42% { opacity: 0.1; transform: translateX(-30px); }
-      48%, 92% { opacity: 0.35; transform: translateX(30px); }
-      98%, 100% { opacity: 0.1; transform: translateX(-30px); }
     }
   </style>
 
-  <!-- Button Background -->
-  <rect x="2" y="2" width="166" height="38" class="btn-pill"/>
+  <!-- Background Capsule -->
+  <rect x="1" y="1" width="163" height="40" class="pill"/>
 
-  <!-- Clipped Area for Dynamic Content -->
-  <g clip-path="url(#pillClipIn)">
-    <!-- Light Shimmer Sweep -->
-    <ellipse cx="85" cy="21" rx="60" ry="14" fill="#00ff66" class="shimmer"/>
+  <!-- Text on Left -->
+  <text x="32" y="21.5" class="label">LINKEDIN</text>
 
-    <!-- Morphing LinkedIn Icon -->
-    <g class="icon-wrap" transform="translate(18, 12.5)">
-      <path fill="#ffffff" d="M14.25 0H1.75C0.78 0 0 0.78 0 1.75V14.25C0 15.22 0.78 16 1.75 16H14.25C15.22 16 16 15.22 16 14.25V1.75C16 0.78 15.22 0 14.25 0ZM4.75 13.5H2.375V5.875H4.75V13.5ZM3.56 4.83C2.8 4.83 2.18 4.21 2.18 3.44C2.18 2.68 2.8 2.06 3.56 2.06C4.33 2.06 4.95 2.68 4.95 3.44C4.95 4.21 4.33 4.83 3.56 4.83ZM13.625 13.5H11.25V9.75C11.25 8.85 10.45 8.1 9.55 8.1C8.65 8.1 7.875 8.85 7.875 9.75V13.5H5.5V5.875H7.875V6.85C8.38 6.05 9.4 5.65 10.35 5.65C12.15 5.65 13.625 7.12 13.625 8.92V13.5Z"/>
-    </g>
-
-    <!-- Alternating Text Layers -->
-    <text x="98" y="21.5" class="btn-text text-play">LINKEDIN</text>
-    <text x="85" y="21.5" class="btn-text text-now">CONNECT</text>
+  <!-- Icon on Right (16x16 viewBox 0 0 24 24) -->
+  <g transform="translate(118, 13)">
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="#ffffff">
+      <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+    </svg>
   </g>
 </svg>
