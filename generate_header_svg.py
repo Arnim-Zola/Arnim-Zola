@@ -1,35 +1,21 @@
+import random
 import re
 
-with open(r'c:\Holidays\Arnim-Zola\assets\uiverse-stars.css', 'r', encoding='utf-8') as f:
-    css = f.read()
+random.seed(42)
 
-def extract_raw_coords(selector):
-    pattern = re.compile(rf'{selector}\s*\{{.*?box-shadow:\s*(.*?);', re.DOTALL)
-    m = pattern.search(css)
-    if not m:
-        return []
-    shadow_text = m.group(1)
-    coords = []
-    for line in shadow_text.split(','):
-        match = re.search(r'(\d+)px\s+(\d+)px', line)
-        if match:
-            x, y = int(match.group(1)), int(match.group(2))
-            if x <= 900 and y <= 2000:
-                coords.append((x, y))
-    return sorted(list(set(coords)))
+# 36 small stars across 900x2000 (averaging ~4 on screen at any time)
+stars1 = sorted([(random.randint(25, 875), random.randint(10, 1990)) for _ in range(36)])
+# 16 medium stars (averaging ~2 on screen at any time)
+stars2 = sorted([(random.randint(35, 865), random.randint(10, 1990)) for _ in range(16)])
+# 8 bright stars (averaging ~1 on screen at any time)
+stars3 = sorted([(random.randint(45, 855), random.randint(10, 1990)) for _ in range(8)])
 
-stars1 = extract_raw_coords('#stars')
-stars2 = extract_raw_coords('#stars2')
-stars3 = extract_raw_coords('#stars3')
-
-# Read Caacupe font data from existing header.svg
 with open(r'c:\Holidays\Arnim-Zola\assets\header.svg', 'r', encoding='utf-8') as f:
     old_svg = f.read()
 
 font_match = re.search(r"@font-face\s*\{.*?src:\s*url\((data:font/woff2;.*?)\)\s*format\('woff2'\);.*?\}", old_svg, re.DOTALL)
 font_src = font_match.group(1) if font_match else ''
 
-# Build SVG
 svg_parts = []
 svg_parts.append('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 240" width="100%" height="100%">')
 svg_parts.append('  <defs>')
@@ -57,28 +43,28 @@ svg_parts.append("      .mono-text {")
 svg_parts.append("        font-family: 'JetBrains Mono', 'Fira Code', 'Courier New', monospace;")
 svg_parts.append("      }")
 svg_parts.append('')
-svg_parts.append("      /* Uiverse.io Parallax Starfield Drift Keyframes (2000px cycle) */")
-svg_parts.append("      @keyframes animStar1 {")
+svg_parts.append("      /* Uiverse.io Parallax Starfield Drift Keyframes */")
+svg_parts.append("      @keyframes driftStars1 {")
 svg_parts.append("        from { transform: translateY(0px); }")
 svg_parts.append("        to { transform: translateY(-2000px); }")
 svg_parts.append("      }")
-svg_parts.append("      @keyframes animStar2 {")
+svg_parts.append("      @keyframes driftStars2 {")
 svg_parts.append("        from { transform: translateY(0px); }")
 svg_parts.append("        to { transform: translateY(-2000px); }")
 svg_parts.append("      }")
-svg_parts.append("      @keyframes animStar3 {")
+svg_parts.append("      @keyframes driftStars3 {")
 svg_parts.append("        from { transform: translateY(0px); }")
 svg_parts.append("        to { transform: translateY(-2000px); }")
 svg_parts.append("      }")
 svg_parts.append('')
 svg_parts.append("      .stars-layer1 {")
-svg_parts.append("        animation: animStar1 50s linear infinite;")
+svg_parts.append("        animation: driftStars1 50s linear infinite;")
 svg_parts.append("      }")
 svg_parts.append("      .stars-layer2 {")
-svg_parts.append("        animation: animStar2 100s linear infinite;")
+svg_parts.append("        animation: driftStars2 100s linear infinite;")
 svg_parts.append("      }")
 svg_parts.append("      .stars-layer3 {")
-svg_parts.append("        animation: animStar3 150s linear infinite;")
+svg_parts.append("        animation: driftStars3 150s linear infinite;")
 svg_parts.append("      }")
 svg_parts.append('    ]]></style>')
 svg_parts.append('')
@@ -123,21 +109,21 @@ svg_parts.append('  <g clip-path="url(#bannerClip)">')
 svg_parts.append('    <!-- 1. Background Base Card with Concentrated Emerald Glow -->')
 svg_parts.append('    <rect x="0" y="0" width="900" height="240" fill="url(#uiverseEmeraldBg)" />')
 svg_parts.append('')
-svg_parts.append('    <!-- 2. Uiverse.io Parallax Starfield Layer 1 (1px Stars, 50s Speed over 2000px) -->')
+svg_parts.append('    <!-- 2. Uiverse.io Parallax Starfield Layer 1 (Small Stars) -->')
 svg_parts.append('    <g class="stars-layer1">')
 for x, y in stars1:
     svg_parts.append(f'      <circle cx="{x}" cy="{y}" r="0.85" fill="#ffffff" opacity="0.85" />')
     svg_parts.append(f'      <circle cx="{x}" cy="{y + 2000}" r="0.85" fill="#ffffff" opacity="0.85" />')
 svg_parts.append('    </g>')
 svg_parts.append('')
-svg_parts.append('    <!-- 3. Uiverse.io Parallax Starfield Layer 2 (2px Stars, 100s Speed over 2000px) -->')
+svg_parts.append('    <!-- 3. Uiverse.io Parallax Starfield Layer 2 (Medium Stars) -->')
 svg_parts.append('    <g class="stars-layer2">')
 for x, y in stars2:
     svg_parts.append(f'      <circle cx="{x}" cy="{y}" r="1.3" fill="#ffffff" opacity="0.9" />')
     svg_parts.append(f'      <circle cx="{x}" cy="{y + 2000}" r="1.3" fill="#ffffff" opacity="0.9" />')
 svg_parts.append('    </g>')
 svg_parts.append('')
-svg_parts.append('    <!-- 4. Uiverse.io Parallax Starfield Layer 3 (3px Stars, 150s Speed over 2000px) -->')
+svg_parts.append('    <!-- 4. Uiverse.io Parallax Starfield Layer 3 (Bright Stars) -->')
 svg_parts.append('    <g class="stars-layer3">')
 for x, y in stars3:
     svg_parts.append(f'      <circle cx="{x}" cy="{y}" r="1.8" fill="#ffffff" opacity="1" />')
@@ -176,9 +162,10 @@ svg_parts.append('    </g>')
 svg_parts.append('  </g>')
 svg_parts.append('</svg>')
 
-final_svg = '\n'.join(svg_parts)
-with open(r'c:\Holidays\Arnim-Zola\assets\header.svg', 'w', encoding='utf-8') as out:
-    out.write(final_svg)
+content = '\n'.join(svg_parts)
+with open(r'c:\Holidays\Arnim-Zola\assets\header-v2.svg', 'w', encoding='utf-8') as f:
+    f.write(content)
+with open(r'c:\Holidays\Arnim-Zola\assets\header.svg', 'w', encoding='utf-8') as f:
+    f.write(content)
 
-print('Successfully re-generated header.svg with authentic Uiverse density!')
-print('File size:', len(final_svg), 'bytes')
+print(f'Generated minimal starfield: {len(stars1)} layer1, {len(stars2)} layer2, {len(stars3)} layer3.')

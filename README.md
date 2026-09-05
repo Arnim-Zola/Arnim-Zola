@@ -2,7 +2,7 @@
 
   <!-- Native Animated Cyberpunk GitHub Dark & Emerald Green Banner -->
   <a href="https://github.com/Arnim-Zola">
-    <img src="assets/header.svg?v=1.2" alt="Mohammed Sahil - Full-Stack & GenAI Engineer" width="100%" />
+    <img src="assets/header-v2.svg" alt="Mohammed Sahil - Full-Stack & GenAI Engineer" width="100%" />
   </a>
 
   <!-- Real-Time Looping Iris Text Subtitle (GitHub Green) -->
