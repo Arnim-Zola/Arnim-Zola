@@ -15,11 +15,11 @@
   <!-- Unified Emerald Green Social Connect HUD -->
   <p align="center">
     <a href="https://www.linkedin.com/in/mohammed-sahil-2b0583336/">
-      <img src="assets/btn-linkedin-v6.svg" height="42" alt="Connect on LinkedIn" />
+      <img src="assets/btn-linkedin-v7.svg" height="42" alt="Connect on LinkedIn" />
     </a>
     &nbsp;&nbsp;&nbsp;&nbsp;
     <a href="mailto:mohammedsahil0003@gmail.com">
-      <img src="assets/btn-email-v6.svg" height="42" alt="Send Email" />
+      <img src="assets/btn-email-v7.svg" height="42" alt="Send Email" />
     </a>
   </p>
 
