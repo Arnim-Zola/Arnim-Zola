@@ -146,14 +146,14 @@ def generate_terminal_bookshelf_green_torch():
 
       @keyframes flashlight-circle {{
         0% {{ clip-path: circle(135px at -100px 30px); }}
-        35% {{ clip-path: circle(135px at 520px 40px); }}
-        39% {{ clip-path: circle(135px at 560px 120px); opacity: 1; }}
-        40% {{ clip-path: circle(135px at 560px 120px); opacity: 0.2; }}
-        41% {{ clip-path: circle(135px at 560px 120px); opacity: 1; }}
-        42% {{ clip-path: circle(135px at 560px 120px); opacity: 0.2; }}
-        54% {{ clip-path: circle(135px at 560px 120px); opacity: 0.2; }}
-        55% {{ clip-path: circle(135px at 560px 120px); opacity: 1; }}
-        59% {{ clip-path: circle(135px at 560px 120px); opacity: 1; }}
+        35% {{ clip-path: circle(135px at 420px 140px); }}
+        39% {{ clip-path: circle(135px at 467px 178px); opacity: 1; }}
+        40% {{ clip-path: circle(135px at 467px 178px); opacity: 0; }}
+        41% {{ clip-path: circle(135px at 467px 178px); opacity: 1; }}
+        42% {{ clip-path: circle(135px at 467px 178px); opacity: 0; }}
+        54% {{ clip-path: circle(135px at 467px 178px); opacity: 0; }}
+        55% {{ clip-path: circle(135px at 467px 178px); opacity: 1; }}
+        59% {{ clip-path: circle(135px at 467px 178px); opacity: 1; }}
         64% {{ clip-path: circle(135px at 320px 80px); }}
         68% {{ clip-path: circle(135px at 720px 130px); }}
         72% {{ clip-path: circle(135px at 560px 120px); }}
@@ -163,14 +163,14 @@ def generate_terminal_bookshelf_green_torch():
 
       @keyframes bg-eyes {{
         0%, 38% {{ opacity: 0; transform: scaleY(0); }}
-        39%, 40.5% {{ opacity: 1; transform: scaleY(1); fill: #ffffff; filter: drop-shadow(0 0 5px #ffffff); }}
+        39%, 40.5% {{ opacity: 1; transform: scaleY(1); fill: #ffffff; filter: drop-shadow(0 0 6px #ffffff); }}
         41% {{ opacity: 0; transform: scaleY(0); }}
-        41.5%, 43% {{ opacity: 1; transform: scaleY(1); fill: #ff0033; filter: drop-shadow(0 0 8px #ff0033); }}
-        43.5%, 100% {{ opacity: 0; transform: scaleY(0); }}
+        41.5%, 54% {{ opacity: 1; transform: scaleY(1); fill: #ff0033; filter: drop-shadow(0 0 8px #ff0033); }}
+        54.5%, 100% {{ opacity: 0; transform: scaleY(0); }}
       }}
 
       .bg-spooky-eyes {{
-        transform-origin: 569px 92px;
+        transform-origin: 467px 178px;
         animation: bg-eyes 20s infinite;
       }}
     </style>
@@ -197,10 +197,10 @@ def generate_terminal_bookshelf_green_torch():
     {color_books_svg}
   </g>
 
-  <!-- Spooky Eyes Hidden between Books -->
+  <!-- Cat Eyes Hidden on Lower Shelf (Above Stacked Books) -->
   <g class="bg-spooky-eyes">
-    <circle cx="564" cy="92" r="3.5" fill="#fff" />
-    <circle cx="574" cy="92" r="3.5" fill="#fff" />
+    <ellipse cx="460" cy="178" rx="4.5" ry="3.5" fill="#fff" />
+    <ellipse cx="474" cy="178" rx="4.5" ry="3.5" fill="#fff" />
   </g>
 
   <!-- Header Title -->
