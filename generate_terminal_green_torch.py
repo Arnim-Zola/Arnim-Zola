@@ -101,7 +101,7 @@ def generate_terminal_bookshelf_green_torch():
         ("Active Pursuits:", '"Competitive Hackathons, Research Papers, Problem Solving &amp; Full-Stack Projects"')
     ]
 
-    text_start_y = 60
+    text_start_y = 68
     text_line_h = 27
     text_svg_list = []
     
@@ -215,7 +215,7 @@ def generate_terminal_bookshelf_green_torch():
 </svg>
 """
 
-    for fname in ["terminal-profile-bg-torch.svg", "terminal-profile-v3.svg", "terminal-profile-cartoon.svg", "terminal-profile-green-torch.svg", "terminal-profile-final.svg", "terminal-profile-v4.svg", "terminal-profile-v5.svg", "terminal-profile-v6.svg", "terminal-profile-v7.svg"]:
+    for fname in ["terminal-profile-bg-torch.svg", "terminal-profile-v3.svg", "terminal-profile-cartoon.svg", "terminal-profile-green-torch.svg", "terminal-profile-final.svg", "terminal-profile-v4.svg", "terminal-profile-v5.svg", "terminal-profile-v6.svg", "terminal-profile-v7.svg", "terminal-profile-v8.svg"]:
         out_path = os.path.join(assets_dir, fname)
         with open(out_path, "w", encoding="utf-8") as f:
             f.write(svg_content)
