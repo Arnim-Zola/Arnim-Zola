@@ -23,16 +23,16 @@ def generate_about_me_svg():
     # L4 (~101): "pgvector) with interactive ... (TypeScript, React, Next.js, Three.js)."
 
     vbox_w     = 920
-    font_size  = 19
-    line_h     = 28    # line height in px
-    top_pad    = 24    # first line y from box top
-    bot_pad    = 20    # padding below last line
+    font_size  = 17
+    line_h     = 26    # line height in px
+    top_pad    = 22    # first line y from box top
+    bot_pad    = 18    # padding below last line
     num_lines  = 4
 
-    box_height = top_pad + (num_lines - 1) * line_h + bot_pad   # 24+84+20 = 128
-    heading_y  = 22
-    box_top    = 36
-    svg_height = box_top + box_height + 2                        # 36+128+2 = 166
+    box_height = top_pad + (num_lines - 1) * line_h + bot_pad   # 22+78+18 = 118
+    heading_y  = 20
+    box_top    = 32
+    svg_height = box_top + box_height + 2                        # 32+118+2 = 152
 
     # line y positions (relative to the box group)
     y1 = top_pad
@@ -47,7 +47,7 @@ def generate_about_me_svg():
 
       .sh {{
         font-family: 'Caacupe One', cursive, sans-serif;
-        font-size: 20px;
+        font-size: 18px;
         font-weight: 400;
         letter-spacing: 1px;
         fill: #7ee787;
@@ -56,7 +56,7 @@ def generate_about_me_svg():
         font-family: 'Caacupe One', cursive, sans-serif;
         font-size: {font_size}px;
         font-weight: 400;
-        letter-spacing: 0.3px;
+        letter-spacing: 0.2px;
         fill: #e6edf3;
       }}
       .hi {{
@@ -90,7 +90,7 @@ def generate_about_me_svg():
 </svg>
 """
 
-    for fname in ["about-me.svg", "about-me-v2.svg", "about-me-v3.svg", "about-me-centered.svg", "about-me-justified.svg"]:
+    for fname in ["about-me.svg", "about-me-v2.svg", "about-me-v3.svg", "about-me-centered.svg", "about-me-justified.svg", "about-me-v5.svg"]:
         path = os.path.join(assets_dir, fname)
         with open(path, "w", encoding="utf-8") as f:
             f.write(svg_content)
