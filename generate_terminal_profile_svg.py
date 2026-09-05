@@ -16,15 +16,15 @@ def generate_terminal_svg():
     # Dimensions
     vbox_w = 920
     
-    # Terminal text lines
+    # Terminal text lines with XML-escaped ampersands
     term_lines = [
         ("Engineer:", '"Mohammed Sahil (@Arnim-Zola)"'),
-        ("Institution:", '"3rd Year B.E. Computer Science & Engineering @ DSATM (Class of 2028)"'),
+        ("Institution:", '"3rd Year B.E. Computer Science &amp; Engineering @ DSATM (Class of 2028)"'),
         ("Location:", '"Bengaluru, Karnataka, India"'),
         ("Target Roles:", '"Full-Stack AI Developer / GenAI Engineer • SDE"'),
-        ("Core Pillars:", '"DSA • OS & Systems • DBMS • Computer Networks • OOP"'),
+        ("Core Pillars:", '"DSA • OS &amp; Systems • DBMS • Computer Networks • OOP"'),
         ("Daily Drivers:", '"FastAPI, pgvector, OpenCV, Whisper RAG, Next.js 15, Docker"'),
-        ("Active Pursuits:", '"Competitive Hackathons, Research Papers, Problem Solving & Full-Stack Projects"')
+        ("Active Pursuits:", '"Competitive Hackathons, Research Papers, Problem Solving &amp; Full-Stack Projects"')
     ]
     
     # Build text rows
@@ -236,10 +236,11 @@ def generate_terminal_svg():
 </svg>
 """
 
-    out_path = os.path.join(assets_dir, "terminal-profile-torch.svg")
-    with open(out_path, "w", encoding="utf-8") as f:
-        f.write(svg_content)
-    print(f"Generated: {out_path}")
+    for fname in ["terminal-profile-torch.svg", "terminal-profile-v2.svg"]:
+        out_path = os.path.join(assets_dir, fname)
+        with open(out_path, "w", encoding="utf-8") as f:
+            f.write(svg_content)
+        print(f"Generated: {out_path}")
 
 if __name__ == "__main__":
     generate_terminal_svg()
