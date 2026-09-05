@@ -19,7 +19,7 @@
 
 ---
 
-<img src="assets/about-me-sleek-small.svg" alt="About Me &amp; Identity" width="100%" />
+<img src="assets/about-me-perfect.svg" alt="About Me &amp; Identity" width="100%" />
 
 ```yaml
 Terminal Profile:
