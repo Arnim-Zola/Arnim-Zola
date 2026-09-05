@@ -159,5 +159,5 @@ Open Source & Mentorship:
 
 <div align="center">
   <p><b>⚡ Engineered by Mohammed Sahil • 2nd Year CSE @ DSATM, Bengaluru ⚡</b></p>
-  <img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=39d353,26a641,006d32,0e4429,161b22,0d1117&height=90&section=footer" width="100%" />
+  <img src="https://capsule-render.vercel.app/api?type=rect&color=0:0d1117,50:238636,100:0d1117&height=4" width="100%" />
 </div>
