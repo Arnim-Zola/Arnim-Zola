@@ -17,9 +17,9 @@ def generate_architecture_matrix_svg():
     row_h = 102
     total_h = header_h + row_h * 5  # 48 + 510 = 558
 
-    col1_w = 224
-    col2_w = 490
-    col3_w = vbox_w - (col1_w + col2_w)  # 206
+    col1_w = 205
+    col2_w = 480
+    col3_w = vbox_w - (col1_w + col2_w)  # 235
     col2_x = col1_w
     col3_x = col1_w + col2_w
 
@@ -33,8 +33,8 @@ def generate_architecture_matrix_svg():
                 ('with rate-limit resilient retry fallbacks.',)
             ],
             "badges": [
-                [("FastAPI", 64), ("Celery", 56), ("Redis", 48)],
-                [("Asyncio", 60)]
+                [("FastAPI", 58), ("Celery", 52), ("Redis", 48)],
+                [("Asyncio", 58)]
             ]
         },
         {
@@ -46,7 +46,7 @@ def generate_architecture_matrix_svg():
             ],
             "badges": [
                 [("PostgreSQL", 78), ("pgvector", 64)],
-                [("HNSW", 52), ("Redis", 48)]
+                [("HNSW", 48), ("Redis", 48)]
             ]
         },
         {
@@ -57,8 +57,8 @@ def generate_architecture_matrix_svg():
                 ('LLM agents into an authenticity truth index.',)
             ],
             "badges": [
-                [("OpenCV", 62), ("Whisper", 62), ("EasyOCR", 62)],
-                [("Multi-Agent RAG", 108)]
+                [("OpenCV", 58), ("Whisper", 58), ("EasyOCR", 62)],
+                [("Multi-Agent RAG", 116)]
             ]
         },
         {
@@ -69,8 +69,8 @@ def generate_architecture_matrix_svg():
                 ('<tspan class="hi">shaders</tspan> at 60FPS alongside Web Audio API synthesis.',)
             ],
             "badges": [
-                [("Next.js 15", 70), ("React 19", 64)],
-                [("Three.js", 64), ("GLSL Shaders", 86)]
+                [("Next.js 15", 68), ("React 19", 62)],
+                [("Three.js", 62), ("GLSL Shaders", 86)]
             ]
         },
         {
@@ -81,8 +81,8 @@ def generate_architecture_matrix_svg():
                 ('into reproducible networks.',)
             ],
             "badges": [
-                [("Docker Compose", 98), ("Linux/Bash", 78)],
-                [("Nginx", 54), ("Git", 40)]
+                [("Docker Compose", 102), ("Linux/Bash", 78)],
+                [("Nginx", 50), ("Git", 38)]
             ]
         }
     ]
@@ -96,18 +96,18 @@ def generate_architecture_matrix_svg():
         # Pillar text (Col 1)
         p_lines = r["pillar"]
         if len(p_lines) == 1:
-            p_svg = f'<text x="24" y="{y_mid + 5}" class="pillar-text">{p_lines[0]}</text>'
+            p_svg = f'<text x="20" y="{y_mid + 5}" class="pillar-text">{p_lines[0]}</text>'
         else:
             p_y1 = y_mid - 8
             p_y2 = y_mid + 14
-            p_svg = f'<text x="24" y="{p_y1}" class="pillar-text">{p_lines[0]}</text>\n      <text x="24" y="{p_y2}" class="pillar-text">{p_lines[1]}</text>'
+            p_svg = f'<text x="20" y="{p_y1}" class="pillar-text">{p_lines[0]}</text>\n      <text x="20" y="{p_y2}" class="pillar-text">{p_lines[1]}</text>'
 
         # Desc lines (Col 2)
         desc_start_y = y_top + 28
         d_svg_list = []
         for d_idx, d_line in enumerate(r["desc"]):
             dy = desc_start_y + d_idx * 22
-            d_svg_list.append(f'<text x="{col2_x + 20}" y="{dy}" class="desc-text">{d_line[0]}</text>')
+            d_svg_list.append(f'<text x="{col2_x + 18}" y="{dy}" class="desc-text">{d_line[0]}</text>')
         desc_svg = "\n      ".join(d_svg_list)
 
         # Badges (Col 3)
@@ -116,13 +116,13 @@ def generate_architecture_matrix_svg():
         b_start_y = y_top + 26
         for b_row_idx, b_list in enumerate(badge_rows):
             by = b_start_y + b_row_idx * 34
-            bx = col3_x + 16
+            bx = col3_x + 12
             for label, bw in b_list:
                 badge_svg_list.append(f'''<g transform="translate({bx}, {by})">
         <rect width="{bw}" height="24" rx="6" class="badge-bg" />
         <text x="{bw/2}" y="16.5" class="badge-text">{label}</text>
       </g>''')
-                bx += bw + 8
+                bx += bw + 6
         badges_svg = "\n      ".join(badge_svg_list)
 
         rows_svg.append(f"""  <!-- Row {idx + 1} -->
@@ -224,10 +224,11 @@ def generate_architecture_matrix_svg():
 </svg>
 """
 
-    out_path = os.path.join(assets_dir, "architecture-matrix.svg")
-    with open(out_path, "w", encoding="utf-8") as f:
-        f.write(svg_content)
-    print(f"Generated: {out_path}")
+    for fname in ["architecture-matrix.svg", "architecture-matrix-v2.svg"]:
+        out_path = os.path.join(assets_dir, fname)
+        with open(out_path, "w", encoding="utf-8") as f:
+            f.write(svg_content)
+        print(f"Generated: {out_path}")
 
 if __name__ == "__main__":
     generate_architecture_matrix_svg()

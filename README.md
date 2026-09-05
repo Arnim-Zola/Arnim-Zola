@@ -23,7 +23,7 @@
 
 <img src="assets/terminal-profile-v9.svg" alt="Terminal Profile &amp; Cartoon Green Bookshelf Spotlight" width="100%" />
 
-<img src="assets/architecture-matrix.svg" alt="Architecture &amp; Integration Matrix" width="100%" />
+<img src="assets/architecture-matrix-v2.svg" alt="Architecture &amp; Integration Matrix" width="100%" />
 
 ---
 
