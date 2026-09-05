@@ -107,9 +107,8 @@ def generate_terminal_bookshelf_green_torch():
     
     for i, (k, v) in enumerate(term_lines):
         y = text_start_y + i * text_line_h
-        text_svg_list.append(f"""    <text y="{y}" class="t-line">
-      <tspan x="28" class="t-key">{k}</tspan>
-      <tspan x="180" class="t-val">{v}</tspan>
+        text_svg_list.append(f"""    <text x="28" y="{y}" class="t-line">
+      <tspan class="t-key">{k}</tspan> <tspan class="t-val">{v}</tspan>
     </text>""")
 
     text_content = "\n".join(text_svg_list)
@@ -216,7 +215,7 @@ def generate_terminal_bookshelf_green_torch():
 </svg>
 """
 
-    for fname in ["terminal-profile-bg-torch.svg", "terminal-profile-v3.svg", "terminal-profile-cartoon.svg", "terminal-profile-green-torch.svg", "terminal-profile-final.svg", "terminal-profile-v4.svg", "terminal-profile-v5.svg", "terminal-profile-v6.svg"]:
+    for fname in ["terminal-profile-bg-torch.svg", "terminal-profile-v3.svg", "terminal-profile-cartoon.svg", "terminal-profile-green-torch.svg", "terminal-profile-final.svg", "terminal-profile-v4.svg", "terminal-profile-v5.svg", "terminal-profile-v6.svg", "terminal-profile-v7.svg"]:
         out_path = os.path.join(assets_dir, fname)
         with open(out_path, "w", encoding="utf-8") as f:
             f.write(svg_content)
