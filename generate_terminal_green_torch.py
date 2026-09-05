@@ -71,6 +71,13 @@ def generate_terminal_bookshelf_green_torch():
 
     tier1 = make_shelf_books(8, 108)
     tier2 = make_shelf_books(122, 108)
+
+    # Ensure the book in the middle of tier 2 is short to create a deep dark shelf alcove for the cat eyes
+    for b in tier2:
+        if 430 <= b["x"] <= 460:
+            b["h"] = 55
+            b["y"] = 122 + (108 - 55)  # y = 175, leaving y: 122..174 (53px tall dark shadow gap)
+
     all_books = tier1 + tier2
 
     dark_rects = []
@@ -146,14 +153,14 @@ def generate_terminal_bookshelf_green_torch():
 
       @keyframes flashlight-circle {{
         0% {{ clip-path: circle(135px at -100px 30px); }}
-        35% {{ clip-path: circle(135px at 420px 140px); }}
-        39% {{ clip-path: circle(135px at 467px 178px); opacity: 1; }}
-        40% {{ clip-path: circle(135px at 467px 178px); opacity: 0; }}
-        41% {{ clip-path: circle(135px at 467px 178px); opacity: 1; }}
-        42% {{ clip-path: circle(135px at 467px 178px); opacity: 0; }}
-        54% {{ clip-path: circle(135px at 467px 178px); opacity: 0; }}
-        55% {{ clip-path: circle(135px at 467px 178px); opacity: 1; }}
-        59% {{ clip-path: circle(135px at 467px 178px); opacity: 1; }}
+        35% {{ clip-path: circle(135px at 380px 110px); }}
+        39% {{ clip-path: circle(135px at 450px 144px); opacity: 1; }}
+        40% {{ clip-path: circle(135px at 450px 144px); opacity: 0; }}
+        41% {{ clip-path: circle(135px at 450px 144px); opacity: 1; }}
+        42% {{ clip-path: circle(135px at 450px 144px); opacity: 0; }}
+        54% {{ clip-path: circle(135px at 450px 144px); opacity: 0; }}
+        55% {{ clip-path: circle(135px at 450px 144px); opacity: 1; }}
+        59% {{ clip-path: circle(135px at 450px 144px); opacity: 1; }}
         64% {{ clip-path: circle(135px at 320px 80px); }}
         68% {{ clip-path: circle(135px at 720px 130px); }}
         72% {{ clip-path: circle(135px at 560px 120px); }}
@@ -170,7 +177,7 @@ def generate_terminal_bookshelf_green_torch():
       }}
 
       .bg-spooky-eyes {{
-        transform-origin: 467px 178px;
+        transform-origin: 450px 144px;
         animation: bg-eyes 20s infinite;
       }}
     </style>
@@ -197,10 +204,10 @@ def generate_terminal_bookshelf_green_torch():
     {color_books_svg}
   </g>
 
-  <!-- Cat Eyes Hidden on Lower Shelf (Above Stacked Books) -->
+  <!-- Cat Eyes Peering Out of Dark Shelf Alcove -->
   <g class="bg-spooky-eyes">
-    <ellipse cx="460" cy="178" rx="4.5" ry="3.5" fill="#fff" />
-    <ellipse cx="474" cy="178" rx="4.5" ry="3.5" fill="#fff" />
+    <ellipse cx="444" cy="144" rx="4.5" ry="3.5" fill="#fff" />
+    <ellipse cx="456" cy="144" rx="4.5" ry="3.5" fill="#fff" />
   </g>
 
   <!-- Header Title -->
