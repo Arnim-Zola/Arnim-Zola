@@ -123,21 +123,27 @@ def generate_terminal_bookshelf_green_torch():
         font-size: 18px;
         font-weight: 400;
         letter-spacing: 0.8px;
-        fill: #7ee787;
-        filter: drop-shadow(0 1px 3px rgba(0,0,0,0.95));
+        fill: #00ff66;
+        paint-order: stroke fill;
+        stroke: #040906;
+        stroke-width: 4px;
+        stroke-linejoin: round;
       }}
       .t-line {{
         font-family: 'Caacupe One', cursive, sans-serif;
         font-size: 16px;
         font-weight: 400;
         letter-spacing: 0.2px;
-        filter: drop-shadow(0 1px 3px rgba(0,0,0,0.95));
+        paint-order: stroke fill;
+        stroke: #040906;
+        stroke-width: 4px;
+        stroke-linejoin: round;
       }}
       .t-key {{
-        fill: #39d353;
+        fill: #00ff66;
       }}
       .t-val {{
-        fill: #e6edf3;
+        fill: #ffffff;
       }}
 
       /* CSS Flashlight Animation directly on the layer with clip-path (Uiverse.io standard) */
@@ -215,7 +221,7 @@ def generate_terminal_bookshelf_green_torch():
 </svg>
 """
 
-    for fname in ["terminal-profile-bg-torch.svg", "terminal-profile-v3.svg", "terminal-profile-cartoon.svg", "terminal-profile-green-torch.svg", "terminal-profile-final.svg", "terminal-profile-v4.svg", "terminal-profile-v5.svg", "terminal-profile-v6.svg", "terminal-profile-v7.svg", "terminal-profile-v8.svg"]:
+    for fname in ["terminal-profile-bg-torch.svg", "terminal-profile-v3.svg", "terminal-profile-cartoon.svg", "terminal-profile-green-torch.svg", "terminal-profile-final.svg", "terminal-profile-v4.svg", "terminal-profile-v5.svg", "terminal-profile-v6.svg", "terminal-profile-v7.svg", "terminal-profile-v8.svg", "terminal-profile-v9.svg"]:
         out_path = os.path.join(assets_dir, fname)
         with open(out_path, "w", encoding="utf-8") as f:
             f.write(svg_content)

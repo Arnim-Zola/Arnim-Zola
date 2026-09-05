@@ -13,21 +13,27 @@
         font-size: 18px;
         font-weight: 400;
         letter-spacing: 0.8px;
-        fill: #7ee787;
-        filter: drop-shadow(0 1px 3px rgba(0,0,0,0.95));
+        fill: #00ff66;
+        paint-order: stroke fill;
+        stroke: #040906;
+        stroke-width: 4px;
+        stroke-linejoin: round;
       }
       .t-line {
         font-family: 'Caacupe One', cursive, sans-serif;
         font-size: 16px;
         font-weight: 400;
         letter-spacing: 0.2px;
-        filter: drop-shadow(0 1px 3px rgba(0,0,0,0.95));
+        paint-order: stroke fill;
+        stroke: #040906;
+        stroke-width: 4px;
+        stroke-linejoin: round;
       }
       .t-key {
-        fill: #39d353;
+        fill: #00ff66;
       }
       .t-val {
-        fill: #e6edf3;
+        fill: #ffffff;
       }
 
       /* CSS Flashlight Animation directly on the layer with clip-path (Uiverse.io standard) */
