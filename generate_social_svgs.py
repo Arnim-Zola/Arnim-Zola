@@ -1,24 +1,24 @@
 import os
 
-def generate_v5_svgs():
+def generate_v6_svgs():
     assets_dir = r"c:\Holidays\Arnim-Zola\assets"
     os.makedirs(assets_dir, exist_ok=True)
 
-    # LinkedIn SVG v5
+    # LinkedIn SVG v6 - Symmetrically centered text + icon combo
     linkedin_svg = """<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 165 42" width="165" height="42">
   <defs>
-    <linearGradient id="bgGradIn5" x1="0%" y1="0%" x2="100%" y2="100%">
+    <linearGradient id="bgGradIn6" x1="0%" y1="0%" x2="100%" y2="100%">
       <stop offset="0%" stop-color="#238636"/>
       <stop offset="100%" stop-color="#1a6328"/>
     </linearGradient>
-    <clipPath id="btnClipIn5">
+    <clipPath id="btnClipIn6">
       <rect x="1" y="1" width="163" height="40" rx="20" ry="20"/>
     </clipPath>
   </defs>
 
   <style>
     .pill-bg {
-      fill: url(#bgGradIn5);
+      fill: url(#bgGradIn6);
       stroke: #39d353;
       stroke-width: 2;
       rx: 20;
@@ -80,15 +80,15 @@ def generate_v5_svgs():
     @keyframes iconWatermarkIn {
       0%, 40% {
         opacity: 1;
-        transform: translate(126px, 21px) scale(1);
+        transform: translate(122px, 21px) scale(1);
       }
       48%, 90% {
         opacity: 0.15;
-        transform: translate(132px, 21px) scale(3.2);
+        transform: translate(130px, 21px) scale(3.2);
       }
       96%, 100% {
         opacity: 1;
-        transform: translate(126px, 21px) scale(1);
+        transform: translate(122px, 21px) scale(1);
       }
     }
 
@@ -112,38 +112,38 @@ def generate_v5_svgs():
   <rect x="1" y="1" width="163" height="40" class="pill-bg"/>
 
   <!-- Clipped Interactive Content -->
-  <g clip-path="url(#btnClipIn5)">
-    <!-- Right-Side Icon anchored at (126, 21) -->
-    <g class="icon-anim" transform="translate(126, 21)">
+  <g clip-path="url(#btnClipIn6)">
+    <!-- Right-Side Icon centered at (122, 21) -->
+    <g class="icon-anim" transform="translate(122, 21)">
       <svg x="-8" y="-8" width="16" height="16" viewBox="0 0 24 24" fill="#ffffff">
         <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
       </svg>
     </g>
 
-    <!-- Resting State: LINKEDIN on left -->
-    <text x="62" y="21.5" class="label text-resting">LINKEDIN</text>
+    <!-- Resting State: LINKEDIN centered at x=70 (combo spans 36 to 130) -->
+    <text x="70" y="21.5" class="label text-resting">LINKEDIN</text>
 
-    <!-- Hovered State: CONNECT perfectly centered -->
+    <!-- Hovered State: CONNECT perfectly centered in the 165px pill -->
     <text x="82.5" y="21.5" class="label text-hovered">CONNECT</text>
   </g>
 </svg>
 """
 
-    # Email SVG v5
+    # Email SVG v6 - Symmetrically centered text + icon combo
     email_svg = """<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 165 42" width="165" height="42">
   <defs>
-    <linearGradient id="bgGradMail5" x1="0%" y1="0%" x2="100%" y2="100%">
+    <linearGradient id="bgGradMail6" x1="0%" y1="0%" x2="100%" y2="100%">
       <stop offset="0%" stop-color="#238636"/>
       <stop offset="100%" stop-color="#1a6328"/>
     </linearGradient>
-    <clipPath id="btnClipMail5">
+    <clipPath id="btnClipMail6">
       <rect x="1" y="1" width="163" height="40" rx="20" ry="20"/>
     </clipPath>
   </defs>
 
   <style>
     .pill-bg {
-      fill: url(#bgGradMail5);
+      fill: url(#bgGradMail6);
       stroke: #39d353;
       stroke-width: 2;
       rx: 20;
@@ -205,15 +205,15 @@ def generate_v5_svgs():
     @keyframes iconWatermarkMail {
       0%, 40% {
         opacity: 1;
-        transform: translate(126px, 21px) scale(1);
+        transform: translate(110px, 21px) scale(1);
       }
       48%, 90% {
         opacity: 0.15;
-        transform: translate(132px, 21px) scale(3.2);
+        transform: translate(122px, 21px) scale(3.2);
       }
       96%, 100% {
         opacity: 1;
-        transform: translate(126px, 21px) scale(1);
+        transform: translate(110px, 21px) scale(1);
       }
     }
 
@@ -237,31 +237,31 @@ def generate_v5_svgs():
   <rect x="1" y="1" width="163" height="40" class="pill-bg"/>
 
   <!-- Clipped Interactive Content -->
-  <g clip-path="url(#btnClipMail5)">
-    <!-- Right-Side Icon anchored at (126, 21) -->
-    <g class="icon-anim" transform="translate(126, 21)">
+  <g clip-path="url(#btnClipMail6)">
+    <!-- Right-Side Icon centered at (110, 21) -->
+    <g class="icon-anim" transform="translate(110, 21)">
       <svg x="-8" y="-8" width="16" height="16" viewBox="0 0 24 24" fill="#ffffff">
         <path d="M24 5.457v13.909c0 .904-.732 1.636-1.636 1.636h-3.819V11.73L12 16.64l-6.545-4.91v9.273H1.636A1.636 1.636 0 0 1 0 19.366V5.457c0-2.023 2.309-3.178 3.927-1.964L5.455 4.64 12 9.548l6.545-4.91 1.528-1.145C21.69 2.28 24 3.434 24 5.457z"/>
       </svg>
     </g>
 
-    <!-- Resting State: EMAIL on left -->
-    <text x="62" y="21.5" class="label text-resting">EMAIL</text>
+    <!-- Resting State: EMAIL centered at x=70 (combo spans 48 to 118, center is 83) -->
+    <text x="70" y="21.5" class="label text-resting">EMAIL</text>
 
-    <!-- Hovered State: SEND MAIL perfectly centered -->
+    <!-- Hovered State: SEND MAIL perfectly centered in the 165px pill -->
     <text x="82.5" y="21.5" class="label text-hovered">SEND MAIL</text>
   </g>
 </svg>
 """
 
     for fname, content in [("btn-linkedin.svg", linkedin_svg), 
-                           ("btn-linkedin-v5.svg", linkedin_svg),
+                           ("btn-linkedin-v6.svg", linkedin_svg),
                            ("btn-email.svg", email_svg), 
-                           ("btn-email-v5.svg", email_svg)]:
+                           ("btn-email-v6.svg", email_svg)]:
         with open(os.path.join(assets_dir, fname), "w", encoding="utf-8") as f:
             f.write(content)
 
-    print("Created v5 SVGs with rock-solid right-side icon anchor and centered hover text!")
+    print("Created v6 SVGs with mathematically balanced centering for text and icons!")
 
 if __name__ == "__main__":
-    generate_v5_svgs()
+    generate_v6_svgs()
