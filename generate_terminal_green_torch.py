@@ -15,7 +15,7 @@ def generate_terminal_bookshelf_green_torch():
 
     # Dimensions
     vbox_w = 920
-    vbox_h = 240
+    vbox_h = 264
     
     # Rich palette of different shades of green (from bright neon lime to deep forest emerald)
     green_shades = [
@@ -69,8 +69,8 @@ def generate_terminal_bookshelf_green_torch():
                 cur_x += b_w + random.choice([2, 3, 4, 5])
         return books
 
-    tier1 = make_shelf_books(8, 108)
-    tier2_raw = make_shelf_books(122, 108)
+    tier1 = make_shelf_books(8, 118)
+    tier2_raw = make_shelf_books(134, 118)
 
     # Leave an authentic, pure dark empty shelf gap between x=440 and x=496 (no books) for the cat to lurk in
     tier2 = [b for b in tier2_raw if not (440 <= b["x"] <= 496 or 440 <= b["x"] + b.get("w", 0) <= 496)]
@@ -101,8 +101,8 @@ def generate_terminal_bookshelf_green_torch():
         ("Active Pursuits:", '"Competitive Hackathons, Research Papers, Problem Solving &amp; Full-Stack Projects"')
     ]
 
-    text_start_y = 56
-    text_line_h = 25
+    text_start_y = 60
+    text_line_h = 27
     text_svg_list = []
     
     for i, (k, v) in enumerate(term_lines):
@@ -120,7 +120,7 @@ def generate_terminal_bookshelf_green_torch():
 
       .t-title {{
         font-family: 'Caacupe One', cursive, sans-serif;
-        font-size: 16px;
+        font-size: 18px;
         font-weight: 700;
         letter-spacing: 0.5px;
         fill: #00ff66;
@@ -128,7 +128,7 @@ def generate_terminal_bookshelf_green_torch():
       }}
       .t-line {{
         font-family: 'Caacupe One', cursive, sans-serif;
-        font-size: 14.5px;
+        font-size: 16.5px;
         font-weight: 400;
         letter-spacing: 0.3px;
         filter: drop-shadow(0 2px 5px rgba(0,0,0,0.95)) drop-shadow(0 1px 2px rgba(0,0,0,1));
@@ -144,25 +144,25 @@ def generate_terminal_bookshelf_green_torch():
 
       /* CSS Flashlight Animation directly on the layer with clip-path (Uiverse.io standard) */
       .torch-lit-layer {{
-        clip-path: circle(135px at -100px 30px);
+        clip-path: circle(145px at -100px 30px);
         animation: flashlight-circle 20s ease-in-out infinite;
       }}
 
       @keyframes flashlight-circle {{
-        0% {{ clip-path: circle(135px at -100px 30px); }}
-        35% {{ clip-path: circle(135px at 390px 120px); }}
-        39% {{ clip-path: circle(135px at 468px 175px); opacity: 1; }}
-        40% {{ clip-path: circle(135px at 468px 175px); opacity: 0; }}
-        41% {{ clip-path: circle(135px at 468px 175px); opacity: 1; }}
-        42% {{ clip-path: circle(135px at 468px 175px); opacity: 0; }}
-        54% {{ clip-path: circle(135px at 468px 175px); opacity: 0; }}
-        55% {{ clip-path: circle(135px at 468px 175px); opacity: 1; }}
-        59% {{ clip-path: circle(135px at 468px 175px); opacity: 1; }}
-        64% {{ clip-path: circle(135px at 320px 80px); }}
-        68% {{ clip-path: circle(135px at 720px 130px); }}
-        72% {{ clip-path: circle(135px at 560px 120px); }}
-        75% {{ clip-path: circle(135px at 560px 120px); }}
-        100% {{ clip-path: circle(135px at 1050px 60px); }}
+        0% {{ clip-path: circle(145px at -100px 30px); }}
+        35% {{ clip-path: circle(145px at 390px 120px); }}
+        39% {{ clip-path: circle(145px at 468px 188px); opacity: 1; }}
+        40% {{ clip-path: circle(145px at 468px 188px); opacity: 0; }}
+        41% {{ clip-path: circle(145px at 468px 188px); opacity: 1; }}
+        42% {{ clip-path: circle(145px at 468px 188px); opacity: 0; }}
+        54% {{ clip-path: circle(145px at 468px 188px); opacity: 0; }}
+        55% {{ clip-path: circle(145px at 468px 188px); opacity: 1; }}
+        59% {{ clip-path: circle(145px at 468px 188px); opacity: 1; }}
+        64% {{ clip-path: circle(145px at 320px 80px); }}
+        68% {{ clip-path: circle(145px at 720px 130px); }}
+        72% {{ clip-path: circle(145px at 560px 120px); }}
+        75% {{ clip-path: circle(145px at 560px 120px); }}
+        100% {{ clip-path: circle(145px at 1050px 60px); }}
       }}
 
       @keyframes bg-eyes {{
@@ -174,7 +174,7 @@ def generate_terminal_bookshelf_green_torch():
       }}
 
       .bg-spooky-eyes {{
-        transform-origin: 468px 175px;
+        transform-origin: 468px 188px;
         animation: bg-eyes 20s infinite;
       }}
     </style>
@@ -184,8 +184,8 @@ def generate_terminal_bookshelf_green_torch():
   <rect x="0" y="0" width="{vbox_w}" height="{vbox_h}" rx="10" fill="#040906" stroke="rgba(0,255,102,0.4)" stroke-width="1.5" />
 
   <!-- Shelves Structure -->
-  <rect x="6" y="115" width="{vbox_w - 12}" height="6" rx="1" fill="#07120a" stroke="#0f2615" stroke-width="1" />
-  <rect x="6" y="230" width="{vbox_w - 12}" height="6" rx="1" fill="#07120a" stroke="#0f2615" stroke-width="1" />
+  <rect x="6" y="127" width="{vbox_w - 12}" height="6" rx="1" fill="#07120a" stroke="#0f2615" stroke-width="1" />
+  <rect x="6" y="254" width="{vbox_w - 12}" height="6" rx="1" fill="#07120a" stroke="#0f2615" stroke-width="1" />
 
   <!-- Layer 1: Dark Bookshelf in Shadow -->
   <g>
@@ -196,19 +196,19 @@ def generate_terminal_bookshelf_green_torch():
   <g class="torch-lit-layer">
     <!-- Green background light fill inside the circle -->
     <rect x="0" y="0" width="{vbox_w}" height="{vbox_h}" fill="#04180c" />
-    <rect x="6" y="115" width="{vbox_w - 12}" height="6" rx="1" fill="#143d20" stroke="#00ff66" stroke-width="0.5" />
-    <rect x="6" y="230" width="{vbox_w - 12}" height="6" rx="1" fill="#143d20" stroke="#00ff66" stroke-width="0.5" />
+    <rect x="6" y="127" width="{vbox_w - 12}" height="6" rx="1" fill="#143d20" stroke="#00ff66" stroke-width="0.5" />
+    <rect x="6" y="254" width="{vbox_w - 12}" height="6" rx="1" fill="#143d20" stroke="#00ff66" stroke-width="0.5" />
     {color_books_svg}
   </g>
 
   <!-- Cat Eyes Peering Out of the Dark Shelf Void -->
   <g class="bg-spooky-eyes">
-    <ellipse cx="461" cy="175" rx="4.5" ry="3.5" fill="#fff" />
-    <ellipse cx="475" cy="175" rx="4.5" ry="3.5" fill="#fff" />
+    <ellipse cx="461" cy="188" rx="4.5" ry="3.5" fill="#fff" />
+    <ellipse cx="475" cy="188" rx="4.5" ry="3.5" fill="#fff" />
   </g>
 
   <!-- Header Title -->
-  <text x="28" y="28" class="t-title">Terminal Profile:</text>
+  <text x="28" y="30" class="t-title">Terminal Profile:</text>
 
   <!-- Terminal Text Floating Directly Over the Bookshelf -->
   <g>
