@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 170 42" width="170" height="42">
+  <defs>
+    <linearGradient id="bgGradMail" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#238636"/>
+      <stop offset="100%" stop-color="#1a6328"/>
+    </linearGradient>
+    <linearGradient id="borderGradMail" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#39d353">
+        <animate attributeName="stop-color" values="#39d353;#00ff66;#39d353" dur="3s repeatCount="indefinite""/>
+      </stop>
+      <stop offset="100%" stop-color="#00ff66">
+        <animate attributeName="stop-color" values="#00ff66;#39d353;#00ff66" dur="3s" repeatCount="indefinite"/>
+      </stop>
+    </linearGradient>
+  </defs>
+
+  <style>
+    .btn-pill {
+      fill: url(#bgGradMail);
+      stroke: url(#borderGradMail);
+      stroke-width: 1.5;
+      rx: 21;
+      ry: 21;
+    }
+    .btn-text {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Space Grotesk", Roboto, sans-serif;
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 1.5px;
+      fill: #ffffff;
+      text-anchor: middle;
+      dominant-baseline: central;
+    }
+    .btn-icon {
+      fill: #ffffff;
+    }
+    .shimmer {
+      opacity: 0.12;
+      animation: sweep 4s ease-in-out infinite;
+    }
+    @keyframes sweep {
+      0%, 100% { opacity: 0.08; transform: translateX(-50px); }
+      50% { opacity: 0.25; transform: translateX(50px); }
+    }
+  </style>
+
+  <!-- Button Pill Background -->
+  <rect x="2" y="2" width="166" height="38" class="btn-pill"/>
+
+  <!-- Subtle Internal Glow Shimmer -->
+  <ellipse cx="85" cy="21" rx="60" ry="14" fill="#39d353" class="shimmer"/>
+
+  <!-- Content Group: Icon + Text -->
+  <g transform="translate(24, 13)">
+    <!-- Email Envelope Icon (16x16) -->
+    <path class="btn-icon" d="M16 3.638V12.91C16 13.513 15.513 14 14.91 14H12.363V7.82L8 11.093L3.636 7.82V14H1.09C0.487 14 0 13.513 0 12.91V3.638C0 2.29 1.54 1.52 2.618 2.329L3.636 3.093L8 6.365L12.364 3.093L13.382 2.33C14.46 1.52 16 2.29 16 3.638Z"/>
+  </g>
+
+  <!-- Text -->
+  <text x="96" y="22" class="btn-text">EMAIL</text>
+</svg>
