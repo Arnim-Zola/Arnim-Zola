@@ -19,7 +19,10 @@
 
 ---
 
-<img src="assets/about-me-v6.svg" alt="About Me &amp; Identity" width="100%" />
+### ABOUT ME &amp; IDENTITY
+
+> I am a 3rd-year Computer Science &amp; Engineering undergraduate at **DSATM, Bengaluru (Class of 2028)**, building at the intersection of **core CS systems (DSA, OS, DBMS, Networks)** and **production-grade GenAI &amp; Full-Stack engineering**. My work bridges resilient, low-latency agentic workflows (**FastAPI, Celery, Redis, pgvector**) with interactive, high-performance web applications (**TypeScript, React, Next.js, Three.js**).
+
 
 ```yaml
 Terminal Profile:
