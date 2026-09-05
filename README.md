@@ -29,7 +29,7 @@ Terminal Profile:
   Target Roles:    "Full-Stack AI Developer / GenAI Engineer • SDE"
   Core Pillars:    "DSA • OS & Systems • DBMS • Computer Networks • OOP"
   Daily Drivers:   "FastAPI, pgvector, OpenCV, Whisper RAG, Next.js 15, Docker"
-  Active Pursuits: "Competitive Hackathons & Codeathons, Research Papers, Problem Solving & Full-Stack Projects"
+  Active Pursuits: "Competitive Hackathons, Research Papers, Problem Solving & Full-Stack Projects"
 ```
 
 | Pillar & Domain | Real-World Architecture & Integration (Eden & Portfolio) | Core Stack |
