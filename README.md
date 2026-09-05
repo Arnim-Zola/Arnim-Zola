@@ -42,6 +42,12 @@ Terminal Profile:
 
 ---
 
+### 📚 MIDNIGHT ARCHIVES &amp; RESEARCH VAULT
+
+<img src="assets/bookshelf-torch.svg" alt="Midnight Archives &amp; Research Vault • Flashlight Radar" width="100%" />
+
+---
+
 ### PRIMARY FLAGSHIP: EDEN (Autonomous Misinformation Analysis Engine)
 
 <div align="center">
