@@ -23,13 +23,7 @@
 
 <img src="assets/terminal-profile-v9.svg" alt="Terminal Profile &amp; Cartoon Green Bookshelf Spotlight" width="100%" />
 
-| Pillar & Domain | Real-World Architecture & Integration (Eden & Portfolio) | Core Stack |
-| :--- | :--- | :--- |
-| **Distributed Systems & Async Tasks** | In **Eden**, video ingestion and frame extraction are offloaded to asynchronous background worker pools via **Celery + Redis**, preventing HTTP server bottlenecks with rate-limit resilient retry fallbacks. | `FastAPI` `Celery` `Redis` `Asyncio` |
-| **Relational & Vector Search Architecture** | In **Eden**, forensic claims are embedded and indexed in **PostgreSQL (pgvector)** using **HNSW graphs** for sub-120ms nearest-neighbor retrieval, paired with **Redis** caching for high-frequency queries. | `PostgreSQL` `pgvector (HNSW)` `Redis` |
-| **Multimodal Perception & Fact RAG** | In **Eden**, parallel streams demux visual frames (**OpenCV**) for OCR scanning and audio (**OpenAI Whisper**) for speech transcription, synthesized by deep reasoning LLM agents into an authenticity truth index. | `OpenCV` `Whisper` `EasyOCR` `Multi-Agent RAG` |
-| **Full-Stack & 60FPS 3D WebGL** | In **Quantum OS** *(In Progress / Active Build)*, architecting an interactive cyberpunk terminal portfolio with **Next.js 15** and **Three.js**, running custom GPU **GLSL fragment shaders** at 60FPS alongside Web Audio API synthesis. | `Next.js 15` `React 19` `Three.js` `GLSL Shaders` |
-| **Containerization & Multi-Service Infra** | Orchestrated the full multi-service architecture with **Docker Compose**, isolating FastAPI/Django API layers, Celery workers, Redis brokers, and React frontends into reproducible networks. | `Docker Compose` `Linux/Bash` `Nginx` `Git` |
+<img src="assets/architecture-matrix.svg" alt="Architecture &amp; Integration Matrix" width="100%" />
 
 ---
 
