@@ -26,10 +26,10 @@ Terminal Profile:
   Engineer:        "Mohammed Sahil (@Arnim-Zola)"
   Institution:     "3rd Year B.E. Computer Science & Engineering @ DSATM (Class of 2028)"
   Location:        "Bengaluru, Karnataka, India"
-  Target Roles:    "Full-Stack AI Developer / GenAI Engineer • Software Development Engineer (SDE)"
+  Target Roles:    "Full-Stack AI Developer / GenAI Engineer • SDE"
   Core Pillars:    "DSA • OS & Systems • DBMS • Computer Networks • OOP"
-  Daily Drivers:   "FastAPI (Celery/Redis Tasks), pgvector (HNSW), OpenCV + Whisper RAG, Next.js 15 (Three.js WebGL), Docker Compose"
-  Active Pursuits: "Competitive Hackathons & Codeathons, Research Papers, Daily Problem Solving & Full-Stack Projects"
+  Daily Drivers:   "FastAPI (Celery/Redis), pgvector (HNSW), OpenCV + Whisper RAG, Next.js 15 (Three.js WebGL), Docker"
+  Active Pursuits: "Competitive Hackathons & Codeathons, Research Papers, Problem Solving & Full-Stack Projects"
 ```
 
 | Pillar & Domain | Real-World Architecture & Integration (Eden & Portfolio) | Core Stack |
