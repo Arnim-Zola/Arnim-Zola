@@ -22,17 +22,17 @@ def generate_about_me_svg():
     # L3 (~104): "Full-Stack engineering. My work bridges ... (FastAPI, Celery, Redis,"
     # L4 (~101): "pgvector) with interactive ... (TypeScript, React, Next.js, Three.js)."
 
-    vbox_w     = 920
-    font_size  = 15
-    line_h     = 23    # line height in px
-    top_pad    = 20    # first line y from box top
-    bot_pad    = 16    # padding below last line
+    vbox_w     = 1200
+    font_size  = 18.5
+    line_h     = 30    # line height in px
+    top_pad    = 26    # first line y from box top
+    bot_pad    = 22    # padding below last line
     num_lines  = 3
 
-    box_height = top_pad + (num_lines - 1) * line_h + bot_pad   # 20+46+16 = 82
-    heading_y  = 17
-    box_top    = 28
-    svg_height = box_top + box_height + 2                        # 28+82+2 = 112
+    box_height = top_pad + (num_lines - 1) * line_h + bot_pad   # 26+60+22 = 108
+    heading_y  = 22
+    box_top    = 36
+    svg_height = box_top + box_height + 2                        # 36+108+2 = 146
 
     # line y positions (relative to the box group)
     y1 = top_pad
@@ -46,7 +46,7 @@ def generate_about_me_svg():
 
       .sh {{
         font-family: 'Caacupe One', cursive, sans-serif;
-        font-size: 16px;
+        font-size: 19px;
         font-weight: 400;
         letter-spacing: 1px;
         fill: #7ee787;
@@ -75,18 +75,18 @@ def generate_about_me_svg():
     <rect x="0" y="0" width="4" height="{box_height}" rx="2" ry="2" fill="#39d353"/>
 
     <!-- Line 1 (137 chars, justified) -->
-    <text x="20" y="{y1}" textLength="880" lengthAdjust="spacing" class="bt"><tspan>I am a 3rd-year Computer Science &amp; Engineering undergraduate at </tspan><tspan class="hi">DSATM, Bengaluru (Class of 2028)</tspan><tspan>, building at the intersection of </tspan><tspan class="hi">core CS</tspan></text>
+    <text x="20" y="{y1}" textLength="1160" lengthAdjust="spacing" class="bt"><tspan>I am a 3rd-year Computer Science &amp; Engineering undergraduate at </tspan><tspan class="hi">DSATM, Bengaluru (Class of 2028)</tspan><tspan>, building at the intersection of </tspan><tspan class="hi">core CS</tspan></text>
 
     <!-- Line 2 (133 chars, justified) -->
-    <text x="20" y="{y2}" textLength="880" lengthAdjust="spacing" class="bt"><tspan class="hi">systems (DSA, OS, DBMS, Networks)</tspan><tspan> and </tspan><tspan class="hi">production-grade GenAI &amp; Full-Stack engineering</tspan><tspan>. My work bridges resilient, low-latency agentic</tspan></text>
+    <text x="20" y="{y2}" textLength="1160" lengthAdjust="spacing" class="bt"><tspan class="hi">systems (DSA, OS, DBMS, Networks)</tspan><tspan> and </tspan><tspan class="hi">production-grade GenAI &amp; Full-Stack engineering</tspan><tspan>. My work bridges resilient, low-latency agentic</tspan></text>
 
     <!-- Line 3 (136 chars, justified) -->
-    <text x="20" y="{y3}" textLength="880" lengthAdjust="spacing" class="bt"><tspan>workflows (</tspan><tspan class="hi">FastAPI, Celery, Redis, pgvector</tspan><tspan>) with interactive, high-performance web applications (</tspan><tspan class="hi">TypeScript, React, Next.js, Three.js</tspan><tspan>).</tspan></text>
+    <text x="20" y="{y3}" textLength="1160" lengthAdjust="spacing" class="bt"><tspan>workflows (</tspan><tspan class="hi">FastAPI, Celery, Redis, pgvector</tspan><tspan>) with interactive, high-performance web applications (</tspan><tspan class="hi">TypeScript, React, Next.js, Three.js</tspan><tspan>).</tspan></text>
   </g>
 </svg>
 """
 
-    for fname in ["about-me.svg", "about-me-v2.svg", "about-me-v3.svg", "about-me-centered.svg", "about-me-justified.svg", "about-me-v5.svg", "about-me-v6.svg", "about-me-justified-final.svg", "about-me-compact.svg"]:
+    for fname in ["about-me.svg", "about-me-v2.svg", "about-me-v3.svg", "about-me-centered.svg", "about-me-justified.svg", "about-me-v5.svg", "about-me-v6.svg", "about-me-justified-final.svg", "about-me-compact.svg", "about-me-sleek-small.svg"]:
         path = os.path.join(assets_dir, fname)
         with open(path, "w", encoding="utf-8") as f:
             f.write(svg_content)
