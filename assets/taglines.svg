@@ -1,0 +1,1568 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 76" width="100%" height="76" fill="none">
+  <defs>
+    <style>
+      <![CDATA[
+      @font-face {
+        font-family: 'Caacupe One';
+        font-style: normal;
+        font-weight: 400;
+        src: url(data:font/woff2;charset=utf-8;base64,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) format('woff2');
+      }
+
+      .tagline text {
+        font-family: 'Caacupe One', cursive, sans-serif;
+        font-size: 36.0px;
+        font-weight: 400;
+        fill: #FFFFFF;
+        letter-spacing: 1.8px;
+      }
+      ]]>
+    </style>
+    <clipPath id="iris-0-0">
+      <circle cx="188.0" cy="39.0" r="0">
+        <animate attributeName="r" values="0;0;54;54;0;0" keyTimes="0.00000;0.00429;0.01286;0.12929;0.13714;1.00000" dur="28.0s" repeatCount="indefinite" />
+      </circle>
+    </clipPath>
+    <clipPath id="iris-0-1">
+      <circle cx="200.5" cy="39.0" r="0">
+        <animate attributeName="r" values="0;0;54;54;0;0" keyTimes="0.00000;0.00486;0.01343;0.12957;0.13743;1.00000" dur="28.0s" repeatCount="indefinite" />
+      </circle>
+    </clipPath>
+    <clipPath id="iris-0-2">
+      <circle cx="211.0" cy="39.0" r="0">
+        <animate attributeName="r" values="0;0;54;54;0;0" keyTimes="0.00000;0.00543;0.01400;0.12986;0.13771;1.00000" dur="28.0s" repeatCount="indefinite" />
+      </circle>
+    </clipPath>
+    <clipPath id="iris-0-3">
+      <circle cx="223.0" cy="39.0" r="0">
+        <animate attributeName="r" values="0;0;54;54;0;0" keyTimes="0.00000;0.00600;0.01457;0.13014;0.13800;1.00000" dur="28.0s" repeatCount="indefinite" />
+      </circle>
+    </clipPath>
+    <clipPath id="iris-0-4">
+      <circle cx="233.5" cy="39.0" r="0">
+        <animate attributeName="r" values="0;0;54;54;0;0" keyTimes="0.00000;0.00657;0.01514;0.13043;0.13829;1.00000" dur="28.0s" repeatCount="indefinite" />
+      </circle>
+    </clipPath>
+    <clipPath id="iris-0-5">
+      <circle cx="241.5" cy="39.0" r="0">
+        <animate attributeName="r" values="0;0;54;54;0;0" keyTimes="0.00000;0.00714;0.01571;0.13071;0.13857;1.00000" dur="28.0s" repeatCount="indefinite" />
+      </circle>
+    </clipPath>
+    <clipPath id="iris-0-6">
+      <circle cx="252.5" cy="39.0" r="0">
+        <animate attributeName="r" values="0;0;54;54;0;0" keyTimes="0.00000;0.00771;0.01629;0.13100;0.13886;1.00000" dur="28.0s" repeatCount="indefinite" />
+      </circle>
+    </clipPath>
+    <clipPath id="iris-0-7">
+      <circle cx="264.5" cy="39.0" r="0">
+        <animate attributeName="r" values="0;0;54;54;0;0" keyTimes="0.00000;0.00829;0.01686;0.13129;0.13914;1.00000" dur="28.0s" repeatCount="indefinite" />
+      </circle>
+    </clipPath>
+    <clipPath id="iris-0-8">
+      <circle cx="274.5" cy="39.0" r="0">
+        <animate attributeName="r" values="0;0;54;54;0;0" keyTimes="0.00000;0.00886;0.01743;0.13157;0.13943;1.00000" dur="28.0s" repeatCount="indefinite" />
+      </circle>
+    </clipPath>
+    <clipPath id="iris-0-9">
+      <circle cx="282.5" cy="39.0" r="0">
+        <animate attributeName="r" values="0;0;54;54;0;0" keyTimes="0.00000;0.00943;0.01800;0.13186;0.13971;1.00000" dur="28.0s" repeatCount="indefinite" />
+      </circle>
+    </clipPath>
+    <clipPath id="iris-0-10">
+      <circle cx="293.0" cy="39.0" r="0">
+        <animate attributeName="r" values="0;0;54;54;0;0" keyTimes="0.00000;0.01000;0.01857;0.13214;0.14000;1.00000" dur="28.0s" repeatCount="indefinite" />
+      </circle>
+    </clipPath>
+    <clipPath id="iris-0-11">
+      <circle cx="307.0" cy="39.0" r="0">
+        <animate attributeName="r" values="0;0;54;54;0;0" keyTimes="0.00000;0.01057;0.01914;0.13243;0.14029;1.00000" dur="28.0s" repeatCount="indefinite" />
+      </circle>
+    </clipPath>
+    <clipPath id="iris-0-13">
+      <circle cx="327.0" cy="39.0" r="0">
+        <animate attributeName="r" values="0;0;54;54;0;0" keyTimes="0.00000;0.01171;0.02029;0.13300;0.14086;1.00000" dur="28.0s" repeatCount="indefinite" />
+      </circle>
+    </clipPath>
+    <clipPath id="iris-0-14">
+      <circle cx="341.0" cy="39.0" r="0">
+        <animate attributeName="r" values="0;0;54;54;0;0" keyTimes="0.00000;0.01229;0.02086;0.13329;0.14114;1.00000" dur="28.0s" repeatCount="indefinite" />
+      </circle>
+    </clipPath>
+    <clipPath id="iris-0-15">
+      <circle cx="352.5" cy="39.0" r="0">
+        <animate attributeName="r" values="0;0;54;54;0;0" keyTimes="0.00000;0.01286;0.02143;0.13357;0.14143;1.00000" dur="28.0s" repeatCount="indefinite" />
+      </circle>
+    </clipPath>
+    <clipPath id="iris-0-16">
+      <circle cx="364.0" cy="39.0" r="0">
+        <animate attributeName="r" values="0;0;54;54;0;0" keyTimes="0.00000;0.01343;0.02200;0.13386;0.14171;1.00000" dur="28.0s" repeatCount="indefinite" />
+      </circle>
+    </clipPath>
+    <clipPath id="iris-0-17">
+      <circle cx="378.0" cy="39.0" r="0">
+        <animate attributeName="r" values="0;0;54;54;0;0" keyTimes="0.00000;0.01400;0.02257;0.13414;0.14200;1.00000" dur="28.0s" repeatCount="indefinite" />
+      </circle>
+    </clipPath>
+    <clipPath id="iris-0-18">
+      <circle cx="392.0" cy="39.0" r="0">
+        <animate attributeName="r" values="0;0;54;54;0;0" keyTimes="0.00000;0.01457;0.02314;0.13443;0.14229;1.00000" dur="28.0s" repeatCount="indefinite" />
+      </circle>
+    </clipPath>
+    <clipPath id="iris-0-19">
+      <circle cx="409.5" cy="39.0" r="0">
+        <animate attributeName="r" values="0;0;54;54;0;0" keyTimes="0.00000;0.01514;0.02371;0.13471;0.14257;1.00000" dur="28.0s" repeatCount="indefinite" />
+      </circle>
+    </clipPath>
+    <clipPath id="iris-0-20">
+      <circle cx="427.0" cy="39.0" r="0">
+        <animate attributeName="r" values="0;0;54;54;0;0" keyTimes="0.00000;0.01571;0.02429;0.13500;0.14286;1.00000" dur="28.0s" repeatCount="indefinite" />
+      </circle>
+    </clipPath>
+    <clipPath id="iris-0-21">
+      <circle cx="441.0" cy="39.0" r="0">
+        <animate attributeName="r" values="0;0;54;54;0;0" keyTimes="0.00000;0.01629;0.02486;0.13529;0.14314;1.00000" dur="28.0s" repeatCount="indefinite" />
+      </circle>
+    </clipPath>
+    <clipPath id="iris-0-22">
+      <circle cx="453.5" cy="39.0" r="0">
+        <animate attributeName="r" values="0;0;54;54;0;0" keyTimes="0.00000;0.01686;0.02543;0.13557;0.14343;1.00000" dur="28.0s" repeatCount="indefinite" />
+      </circle>
+    </clipPath>
+    <clipPath id="iris-0-24">
+      <circle cx="474.5" cy="39.0" r="0">
+        <animate attributeName="r" values="0;0;54;54;0;0" keyTimes="0.00000;0.01800;0.02657;0.13614;0.14400;1.00000" dur="28.0s" repeatCount="indefinite" />
+      </circle>
+    </clipPath>
+    <clipPath id="iris-0-25">
+      <circle cx="491.0" cy="39.0" r="0">
+        <animate attributeName="r" values="0;0;54;54;0;0" keyTimes="0.00000;0.01857;0.02714;0.13643;0.14429;1.00000" dur="28.0s" repeatCount="indefinite" />
+      </circle>
+    </clipPath>
+    <clipPath id="iris-0-26">
+      <circle cx="501.5" cy="39.0" r="0">
+        <animate attributeName="r" values="0;0;54;54;0;0" keyTimes="0.00000;0.01914;0.02771;0.13671;0.14457;1.00000" dur="28.0s" repeatCount="indefinite" />
+      </circle>
+    </clipPath>
+    <clipPath id="iris-0-27">
+      <circle cx="509.5" cy="39.0" r="0">
+        <animate attributeName="r" values="0;0;54;54;0;0" keyTimes="0.00000;0.01971;0.02829;0.13700;0.14486;1.00000" dur="28.0s" repeatCount="indefinite" />
+      </circle>
+    </clipPath>
+    <clipPath id="iris-0-28">
+      <circle cx="517.5" cy="39.0" r="0">
+        <animate attributeName="r" values="0;0;54;54;0;0" keyTimes="0.00000;0.02029;0.02886;0.13729;0.14514;1.00000" dur="28.0s" repeatCount="indefinite" />
+      </circle>
+    </clipPath>
+    <clipPath id="iris-0-29">
+      <circle cx="531.5" cy="39.0" r="0">
+        <animate attributeName="r" values="0;0;54;54;0;0" keyTimes="0.00000;0.02086;0.02943;0.13757;0.14543;1.00000" dur="28.0s" repeatCount="indefinite" />
+      </circle>
+    </clipPath>
+    <clipPath id="iris-0-30">
+      <circle cx="549.0" cy="39.0" r="0">
+        <animate attributeName="r" values="0;0;54;54;0;0" keyTimes="0.00000;0.02143;0.03000;0.13786;0.14571;1.00000" dur="28.0s" repeatCount="indefinite" />
+      </circle>
+    </clipPath>
+    <clipPath id="iris-0-31">
+      <circle cx="563.0" cy="39.0" r="0">
+        <animate attributeName="r" values="0;0;54;54;0;0" keyTimes="0.00000;0.02200;0.03057;0.13814;0.14600;1.00000" dur="28.0s" repeatCount="indefinite" />
+      </circle>
+    </clipPath>
+    <clipPath id="iris-0-32">
+      <circle cx="577.0" cy="39.0" r="0">
+        <animate attributeName="r" values="0;0;54;54;0;0" keyTimes="0.00000;0.02257;0.03114;0.13843;0.14629;1.00000" dur="28.0s" repeatCount="indefinite" />
+      </circle>
+    </clipPath>
+    <clipPath id="iris-0-33">
+      <circle cx="587.5" cy="39.0" r="0">
+        <animate attributeName="r" values="0;0;54;54;0;0" keyTimes="0.00000;0.02314;0.03171;0.13871;0.14657;1.00000" dur="28.0s" repeatCount="indefinite" />
+      </circle>
+    </clipPath>
+    <clipPath id="iris-0-35">
+      <circle cx="604.0" cy="39.0" r="0">
+        <animate attributeName="r" values="0;0;54;54;0;0" keyTimes="0.00000;0.02429;0.03286;0.13929;0.14714;1.00000" dur="28.0s" repeatCount="indefinite" />
+      </circle>
+    </clipPath>
+    <clipPath id="iris-0-36">
+      <circle cx="616.5" cy="39.0" r="0">
+        <animate attributeName="r" values="0;0;54;54;0;0" keyTimes="0.00000;0.02486;0.03343;0.13957;0.14743;1.00000" dur="28.0s" repeatCount="indefinite" />
+      </circle>
+    </clipPath>
+    <clipPath id="iris-0-38">
+      <circle cx="634.5" cy="39.0" r="0">
+        <animate attributeName="r" values="0;0;54;54;0;0" keyTimes="0.00000;0.02600;0.03457;0.14014;0.14800;1.00000" dur="28.0s" repeatCount="indefinite" />
+      </circle>
+    </clipPath>
+    <clipPath id="iris-0-39">
+      <circle cx="647.5" cy="39.0" r="0">
+        <animate attributeName="r" values="0;0;54;54;0;0" keyTimes="0.00000;0.02657;0.03514;0.14043;0.14829;1.00000" dur="28.0s" repeatCount="indefinite" />
+      </circle>
+    </clipPath>
+    <clipPath id="iris-0-40">
+      <circle cx="659.5" cy="39.0" r="0">
+        <animate attributeName="r" values="0;0;54;54;0;0" keyTimes="0.00000;0.02714;0.03571;0.14071;0.14857;1.00000" dur="28.0s" repeatCount="indefinite" />
+      </circle>
+    </clipPath>
+    <clipPath id="iris-0-41">
+      <circle cx="669.5" cy="39.0" r="0">
+        <animate attributeName="r" values="0;0;54;54;0;0" keyTimes="0.00000;0.02771;0.03629;0.14100;0.14886;1.00000" dur="28.0s" repeatCount="indefinite" />
+      </circle>
+    </clipPath>
+    <clipPath id="iris-0-42">
+      <circle cx="680.5" cy="39.0" r="0">
+        <animate attributeName="r" values="0;0;54;54;0;0" keyTimes="0.00000;0.02829;0.03686;0.14129;0.14914;1.00000" dur="28.0s" repeatCount="indefinite" />
+      </circle>
+    </clipPath>
+    <clipPath id="iris-0-43">
+      <circle cx="697.5" cy="39.0" r="0">
+        <animate attributeName="r" values="0;0;54;54;0;0" keyTimes="0.00000;0.02886;0.03743;0.14157;0.14943;1.00000" dur="28.0s" repeatCount="indefinite" />
+      </circle>
+    </clipPath>
+    <clipPath id="iris-0-44">
+      <circle cx="713.5" cy="39.0" r="0">
+        <animate attributeName="r" values="0;0;54;54;0;0" keyTimes="0.00000;0.02943;0.03800;0.14186;0.14971;1.00000" dur="28.0s" repeatCount="indefinite" />
+      </circle>
+    </clipPath>
+    <clipPath id="iris-1-0">
+      <circle cx="220.5" cy="39.0" r="0">
+        <animate attributeName="r" values="0;0;54;54;0;0" keyTimes="0.00000;0.14714;0.15571;0.27214;0.28000;1.00000" dur="28.0s" repeatCount="indefinite" />
+      </circle>
+    </clipPath>
+    <clipPath id="iris-1-1">
+      <circle cx="234.5" cy="39.0" r="0">
+        <animate attributeName="r" values="0;0;54;54;0;0" keyTimes="0.00000;0.14771;0.15629;0.27243;0.28029;1.00000" dur="28.0s" repeatCount="indefinite" />
+      </circle>
+    </clipPath>
+    <clipPath id="iris-1-2">
+      <circle cx="245.0" cy="39.0" r="0">
+        <animate attributeName="r" values="0;0;54;54;0;0" keyTimes="0.00000;0.14829;0.15686;0.27271;0.28057;1.00000" dur="28.0s" repeatCount="indefinite" />
+      </circle>
+    </clipPath>
+    <clipPath id="iris-1-3">
+      <circle cx="252.0" cy="39.0" r="0">
+        <animate attributeName="r" values="0;0;54;54;0;0" keyTimes="0.00000;0.14886;0.15743;0.27300;0.28086;1.00000" dur="28.0s" repeatCount="indefinite" />
+      </circle>
+    </clipPath>
+    <clipPath id="iris-1-4">
+      <circle cx="262.5" cy="39.0" r="0">
+        <animate attributeName="r" values="0;0;54;54;0;0" keyTimes="0.00000;0.14943;0.15800;0.27329;0.28114;1.00000" dur="28.0s" repeatCount="indefinite" />
+      </circle>
+    </clipPath>
+    <clipPath id="iris-1-5">
+      <circle cx="273.0" cy="39.0" r="0">
+        <animate attributeName="r" values="0;0;54;54;0;0" keyTimes="0.00000;0.15000;0.15857;0.27357;0.28143;1.00000" dur="28.0s" repeatCount="indefinite" />
+      </circle>
+    </clipPath>
+    <clipPath id="iris-1-6">
+      <circle cx="283.5" cy="39.0" r="0">
+        <animate attributeName="r" values="0;0;54;54;0;0" keyTimes="0.00000;0.15057;0.15914;0.27386;0.28171;1.00000" dur="28.0s" repeatCount="indefinite" />
+      </circle>
+    </clipPath>
+    <clipPath id="iris-1-7">
+      <circle cx="297.5" cy="39.0" r="0">
+        <animate attributeName="r" values="0;0;54;54;0;0" keyTimes="0.00000;0.15114;0.15971;0.27414;0.28200;1.00000" dur="28.0s" repeatCount="indefinite" />
+      </circle>
+    </clipPath>
+    <clipPath id="iris-1-9">
+      <circle cx="317.0" cy="39.0" r="0">
+        <animate attributeName="r" values="0;0;54;54;0;0" keyTimes="0.00000;0.15229;0.16086;0.27471;0.28257;1.00000" dur="28.0s" repeatCount="indefinite" />
+      </circle>
+    </clipPath>
+    <clipPath id="iris-1-10">
+      <circle cx="330.5" cy="39.0" r="0">
+        <animate attributeName="r" values="0;0;54;54;0;0" keyTimes="0.00000;0.15286;0.16143;0.27500;0.28286;1.00000" dur="28.0s" repeatCount="indefinite" />
+      </circle>
+    </clipPath>
+    <clipPath id="iris-1-11">
+      <circle cx="344.5" cy="39.0" r="0">
+        <animate attributeName="r" values="0;0;54;54;0;0" keyTimes="0.00000;0.15343;0.16200;0.27529;0.28314;1.00000" dur="28.0s" repeatCount="indefinite" />
+      </circle>
+    </clipPath>
+    <clipPath id="iris-1-12">
+      <circle cx="358.0" cy="39.0" r="0">
+        <animate attributeName="r" values="0;0;54;54;0;0" keyTimes="0.00000;0.15400;0.16257;0.27557;0.28343;1.00000" dur="28.0s" repeatCount="indefinite" />
+      </circle>
+    </clipPath>
+    <clipPath id="iris-1-13">
+      <circle cx="371.0" cy="39.0" r="0">
+        <animate attributeName="r" values="0;0;54;54;0;0" keyTimes="0.00000;0.15457;0.16314;0.27586;0.28371;1.00000" dur="28.0s" repeatCount="indefinite" />
+      </circle>
+    </clipPath>
+    <clipPath id="iris-1-14">
+      <circle cx="384.0" cy="39.0" r="0">
+        <animate attributeName="r" values="0;0;54;54;0;0" keyTimes="0.00000;0.15514;0.16371;0.27614;0.28400;1.00000" dur="28.0s" repeatCount="indefinite" />
+      </circle>
+    </clipPath>
+    <clipPath id="iris-1-15">
+      <circle cx="396.0" cy="39.0" r="0">
+        <animate attributeName="r" values="0;0;54;54;0;0" keyTimes="0.00000;0.15571;0.16429;0.27643;0.28429;1.00000" dur="28.0s" repeatCount="indefinite" />
+      </circle>
+    </clipPath>
+    <clipPath id="iris-1-16">
+      <circle cx="408.5" cy="39.0" r="0">
+        <animate attributeName="r" values="0;0;54;54;0;0" keyTimes="0.00000;0.15629;0.16486;0.27671;0.28457;1.00000" dur="28.0s" repeatCount="indefinite" />
+      </circle>
+    </clipPath>
+    <clipPath id="iris-1-17">
+      <circle cx="422.5" cy="39.0" r="0">
+        <animate attributeName="r" values="0;0;54;54;0;0" keyTimes="0.00000;0.15686;0.16543;0.27700;0.28486;1.00000" dur="28.0s" repeatCount="indefinite" />
+      </circle>
+    </clipPath>
+    <clipPath id="iris-1-18">
+      <circle cx="436.5" cy="39.0" r="0">
+        <animate attributeName="r" values="0;0;54;54;0;0" keyTimes="0.00000;0.15743;0.16600;0.27729;0.28514;1.00000" dur="28.0s" repeatCount="indefinite" />
+      </circle>
+    </clipPath>
+    <clipPath id="iris-1-20">
+      <circle cx="456.5" cy="39.0" r="0">
+        <animate attributeName="r" values="0;0;54;54;0;0" keyTimes="0.00000;0.15857;0.16714;0.27786;0.28571;1.00000" dur="28.0s" repeatCount="indefinite" />
+      </circle>
+    </clipPath>
+    <clipPath id="iris-1-21">
+      <circle cx="470.5" cy="39.0" r="0">
+        <animate attributeName="r" values="0;0;54;54;0;0" keyTimes="0.00000;0.15914;0.16771;0.27814;0.28600;1.00000" dur="28.0s" repeatCount="indefinite" />
+      </circle>
+    </clipPath>
+    <clipPath id="iris-1-22">
+      <circle cx="484.0" cy="39.0" r="0">
+        <animate attributeName="r" values="0;0;54;54;0;0" keyTimes="0.00000;0.15971;0.16829;0.27843;0.28629;1.00000" dur="28.0s" repeatCount="indefinite" />
+      </circle>
+    </clipPath>
+    <clipPath id="iris-1-23">
+      <circle cx="497.5" cy="39.0" r="0">
+        <animate attributeName="r" values="0;0;54;54;0;0" keyTimes="0.00000;0.16029;0.16886;0.27871;0.28657;1.00000" dur="28.0s" repeatCount="indefinite" />
+      </circle>
+    </clipPath>
+    <clipPath id="iris-1-24">
+      <circle cx="509.0" cy="39.0" r="0">
+        <animate attributeName="r" values="0;0;54;54;0;0" keyTimes="0.00000;0.16086;0.16943;0.27900;0.28686;1.00000" dur="28.0s" repeatCount="indefinite" />
+      </circle>
+    </clipPath>
+    <clipPath id="iris-1-25">
+      <circle cx="517.0" cy="39.0" r="0">
+        <animate attributeName="r" values="0;0;54;54;0;0" keyTimes="0.00000;0.16143;0.17000;0.27929;0.28714;1.00000" dur="28.0s" repeatCount="indefinite" />
+      </circle>
+    </clipPath>
+    <clipPath id="iris-1-26">
+      <circle cx="526.0" cy="39.0" r="0">
+        <animate attributeName="r" values="0;0;54;54;0;0" keyTimes="0.00000;0.16200;0.17057;0.27957;0.28743;1.00000" dur="28.0s" repeatCount="indefinite" />
+      </circle>
+    </clipPath>
+    <clipPath id="iris-1-28">
+      <circle cx="544.5" cy="39.0" r="0">
+        <animate attributeName="r" values="0;0;54;54;0;0" keyTimes="0.00000;0.16314;0.17171;0.28014;0.28800;1.00000" dur="28.0s" repeatCount="indefinite" />
+      </circle>
+    </clipPath>
+    <clipPath id="iris-1-29">
+      <circle cx="558.5" cy="39.0" r="0">
+        <animate attributeName="r" values="0;0;54;54;0;0" keyTimes="0.00000;0.16371;0.17229;0.28043;0.28829;1.00000" dur="28.0s" repeatCount="indefinite" />
+      </circle>
+    </clipPath>
+    <clipPath id="iris-1-30">
+      <circle cx="573.0" cy="39.0" r="0">
+        <animate attributeName="r" values="0;0;54;54;0;0" keyTimes="0.00000;0.16429;0.17286;0.28071;0.28857;1.00000" dur="28.0s" repeatCount="indefinite" />
+      </circle>
+    </clipPath>
+    <clipPath id="iris-1-32">
+      <circle cx="593.5" cy="39.0" r="0">
+        <animate attributeName="r" values="0;0;54;54;0;0" keyTimes="0.00000;0.16543;0.17400;0.28129;0.28914;1.00000" dur="28.0s" repeatCount="indefinite" />
+      </circle>
+    </clipPath>
+    <clipPath id="iris-1-33">
+      <circle cx="604.0" cy="39.0" r="0">
+        <animate attributeName="r" values="0;0;54;54;0;0" keyTimes="0.00000;0.16600;0.17457;0.28157;0.28943;1.00000" dur="28.0s" repeatCount="indefinite" />
+      </circle>
+    </clipPath>
+    <clipPath id="iris-1-34">
+      <circle cx="614.5" cy="39.0" r="0">
+        <animate attributeName="r" values="0;0;54;54;0;0" keyTimes="0.00000;0.16657;0.17514;0.28186;0.28971;1.00000" dur="28.0s" repeatCount="indefinite" />
+      </circle>
+    </clipPath>
+    <clipPath id="iris-1-35">
+      <circle cx="628.0" cy="39.0" r="0">
+        <animate attributeName="r" values="0;0;54;54;0;0" keyTimes="0.00000;0.16714;0.17571;0.28214;0.29000;1.00000" dur="28.0s" repeatCount="indefinite" />
+      </circle>
+    </clipPath>
+    <clipPath id="iris-1-36">
+      <circle cx="638.0" cy="39.0" r="0">
+        <animate attributeName="r" values="0;0;54;54;0;0" keyTimes="0.00000;0.16771;0.17629;0.28243;0.29029;1.00000" dur="28.0s" repeatCount="indefinite" />
+      </circle>
+    </clipPath>
+    <clipPath id="iris-1-37">
+      <circle cx="645.0" cy="39.0" r="0">
+        <animate attributeName="r" values="0;0;54;54;0;0" keyTimes="0.00000;0.16829;0.17686;0.28271;0.29057;1.00000" dur="28.0s" repeatCount="indefinite" />
+      </circle>
+    </clipPath>
+    <clipPath id="iris-1-38">
+      <circle cx="655.5" cy="39.0" r="0">
+        <animate attributeName="r" values="0;0;54;54;0;0" keyTimes="0.00000;0.16886;0.17743;0.28300;0.29086;1.00000" dur="28.0s" repeatCount="indefinite" />
+      </circle>
+    </clipPath>
+    <clipPath id="iris-1-39">
+      <circle cx="669.0" cy="39.0" r="0">
+        <animate attributeName="r" values="0;0;54;54;0;0" keyTimes="0.00000;0.16943;0.17800;0.28329;0.29114;1.00000" dur="28.0s" repeatCount="indefinite" />
+      </circle>
+    </clipPath>
+    <clipPath id="iris-1-40">
+      <circle cx="681.0" cy="39.0" r="0">
+        <animate attributeName="r" values="0;0;54;54;0;0" keyTimes="0.00000;0.17000;0.17857;0.28357;0.29143;1.00000" dur="28.0s" repeatCount="indefinite" />
+      </circle>
+    </clipPath>
+    <clipPath id="iris-2-0">
+      <circle cx="185.5" cy="39.0" r="0">
+        <animate attributeName="r" values="0;0;54;54;0;0" keyTimes="0.00000;0.29000;0.29857;0.41500;0.42286;1.00000" dur="28.0s" repeatCount="indefinite" />
+      </circle>
+    </clipPath>
+    <clipPath id="iris-2-1">
+      <circle cx="196.5" cy="39.0" r="0">
+        <animate attributeName="r" values="0;0;54;54;0;0" keyTimes="0.00000;0.29057;0.29914;0.41529;0.42314;1.00000" dur="28.0s" repeatCount="indefinite" />
+      </circle>
+    </clipPath>
+    <clipPath id="iris-2-2">
+      <circle cx="207.0" cy="39.0" r="0">
+        <animate attributeName="r" values="0;0;54;54;0;0" keyTimes="0.00000;0.29114;0.29971;0.41557;0.42343;1.00000" dur="28.0s" repeatCount="indefinite" />
+      </circle>
+    </clipPath>
+    <clipPath id="iris-2-3">
+      <circle cx="221.0" cy="39.0" r="0">
+        <animate attributeName="r" values="0;0;54;54;0;0" keyTimes="0.00000;0.29171;0.30029;0.41586;0.42371;1.00000" dur="28.0s" repeatCount="indefinite" />
+      </circle>
+    </clipPath>
+    <clipPath id="iris-2-4">
+      <circle cx="234.5" cy="39.0" r="0">
+        <animate attributeName="r" values="0;0;54;54;0;0" keyTimes="0.00000;0.29229;0.30086;0.41614;0.42400;1.00000" dur="28.0s" repeatCount="indefinite" />
+      </circle>
+    </clipPath>
+    <clipPath id="iris-2-5">
+      <circle cx="247.5" cy="39.0" r="0">
+        <animate attributeName="r" values="0;0;54;54;0;0" keyTimes="0.00000;0.29286;0.30143;0.41643;0.42429;1.00000" dur="28.0s" repeatCount="indefinite" />
+      </circle>
+    </clipPath>
+    <clipPath id="iris-2-6">
+      <circle cx="260.5" cy="39.0" r="0">
+        <animate attributeName="r" values="0;0;54;54;0;0" keyTimes="0.00000;0.29343;0.30200;0.41671;0.42457;1.00000" dur="28.0s" repeatCount="indefinite" />
+      </circle>
+    </clipPath>
+    <clipPath id="iris-2-7">
+      <circle cx="272.5" cy="39.0" r="0">
+        <animate attributeName="r" values="0;0;54;54;0;0" keyTimes="0.00000;0.29400;0.30257;0.41700;0.42486;1.00000" dur="28.0s" repeatCount="indefinite" />
+      </circle>
+    </clipPath>
+    <clipPath id="iris-2-8">
+      <circle cx="284.5" cy="39.0" r="0">
+        <animate attributeName="r" values="0;0;54;54;0;0" keyTimes="0.00000;0.29457;0.30314;0.41729;0.42514;1.00000" dur="28.0s" repeatCount="indefinite" />
+      </circle>
+    </clipPath>
+    <clipPath id="iris-2-9">
+      <circle cx="298.0" cy="39.0" r="0">
+        <animate attributeName="r" values="0;0;54;54;0;0" keyTimes="0.00000;0.29514;0.30371;0.41757;0.42543;1.00000" dur="28.0s" repeatCount="indefinite" />
+      </circle>
+    </clipPath>
+    <clipPath id="iris-2-10">
+      <circle cx="312.0" cy="39.0" r="0">
+        <animate attributeName="r" values="0;0;54;54;0;0" keyTimes="0.00000;0.29571;0.30429;0.41786;0.42571;1.00000" dur="28.0s" repeatCount="indefinite" />
+      </circle>
+    </clipPath>
+    <clipPath id="iris-2-11">
+      <circle cx="326.0" cy="39.0" r="0">
+        <animate attributeName="r" values="0;0;54;54;0;0" keyTimes="0.00000;0.29629;0.30486;0.41814;0.42600;1.00000" dur="28.0s" repeatCount="indefinite" />
+      </circle>
+    </clipPath>
+    <clipPath id="iris-2-12">
+      <circle cx="340.0" cy="39.0" r="0">
+        <animate attributeName="r" values="0;0;54;54;0;0" keyTimes="0.00000;0.29686;0.30543;0.41843;0.42629;1.00000" dur="28.0s" repeatCount="indefinite" />
+      </circle>
+    </clipPath>
+    <clipPath id="iris-2-13">
+      <circle cx="354.0" cy="39.0" r="0">
+        <animate attributeName="r" values="0;0;54;54;0;0" keyTimes="0.00000;0.29743;0.30600;0.41871;0.42657;1.00000" dur="28.0s" repeatCount="indefinite" />
+      </circle>
+    </clipPath>
+    <clipPath id="iris-2-14">
+      <circle cx="365.5" cy="39.0" r="0">
+        <animate attributeName="r" values="0;0;54;54;0;0" keyTimes="0.00000;0.29800;0.30657;0.41900;0.42686;1.00000" dur="28.0s" repeatCount="indefinite" />
+      </circle>
+    </clipPath>
+    <clipPath id="iris-2-16">
+      <circle cx="383.0" cy="39.0" r="0">
+        <animate attributeName="r" values="0;0;54;54;0;0" keyTimes="0.00000;0.29914;0.30771;0.41957;0.42743;1.00000" dur="28.0s" repeatCount="indefinite" />
+      </circle>
+    </clipPath>
+    <clipPath id="iris-2-17">
+      <circle cx="396.5" cy="39.0" r="0">
+        <animate attributeName="r" values="0;0;54;54;0;0" keyTimes="0.00000;0.29971;0.30829;0.41986;0.42771;1.00000" dur="28.0s" repeatCount="indefinite" />
+      </circle>
+    </clipPath>
+    <clipPath id="iris-2-18">
+      <circle cx="406.5" cy="39.0" r="0">
+        <animate attributeName="r" values="0;0;54;54;0;0" keyTimes="0.00000;0.30029;0.30886;0.42014;0.42800;1.00000" dur="28.0s" repeatCount="indefinite" />
+      </circle>
+    </clipPath>
+    <clipPath id="iris-2-19">
+      <circle cx="416.5" cy="39.0" r="0">
+        <animate attributeName="r" values="0;0;54;54;0;0" keyTimes="0.00000;0.30086;0.30943;0.42043;0.42829;1.00000" dur="28.0s" repeatCount="indefinite" />
+      </circle>
+    </clipPath>
+    <clipPath id="iris-2-20">
+      <circle cx="428.5" cy="39.0" r="0">
+        <animate attributeName="r" values="0;0;54;54;0;0" keyTimes="0.00000;0.30143;0.31000;0.42071;0.42857;1.00000" dur="28.0s" repeatCount="indefinite" />
+      </circle>
+    </clipPath>
+    <clipPath id="iris-2-21">
+      <circle cx="440.0" cy="39.0" r="0">
+        <animate attributeName="r" values="0;0;54;54;0;0" keyTimes="0.00000;0.30200;0.31057;0.42100;0.42886;1.00000" dur="28.0s" repeatCount="indefinite" />
+      </circle>
+    </clipPath>
+    <clipPath id="iris-2-23">
+      <circle cx="460.5" cy="39.0" r="0">
+        <animate attributeName="r" values="0;0;54;54;0;0" keyTimes="0.00000;0.30314;0.31171;0.42157;0.42943;1.00000" dur="28.0s" repeatCount="indefinite" />
+      </circle>
+    </clipPath>
+    <clipPath id="iris-2-25">
+      <circle cx="482.0" cy="39.0" r="0">
+        <animate attributeName="r" values="0;0;54;54;0;0" keyTimes="0.00000;0.30429;0.31286;0.42214;0.43000;1.00000" dur="28.0s" repeatCount="indefinite" />
+      </circle>
+    </clipPath>
+    <clipPath id="iris-2-26">
+      <circle cx="495.5" cy="39.0" r="0">
+        <animate attributeName="r" values="0;0;54;54;0;0" keyTimes="0.00000;0.30486;0.31343;0.42243;0.43029;1.00000" dur="28.0s" repeatCount="indefinite" />
+      </circle>
+    </clipPath>
+    <clipPath id="iris-2-27">
+      <circle cx="509.0" cy="39.0" r="0">
+        <animate attributeName="r" values="0;0;54;54;0;0" keyTimes="0.00000;0.30543;0.31400;0.42271;0.43057;1.00000" dur="28.0s" repeatCount="indefinite" />
+      </circle>
+    </clipPath>
+    <clipPath id="iris-2-28">
+      <circle cx="519.5" cy="39.0" r="0">
+        <animate attributeName="r" values="0;0;54;54;0;0" keyTimes="0.00000;0.30600;0.31457;0.42300;0.43086;1.00000" dur="28.0s" repeatCount="indefinite" />
+      </circle>
+    </clipPath>
+    <clipPath id="iris-2-29">
+      <circle cx="528.5" cy="39.0" r="0">
+        <animate attributeName="r" values="0;0;54;54;0;0" keyTimes="0.00000;0.30657;0.31514;0.42329;0.43114;1.00000" dur="28.0s" repeatCount="indefinite" />
+      </circle>
+    </clipPath>
+    <clipPath id="iris-2-31">
+      <circle cx="547.0" cy="39.0" r="0">
+        <animate attributeName="r" values="0;0;54;54;0;0" keyTimes="0.00000;0.30771;0.31629;0.42386;0.43171;1.00000" dur="28.0s" repeatCount="indefinite" />
+      </circle>
+    </clipPath>
+    <clipPath id="iris-2-32">
+      <circle cx="559.5" cy="39.0" r="0">
+        <animate attributeName="r" values="0;0;54;54;0;0" keyTimes="0.00000;0.30829;0.31686;0.42414;0.43200;1.00000" dur="28.0s" repeatCount="indefinite" />
+      </circle>
+    </clipPath>
+    <clipPath id="iris-2-34">
+      <circle cx="580.5" cy="39.0" r="0">
+        <animate attributeName="r" values="0;0;54;54;0;0" keyTimes="0.00000;0.30943;0.31800;0.42471;0.43257;1.00000" dur="28.0s" repeatCount="indefinite" />
+      </circle>
+    </clipPath>
+    <clipPath id="iris-2-35">
+      <circle cx="593.5" cy="39.0" r="0">
+        <animate attributeName="r" values="0;0;54;54;0;0" keyTimes="0.00000;0.31000;0.31857;0.42500;0.43286;1.00000" dur="28.0s" repeatCount="indefinite" />
+      </circle>
+    </clipPath>
+    <clipPath id="iris-2-36">
+      <circle cx="602.5" cy="39.0" r="0">
+        <animate attributeName="r" values="0;0;54;54;0;0" keyTimes="0.00000;0.31057;0.31914;0.42529;0.43314;1.00000" dur="28.0s" repeatCount="indefinite" />
+      </circle>
+    </clipPath>
+    <clipPath id="iris-2-37">
+      <circle cx="613.5" cy="39.0" r="0">
+        <animate attributeName="r" values="0;0;54;54;0;0" keyTimes="0.00000;0.31114;0.31971;0.42557;0.43343;1.00000" dur="28.0s" repeatCount="indefinite" />
+      </circle>
+    </clipPath>
+    <clipPath id="iris-2-38">
+      <circle cx="625.5" cy="39.0" r="0">
+        <animate attributeName="r" values="0;0;54;54;0;0" keyTimes="0.00000;0.31171;0.32029;0.42586;0.43371;1.00000" dur="28.0s" repeatCount="indefinite" />
+      </circle>
+    </clipPath>
+    <clipPath id="iris-2-39">
+      <circle cx="637.5" cy="39.0" r="0">
+        <animate attributeName="r" values="0;0;54;54;0;0" keyTimes="0.00000;0.31229;0.32086;0.42614;0.43400;1.00000" dur="28.0s" repeatCount="indefinite" />
+      </circle>
+    </clipPath>
+    <clipPath id="iris-2-40">
+      <circle cx="649.5" cy="39.0" r="0">
+        <animate attributeName="r" values="0;0;54;54;0;0" keyTimes="0.00000;0.31286;0.32143;0.42643;0.43429;1.00000" dur="28.0s" repeatCount="indefinite" />
+      </circle>
+    </clipPath>
+    <clipPath id="iris-2-41">
+      <circle cx="661.5" cy="39.0" r="0">
+        <animate attributeName="r" values="0;0;54;54;0;0" keyTimes="0.00000;0.31343;0.32200;0.42671;0.43457;1.00000" dur="28.0s" repeatCount="indefinite" />
+      </circle>
+    </clipPath>
+    <clipPath id="iris-2-42">
+      <circle cx="673.5" cy="39.0" r="0">
+        <animate attributeName="r" values="0;0;54;54;0;0" keyTimes="0.00000;0.31400;0.32257;0.42700;0.43486;1.00000" dur="28.0s" repeatCount="indefinite" />
+      </circle>
+    </clipPath>
+    <clipPath id="iris-2-43">
+      <circle cx="683.5" cy="39.0" r="0">
+        <animate attributeName="r" values="0;0;54;54;0;0" keyTimes="0.00000;0.31457;0.32314;0.42729;0.43514;1.00000" dur="28.0s" repeatCount="indefinite" />
+      </circle>
+    </clipPath>
+    <clipPath id="iris-2-44">
+      <circle cx="692.5" cy="39.0" r="0">
+        <animate attributeName="r" values="0;0;54;54;0;0" keyTimes="0.00000;0.31514;0.32371;0.42757;0.43543;1.00000" dur="28.0s" repeatCount="indefinite" />
+      </circle>
+    </clipPath>
+    <clipPath id="iris-2-45">
+      <circle cx="704.5" cy="39.0" r="0">
+        <animate attributeName="r" values="0;0;54;54;0;0" keyTimes="0.00000;0.31571;0.32429;0.42786;0.43571;1.00000" dur="28.0s" repeatCount="indefinite" />
+      </circle>
+    </clipPath>
+    <clipPath id="iris-2-46">
+      <circle cx="716.5" cy="39.0" r="0">
+        <animate attributeName="r" values="0;0;54;54;0;0" keyTimes="0.00000;0.31629;0.32486;0.42814;0.43600;1.00000" dur="28.0s" repeatCount="indefinite" />
+      </circle>
+    </clipPath>
+    <clipPath id="iris-3-0">
+      <circle cx="228.0" cy="39.0" r="0">
+        <animate attributeName="r" values="0;0;54;54;0;0" keyTimes="0.00000;0.43286;0.44143;0.55786;0.56571;1.00000" dur="28.0s" repeatCount="indefinite" />
+      </circle>
+    </clipPath>
+    <clipPath id="iris-3-1">
+      <circle cx="241.0" cy="39.0" r="0">
+        <animate attributeName="r" values="0;0;54;54;0;0" keyTimes="0.00000;0.43343;0.44200;0.55814;0.56600;1.00000" dur="28.0s" repeatCount="indefinite" />
+      </circle>
+    </clipPath>
+    <clipPath id="iris-3-2">
+      <circle cx="255.0" cy="39.0" r="0">
+        <animate attributeName="r" values="0;0;54;54;0;0" keyTimes="0.00000;0.43400;0.44257;0.55843;0.56629;1.00000" dur="28.0s" repeatCount="indefinite" />
+      </circle>
+    </clipPath>
+    <clipPath id="iris-3-3">
+      <circle cx="265.5" cy="39.0" r="0">
+        <animate attributeName="r" values="0;0;54;54;0;0" keyTimes="0.00000;0.43457;0.44314;0.55871;0.56657;1.00000" dur="28.0s" repeatCount="indefinite" />
+      </circle>
+    </clipPath>
+    <clipPath id="iris-3-4">
+      <circle cx="276.0" cy="39.0" r="0">
+        <animate attributeName="r" values="0;0;54;54;0;0" keyTimes="0.00000;0.43514;0.44371;0.55900;0.56686;1.00000" dur="28.0s" repeatCount="indefinite" />
+      </circle>
+    </clipPath>
+    <clipPath id="iris-3-5">
+      <circle cx="289.5" cy="39.0" r="0">
+        <animate attributeName="r" values="0;0;54;54;0;0" keyTimes="0.00000;0.43571;0.44429;0.55929;0.56714;1.00000" dur="28.0s" repeatCount="indefinite" />
+      </circle>
+    </clipPath>
+    <clipPath id="iris-3-6">
+      <circle cx="302.5" cy="39.0" r="0">
+        <animate attributeName="r" values="0;0;54;54;0;0" keyTimes="0.00000;0.43629;0.44486;0.55957;0.56743;1.00000" dur="28.0s" repeatCount="indefinite" />
+      </circle>
+    </clipPath>
+    <clipPath id="iris-3-7">
+      <circle cx="314.5" cy="39.0" r="0">
+        <animate attributeName="r" values="0;0;54;54;0;0" keyTimes="0.00000;0.43686;0.44543;0.55986;0.56771;1.00000" dur="28.0s" repeatCount="indefinite" />
+      </circle>
+    </clipPath>
+    <clipPath id="iris-3-8">
+      <circle cx="323.0" cy="39.0" r="0">
+        <animate attributeName="r" values="0;0;54;54;0;0" keyTimes="0.00000;0.43743;0.44600;0.56014;0.56800;1.00000" dur="28.0s" repeatCount="indefinite" />
+      </circle>
+    </clipPath>
+    <clipPath id="iris-3-9">
+      <circle cx="333.0" cy="39.0" r="0">
+        <animate attributeName="r" values="0;0;54;54;0;0" keyTimes="0.00000;0.43800;0.44657;0.56043;0.56829;1.00000" dur="28.0s" repeatCount="indefinite" />
+      </circle>
+    </clipPath>
+    <clipPath id="iris-3-10">
+      <circle cx="347.0" cy="39.0" r="0">
+        <animate attributeName="r" values="0;0;54;54;0;0" keyTimes="0.00000;0.43857;0.44714;0.56071;0.56857;1.00000" dur="28.0s" repeatCount="indefinite" />
+      </circle>
+    </clipPath>
+    <clipPath id="iris-3-12">
+      <circle cx="367.0" cy="39.0" r="0">
+        <animate attributeName="r" values="0;0;54;54;0;0" keyTimes="0.00000;0.43971;0.44829;0.56129;0.56914;1.00000" dur="28.0s" repeatCount="indefinite" />
+      </circle>
+    </clipPath>
+    <clipPath id="iris-3-13">
+      <circle cx="381.5" cy="39.0" r="0">
+        <animate attributeName="r" values="0;0;54;54;0;0" keyTimes="0.00000;0.44029;0.44886;0.56157;0.56943;1.00000" dur="28.0s" repeatCount="indefinite" />
+      </circle>
+    </clipPath>
+    <clipPath id="iris-3-14">
+      <circle cx="395.0" cy="39.0" r="0">
+        <animate attributeName="r" values="0;0;54;54;0;0" keyTimes="0.00000;0.44086;0.44943;0.56186;0.56971;1.00000" dur="28.0s" repeatCount="indefinite" />
+      </circle>
+    </clipPath>
+    <clipPath id="iris-3-15">
+      <circle cx="408.0" cy="39.0" r="0">
+        <animate attributeName="r" values="0;0;54;54;0;0" keyTimes="0.00000;0.44143;0.45000;0.56214;0.57000;1.00000" dur="28.0s" repeatCount="indefinite" />
+      </circle>
+    </clipPath>
+    <clipPath id="iris-3-16">
+      <circle cx="421.5" cy="39.0" r="0">
+        <animate attributeName="r" values="0;0;54;54;0;0" keyTimes="0.00000;0.44200;0.45057;0.56243;0.57029;1.00000" dur="28.0s" repeatCount="indefinite" />
+      </circle>
+    </clipPath>
+    <clipPath id="iris-3-18">
+      <circle cx="440.0" cy="39.0" r="0">
+        <animate attributeName="r" values="0;0;54;54;0;0" keyTimes="0.00000;0.44314;0.45171;0.56300;0.57086;1.00000" dur="28.0s" repeatCount="indefinite" />
+      </circle>
+    </clipPath>
+    <clipPath id="iris-3-19">
+      <circle cx="453.5" cy="39.0" r="0">
+        <animate attributeName="r" values="0;0;54;54;0;0" keyTimes="0.00000;0.44371;0.45229;0.56329;0.57114;1.00000" dur="28.0s" repeatCount="indefinite" />
+      </circle>
+    </clipPath>
+    <clipPath id="iris-3-21">
+      <circle cx="477.0" cy="39.0" r="0">
+        <animate attributeName="r" values="0;0;54;54;0;0" keyTimes="0.00000;0.44486;0.45343;0.56386;0.57171;1.00000" dur="28.0s" repeatCount="indefinite" />
+      </circle>
+    </clipPath>
+    <clipPath id="iris-3-22">
+      <circle cx="493.5" cy="39.0" r="0">
+        <animate attributeName="r" values="0;0;54;54;0;0" keyTimes="0.00000;0.44543;0.45400;0.56414;0.57200;1.00000" dur="28.0s" repeatCount="indefinite" />
+      </circle>
+    </clipPath>
+    <clipPath id="iris-3-23">
+      <circle cx="507.0" cy="39.0" r="0">
+        <animate attributeName="r" values="0;0;54;54;0;0" keyTimes="0.00000;0.44600;0.45457;0.56443;0.57229;1.00000" dur="28.0s" repeatCount="indefinite" />
+      </circle>
+    </clipPath>
+    <clipPath id="iris-3-24">
+      <circle cx="521.5" cy="39.0" r="0">
+        <animate attributeName="r" values="0;0;54;54;0;0" keyTimes="0.00000;0.44657;0.45514;0.56471;0.57257;1.00000" dur="28.0s" repeatCount="indefinite" />
+      </circle>
+    </clipPath>
+    <clipPath id="iris-3-25">
+      <circle cx="535.0" cy="39.0" r="0">
+        <animate attributeName="r" values="0;0;54;54;0;0" keyTimes="0.00000;0.44714;0.45571;0.56500;0.57286;1.00000" dur="28.0s" repeatCount="indefinite" />
+      </circle>
+    </clipPath>
+    <clipPath id="iris-3-27">
+      <circle cx="552.0" cy="39.0" r="0">
+        <animate attributeName="r" values="0;0;54;54;0;0" keyTimes="0.00000;0.44829;0.45686;0.56557;0.57343;1.00000" dur="28.0s" repeatCount="indefinite" />
+      </circle>
+    </clipPath>
+    <clipPath id="iris-3-28">
+      <circle cx="565.0" cy="39.0" r="0">
+        <animate attributeName="r" values="0;0;54;54;0;0" keyTimes="0.00000;0.44886;0.45743;0.56586;0.57371;1.00000" dur="28.0s" repeatCount="indefinite" />
+      </circle>
+    </clipPath>
+    <clipPath id="iris-3-29">
+      <circle cx="579.0" cy="39.0" r="0">
+        <animate attributeName="r" values="0;0;54;54;0;0" keyTimes="0.00000;0.44943;0.45800;0.56614;0.57400;1.00000" dur="28.0s" repeatCount="indefinite" />
+      </circle>
+    </clipPath>
+    <clipPath id="iris-3-30">
+      <circle cx="592.5" cy="39.0" r="0">
+        <animate attributeName="r" values="0;0;54;54;0;0" keyTimes="0.00000;0.45000;0.45857;0.56643;0.57429;1.00000" dur="28.0s" repeatCount="indefinite" />
+      </circle>
+    </clipPath>
+    <clipPath id="iris-3-31">
+      <circle cx="604.5" cy="39.0" r="0">
+        <animate attributeName="r" values="0;0;54;54;0;0" keyTimes="0.00000;0.45057;0.45914;0.56671;0.57457;1.00000" dur="28.0s" repeatCount="indefinite" />
+      </circle>
+    </clipPath>
+    <clipPath id="iris-3-32">
+      <circle cx="613.0" cy="39.0" r="0">
+        <animate attributeName="r" values="0;0;54;54;0;0" keyTimes="0.00000;0.45114;0.45971;0.56700;0.57486;1.00000" dur="28.0s" repeatCount="indefinite" />
+      </circle>
+    </clipPath>
+    <clipPath id="iris-3-33">
+      <circle cx="622.5" cy="39.0" r="0">
+        <animate attributeName="r" values="0;0;54;54;0;0" keyTimes="0.00000;0.45171;0.46029;0.56729;0.57514;1.00000" dur="28.0s" repeatCount="indefinite" />
+      </circle>
+    </clipPath>
+    <clipPath id="iris-3-34">
+      <circle cx="636.0" cy="39.0" r="0">
+        <animate attributeName="r" values="0;0;54;54;0;0" keyTimes="0.00000;0.45229;0.46086;0.56757;0.57543;1.00000" dur="28.0s" repeatCount="indefinite" />
+      </circle>
+    </clipPath>
+    <clipPath id="iris-3-35">
+      <circle cx="648.5" cy="39.0" r="0">
+        <animate attributeName="r" values="0;0;54;54;0;0" keyTimes="0.00000;0.45286;0.46143;0.56786;0.57571;1.00000" dur="28.0s" repeatCount="indefinite" />
+      </circle>
+    </clipPath>
+    <clipPath id="iris-3-36">
+      <circle cx="660.5" cy="39.0" r="0">
+        <animate attributeName="r" values="0;0;54;54;0;0" keyTimes="0.00000;0.45343;0.46200;0.56814;0.57600;1.00000" dur="28.0s" repeatCount="indefinite" />
+      </circle>
+    </clipPath>
+    <clipPath id="iris-3-37">
+      <circle cx="672.5" cy="39.0" r="0">
+        <animate attributeName="r" values="0;0;54;54;0;0" keyTimes="0.00000;0.45400;0.46257;0.56843;0.57629;1.00000" dur="28.0s" repeatCount="indefinite" />
+      </circle>
+    </clipPath>
+    <clipPath id="iris-4-0">
+      <circle cx="266.0" cy="39.0" r="0">
+        <animate attributeName="r" values="0;0;54;54;0;0" keyTimes="0.00000;0.57571;0.58429;0.70071;0.70857;1.00000" dur="28.0s" repeatCount="indefinite" />
+      </circle>
+    </clipPath>
+    <clipPath id="iris-4-1">
+      <circle cx="278.5" cy="39.0" r="0">
+        <animate attributeName="r" values="0;0;54;54;0;0" keyTimes="0.00000;0.57629;0.58486;0.70100;0.70886;1.00000" dur="28.0s" repeatCount="indefinite" />
+      </circle>
+    </clipPath>
+    <clipPath id="iris-4-2">
+      <circle cx="290.5" cy="39.0" r="0">
+        <animate attributeName="r" values="0;0;54;54;0;0" keyTimes="0.00000;0.57686;0.58543;0.70129;0.70914;1.00000" dur="28.0s" repeatCount="indefinite" />
+      </circle>
+    </clipPath>
+    <clipPath id="iris-4-3">
+      <circle cx="302.5" cy="39.0" r="0">
+        <animate attributeName="r" values="0;0;54;54;0;0" keyTimes="0.00000;0.57743;0.58600;0.70157;0.70943;1.00000" dur="28.0s" repeatCount="indefinite" />
+      </circle>
+    </clipPath>
+    <clipPath id="iris-4-4">
+      <circle cx="312.0" cy="39.0" r="0">
+        <animate attributeName="r" values="0;0;54;54;0;0" keyTimes="0.00000;0.57800;0.58657;0.70186;0.70971;1.00000" dur="28.0s" repeatCount="indefinite" />
+      </circle>
+    </clipPath>
+    <clipPath id="iris-4-5">
+      <circle cx="319.5" cy="39.0" r="0">
+        <animate attributeName="r" values="0;0;54;54;0;0" keyTimes="0.00000;0.57857;0.58714;0.70214;0.71000;1.00000" dur="28.0s" repeatCount="indefinite" />
+      </circle>
+    </clipPath>
+    <clipPath id="iris-4-6">
+      <circle cx="330.0" cy="39.0" r="0">
+        <animate attributeName="r" values="0;0;54;54;0;0" keyTimes="0.00000;0.57914;0.58771;0.70243;0.71029;1.00000" dur="28.0s" repeatCount="indefinite" />
+      </circle>
+    </clipPath>
+    <clipPath id="iris-4-7">
+      <circle cx="344.0" cy="39.0" r="0">
+        <animate attributeName="r" values="0;0;54;54;0;0" keyTimes="0.00000;0.57971;0.58829;0.70271;0.71057;1.00000" dur="28.0s" repeatCount="indefinite" />
+      </circle>
+    </clipPath>
+    <clipPath id="iris-4-9">
+      <circle cx="364.0" cy="39.0" r="0">
+        <animate attributeName="r" values="0;0;54;54;0;0" keyTimes="0.00000;0.58086;0.58943;0.70329;0.71114;1.00000" dur="28.0s" repeatCount="indefinite" />
+      </circle>
+    </clipPath>
+    <clipPath id="iris-4-10">
+      <circle cx="378.0" cy="39.0" r="0">
+        <animate attributeName="r" values="0;0;54;54;0;0" keyTimes="0.00000;0.58143;0.59000;0.70357;0.71143;1.00000" dur="28.0s" repeatCount="indefinite" />
+      </circle>
+    </clipPath>
+    <clipPath id="iris-4-11">
+      <circle cx="390.5" cy="39.0" r="0">
+        <animate attributeName="r" values="0;0;54;54;0;0" keyTimes="0.00000;0.58200;0.59057;0.70386;0.71171;1.00000" dur="28.0s" repeatCount="indefinite" />
+      </circle>
+    </clipPath>
+    <clipPath id="iris-4-12">
+      <circle cx="400.5" cy="39.0" r="0">
+        <animate attributeName="r" values="0;0;54;54;0;0" keyTimes="0.00000;0.58257;0.59114;0.70414;0.71200;1.00000" dur="28.0s" repeatCount="indefinite" />
+      </circle>
+    </clipPath>
+    <clipPath id="iris-4-13">
+      <circle cx="412.0" cy="39.0" r="0">
+        <animate attributeName="r" values="0;0;54;54;0;0" keyTimes="0.00000;0.58314;0.59171;0.70443;0.71229;1.00000" dur="28.0s" repeatCount="indefinite" />
+      </circle>
+    </clipPath>
+    <clipPath id="iris-4-14">
+      <circle cx="429.5" cy="39.0" r="0">
+        <animate attributeName="r" values="0;0;54;54;0;0" keyTimes="0.00000;0.58371;0.59229;0.70471;0.71257;1.00000" dur="28.0s" repeatCount="indefinite" />
+      </circle>
+    </clipPath>
+    <clipPath id="iris-4-16">
+      <circle cx="453.5" cy="39.0" r="0">
+        <animate attributeName="r" values="0;0;54;54;0;0" keyTimes="0.00000;0.58486;0.59343;0.70529;0.71314;1.00000" dur="28.0s" repeatCount="indefinite" />
+      </circle>
+    </clipPath>
+    <clipPath id="iris-4-17">
+      <circle cx="467.0" cy="39.0" r="0">
+        <animate attributeName="r" values="0;0;54;54;0;0" keyTimes="0.00000;0.58543;0.59400;0.70557;0.71343;1.00000" dur="28.0s" repeatCount="indefinite" />
+      </circle>
+    </clipPath>
+    <clipPath id="iris-4-18">
+      <circle cx="479.0" cy="39.0" r="0">
+        <animate attributeName="r" values="0;0;54;54;0;0" keyTimes="0.00000;0.58600;0.59457;0.70586;0.71371;1.00000" dur="28.0s" repeatCount="indefinite" />
+      </circle>
+    </clipPath>
+    <clipPath id="iris-4-19">
+      <circle cx="491.0" cy="39.0" r="0">
+        <animate attributeName="r" values="0;0;54;54;0;0" keyTimes="0.00000;0.58657;0.59514;0.70614;0.71400;1.00000" dur="28.0s" repeatCount="indefinite" />
+      </circle>
+    </clipPath>
+    <clipPath id="iris-4-21">
+      <circle cx="509.5" cy="39.0" r="0">
+        <animate attributeName="r" values="0;0;54;54;0;0" keyTimes="0.00000;0.58771;0.59629;0.70671;0.71457;1.00000" dur="28.0s" repeatCount="indefinite" />
+      </circle>
+    </clipPath>
+    <clipPath id="iris-4-22">
+      <circle cx="524.0" cy="39.0" r="0">
+        <animate attributeName="r" values="0;0;54;54;0;0" keyTimes="0.00000;0.58829;0.59686;0.70700;0.71486;1.00000" dur="28.0s" repeatCount="indefinite" />
+      </circle>
+    </clipPath>
+    <clipPath id="iris-4-23">
+      <circle cx="538.5" cy="39.0" r="0">
+        <animate attributeName="r" values="0;0;54;54;0;0" keyTimes="0.00000;0.58886;0.59743;0.70729;0.71514;1.00000" dur="28.0s" repeatCount="indefinite" />
+      </circle>
+    </clipPath>
+    <clipPath id="iris-4-25">
+      <circle cx="558.5" cy="39.0" r="0">
+        <animate attributeName="r" values="0;0;54;54;0;0" keyTimes="0.00000;0.59000;0.59857;0.70786;0.71571;1.00000" dur="28.0s" repeatCount="indefinite" />
+      </circle>
+    </clipPath>
+    <clipPath id="iris-4-26">
+      <circle cx="572.0" cy="39.0" r="0">
+        <animate attributeName="r" values="0;0;54;54;0;0" keyTimes="0.00000;0.59057;0.59914;0.70814;0.71600;1.00000" dur="28.0s" repeatCount="indefinite" />
+      </circle>
+    </clipPath>
+    <clipPath id="iris-4-27">
+      <circle cx="586.0" cy="39.0" r="0">
+        <animate attributeName="r" values="0;0;54;54;0;0" keyTimes="0.00000;0.59114;0.59971;0.70843;0.71629;1.00000" dur="28.0s" repeatCount="indefinite" />
+      </circle>
+    </clipPath>
+    <clipPath id="iris-4-28">
+      <circle cx="600.0" cy="39.0" r="0">
+        <animate attributeName="r" values="0;0;54;54;0;0" keyTimes="0.00000;0.59171;0.60029;0.70871;0.71657;1.00000" dur="28.0s" repeatCount="indefinite" />
+      </circle>
+    </clipPath>
+    <clipPath id="iris-4-29">
+      <circle cx="613.5" cy="39.0" r="0">
+        <animate attributeName="r" values="0;0;54;54;0;0" keyTimes="0.00000;0.59229;0.60086;0.70900;0.71686;1.00000" dur="28.0s" repeatCount="indefinite" />
+      </circle>
+    </clipPath>
+    <clipPath id="iris-4-30">
+      <circle cx="625.5" cy="39.0" r="0">
+        <animate attributeName="r" values="0;0;54;54;0;0" keyTimes="0.00000;0.59286;0.60143;0.70929;0.71714;1.00000" dur="28.0s" repeatCount="indefinite" />
+      </circle>
+    </clipPath>
+    <clipPath id="iris-4-31">
+      <circle cx="636.0" cy="39.0" r="0">
+        <animate attributeName="r" values="0;0;54;54;0;0" keyTimes="0.00000;0.59343;0.60200;0.70957;0.71743;1.00000" dur="28.0s" repeatCount="indefinite" />
+      </circle>
+    </clipPath>
+    <clipPath id="iris-5-0">
+      <circle cx="277.5" cy="39.0" r="0">
+        <animate attributeName="r" values="0;0;54;54;0;0" keyTimes="0.00000;0.71857;0.72714;0.84357;0.85143;1.00000" dur="28.0s" repeatCount="indefinite" />
+      </circle>
+    </clipPath>
+    <clipPath id="iris-5-1">
+      <circle cx="291.5" cy="39.0" r="0">
+        <animate attributeName="r" values="0;0;54;54;0;0" keyTimes="0.00000;0.71914;0.72771;0.84386;0.85171;1.00000" dur="28.0s" repeatCount="indefinite" />
+      </circle>
+    </clipPath>
+    <clipPath id="iris-5-2">
+      <circle cx="302.0" cy="39.0" r="0">
+        <animate attributeName="r" values="0;0;54;54;0;0" keyTimes="0.00000;0.71971;0.72829;0.84414;0.85200;1.00000" dur="28.0s" repeatCount="indefinite" />
+      </circle>
+    </clipPath>
+    <clipPath id="iris-5-3">
+      <circle cx="309.0" cy="39.0" r="0">
+        <animate attributeName="r" values="0;0;54;54;0;0" keyTimes="0.00000;0.72029;0.72886;0.84443;0.85229;1.00000" dur="28.0s" repeatCount="indefinite" />
+      </circle>
+    </clipPath>
+    <clipPath id="iris-5-4">
+      <circle cx="319.5" cy="39.0" r="0">
+        <animate attributeName="r" values="0;0;54;54;0;0" keyTimes="0.00000;0.72086;0.72943;0.84471;0.85257;1.00000" dur="28.0s" repeatCount="indefinite" />
+      </circle>
+    </clipPath>
+    <clipPath id="iris-5-5">
+      <circle cx="330.0" cy="39.0" r="0">
+        <animate attributeName="r" values="0;0;54;54;0;0" keyTimes="0.00000;0.72143;0.73000;0.84500;0.85286;1.00000" dur="28.0s" repeatCount="indefinite" />
+      </circle>
+    </clipPath>
+    <clipPath id="iris-5-6">
+      <circle cx="340.5" cy="39.0" r="0">
+        <animate attributeName="r" values="0;0;54;54;0;0" keyTimes="0.00000;0.72200;0.73057;0.84529;0.85314;1.00000" dur="28.0s" repeatCount="indefinite" />
+      </circle>
+    </clipPath>
+    <clipPath id="iris-5-7">
+      <circle cx="354.5" cy="39.0" r="0">
+        <animate attributeName="r" values="0;0;54;54;0;0" keyTimes="0.00000;0.72257;0.73114;0.84557;0.85343;1.00000" dur="28.0s" repeatCount="indefinite" />
+      </circle>
+    </clipPath>
+    <clipPath id="iris-5-9">
+      <circle cx="373.5" cy="39.0" r="0">
+        <animate attributeName="r" values="0;0;54;54;0;0" keyTimes="0.00000;0.72371;0.73229;0.84614;0.85400;1.00000" dur="28.0s" repeatCount="indefinite" />
+      </circle>
+    </clipPath>
+    <clipPath id="iris-5-10">
+      <circle cx="383.0" cy="39.0" r="0">
+        <animate attributeName="r" values="0;0;54;54;0;0" keyTimes="0.00000;0.72429;0.73286;0.84643;0.85429;1.00000" dur="28.0s" repeatCount="indefinite" />
+      </circle>
+    </clipPath>
+    <clipPath id="iris-5-11">
+      <circle cx="393.5" cy="39.0" r="0">
+        <animate attributeName="r" values="0;0;54;54;0;0" keyTimes="0.00000;0.72486;0.73343;0.84671;0.85457;1.00000" dur="28.0s" repeatCount="indefinite" />
+      </circle>
+    </clipPath>
+    <clipPath id="iris-5-12">
+      <circle cx="404.0" cy="39.0" r="0">
+        <animate attributeName="r" values="0;0;54;54;0;0" keyTimes="0.00000;0.72543;0.73400;0.84700;0.85486;1.00000" dur="28.0s" repeatCount="indefinite" />
+      </circle>
+    </clipPath>
+    <clipPath id="iris-5-13">
+      <circle cx="414.5" cy="39.0" r="0">
+        <animate attributeName="r" values="0;0;54;54;0;0" keyTimes="0.00000;0.72600;0.73457;0.84729;0.85514;1.00000" dur="28.0s" repeatCount="indefinite" />
+      </circle>
+    </clipPath>
+    <clipPath id="iris-5-15">
+      <circle cx="433.5" cy="39.0" r="0">
+        <animate attributeName="r" values="0;0;54;54;0;0" keyTimes="0.00000;0.72714;0.73571;0.84786;0.85571;1.00000" dur="28.0s" repeatCount="indefinite" />
+      </circle>
+    </clipPath>
+    <clipPath id="iris-5-16">
+      <circle cx="447.0" cy="39.0" r="0">
+        <animate attributeName="r" values="0;0;54;54;0;0" keyTimes="0.00000;0.72771;0.73629;0.84814;0.85600;1.00000" dur="28.0s" repeatCount="indefinite" />
+      </circle>
+    </clipPath>
+    <clipPath id="iris-5-18">
+      <circle cx="470.5" cy="39.0" r="0">
+        <animate attributeName="r" values="0;0;54;54;0;0" keyTimes="0.00000;0.72886;0.73743;0.84871;0.85657;1.00000" dur="28.0s" repeatCount="indefinite" />
+      </circle>
+    </clipPath>
+    <clipPath id="iris-5-19">
+      <circle cx="487.0" cy="39.0" r="0">
+        <animate attributeName="r" values="0;0;54;54;0;0" keyTimes="0.00000;0.72943;0.73800;0.84900;0.85686;1.00000" dur="28.0s" repeatCount="indefinite" />
+      </circle>
+    </clipPath>
+    <clipPath id="iris-5-20">
+      <circle cx="500.5" cy="39.0" r="0">
+        <animate attributeName="r" values="0;0;54;54;0;0" keyTimes="0.00000;0.73000;0.73857;0.84929;0.85714;1.00000" dur="28.0s" repeatCount="indefinite" />
+      </circle>
+    </clipPath>
+    <clipPath id="iris-5-22">
+      <circle cx="519.0" cy="39.0" r="0">
+        <animate attributeName="r" values="0;0;54;54;0;0" keyTimes="0.00000;0.73114;0.73971;0.84986;0.85771;1.00000" dur="28.0s" repeatCount="indefinite" />
+      </circle>
+    </clipPath>
+    <clipPath id="iris-5-23">
+      <circle cx="531.5" cy="39.0" r="0">
+        <animate attributeName="r" values="0;0;54;54;0;0" keyTimes="0.00000;0.73171;0.74029;0.85014;0.85800;1.00000" dur="28.0s" repeatCount="indefinite" />
+      </circle>
+    </clipPath>
+    <clipPath id="iris-5-24">
+      <circle cx="543.0" cy="39.0" r="0">
+        <animate attributeName="r" values="0;0;54;54;0;0" keyTimes="0.00000;0.73229;0.74086;0.85043;0.85829;1.00000" dur="28.0s" repeatCount="indefinite" />
+      </circle>
+    </clipPath>
+    <clipPath id="iris-5-25">
+      <circle cx="554.0" cy="39.0" r="0">
+        <animate attributeName="r" values="0;0;54;54;0;0" keyTimes="0.00000;0.73286;0.74143;0.85071;0.85857;1.00000" dur="28.0s" repeatCount="indefinite" />
+      </circle>
+    </clipPath>
+    <clipPath id="iris-5-26">
+      <circle cx="566.0" cy="39.0" r="0">
+        <animate attributeName="r" values="0;0;54;54;0;0" keyTimes="0.00000;0.73343;0.74200;0.85100;0.85886;1.00000" dur="28.0s" repeatCount="indefinite" />
+      </circle>
+    </clipPath>
+    <clipPath id="iris-5-27">
+      <circle cx="576.5" cy="39.0" r="0">
+        <animate attributeName="r" values="0;0;54;54;0;0" keyTimes="0.00000;0.73400;0.74257;0.85129;0.85914;1.00000" dur="28.0s" repeatCount="indefinite" />
+      </circle>
+    </clipPath>
+    <clipPath id="iris-5-28">
+      <circle cx="588.0" cy="39.0" r="0">
+        <animate attributeName="r" values="0;0;54;54;0;0" keyTimes="0.00000;0.73457;0.74314;0.85157;0.85943;1.00000" dur="28.0s" repeatCount="indefinite" />
+      </circle>
+    </clipPath>
+    <clipPath id="iris-5-29">
+      <circle cx="600.0" cy="39.0" r="0">
+        <animate attributeName="r" values="0;0;54;54;0;0" keyTimes="0.00000;0.73514;0.74371;0.85186;0.85971;1.00000" dur="28.0s" repeatCount="indefinite" />
+      </circle>
+    </clipPath>
+    <clipPath id="iris-5-30">
+      <circle cx="612.0" cy="39.0" r="0">
+        <animate attributeName="r" values="0;0;54;54;0;0" keyTimes="0.00000;0.73571;0.74429;0.85214;0.86000;1.00000" dur="28.0s" repeatCount="indefinite" />
+      </circle>
+    </clipPath>
+    <clipPath id="iris-5-31">
+      <circle cx="624.0" cy="39.0" r="0">
+        <animate attributeName="r" values="0;0;54;54;0;0" keyTimes="0.00000;0.73629;0.74486;0.85243;0.86029;1.00000" dur="28.0s" repeatCount="indefinite" />
+      </circle>
+    </clipPath>
+    <clipPath id="iris-6-0">
+      <circle cx="187.0" cy="39.0" r="0">
+        <animate attributeName="r" values="0;0;54;54;0;0" keyTimes="0.00000;0.86143;0.87000;0.98643;0.99429;1.00000" dur="28.0s" repeatCount="indefinite" />
+      </circle>
+    </clipPath>
+    <clipPath id="iris-6-1">
+      <circle cx="199.5" cy="39.0" r="0">
+        <animate attributeName="r" values="0;0;54;54;0;0" keyTimes="0.00000;0.86200;0.87057;0.98671;0.99457;1.00000" dur="28.0s" repeatCount="indefinite" />
+      </circle>
+    </clipPath>
+    <clipPath id="iris-6-2">
+      <circle cx="211.0" cy="39.0" r="0">
+        <animate attributeName="r" values="0;0;54;54;0;0" keyTimes="0.00000;0.86257;0.87114;0.98700;0.99486;1.00000" dur="28.0s" repeatCount="indefinite" />
+      </circle>
+    </clipPath>
+    <clipPath id="iris-6-3">
+      <circle cx="224.0" cy="39.0" r="0">
+        <animate attributeName="r" values="0;0;54;54;0;0" keyTimes="0.00000;0.86314;0.87171;0.98729;0.99514;1.00000" dur="28.0s" repeatCount="indefinite" />
+      </circle>
+    </clipPath>
+    <clipPath id="iris-6-4">
+      <circle cx="235.5" cy="39.0" r="0">
+        <animate attributeName="r" values="0;0;54;54;0;0" keyTimes="0.00000;0.86371;0.87229;0.98757;0.99543;1.00000" dur="28.0s" repeatCount="indefinite" />
+      </circle>
+    </clipPath>
+    <clipPath id="iris-6-5">
+      <circle cx="243.5" cy="39.0" r="0">
+        <animate attributeName="r" values="0;0;54;54;0;0" keyTimes="0.00000;0.86429;0.87286;0.98786;0.99571;1.00000" dur="28.0s" repeatCount="indefinite" />
+      </circle>
+    </clipPath>
+    <clipPath id="iris-6-6">
+      <circle cx="254.0" cy="39.0" r="0">
+        <animate attributeName="r" values="0;0;54;54;0;0" keyTimes="0.00000;0.86486;0.87343;0.98814;0.99600;1.00000" dur="28.0s" repeatCount="indefinite" />
+      </circle>
+    </clipPath>
+    <clipPath id="iris-6-7">
+      <circle cx="268.0" cy="39.0" r="0">
+        <animate attributeName="r" values="0;0;54;54;0;0" keyTimes="0.00000;0.86543;0.87400;0.98843;0.99629;1.00000" dur="28.0s" repeatCount="indefinite" />
+      </circle>
+    </clipPath>
+    <clipPath id="iris-6-9">
+      <circle cx="286.5" cy="39.0" r="0">
+        <animate attributeName="r" values="0;0;54;54;0;0" keyTimes="0.00000;0.86657;0.87514;0.98900;0.99686;1.00000" dur="28.0s" repeatCount="indefinite" />
+      </circle>
+    </clipPath>
+    <clipPath id="iris-6-10">
+      <circle cx="299.0" cy="39.0" r="0">
+        <animate attributeName="r" values="0;0;54;54;0;0" keyTimes="0.00000;0.86714;0.87571;0.98929;0.99714;1.00000" dur="28.0s" repeatCount="indefinite" />
+      </circle>
+    </clipPath>
+    <clipPath id="iris-6-11">
+      <circle cx="310.5" cy="39.0" r="0">
+        <animate attributeName="r" values="0;0;54;54;0;0" keyTimes="0.00000;0.86771;0.87629;0.98957;0.99743;1.00000" dur="28.0s" repeatCount="indefinite" />
+      </circle>
+    </clipPath>
+    <clipPath id="iris-6-12">
+      <circle cx="321.5" cy="39.0" r="0">
+        <animate attributeName="r" values="0;0;54;54;0;0" keyTimes="0.00000;0.86829;0.87686;0.98986;0.99771;1.00000" dur="28.0s" repeatCount="indefinite" />
+      </circle>
+    </clipPath>
+    <clipPath id="iris-6-13">
+      <circle cx="333.5" cy="39.0" r="0">
+        <animate attributeName="r" values="0;0;54;54;0;0" keyTimes="0.00000;0.86886;0.87743;0.99014;0.99800;1.00000" dur="28.0s" repeatCount="indefinite" />
+      </circle>
+    </clipPath>
+    <clipPath id="iris-6-14">
+      <circle cx="345.5" cy="39.0" r="0">
+        <animate attributeName="r" values="0;0;54;54;0;0" keyTimes="0.00000;0.86943;0.87800;0.99043;0.99829;1.00000" dur="28.0s" repeatCount="indefinite" />
+      </circle>
+    </clipPath>
+    <clipPath id="iris-6-15">
+      <circle cx="357.5" cy="39.0" r="0">
+        <animate attributeName="r" values="0;0;54;54;0;0" keyTimes="0.00000;0.87000;0.87857;0.99071;0.99857;1.00000" dur="28.0s" repeatCount="indefinite" />
+      </circle>
+    </clipPath>
+    <clipPath id="iris-6-16">
+      <circle cx="367.5" cy="39.0" r="0">
+        <animate attributeName="r" values="0;0;54;54;0;0" keyTimes="0.00000;0.87057;0.87914;0.99100;0.99886;1.00000" dur="28.0s" repeatCount="indefinite" />
+      </circle>
+    </clipPath>
+    <clipPath id="iris-6-17">
+      <circle cx="375.5" cy="39.0" r="0">
+        <animate attributeName="r" values="0;0;54;54;0;0" keyTimes="0.00000;0.87114;0.87971;0.99129;0.99914;1.00000" dur="28.0s" repeatCount="indefinite" />
+      </circle>
+    </clipPath>
+    <clipPath id="iris-6-18">
+      <circle cx="386.0" cy="39.0" r="0">
+        <animate attributeName="r" values="0;0;54;54;0;0" keyTimes="0.00000;0.87171;0.88029;0.99157;0.99943;1.00000" dur="28.0s" repeatCount="indefinite" />
+      </circle>
+    </clipPath>
+    <clipPath id="iris-6-19">
+      <circle cx="399.5" cy="39.0" r="0">
+        <animate attributeName="r" values="0;0;54;54;0;0" keyTimes="0.00000;0.87229;0.88086;0.99186;0.99971;1.00000" dur="28.0s" repeatCount="indefinite" />
+      </circle>
+    </clipPath>
+    <clipPath id="iris-6-21">
+      <circle cx="418.5" cy="39.0" r="0">
+        <animate attributeName="r" values="0;0;54;54;0;0" keyTimes="0.00000;0.87343;0.88200;0.99243;0.99990;1.00000" dur="28.0s" repeatCount="indefinite" />
+      </circle>
+    </clipPath>
+    <clipPath id="iris-6-22">
+      <circle cx="431.5" cy="39.0" r="0">
+        <animate attributeName="r" values="0;0;54;54;0;0" keyTimes="0.00000;0.87400;0.88257;0.99271;0.99990;1.00000" dur="28.0s" repeatCount="indefinite" />
+      </circle>
+    </clipPath>
+    <clipPath id="iris-6-23">
+      <circle cx="443.5" cy="39.0" r="0">
+        <animate attributeName="r" values="0;0;54;54;0;0" keyTimes="0.00000;0.87457;0.88314;0.99300;0.99990;1.00000" dur="28.0s" repeatCount="indefinite" />
+      </circle>
+    </clipPath>
+    <clipPath id="iris-6-24">
+      <circle cx="455.0" cy="39.0" r="0">
+        <animate attributeName="r" values="0;0;54;54;0;0" keyTimes="0.00000;0.87514;0.88371;0.99329;0.99990;1.00000" dur="28.0s" repeatCount="indefinite" />
+      </circle>
+    </clipPath>
+    <clipPath id="iris-6-25">
+      <circle cx="467.5" cy="39.0" r="0">
+        <animate attributeName="r" values="0;0;54;54;0;0" keyTimes="0.00000;0.87571;0.88429;0.99357;0.99990;1.00000" dur="28.0s" repeatCount="indefinite" />
+      </circle>
+    </clipPath>
+    <clipPath id="iris-6-26">
+      <circle cx="477.0" cy="39.0" r="0">
+        <animate attributeName="r" values="0;0;54;54;0;0" keyTimes="0.00000;0.87629;0.88486;0.99386;0.99990;1.00000" dur="28.0s" repeatCount="indefinite" />
+      </circle>
+    </clipPath>
+    <clipPath id="iris-6-27">
+      <circle cx="483.5" cy="39.0" r="0">
+        <animate attributeName="r" values="0;0;54;54;0;0" keyTimes="0.00000;0.87686;0.88543;0.99414;0.99990;1.00000" dur="28.0s" repeatCount="indefinite" />
+      </circle>
+    </clipPath>
+    <clipPath id="iris-6-28">
+      <circle cx="492.5" cy="39.0" r="0">
+        <animate attributeName="r" values="0;0;54;54;0;0" keyTimes="0.00000;0.87743;0.88600;0.99443;0.99990;1.00000" dur="28.0s" repeatCount="indefinite" />
+      </circle>
+    </clipPath>
+    <clipPath id="iris-6-30">
+      <circle cx="510.5" cy="39.0" r="0">
+        <animate attributeName="r" values="0;0;54;54;0;0" keyTimes="0.00000;0.87857;0.88714;0.99500;0.99990;1.00000" dur="28.0s" repeatCount="indefinite" />
+      </circle>
+    </clipPath>
+    <clipPath id="iris-6-31">
+      <circle cx="524.0" cy="39.0" r="0">
+        <animate attributeName="r" values="0;0;54;54;0;0" keyTimes="0.00000;0.87914;0.88771;0.99529;0.99990;1.00000" dur="28.0s" repeatCount="indefinite" />
+      </circle>
+    </clipPath>
+    <clipPath id="iris-6-32">
+      <circle cx="538.0" cy="39.0" r="0">
+        <animate attributeName="r" values="0;0;54;54;0;0" keyTimes="0.00000;0.87971;0.88829;0.99557;0.99990;1.00000" dur="28.0s" repeatCount="indefinite" />
+      </circle>
+    </clipPath>
+    <clipPath id="iris-6-33">
+      <circle cx="552.0" cy="39.0" r="0">
+        <animate attributeName="r" values="0;0;54;54;0;0" keyTimes="0.00000;0.88029;0.88886;0.99586;0.99990;1.00000" dur="28.0s" repeatCount="indefinite" />
+      </circle>
+    </clipPath>
+    <clipPath id="iris-6-34">
+      <circle cx="565.5" cy="39.0" r="0">
+        <animate attributeName="r" values="0;0;54;54;0;0" keyTimes="0.00000;0.88086;0.88943;0.99614;0.99990;1.00000" dur="28.0s" repeatCount="indefinite" />
+      </circle>
+    </clipPath>
+    <clipPath id="iris-6-35">
+      <circle cx="577.5" cy="39.0" r="0">
+        <animate attributeName="r" values="0;0;54;54;0;0" keyTimes="0.00000;0.88143;0.89000;0.99643;0.99990;1.00000" dur="28.0s" repeatCount="indefinite" />
+      </circle>
+    </clipPath>
+    <clipPath id="iris-6-37">
+      <circle cx="594.0" cy="39.0" r="0">
+        <animate attributeName="r" values="0;0;54;54;0;0" keyTimes="0.00000;0.88257;0.89114;0.99700;0.99990;1.00000" dur="28.0s" repeatCount="indefinite" />
+      </circle>
+    </clipPath>
+    <clipPath id="iris-6-38">
+      <circle cx="607.0" cy="39.0" r="0">
+        <animate attributeName="r" values="0;0;54;54;0;0" keyTimes="0.00000;0.88314;0.89171;0.99729;0.99990;1.00000" dur="28.0s" repeatCount="indefinite" />
+      </circle>
+    </clipPath>
+    <clipPath id="iris-6-39">
+      <circle cx="621.0" cy="39.0" r="0">
+        <animate attributeName="r" values="0;0;54;54;0;0" keyTimes="0.00000;0.88371;0.89229;0.99757;0.99990;1.00000" dur="28.0s" repeatCount="indefinite" />
+      </circle>
+    </clipPath>
+    <clipPath id="iris-6-40">
+      <circle cx="634.5" cy="39.0" r="0">
+        <animate attributeName="r" values="0;0;54;54;0;0" keyTimes="0.00000;0.88429;0.89286;0.99786;0.99990;1.00000" dur="28.0s" repeatCount="indefinite" />
+      </circle>
+    </clipPath>
+    <clipPath id="iris-6-41">
+      <circle cx="646.5" cy="39.0" r="0">
+        <animate attributeName="r" values="0;0;54;54;0;0" keyTimes="0.00000;0.88486;0.89343;0.99814;0.99990;1.00000" dur="28.0s" repeatCount="indefinite" />
+      </circle>
+    </clipPath>
+    <clipPath id="iris-6-42">
+      <circle cx="655.0" cy="39.0" r="0">
+        <animate attributeName="r" values="0;0;54;54;0;0" keyTimes="0.00000;0.88543;0.89400;0.99843;0.99990;1.00000" dur="28.0s" repeatCount="indefinite" />
+      </circle>
+    </clipPath>
+    <clipPath id="iris-6-43">
+      <circle cx="664.5" cy="39.0" r="0">
+        <animate attributeName="r" values="0;0;54;54;0;0" keyTimes="0.00000;0.88600;0.89457;0.99871;0.99990;1.00000" dur="28.0s" repeatCount="indefinite" />
+      </circle>
+    </clipPath>
+    <clipPath id="iris-6-44">
+      <circle cx="678.0" cy="39.0" r="0">
+        <animate attributeName="r" values="0;0;54;54;0;0" keyTimes="0.00000;0.88657;0.89514;0.99900;0.99990;1.00000" dur="28.0s" repeatCount="indefinite" />
+      </circle>
+    </clipPath>
+    <clipPath id="iris-6-45">
+      <circle cx="690.5" cy="39.0" r="0">
+        <animate attributeName="r" values="0;0;54;54;0;0" keyTimes="0.00000;0.88714;0.89571;0.99929;0.99990;1.00000" dur="28.0s" repeatCount="indefinite" />
+      </circle>
+    </clipPath>
+    <clipPath id="iris-6-46">
+      <circle cx="702.5" cy="39.0" r="0">
+        <animate attributeName="r" values="0;0;54;54;0;0" keyTimes="0.00000;0.88771;0.89629;0.99957;0.99990;1.00000" dur="28.0s" repeatCount="indefinite" />
+      </circle>
+    </clipPath>
+    <clipPath id="iris-6-47">
+      <circle cx="714.5" cy="39.0" r="0">
+        <animate attributeName="r" values="0;0;54;54;0;0" keyTimes="0.00000;0.88829;0.89686;0.99980;0.99990;1.00000" dur="28.0s" repeatCount="indefinite" />
+      </circle>
+    </clipPath>
+  </defs>
+
+  <!-- Tagline 1: Architecting Autonomous Multimodal AI Systems -->
+  <g class="tagline tagline-0">
+    <text x="181.0" y="50" clip-path="url(#iris-0-0)">A</text>
+    <text x="195.0" y="50" clip-path="url(#iris-0-1)">r</text>
+    <text x="206.0" y="50" clip-path="url(#iris-0-2)">c</text>
+    <text x="216.0" y="50" clip-path="url(#iris-0-3)">h</text>
+    <text x="230.0" y="50" clip-path="url(#iris-0-4)">i</text>
+    <text x="237.0" y="50" clip-path="url(#iris-0-5)">t</text>
+    <text x="246.0" y="50" clip-path="url(#iris-0-6)">e</text>
+    <text x="259.0" y="50" clip-path="url(#iris-0-7)">c</text>
+    <text x="270.0" y="50" clip-path="url(#iris-0-8)">t</text>
+    <text x="279.0" y="50" clip-path="url(#iris-0-9)">i</text>
+    <text x="286.0" y="50" clip-path="url(#iris-0-10)">n</text>
+    <text x="300.0" y="50" clip-path="url(#iris-0-11)">g</text>
+    <text x="320.0" y="50" clip-path="url(#iris-0-13)">A</text>
+    <text x="334.0" y="50" clip-path="url(#iris-0-14)">u</text>
+    <text x="348.0" y="50" clip-path="url(#iris-0-15)">t</text>
+    <text x="357.0" y="50" clip-path="url(#iris-0-16)">o</text>
+    <text x="371.0" y="50" clip-path="url(#iris-0-17)">n</text>
+    <text x="385.0" y="50" clip-path="url(#iris-0-18)">o</text>
+    <text x="399.0" y="50" clip-path="url(#iris-0-19)">m</text>
+    <text x="420.0" y="50" clip-path="url(#iris-0-20)">o</text>
+    <text x="434.0" y="50" clip-path="url(#iris-0-21)">u</text>
+    <text x="448.0" y="50" clip-path="url(#iris-0-22)">s</text>
+    <text x="465.0" y="50" clip-path="url(#iris-0-24)">M</text>
+    <text x="484.0" y="50" clip-path="url(#iris-0-25)">u</text>
+    <text x="498.0" y="50" clip-path="url(#iris-0-26)">l</text>
+    <text x="505.0" y="50" clip-path="url(#iris-0-27)">t</text>
+    <text x="514.0" y="50" clip-path="url(#iris-0-28)">i</text>
+    <text x="521.0" y="50" clip-path="url(#iris-0-29)">m</text>
+    <text x="542.0" y="50" clip-path="url(#iris-0-30)">o</text>
+    <text x="556.0" y="50" clip-path="url(#iris-0-31)">d</text>
+    <text x="570.0" y="50" clip-path="url(#iris-0-32)">a</text>
+    <text x="584.0" y="50" clip-path="url(#iris-0-33)">l</text>
+    <text x="597.0" y="50" clip-path="url(#iris-0-35)">A</text>
+    <text x="611.0" y="50" clip-path="url(#iris-0-36)">I</text>
+    <text x="628.0" y="50" clip-path="url(#iris-0-38)">S</text>
+    <text x="641.0" y="50" clip-path="url(#iris-0-39)">y</text>
+    <text x="654.0" y="50" clip-path="url(#iris-0-40)">s</text>
+    <text x="665.0" y="50" clip-path="url(#iris-0-41)">t</text>
+    <text x="674.0" y="50" clip-path="url(#iris-0-42)">e</text>
+    <text x="687.0" y="50" clip-path="url(#iris-0-43)">m</text>
+    <text x="708.0" y="50" clip-path="url(#iris-0-44)">s</text>
+  </g>
+  <!-- Tagline 2: Building Sub-Second Agentic RAG Pipelines -->
+  <g class="tagline tagline-1">
+    <text x="213.5" y="50" clip-path="url(#iris-1-0)">B</text>
+    <text x="227.5" y="50" clip-path="url(#iris-1-1)">u</text>
+    <text x="241.5" y="50" clip-path="url(#iris-1-2)">i</text>
+    <text x="248.5" y="50" clip-path="url(#iris-1-3)">l</text>
+    <text x="255.5" y="50" clip-path="url(#iris-1-4)">d</text>
+    <text x="269.5" y="50" clip-path="url(#iris-1-5)">i</text>
+    <text x="276.5" y="50" clip-path="url(#iris-1-6)">n</text>
+    <text x="290.5" y="50" clip-path="url(#iris-1-7)">g</text>
+    <text x="310.5" y="50" clip-path="url(#iris-1-9)">S</text>
+    <text x="323.5" y="50" clip-path="url(#iris-1-10)">u</text>
+    <text x="337.5" y="50" clip-path="url(#iris-1-11)">b</text>
+    <text x="351.5" y="50" clip-path="url(#iris-1-12)">-</text>
+    <text x="364.5" y="50" clip-path="url(#iris-1-13)">S</text>
+    <text x="377.5" y="50" clip-path="url(#iris-1-14)">e</text>
+    <text x="390.5" y="50" clip-path="url(#iris-1-15)">c</text>
+    <text x="401.5" y="50" clip-path="url(#iris-1-16)">o</text>
+    <text x="415.5" y="50" clip-path="url(#iris-1-17)">n</text>
+    <text x="429.5" y="50" clip-path="url(#iris-1-18)">d</text>
+    <text x="449.5" y="50" clip-path="url(#iris-1-20)">A</text>
+    <text x="463.5" y="50" clip-path="url(#iris-1-21)">g</text>
+    <text x="477.5" y="50" clip-path="url(#iris-1-22)">e</text>
+    <text x="490.5" y="50" clip-path="url(#iris-1-23)">n</text>
+    <text x="504.5" y="50" clip-path="url(#iris-1-24)">t</text>
+    <text x="513.5" y="50" clip-path="url(#iris-1-25)">i</text>
+    <text x="520.5" y="50" clip-path="url(#iris-1-26)">c</text>
+    <text x="537.5" y="50" clip-path="url(#iris-1-28)">R</text>
+    <text x="551.5" y="50" clip-path="url(#iris-1-29)">A</text>
+    <text x="565.5" y="50" clip-path="url(#iris-1-30)">G</text>
+    <text x="586.5" y="50" clip-path="url(#iris-1-32)">P</text>
+    <text x="600.5" y="50" clip-path="url(#iris-1-33)">i</text>
+    <text x="607.5" y="50" clip-path="url(#iris-1-34)">p</text>
+    <text x="621.5" y="50" clip-path="url(#iris-1-35)">e</text>
+    <text x="634.5" y="50" clip-path="url(#iris-1-36)">l</text>
+    <text x="641.5" y="50" clip-path="url(#iris-1-37)">i</text>
+    <text x="648.5" y="50" clip-path="url(#iris-1-38)">n</text>
+    <text x="662.5" y="50" clip-path="url(#iris-1-39)">e</text>
+    <text x="675.5" y="50" clip-path="url(#iris-1-40)">s</text>
+  </g>
+  <!-- Tagline 3: High-Throughput Celery & Redis AI Microservices -->
+  <g class="tagline tagline-2">
+    <text x="178.0" y="50" clip-path="url(#iris-2-0)">H</text>
+    <text x="193.0" y="50" clip-path="url(#iris-2-1)">i</text>
+    <text x="200.0" y="50" clip-path="url(#iris-2-2)">g</text>
+    <text x="214.0" y="50" clip-path="url(#iris-2-3)">h</text>
+    <text x="228.0" y="50" clip-path="url(#iris-2-4)">-</text>
+    <text x="241.0" y="50" clip-path="url(#iris-2-5)">T</text>
+    <text x="254.0" y="50" clip-path="url(#iris-2-6)">h</text>
+    <text x="267.0" y="50" clip-path="url(#iris-2-7)">r</text>
+    <text x="278.0" y="50" clip-path="url(#iris-2-8)">o</text>
+    <text x="291.0" y="50" clip-path="url(#iris-2-9)">u</text>
+    <text x="305.0" y="50" clip-path="url(#iris-2-10)">g</text>
+    <text x="319.0" y="50" clip-path="url(#iris-2-11)">h</text>
+    <text x="333.0" y="50" clip-path="url(#iris-2-12)">p</text>
+    <text x="347.0" y="50" clip-path="url(#iris-2-13)">u</text>
+    <text x="361.0" y="50" clip-path="url(#iris-2-14)">t</text>
+    <text x="376.0" y="50" clip-path="url(#iris-2-16)">C</text>
+    <text x="390.0" y="50" clip-path="url(#iris-2-17)">e</text>
+    <text x="403.0" y="50" clip-path="url(#iris-2-18)">l</text>
+    <text x="410.0" y="50" clip-path="url(#iris-2-19)">e</text>
+    <text x="423.0" y="50" clip-path="url(#iris-2-20)">r</text>
+    <text x="434.0" y="50" clip-path="url(#iris-2-21)">y</text>
+    <text x="452.0" y="50" clip-path="url(#iris-2-23)">&amp;</text>
+    <text x="475.0" y="50" clip-path="url(#iris-2-25)">R</text>
+    <text x="489.0" y="50" clip-path="url(#iris-2-26)">e</text>
+    <text x="502.0" y="50" clip-path="url(#iris-2-27)">d</text>
+    <text x="516.0" y="50" clip-path="url(#iris-2-28)">i</text>
+    <text x="523.0" y="50" clip-path="url(#iris-2-29)">s</text>
+    <text x="540.0" y="50" clip-path="url(#iris-2-31)">A</text>
+    <text x="554.0" y="50" clip-path="url(#iris-2-32)">I</text>
+    <text x="571.0" y="50" clip-path="url(#iris-2-34)">M</text>
+    <text x="590.0" y="50" clip-path="url(#iris-2-35)">i</text>
+    <text x="597.0" y="50" clip-path="url(#iris-2-36)">c</text>
+    <text x="608.0" y="50" clip-path="url(#iris-2-37)">r</text>
+    <text x="619.0" y="50" clip-path="url(#iris-2-38)">o</text>
+    <text x="632.0" y="50" clip-path="url(#iris-2-39)">s</text>
+    <text x="643.0" y="50" clip-path="url(#iris-2-40)">e</text>
+    <text x="656.0" y="50" clip-path="url(#iris-2-41)">r</text>
+    <text x="667.0" y="50" clip-path="url(#iris-2-42)">v</text>
+    <text x="680.0" y="50" clip-path="url(#iris-2-43)">i</text>
+    <text x="687.0" y="50" clip-path="url(#iris-2-44)">c</text>
+    <text x="698.0" y="50" clip-path="url(#iris-2-45)">e</text>
+    <text x="711.0" y="50" clip-path="url(#iris-2-46)">s</text>
+  </g>
+  <!-- Tagline 4: Engineering 60FPS 3D WebGL Experiences -->
+  <g class="tagline tagline-3">
+    <text x="222.0" y="50" clip-path="url(#iris-3-0)">E</text>
+    <text x="234.0" y="50" clip-path="url(#iris-3-1)">n</text>
+    <text x="248.0" y="50" clip-path="url(#iris-3-2)">g</text>
+    <text x="262.0" y="50" clip-path="url(#iris-3-3)">i</text>
+    <text x="269.0" y="50" clip-path="url(#iris-3-4)">n</text>
+    <text x="283.0" y="50" clip-path="url(#iris-3-5)">e</text>
+    <text x="296.0" y="50" clip-path="url(#iris-3-6)">e</text>
+    <text x="309.0" y="50" clip-path="url(#iris-3-7)">r</text>
+    <text x="320.0" y="50" clip-path="url(#iris-3-8)">i</text>
+    <text x="326.0" y="50" clip-path="url(#iris-3-9)">n</text>
+    <text x="340.0" y="50" clip-path="url(#iris-3-10)">g</text>
+    <text x="360.0" y="50" clip-path="url(#iris-3-12)">6</text>
+    <text x="374.0" y="50" clip-path="url(#iris-3-13)">0</text>
+    <text x="389.0" y="50" clip-path="url(#iris-3-14)">F</text>
+    <text x="401.0" y="50" clip-path="url(#iris-3-15)">P</text>
+    <text x="415.0" y="50" clip-path="url(#iris-3-16)">S</text>
+    <text x="434.0" y="50" clip-path="url(#iris-3-18)">3</text>
+    <text x="446.0" y="50" clip-path="url(#iris-3-19)">D</text>
+    <text x="467.0" y="50" clip-path="url(#iris-3-21)">W</text>
+    <text x="487.0" y="50" clip-path="url(#iris-3-22)">e</text>
+    <text x="500.0" y="50" clip-path="url(#iris-3-23)">b</text>
+    <text x="514.0" y="50" clip-path="url(#iris-3-24)">G</text>
+    <text x="529.0" y="50" clip-path="url(#iris-3-25)">L</text>
+    <text x="546.0" y="50" clip-path="url(#iris-3-27)">E</text>
+    <text x="558.0" y="50" clip-path="url(#iris-3-28)">x</text>
+    <text x="572.0" y="50" clip-path="url(#iris-3-29)">p</text>
+    <text x="586.0" y="50" clip-path="url(#iris-3-30)">e</text>
+    <text x="599.0" y="50" clip-path="url(#iris-3-31)">r</text>
+    <text x="610.0" y="50" clip-path="url(#iris-3-32)">i</text>
+    <text x="616.0" y="50" clip-path="url(#iris-3-33)">e</text>
+    <text x="629.0" y="50" clip-path="url(#iris-3-34)">n</text>
+    <text x="643.0" y="50" clip-path="url(#iris-3-35)">c</text>
+    <text x="654.0" y="50" clip-path="url(#iris-3-36)">e</text>
+    <text x="667.0" y="50" clip-path="url(#iris-3-37)">s</text>
+  </g>
+  <!-- Tagline 5: Crafting Custom GLSL GPU Shaders -->
+  <g class="tagline tagline-4">
+    <text x="259.0" y="50" clip-path="url(#iris-4-0)">C</text>
+    <text x="273.0" y="50" clip-path="url(#iris-4-1)">r</text>
+    <text x="284.0" y="50" clip-path="url(#iris-4-2)">a</text>
+    <text x="297.0" y="50" clip-path="url(#iris-4-3)">f</text>
+    <text x="308.0" y="50" clip-path="url(#iris-4-4)">t</text>
+    <text x="316.0" y="50" clip-path="url(#iris-4-5)">i</text>
+    <text x="323.0" y="50" clip-path="url(#iris-4-6)">n</text>
+    <text x="337.0" y="50" clip-path="url(#iris-4-7)">g</text>
+    <text x="357.0" y="50" clip-path="url(#iris-4-9)">C</text>
+    <text x="371.0" y="50" clip-path="url(#iris-4-10)">u</text>
+    <text x="385.0" y="50" clip-path="url(#iris-4-11)">s</text>
+    <text x="396.0" y="50" clip-path="url(#iris-4-12)">t</text>
+    <text x="405.0" y="50" clip-path="url(#iris-4-13)">o</text>
+    <text x="419.0" y="50" clip-path="url(#iris-4-14)">m</text>
+    <text x="446.0" y="50" clip-path="url(#iris-4-16)">G</text>
+    <text x="461.0" y="50" clip-path="url(#iris-4-17)">L</text>
+    <text x="473.0" y="50" clip-path="url(#iris-4-18)">S</text>
+    <text x="485.0" y="50" clip-path="url(#iris-4-19)">L</text>
+    <text x="502.0" y="50" clip-path="url(#iris-4-21)">G</text>
+    <text x="517.0" y="50" clip-path="url(#iris-4-22)">P</text>
+    <text x="531.0" y="50" clip-path="url(#iris-4-23)">U</text>
+    <text x="552.0" y="50" clip-path="url(#iris-4-25)">S</text>
+    <text x="565.0" y="50" clip-path="url(#iris-4-26)">h</text>
+    <text x="579.0" y="50" clip-path="url(#iris-4-27)">a</text>
+    <text x="593.0" y="50" clip-path="url(#iris-4-28)">d</text>
+    <text x="607.0" y="50" clip-path="url(#iris-4-29)">e</text>
+    <text x="620.0" y="50" clip-path="url(#iris-4-30)">r</text>
+    <text x="631.0" y="50" clip-path="url(#iris-4-31)">s</text>
+  </g>
+  <!-- Tagline 6: Building Fluid 3D Web Interfaces -->
+  <g class="tagline tagline-5">
+    <text x="270.5" y="50" clip-path="url(#iris-5-0)">B</text>
+    <text x="284.5" y="50" clip-path="url(#iris-5-1)">u</text>
+    <text x="298.5" y="50" clip-path="url(#iris-5-2)">i</text>
+    <text x="305.5" y="50" clip-path="url(#iris-5-3)">l</text>
+    <text x="312.5" y="50" clip-path="url(#iris-5-4)">d</text>
+    <text x="326.5" y="50" clip-path="url(#iris-5-5)">i</text>
+    <text x="333.5" y="50" clip-path="url(#iris-5-6)">n</text>
+    <text x="347.5" y="50" clip-path="url(#iris-5-7)">g</text>
+    <text x="367.5" y="50" clip-path="url(#iris-5-9)">F</text>
+    <text x="379.5" y="50" clip-path="url(#iris-5-10)">l</text>
+    <text x="386.5" y="50" clip-path="url(#iris-5-11)">u</text>
+    <text x="400.5" y="50" clip-path="url(#iris-5-12)">i</text>
+    <text x="407.5" y="50" clip-path="url(#iris-5-13)">d</text>
+    <text x="427.5" y="50" clip-path="url(#iris-5-15)">3</text>
+    <text x="439.5" y="50" clip-path="url(#iris-5-16)">D</text>
+    <text x="460.5" y="50" clip-path="url(#iris-5-18)">W</text>
+    <text x="480.5" y="50" clip-path="url(#iris-5-19)">e</text>
+    <text x="493.5" y="50" clip-path="url(#iris-5-20)">b</text>
+    <text x="513.5" y="50" clip-path="url(#iris-5-22)">I</text>
+    <text x="524.5" y="50" clip-path="url(#iris-5-23)">n</text>
+    <text x="538.5" y="50" clip-path="url(#iris-5-24)">t</text>
+    <text x="547.5" y="50" clip-path="url(#iris-5-25)">e</text>
+    <text x="560.5" y="50" clip-path="url(#iris-5-26)">r</text>
+    <text x="571.5" y="50" clip-path="url(#iris-5-27)">f</text>
+    <text x="581.5" y="50" clip-path="url(#iris-5-28)">a</text>
+    <text x="594.5" y="50" clip-path="url(#iris-5-29)">c</text>
+    <text x="605.5" y="50" clip-path="url(#iris-5-30)">e</text>
+    <text x="618.5" y="50" clip-path="url(#iris-5-31)">s</text>
+  </g>
+  <!-- Tagline 7: Creating Interactive Three.js Shader Experiences -->
+  <g class="tagline tagline-6">
+    <text x="180.0" y="50" clip-path="url(#iris-6-0)">C</text>
+    <text x="194.0" y="50" clip-path="url(#iris-6-1)">r</text>
+    <text x="205.0" y="50" clip-path="url(#iris-6-2)">e</text>
+    <text x="217.0" y="50" clip-path="url(#iris-6-3)">a</text>
+    <text x="231.0" y="50" clip-path="url(#iris-6-4)">t</text>
+    <text x="240.0" y="50" clip-path="url(#iris-6-5)">i</text>
+    <text x="247.0" y="50" clip-path="url(#iris-6-6)">n</text>
+    <text x="261.0" y="50" clip-path="url(#iris-6-7)">g</text>
+    <text x="281.0" y="50" clip-path="url(#iris-6-9)">I</text>
+    <text x="292.0" y="50" clip-path="url(#iris-6-10)">n</text>
+    <text x="306.0" y="50" clip-path="url(#iris-6-11)">t</text>
+    <text x="315.0" y="50" clip-path="url(#iris-6-12)">e</text>
+    <text x="328.0" y="50" clip-path="url(#iris-6-13)">r</text>
+    <text x="339.0" y="50" clip-path="url(#iris-6-14)">a</text>
+    <text x="352.0" y="50" clip-path="url(#iris-6-15)">c</text>
+    <text x="363.0" y="50" clip-path="url(#iris-6-16)">t</text>
+    <text x="372.0" y="50" clip-path="url(#iris-6-17)">i</text>
+    <text x="379.0" y="50" clip-path="url(#iris-6-18)">v</text>
+    <text x="393.0" y="50" clip-path="url(#iris-6-19)">e</text>
+    <text x="412.0" y="50" clip-path="url(#iris-6-21)">T</text>
+    <text x="425.0" y="50" clip-path="url(#iris-6-22)">h</text>
+    <text x="438.0" y="50" clip-path="url(#iris-6-23)">r</text>
+    <text x="449.0" y="50" clip-path="url(#iris-6-24)">e</text>
+    <text x="461.0" y="50" clip-path="url(#iris-6-25)">e</text>
+    <text x="474.0" y="50" clip-path="url(#iris-6-26)">.</text>
+    <text x="480.0" y="50" clip-path="url(#iris-6-27)">j</text>
+    <text x="487.0" y="50" clip-path="url(#iris-6-28)">s</text>
+    <text x="504.0" y="50" clip-path="url(#iris-6-30)">S</text>
+    <text x="517.0" y="50" clip-path="url(#iris-6-31)">h</text>
+    <text x="531.0" y="50" clip-path="url(#iris-6-32)">a</text>
+    <text x="545.0" y="50" clip-path="url(#iris-6-33)">d</text>
+    <text x="559.0" y="50" clip-path="url(#iris-6-34)">e</text>
+    <text x="572.0" y="50" clip-path="url(#iris-6-35)">r</text>
+    <text x="588.0" y="50" clip-path="url(#iris-6-37)">E</text>
+    <text x="600.0" y="50" clip-path="url(#iris-6-38)">x</text>
+    <text x="614.0" y="50" clip-path="url(#iris-6-39)">p</text>
+    <text x="628.0" y="50" clip-path="url(#iris-6-40)">e</text>
+    <text x="641.0" y="50" clip-path="url(#iris-6-41)">r</text>
+    <text x="652.0" y="50" clip-path="url(#iris-6-42)">i</text>
+    <text x="658.0" y="50" clip-path="url(#iris-6-43)">e</text>
+    <text x="671.0" y="50" clip-path="url(#iris-6-44)">n</text>
+    <text x="685.0" y="50" clip-path="url(#iris-6-45)">c</text>
+    <text x="696.0" y="50" clip-path="url(#iris-6-46)">e</text>
+    <text x="709.0" y="50" clip-path="url(#iris-6-47)">s</text>
+  </g>
+</svg>

@@ -5,159 +5,135 @@
     <img src="assets/header.svg" alt="Mohammed Sahil - Full-Stack & GenAI Engineer" width="100%" />
   </a>
 
-  <!-- Real-Time Looping Typing Subtitle (GitHub Green) -->
+  <!-- Real-Time Looping Iris Text Subtitle (GitHub Green) -->
   <a href="https://github.com/Arnim-Zola/Eden">
-    <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=20&duration=3000&pause=1000&color=39D353&center=true&vCenter=true&width=750&lines=Creator+of+Eden+%F0%9F%8C%BF+Multimodal+AI+Misinformation+Engine;Ingesting+Reels+%7C+OpenCV+Frames+%7C+Whisper+Audio+%7C+LLM+Verification;Architecting+Autonomous+Multi-Agent+Pipelines+%26+Sub-Second+RAG;Creator+of+CampusCart+%F0%9F%9B%92+%26+Zemo+%E2%9A%A1+Analytics+Engine;1st+Place+Grand+Winner+%40+HackBangalore+2025+%F0%9F%8F%86;National+Finalist+%40+Flipkart+GRiD+6.0+%F0%9F%8E%AF" alt="Mohammed Sahil Dynamic Typing" />
+    <img src="assets/taglines.svg" alt="Mohammed Sahil Technical Taglines - Iris Reveal Animation" width="100%" />
   </a>
 
   <br/><br/>
 
-  <!-- Status HUD Badges (GitHub Dark & Emerald Green) -->
+  <!-- Unified Emerald Green Social Connect HUD -->
   <p align="center">
-    <a href="https://github.com/Arnim-Zola/Eden">
-      <img src="https://img.shields.io/badge/FLAGSHIP-EDEN%20MULTIMODAL%20AI-238636?style=for-the-badge&logo=openai&logoColor=white" />
-    </a>
-    <img src="https://img.shields.io/badge/LOCATION-BENGALURU%2C%20IN-161b22?style=for-the-badge&logo=googlemaps&logoColor=39d353" />
-    <img src="https://img.shields.io/badge/STATUS-OPERATIONAL-2ea043?style=for-the-badge&logo=statuspage&logoColor=white" />
-  </p>
-
-  <!-- Quick Social Connect Pills -->
-  <p align="center">
-    <a href="https://github.com/Arnim-Zola/Portfolio"><img src="https://img.shields.io/badge/🌐_Quantum_Portfolio-0d1117?style=for-the-badge&logo=vercel&logoColor=39d353&color=161b22" /></a>
-    <a href="https://www.linkedin.com/in/mohammed-sahil-2b0583336/"><img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" /></a>
-    <a href="mailto:mohammedsahil0003@gmail.com"><img src="https://img.shields.io/badge/Email-EA4335?style=for-the-badge&logo=gmail&logoColor=white" /></a>
-    <a href="https://leetcode.com/"><img src="https://img.shields.io/badge/LeetCode-FFA116?style=for-the-badge&logo=leetcode&logoColor=black" /></a>
-    <a href="https://hackerrank.com/"><img src="https://img.shields.io/badge/HackerRank-2EC866?style=for-the-badge&logo=hackerrank&logoColor=white" /></a>
-    <a href="https://huggingface.co/Arnim-Zola"><img src="https://img.shields.io/badge/HuggingFace-FFD21E?style=for-the-badge&logo=huggingface&logoColor=black" /></a>
+    <a href="https://www.linkedin.com/in/mohammed-sahil-2b0583336/"><img src="https://img.shields.io/badge/LINKEDIN-238636?style=for-the-badge&logo=data%3Aimage%2Fsvg%2Bxml%3Bbase64%2CPHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0id2hpdGUiPjxwYXRoIGQ9Ik0xOSAwaC0xNGMtMi43NjEgMC01IDIuMjM5LTUgNXYxNGMwIDIuNzYxIDIuMjM5IDUgNSA1aDE0YzIuNzYyIDAgNS0yLjIzOSA1LTV2LTE0YzAtMi43NjEtMi4yMzgtNS01LTV6bS0xMSAxOWgtM3YtMTFoM3YxMXptLTEuNS0xMi4yNjhjLS45NjYgMC0xLjc1LS43OS0xLjc1LTEuNzY0cy43ODQtMS43NjQgMS43NS0xLjc2NCAxLjc1Ljc5IDEuNzUgMS43NjQtLjc4MyAxLjc2NC0xLjc1IDEuNzY0em0xMy41IDEyLjI2OGgtM3YtNS42MDRjMC0zLjM2OC00LTMuMTEzLTQgMHY1LjYwNGgtM3YtMTFoM3YxLjc2NWMxLjM5Ni0yLjU4NiA3LTIuNzc3IDcgMi40NzZ2Ni43NTl6Ii8%2BPC9zdmc%2B&logoColor=white" alt="LinkedIn" /></a>
+    <a href="mailto:mohammedsahil0003@gmail.com"><img src="https://img.shields.io/badge/EMAIL-238636?style=for-the-badge&logo=data%3Aimage%2Fsvg%2Bxml%3Bbase64%2CPHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0id2hpdGUiPjxwYXRoIGQ9Ik0yNCA1LjQ1N3YxMy45MDljMCAuOTA0LS43MzIgMS42MzYtMS42MzYgMS42MzZoLTMuODE5VjExLjczTDEyIDE2LjY0bC02LjU0NS00LjkxdjkuMjczSDEuNjM2QTEuNjM2IDEuNjM2IDAgMCAxIDAgMTkuMzY2VjUuNDU3YzAtMi4wMjMgMi4zMDktMy4xNzggMy45MjctMS45NjRMNS40NTUgNC42NCAxMiA5LjU0OGw2LjU0NS00LjkxIDEuNTI4LTEuMTQ1QzIxLjY5IDIuMjggMjQgMy40MzQgMjQgNS40NTd6Ii8%2BPC9zdmc%2B&logoColor=white" alt="Email" /></a>
   </p>
 
 </div>
 
 ---
 
-### 🌿 PRIMARY FLAGSHIP: EDEN (Autonomous Misinformation Analysis Engine)
+### ABOUT ME & IDENTITY
+
+> I am a 3rd-year Computer Science & Engineering undergraduate at **DSATM, Bengaluru (Class of 2028)**, building at the intersection of **core CS systems (DSA, OS, DBMS, Networks)** and **production-grade GenAI & Full-Stack engineering**. My work bridges resilient, low-latency agentic workflows (FastAPI, Celery, Redis, pgvector) with interactive, high-performance web applications (TypeScript, React, Next.js, Three.js).
+
+```yaml
+Terminal Profile:
+  Engineer:        "Mohammed Sahil (@Arnim-Zola)"
+  Institution:     "3rd Year B.E. Computer Science & Engineering @ DSATM (Class of 2028)"
+  Location:        "Bengaluru, Karnataka, India"
+  Target Roles:    "Full-Stack AI Developer / GenAI Engineer • Software Development Engineer (SDE)"
+  Core Pillars:    "DSA • OS & Systems • DBMS • Computer Networks • OOP"
+  Daily Drivers:   "FastAPI (Celery/Redis Tasks), pgvector (HNSW), OpenCV + Whisper RAG, Next.js 15 (Three.js WebGL), Docker Compose"
+  Active Pursuits: "Competitive Hackathons & Codeathons, Research Papers, Daily Problem Solving & Full-Stack Projects"
+```
+
+| Pillar & Domain | Real-World Architecture & Integration (Eden & Portfolio) | Core Stack |
+| :--- | :--- | :--- |
+| **Distributed Systems & Async Tasks** | In **Eden**, video ingestion and frame extraction are offloaded to asynchronous background worker pools via **Celery + Redis**, preventing HTTP server bottlenecks with rate-limit resilient retry fallbacks. | `FastAPI` `Celery` `Redis` `Asyncio` |
+| **Relational & Vector Search Architecture** | In **Eden**, forensic claims are embedded and indexed in **PostgreSQL (pgvector)** using **HNSW graphs** for sub-120ms nearest-neighbor retrieval, paired with **Redis** caching for high-frequency queries. | `PostgreSQL` `pgvector (HNSW)` `Redis` |
+| **Multimodal Perception & Fact RAG** | In **Eden**, parallel streams demux visual frames (**OpenCV**) for OCR scanning and audio (**OpenAI Whisper**) for speech transcription, synthesized by deep reasoning LLM agents into an authenticity truth index. | `OpenCV` `Whisper` `EasyOCR` `Multi-Agent RAG` |
+| **Full-Stack & 60FPS 3D WebGL** | In **Quantum OS** *(In Progress / Active Build)*, architecting an interactive cyberpunk terminal portfolio with **Next.js 15** and **Three.js**, running custom GPU **GLSL fragment shaders** at 60FPS alongside Web Audio API synthesis. | `Next.js 15` `React 19` `Three.js` `GLSL Shaders` |
+| **Containerization & Multi-Service Infra** | Orchestrated the full multi-service architecture with **Docker Compose**, isolating FastAPI/Django API layers, Celery workers, Redis brokers, and React frontends into reproducible networks. | `Docker Compose` `Linux/Bash` `Nginx` `Git` |
+
+---
+
+### PRIMARY FLAGSHIP: EDEN (Autonomous Misinformation Analysis Engine)
 
 <div align="center">
   <a href="https://github.com/Arnim-Zola/Eden">
-    <img src="https://img.shields.io/badge/EDEN-Autonomous%20Multimodal%20Misinformation%20Engine-238636?style=for-the-badge&logo=github&logoColor=white" width="100%" />
+    <img src="assets/eden-logo.svg" width="340px" alt="EDEN — Autonomous Multimodal Misinformation &amp; Media Forensics Engine" />
   </a>
 </div>
 
 <br/>
 
-> **[Eden](https://github.com/Arnim-Zola/Eden)** is a state-of-the-art **forensic media fact-checking and multimodal analysis terminal**. It ingests short-form social media content (Instagram Reels, YouTube Shorts, direct video uploads), decomposes the visual and auditory streams into discrete temporal artifacts, and leverages deep reasoning LLM agents to detect deepfakes, verify assertions against authoritative live sources, and compute a forensic truth index.
-
-```
-┌─────────────────────────────────────────────────────────────────────────────┐
-│                            EDEN MULTIMODAL PIPELINE                         │
-├─────────────────────────────────────────────────────────────────────────────┤
-│  [ Social Reels / Video Stream Ingestion (yt-dlp, Instaloader) ]            │
-│                 │                                                           │
-│                 ├──▶ [ OpenCV Frame Extraction ] ──▶ [ EasyOCR Text Scan ]  │
-│                 │                                             │             │
-│                 └──▶ [ Whisper Audio Slicer ]   ──▶ [ Transcribed Claims ]  │
-│                                                               │             │
-│                                           ▼                   ▼             │
-│                 [ Cross-Modal Claim Synthesis & Temporal Alignment ]       │
-│                                           │                                 │
-│                                           ▼                                 │
-│                 [ Multi-Agent RAG & Fact Verification Engine ]              │
-│                                           │                                 │
-│                                           ▼                                 │
-│                 [ Comprehensive Truth Matrix & Authenticity Score % ]       │
-└─────────────────────────────────────────────────────────────────────────────┘
-```
-
-#### ⚙️ Eden Architectural Innovations
-- 👁️ **Multimodal Perception**: Synchronized **EasyOCR** (on-screen text/captions) + **OpenAI Whisper** (speech transcription) + **OpenCV** (keyframe sampling).
-- 🧠 **Dual-Path Fallback Orchestraction**: Asynchronous task chaining via **Celery + Redis** with graceful degradation under API quota limits.
-- 💻 **Forensic Command HUD**: Threat index telemetry, ⌘K command palette, and one-click PDF intelligence dossier generation.
-- 🐳 **Infrastructure**: Fully containerized multi-container deployment with **Docker Compose**, **Django REST Framework**, and **React 18**.
-
-👉 **[Explore Eden Source Code & Architecture →](https://github.com/Arnim-Zola/Eden)**
-
----
-
-### 🚀 SECONDARY & SUPPORTING ARSENAL
-
-| Project | Domain | Architecture & Highlights | Source Code |
-| :--- | :--- | :--- | :--- |
-| **CampusCart** 🛒 | Campus Logistics | Digital utility ecosystem for college printing & stationery; eliminates campus queues with **PDF.js** page cost estimation, automated 3s polling, and live admin ticketing. | [Arnim-Zola/CampusCart](https://github.com/Arnim-Zola/CampusCart) |
-| **Zemo** ⚡ | E-Commerce Intelligence | Autonomous price tracking engine with headless **Playwright** scraping, **Meta Llama 3 8B** sentiment extraction on 100+ reviews, and **Plotly.js** trend graphs. | [Arnim-Zola/Zemo](https://github.com/Arnim-Zola/Zemo) |
-| **Brainiac** 🧠 | Cognitive AI | Neuroscience-inspired cognitive analytics suite featuring interactive 3D **@react-three/fiber** brain maps, 30-factor psychometrics, and personalized AI improvement protocols. | [Arnim-Zola/Brainiac](https://github.com/Arnim-Zola/Brainiac) |
-| **Quantum OS** 🌌 | 3D Interactive Web | Cyberpunk terminal operating system portfolio with Three.js WebGL shaders, live Gemini edge AI streaming, and custom sound synthesis. | [Arnim-Zola/Portfolio](https://github.com/Arnim-Zola/Portfolio) |
-
----
-
-### 🏆 HACKATHONS, GDG & COMPETITIVE ARENA
-
-| Event / Hackathon | Organization / Track | Achievement / Honor | Focus & Solution |
-| :--- | :--- | :--- | :--- |
-| **HackBangalore 2025** | AWS & Bengaluru Dev Collective | 🥇 **1st Place Grand Winner (₹1,00,000)** | Distributed multi-agent orchestrator with self-healing tools |
-| **Flipkart GRiD 6.0** | Flipkart Robotics & Vision | 🎯 **National Finalist (Rank 142 / 12,000+)** | Real-time YOLOv8 + TensorRT edge camera sorting pipeline |
-| **Smart India Hackathon (SIH)** | Ministry of Education & AICTE | 🛡️ **National Grand Finalist** | Edge-accelerated 3D spatial sign language translator |
-| **Bengaluru GenAI Buildathon** | Scaler & Google Cloud Community | 🥉 **2nd Runner-Up & Best Architecture** | Sub-100ms vector search & hybrid lexical retrieval |
-| **GDG Bengaluru Sprint** | Google Developer Groups | ⚡ **Top Build Prototype** | Autonomous agentic workflow tooling & LLM integrations |
-
----
-
-### ⚡ TECHNICAL ARSENAL
+> **[Eden](https://github.com/Arnim-Zola/Eden)** is a state-of-the-art **forensic media fact-checking and multimodal analysis terminal**. It ingests short-form social media content (Instagram Reels, posts, and direct video uploads), decomposes visual & auditory streams into discrete temporal artifacts, detects political bias & narrative agendas, cross-references claims against real-time authoritative news sources via OSINT pipelines, and computes a comprehensive forensic truth index.
 
 <div align="center">
-
-| Category | Technologies & Tools |
-| :--- | :--- |
-| **Languages** | `Python 3.11` `TypeScript` `JavaScript (ES6+)` `C++` `SQL` `HTML5` `CSS3` |
-| **AI / ML & Vision** | `PyTorch` `OpenCV` `OpenAI Whisper` `EasyOCR` `Google Gemini` `Meta Llama 3` `LangChain` `pgvector` `FAISS` |
-| **Web & Frameworks** | `Next.js` `React 19` `FastAPI` `Django` `Express.js` `Node.js` `Three.js` `@react-three/fiber` `Tailwind CSS` |
-| **Databases & Queues** | `PostgreSQL` `MongoDB` `Redis` `Celery` `Firebase` `SQLite` |
-| **DevOps & Media Tools** | `Docker` `Docker Compose` `Git` `GitHub Actions` `FFmpeg` `Playwright` `yt-dlp` `Linux` |
-
+  <img src="assets/eden-pipeline.svg" width="100%" alt="EDEN Multimodal Architecture Pipeline" />
 </div>
 
+<br/>
+
+#### Multimodal Pipeline Execution (Stage-by-Stage)
+
+| Stage & Node | Name | Plain English Breakdown (What Happens Here) | Core Stack |
+| :--- | :--- | :--- | :--- |
+| **Stage 01** | **Stream Ingestion** | Ingests Instagram Reels, carousel posts, and raw video files without crashing the server by queueing tasks in background worker pools. | `Celery` `Redis` `FastAPI` |
+| **Stage 02A** | **Visual Perception** | Extracts clean image frames from the video (4 frames/sec) and uses OCR to scan and read all on-screen captions, headlines, and overlay text. | `OpenCV` `EasyOCR` |
+| **Stage 02B** | **Auditory Perception** | Slices the audio track, transcribes spoken speech to text using Whisper, and breaks long audio into time-stamped factual claim sentences. | `OpenAI Whisper` `FFmpeg` |
+| **Stage 03** | **Temporal Fusion** | Synchronizes spoken words with on-screen visual text at the exact millisecond so every claim is tied to its visual context. | `Cross-Modal Alignment` |
+| **Stage 04** | **OSINT Engine** | Autonomous AI agents query live news search APIs and cross-check verified knowledge bases using sub-120ms vector database retrieval. | `Multi-Agent RAG` `pgvector (HNSW)` |
+| **Stage 05** | **Forensic Truth Dossier** | Evaluates political bias and manipulative framing, calculates an authenticity score (Truth Index %), and compiles a 1-click PDF dossier. | `LLM Reasoners` `PDF Dossier` |
+
+#### Eden Architectural Innovations
+
+- **Multimodal Perception**: Synchronized **EasyOCR** (on-screen text localization) + **OpenAI Whisper** (temporal speech transcription) + **OpenCV** (4fps keyframe extraction)—watching video frames, reading on-screen captions, and transcribing spoken dialogue simultaneously to match words with visuals at exact seconds.
+- **Political Agenda & Bias Analysis**: Quantifies narrative framing, manipulative bias, and partisan spin using specialized agentic LLM reasoning to detect whether content is pushing biased propaganda, one-sided spin, or intentional exaggeration instead of objective truth.
+- **Real-Time OSINT News Verification**: Dynamically queries live news search APIs and cross-checks authoritative source evidence for every extracted assertion, instantly verifying claims against real-time breaking news and reputable journalism.
+- **Dual-Path Fallback Orchestration**: Asynchronous task chaining via **Celery + Redis** with graceful degradation under API quota limits and GPU constraints, preventing server crashes and slowdowns during viral traffic spikes by queueing requests and rerouting through backup models.
+- **Sub-120ms Vector Retrieval**: Forensic claim embeddings indexed in **PostgreSQL (pgvector)** with **HNSW graphs** for high-speed similarity search, scanning through massive databases of past claims and known hoaxes in under 120 milliseconds to find matching patterns.
+- **Forensic Command HUD & Dossier**: Threat index telemetry, ⌘K command palette, and one-click PDF intelligence dossier generation with verifiable citations, packaging the entire forensic investigation into an exportable, shareable summary report with clickable proof links.
+- **Infrastructure**: Fully containerized multi-container deployment with **Docker Compose**, **FastAPI / Django REST Framework**, and **React 18**, isolating APIs, database services, and frontend interfaces into self-contained Docker containers for consistent deployment anywhere.
+
+**[Access Eden OSINT Pipeline & System Architecture →](https://github.com/Arnim-Zola/Eden)**
+
 ---
 
-### 💼 CAREER TRAJECTORY & EXPERIENCE
+### SECONDARY ARSENAL & CREATIVE WEBGL LABS
 
-```yaml
-Current Role:
-  Position: "Founding AI & Systems Intern"
-  Company:  "Stealth GenAI Startup — Bengaluru"
-  Focus:    "Sub-120ms RAG pipelines (pgvector, FAISS, FastAPI) & autonomous agent execution"
-
-Previous:
-  Position: "Computer Vision & Edge AI Lead"
-  Lab:      "Autonomous Systems Lab"
-  Focus:    "TensorRT & YOLOv8 on NVIDIA Jetson edge boards (40+ FPS); Sensor fusion"
-
-Open Source & Mentorship:
-  Role:     "Core Contributor & Build Sprint Mentor"
-  Guild:    "Bengaluru FOSS Community"
-  Impact:   "Mentored 150+ builders across hackathons; Authored developer benchmarking tools"
-```
+| Project & Domain | Architecture & Systems Highlights | Core Stack | Source Code |
+| :--- | :--- | :--- | :--- |
+| **CampusCart**<br/>`Campus Logistics` | Standing in a 40-person line at 8:55 AM just to print two pages before submission deadline? Absolutely not. CampusCart kills the campus queue forever with an instantaneous zero-queue utility powered by client-side **PDF.js** page parsing & dynamic pricing calculus, 3s automated polling queues via **Django REST**, and real-time vendor ticketing dashboards in **Next.js 14** + **PostgreSQL**. | `Next.js 14` `Django REST` `PostgreSQL` `PDF.js` | [Arnim-Zola/CampusCart](https://github.com/Arnim-Zola/CampusCart) |
+| **Zemo**<br/>`E-Commerce Intel` | That "50% OFF Limited Deal" with 4.8 stars written by bots? We called its bluff. Zemo is an autonomous radar built to expose fake hype and predatory price hikes by automating headless **Playwright** scraping across dynamic DOMs, synthesizing 100+ raw customer reviews into structured sentiment vectors via **Meta Llama 3 8B**, and plotting historical price trends with **Plotly.js**. | `Python` `Playwright` `Meta Llama 3` `FastAPI` `Plotly.js` | [Arnim-Zola/Zemo](https://github.com/Arnim-Zola/Zemo) |
+| **Brainiac**<br/>`Cognitive AI` | Ever wondered what 3 AM caffeine-fueled burnout actually looks like inside your head? Brainiac renders your brain's cognitive chaos into a living 3D simulation, featuring an interactive **@react-three/fiber** brain cortex mesh, computing 30-factor psychometric scoring vectors via **PyTorch**, and generating personalized AI improvement protocols. | `React 18` `@react-three/fiber` `Three.js` `FastAPI` `PyTorch` | [Arnim-Zola/Brainiac](https://github.com/Arnim-Zola/Brainiac) |
+| **Quantum OS**<br/>`Interactive Portfolio` | Why should developer portfolios look like another generic resume template from 2015? Quantum OS turns my personal portfolio into a full-blown sci-fi cybernetic desktop operating system, powered by custom GPU **GLSL fragment shaders** locked at 60FPS, **Web Audio API** synthesis for real-time acoustic feedback, and a streaming edge AI terminal shell. | `Next.js 15` `React 19` `Three.js` `GLSL Shaders` `Web Audio` | [Arnim-Zola/Portfolio](https://github.com/Arnim-Zola/Portfolio)<br/>*(Active Build)* |
 
 ---
 
-### 📊 REAL-TIME TELEMETRY & CODING STATS
+### TECHNICAL ARSENAL
+
+| System Domain | Core Technologies & Production Tooling |
+| :--- | :--- |
+| **Languages & Shaders** | `Python 3.11` `TypeScript` `JavaScript (ES6+)` `GLSL Shaders` `C++` `SQL` `Bash / Linux` |
+| **Applied AI, Vision & NLP** | `Google Gemini 2.0` `Meta Llama 3 (8B)` `PyTorch` `OpenCV` `OpenAI Whisper` `EasyOCR` `pgvector (HNSW)` `LangChain` |
+| **Distributed Backend & Scraping** | `FastAPI` `Django` `Django REST Framework` `Celery` `Redis` `Playwright` `RESTful APIs` |
+| **Creative WebGL, 3D & Frontend** | `Next.js 15` `React 19` `Three.js` `@react-three/fiber` `Web Audio API` `Plotly.js` `PDF.js` `Tailwind CSS` |
+| **Databases, DevOps & Media** | `PostgreSQL` `SQLite` `MongoDB` `Docker` `Docker Compose` `Git` `GitHub Actions` `FFmpeg` |
+
+---
+
+### REAL-TIME TELEMETRY & CODING STATS
 
 <div align="center">
 
-  <!-- GitHub Streak Stats (GitHub Dark & Green Theme) -->
-  <img src="https://github-readme-streak-stats.herokuapp.com/?user=Arnim-Zola&theme=dark&background=0D1117&border=238636&stroke=238636&ring=39D353&fire=39D353&currStreakLabel=39D353" alt="GitHub Streak" width="48%" />
+  <!-- GitHub Streak Stats (Obsidian & Emerald Neon Theme) -->
+  <img src="https://streak-stats.demolab.com/?user=Arnim-Zola&theme=dark&background=040906&border=1b4d2e&stroke=1b4d2e&ring=00ff66&fire=00ff66&currStreakLabel=00ff66&currStreakNum=ffffff&sideNums=ffffff&sideLabels=8b949e&dates=8b949e&border_radius=8" alt="GitHub Streak" width="48%" />
   
-  <!-- GitHub Overall Stats (GitHub Dark & Green Theme) -->
-  <img src="https://github-readme-stats.vercel.app/api?username=Arnim-Zola&show_icons=true&theme=dark&bg_color=0D1117&border_color=238636&icon_color=39D353&title_color=39D353&text_color=C9D1D9" alt="GitHub Stats" width="48%" />
+  <!-- GitHub Overall Stats (Obsidian & Emerald Neon Theme) -->
+  <img src="https://github-stats-extended.vercel.app/api?username=Arnim-Zola&show_icons=true&bg_color=040906&border_color=1b4d2e&icon_color=00ff66&title_color=00ff66&text_color=e6edf3&border_radius=8&include_all_commits=true&count_private=true" alt="GitHub Stats" width="48%" />
 
   <br/><br/>
 
-  <!-- Top Languages Card (GitHub Dark & Green Theme) -->
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=Arnim-Zola&layout=compact&theme=dark&bg_color=0D1117&border_color=238636&title_color=39D353&text_color=C9D1D9" alt="Top Languages" width="60%" />
+  <!-- Top Languages Card (Obsidian & Emerald Neon Theme) -->
+  <img src="https://github-stats-extended.vercel.app/api/top-langs/?username=Arnim-Zola&layout=compact&bg_color=040906&border_color=1b4d2e&title_color=00ff66&text_color=e6edf3&border_radius=8" alt="Top Languages" width="55%" />
 
 </div>
 
 ---
 
 <div align="center">
-  <p><b>⚡ Engineered by Mohammed Sahil • 2nd Year CSE @ DSATM, Bengaluru ⚡</b></p>
-  <img src="https://capsule-render.vercel.app/api?type=rect&color=0:0d1117,50:238636,100:0d1117&height=4" width="100%" />
+  <p><b>Engineered by Mohammed Sahil • 3rd Year CSE @ DSATM, Bengaluru</b></p>
+  <img src="https://capsule-render.vercel.app/api?type=rect&color=0:040906,50:00ff66,100:040906&height=3" width="100%" />
 </div>
+
