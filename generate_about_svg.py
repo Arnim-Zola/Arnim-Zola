@@ -90,7 +90,7 @@ def generate_about_me_svg():
 </svg>
 """
 
-    for fname in ["about-me.svg", "about-me-v2.svg", "about-me-v3.svg"]:
+    for fname in ["about-me.svg", "about-me-v2.svg", "about-me-v3.svg", "about-me-centered.svg"]:
         path = os.path.join(assets_dir, fname)
         with open(path, "w", encoding="utf-8") as f:
             f.write(svg_content)
