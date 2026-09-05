@@ -70,13 +70,10 @@ def generate_terminal_bookshelf_green_torch():
         return books
 
     tier1 = make_shelf_books(8, 108)
-    tier2 = make_shelf_books(122, 108)
+    tier2_raw = make_shelf_books(122, 108)
 
-    # Ensure the book in the middle of tier 2 is short to create a deep dark shelf alcove for the cat eyes
-    for b in tier2:
-        if 430 <= b["x"] <= 460:
-            b["h"] = 55
-            b["y"] = 122 + (108 - 55)  # y = 175, leaving y: 122..174 (53px tall dark shadow gap)
+    # Leave an authentic, pure dark empty shelf gap between x=440 and x=496 (no books) for the cat to lurk in
+    tier2 = [b for b in tier2_raw if not (440 <= b["x"] <= 496 or 440 <= b["x"] + b.get("w", 0) <= 496)]
 
     all_books = tier1 + tier2
 
@@ -153,14 +150,14 @@ def generate_terminal_bookshelf_green_torch():
 
       @keyframes flashlight-circle {{
         0% {{ clip-path: circle(135px at -100px 30px); }}
-        35% {{ clip-path: circle(135px at 380px 110px); }}
-        39% {{ clip-path: circle(135px at 450px 144px); opacity: 1; }}
-        40% {{ clip-path: circle(135px at 450px 144px); opacity: 0; }}
-        41% {{ clip-path: circle(135px at 450px 144px); opacity: 1; }}
-        42% {{ clip-path: circle(135px at 450px 144px); opacity: 0; }}
-        54% {{ clip-path: circle(135px at 450px 144px); opacity: 0; }}
-        55% {{ clip-path: circle(135px at 450px 144px); opacity: 1; }}
-        59% {{ clip-path: circle(135px at 450px 144px); opacity: 1; }}
+        35% {{ clip-path: circle(135px at 390px 120px); }}
+        39% {{ clip-path: circle(135px at 468px 175px); opacity: 1; }}
+        40% {{ clip-path: circle(135px at 468px 175px); opacity: 0; }}
+        41% {{ clip-path: circle(135px at 468px 175px); opacity: 1; }}
+        42% {{ clip-path: circle(135px at 468px 175px); opacity: 0; }}
+        54% {{ clip-path: circle(135px at 468px 175px); opacity: 0; }}
+        55% {{ clip-path: circle(135px at 468px 175px); opacity: 1; }}
+        59% {{ clip-path: circle(135px at 468px 175px); opacity: 1; }}
         64% {{ clip-path: circle(135px at 320px 80px); }}
         68% {{ clip-path: circle(135px at 720px 130px); }}
         72% {{ clip-path: circle(135px at 560px 120px); }}
@@ -177,7 +174,7 @@ def generate_terminal_bookshelf_green_torch():
       }}
 
       .bg-spooky-eyes {{
-        transform-origin: 450px 144px;
+        transform-origin: 468px 175px;
         animation: bg-eyes 20s infinite;
       }}
     </style>
@@ -204,10 +201,10 @@ def generate_terminal_bookshelf_green_torch():
     {color_books_svg}
   </g>
 
-  <!-- Cat Eyes Peering Out of Dark Shelf Alcove -->
+  <!-- Cat Eyes Peering Out of the Dark Shelf Void -->
   <g class="bg-spooky-eyes">
-    <ellipse cx="444" cy="144" rx="4.5" ry="3.5" fill="#fff" />
-    <ellipse cx="456" cy="144" rx="4.5" ry="3.5" fill="#fff" />
+    <ellipse cx="461" cy="175" rx="4.5" ry="3.5" fill="#fff" />
+    <ellipse cx="475" cy="175" rx="4.5" ry="3.5" fill="#fff" />
   </g>
 
   <!-- Header Title -->
@@ -220,7 +217,7 @@ def generate_terminal_bookshelf_green_torch():
 </svg>
 """
 
-    for fname in ["terminal-profile-bg-torch.svg", "terminal-profile-v3.svg", "terminal-profile-cartoon.svg", "terminal-profile-green-torch.svg", "terminal-profile-final.svg"]:
+    for fname in ["terminal-profile-bg-torch.svg", "terminal-profile-v3.svg", "terminal-profile-cartoon.svg", "terminal-profile-green-torch.svg", "terminal-profile-final.svg", "terminal-profile-v4.svg"]:
         out_path = os.path.join(assets_dir, fname)
         with open(out_path, "w", encoding="utf-8") as f:
             f.write(svg_content)
