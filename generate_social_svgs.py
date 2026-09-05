@@ -1,27 +1,29 @@
 import os
 
-def generate_exact_localhost_svgs():
+def generate_hover_transition_svgs():
     assets_dir = r"c:\Holidays\Arnim-Zola\assets"
     os.makedirs(assets_dir, exist_ok=True)
 
-    # LinkedIn SVG matching localhost pixel-for-pixel:
-    # Text on the LEFT, Icon on the RIGHT
+    # LinkedIn SVG with Localhost Exact Hover Transition Loop
     linkedin_svg = """<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 165 42" width="165" height="42">
   <defs>
-    <linearGradient id="bgIn" x1="0%" y1="0%" x2="100%" y2="100%">
+    <linearGradient id="bgGradIn" x1="0%" y1="0%" x2="100%" y2="100%">
       <stop offset="0%" stop-color="#238636"/>
       <stop offset="100%" stop-color="#1a6328"/>
     </linearGradient>
+    <clipPath id="btnClipIn">
+      <rect x="1" y="1" width="163" height="40" rx="20" ry="20"/>
+    </clipPath>
   </defs>
 
   <style>
-    .pill {
-      fill: url(#bgIn);
+    .pill-bg {
+      fill: url(#bgGradIn);
       stroke: #39d353;
       stroke-width: 2;
-      rx: 21;
-      ry: 21;
-      filter: drop-shadow(0 4px 10px rgba(35, 134, 54, 0.35));
+      rx: 20;
+      ry: 20;
+      animation: pillGlow 6s cubic-bezier(0.4, 0, 0.2, 1) infinite;
     }
     .label {
       font-family: 'Space Grotesk', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
@@ -32,41 +34,124 @@ def generate_exact_localhost_svgs():
       text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
       dominant-baseline: central;
     }
+    
+    /* Text 1: LINKEDIN */
+    .text-resting {
+      animation: slideExitRight 6s cubic-bezier(0.2, 0.8, 0.25, 1) infinite;
+    }
+    /* Text 2: CONNECT */
+    .text-hovered {
+      animation: slideEnterLeft 6s cubic-bezier(0.2, 0.8, 0.25, 1) infinite;
+    }
+
+    /* Icon: Scales up and moves right into watermark */
+    .icon-anim {
+      transform-origin: 126px 21px;
+      animation: iconWatermark 6s cubic-bezier(0.2, 0.8, 0.25, 1) infinite;
+    }
+
+    @keyframes slideExitRight {
+      0%, 40% {
+        opacity: 1;
+        transform: translateX(0);
+      }
+      48%, 90% {
+        opacity: 0;
+        transform: translateX(65px);
+      }
+      96%, 100% {
+        opacity: 1;
+        transform: translateX(0);
+      }
+    }
+
+    @keyframes slideEnterLeft {
+      0%, 40% {
+        opacity: 0;
+        transform: translateX(-55px);
+      }
+      48%, 90% {
+        opacity: 1;
+        transform: translateX(0);
+      }
+      96%, 100% {
+        opacity: 0;
+        transform: translateX(65px);
+      }
+    }
+
+    @keyframes iconWatermark {
+      0%, 40% {
+        opacity: 1;
+        transform: scale(1) translateX(0);
+      }
+      48%, 90% {
+        opacity: 0.15;
+        transform: scale(3.2) translateX(16px);
+      }
+      96%, 100% {
+        opacity: 1;
+        transform: scale(1) translateX(0);
+      }
+    }
+
+    @keyframes pillGlow {
+      0%, 40% {
+        stroke: #39d353;
+        fill: #238636;
+      }
+      48%, 90% {
+        stroke: #00ff66;
+        fill: #2ea043;
+      }
+      96%, 100% {
+        stroke: #39d353;
+        fill: #238636;
+      }
+    }
   </style>
 
-  <!-- Background Capsule -->
-  <rect x="1" y="1" width="163" height="40" class="pill"/>
+  <!-- Button Background -->
+  <rect x="1" y="1" width="163" height="40" class="pill-bg"/>
 
-  <!-- Text on Left -->
-  <text x="32" y="21.5" class="label">LINKEDIN</text>
+  <!-- Clipped Interactive Content -->
+  <g clip-path="url(#btnClipIn)">
+    <!-- Expanding Right-Side Icon -->
+    <g class="icon-anim" transform="translate(118, 13)">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="#ffffff">
+        <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+      </svg>
+    </g>
 
-  <!-- Icon on Right (16x16 viewBox 0 0 24 24) -->
-  <g transform="translate(118, 13)">
-    <svg width="16" height="16" viewBox="0 0 24 24" fill="#ffffff">
-      <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
-    </svg>
+    <!-- Resting State: LINKEDIN on left -->
+    <text x="32" y="21.5" class="label text-resting">LINKEDIN</text>
+
+    <!-- Hovered State: CONNECT centered -->
+    <text x="40" y="21.5" class="label text-hovered">CONNECT</text>
   </g>
 </svg>
 """
 
-    # Email SVG matching localhost pixel-for-pixel:
-    # Text on the LEFT, Icon on the RIGHT
+    # Email SVG with Localhost Exact Hover Transition Loop
     email_svg = """<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 165 42" width="165" height="42">
   <defs>
-    <linearGradient id="bgMail" x1="0%" y1="0%" x2="100%" y2="100%">
+    <linearGradient id="bgGradMail" x1="0%" y1="0%" x2="100%" y2="100%">
       <stop offset="0%" stop-color="#238636"/>
       <stop offset="100%" stop-color="#1a6328"/>
     </linearGradient>
+    <clipPath id="btnClipMail">
+      <rect x="1" y="1" width="163" height="40" rx="20" ry="20"/>
+    </clipPath>
   </defs>
 
   <style>
-    .pill {
-      fill: url(#bgMail);
+    .pill-bg {
+      fill: url(#bgGradMail);
       stroke: #39d353;
       stroke-width: 2;
-      rx: 21;
-      ry: 21;
-      filter: drop-shadow(0 4px 10px rgba(35, 134, 54, 0.35));
+      rx: 20;
+      ry: 20;
+      animation: pillGlow 6s cubic-bezier(0.4, 0, 0.2, 1) infinite;
     }
     .label {
       font-family: 'Space Grotesk', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
@@ -77,33 +162,112 @@ def generate_exact_localhost_svgs():
       text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
       dominant-baseline: central;
     }
+
+    /* Text 1: EMAIL */
+    .text-resting {
+      animation: slideExitRight 6s cubic-bezier(0.2, 0.8, 0.25, 1) infinite;
+    }
+    /* Text 2: SEND MAIL */
+    .text-hovered {
+      animation: slideEnterLeftMail 6s cubic-bezier(0.2, 0.8, 0.25, 1) infinite;
+    }
+
+    /* Icon: Scales up and moves right into watermark */
+    .icon-anim {
+      transform-origin: 116px 21px;
+      animation: iconWatermarkMail 6s cubic-bezier(0.2, 0.8, 0.25, 1) infinite;
+    }
+
+    @keyframes slideExitRight {
+      0%, 40% {
+        opacity: 1;
+        transform: translateX(0);
+      }
+      48%, 90% {
+        opacity: 0;
+        transform: translateX(65px);
+      }
+      96%, 100% {
+        opacity: 1;
+        transform: translateX(0);
+      }
+    }
+
+    @keyframes slideEnterLeftMail {
+      0%, 40% {
+        opacity: 0;
+        transform: translateX(-55px);
+      }
+      48%, 90% {
+        opacity: 1;
+        transform: translateX(0);
+      }
+      96%, 100% {
+        opacity: 0;
+        transform: translateX(65px);
+      }
+    }
+
+    @keyframes iconWatermarkMail {
+      0%, 40% {
+        opacity: 1;
+        transform: scale(1) translateX(0);
+      }
+      48%, 90% {
+        opacity: 0.15;
+        transform: scale(3.2) translateX(16px);
+      }
+      96%, 100% {
+        opacity: 1;
+        transform: scale(1) translateX(0);
+      }
+    }
+
+    @keyframes pillGlow {
+      0%, 40% {
+        stroke: #39d353;
+        fill: #238636;
+      }
+      48%, 90% {
+        stroke: #00ff66;
+        fill: #2ea043;
+      }
+      96%, 100% {
+        stroke: #39d353;
+        fill: #238636;
+      }
+    }
   </style>
 
-  <!-- Background Capsule -->
-  <rect x="1" y="1" width="163" height="40" class="pill"/>
+  <!-- Button Background -->
+  <rect x="1" y="1" width="163" height="40" class="pill-bg"/>
 
-  <!-- Text on Left -->
-  <text x="44" y="21.5" class="label">EMAIL</text>
+  <!-- Clipped Interactive Content -->
+  <g clip-path="url(#btnClipMail)">
+    <!-- Expanding Right-Side Icon -->
+    <g class="icon-anim" transform="translate(108, 13)">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="#ffffff">
+        <path d="M24 5.457v13.909c0 .904-.732 1.636-1.636 1.636h-3.819V11.73L12 16.64l-6.545-4.91v9.273H1.636A1.636 1.636 0 0 1 0 19.366V5.457c0-2.023 2.309-3.178 3.927-1.964L5.455 4.64 12 9.548l6.545-4.91 1.528-1.145C21.69 2.28 24 3.434 24 5.457z"/>
+      </svg>
+    </g>
 
-  <!-- Icon on Right (16x16 viewBox 0 0 24 24) -->
-  <g transform="translate(108, 13)">
-    <svg width="16" height="16" viewBox="0 0 24 24" fill="#ffffff">
-      <path d="M24 5.457v13.909c0 .904-.732 1.636-1.636 1.636h-3.819V11.73L12 16.64l-6.545-4.91v9.273H1.636A1.636 1.636 0 0 1 0 19.366V5.457c0-2.023 2.309-3.178 3.927-1.964L5.455 4.64 12 9.548l6.545-4.91 1.528-1.145C21.69 2.28 24 3.434 24 5.457z"/>
-    </svg>
+    <!-- Resting State: EMAIL on left -->
+    <text x="44" y="21.5" class="label text-resting">EMAIL</text>
+
+    <!-- Hovered State: SEND MAIL centered -->
+    <text x="32" y="21.5" class="label text-hovered">SEND MAIL</text>
   </g>
 </svg>
 """
 
     for fname, content in [("btn-linkedin.svg", linkedin_svg), 
-                           ("btn-linkedin-v2.svg", linkedin_svg),
-                           ("btn-linkedin-v3.svg", linkedin_svg),
+                           ("btn-linkedin-v4.svg", linkedin_svg),
                            ("btn-email.svg", email_svg), 
-                           ("btn-email-v2.svg", email_svg),
-                           ("btn-email-v3.svg", email_svg)]:
+                           ("btn-email-v4.svg", email_svg)]:
         with open(os.path.join(assets_dir, fname), "w", encoding="utf-8") as f:
             f.write(content)
 
-    print("All SVGs updated with exact localhost layout!")
+    print("Created v4 SVGs with exact localhost hover transition & icon expansion to right!")
 
 if __name__ == "__main__":
-    generate_exact_localhost_svgs()
+    generate_hover_transition_svgs()
