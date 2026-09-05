@@ -1,8 +1,8 @@
 <div align="center">
 
-  <!-- Guaranteed Live Animated GitHub Dark & Emerald Green Waving Banner -->
+  <!-- Native Animated Cyberpunk GitHub Dark & Emerald Green Banner -->
   <a href="https://github.com/Arnim-Zola">
-    <img src="https://capsule-render.vercel.app/api?type=waving&color=0:0d1117,70:0f3d1e,100:238636&height=220&section=header&text=MOHAMMED%20SAHIL&fontSize=42&fontAlignY=38&fontColor=ffffff&desc=FULL-STACK%20%7C%20GENAI%20SYSTEMS%20%7C%20MULTIMODAL%20AI&descSize=14&descAlignY=62&descAlign=50&descColor=8b949e" alt="Mohammed Sahil - Full-Stack & GenAI Engineer" width="100%" />
+    <img src="assets/banner.svg" alt="Mohammed Sahil - Full-Stack & GenAI Engineer" width="100%" />
   </a>
 
   <!-- Real-Time Looping Typing Subtitle (GitHub Green) -->
