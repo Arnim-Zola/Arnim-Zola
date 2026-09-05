@@ -67,30 +67,23 @@
       }
     </style>
 
-    <!-- ClipPath for moving flashlight on background books -->
+    <!-- ClipPath for sharp cartoon flashlight cutout -->
     <clipPath id="shelf-torch-clip">
       <g class="bg-torch-beam">
-        <circle cx="0" cy="0" r="140" fill="#ffffff" />
+        <circle cx="0" cy="0" r="130" fill="#ffffff" />
       </g>
     </clipPath>
-
-    <!-- Soft Torch Light Beam Glow -->
-    <radialGradient id="torch-glow-ambient" cx="50%" cy="50%" r="50%">
-      <stop offset="0%" stop-color="rgba(0, 255, 102, 0.35)" />
-      <stop offset="60%" stop-color="rgba(0, 255, 102, 0.12)" />
-      <stop offset="100%" stop-color="rgba(0, 0, 0, 0)" />
-    </radialGradient>
   </defs>
 
   <!-- Container Box -->
   <rect x="0" y="0" width="920" height="240" rx="10" fill="#040906" stroke="rgba(0,255,102,0.4)" stroke-width="1.5" />
 
   <!-- Shelves Structure -->
-  <rect x="6" y="115" width="908" height="6" rx="1" fill="#0c1811" stroke="#162e1e" stroke-width="1" />
-  <rect x="6" y="230" width="908" height="6" rx="1" fill="#0c1811" stroke="#162e1e" stroke-width="1" />
+  <rect x="6" y="115" width="908" height="6" rx="1" fill="#0a140e" stroke="#14261a" stroke-width="1" />
+  <rect x="6" y="230" width="908" height="6" rx="1" fill="#0a140e" stroke="#14261a" stroke-width="1" />
 
-  <!-- Layer 1: Dark Bookshelf in Shadow -->
-  <g opacity="0.85">
+  <!-- Layer 1: Flat Dark Silhouetted Bookshelf in Shadow -->
+  <g>
     <rect x="12" y="39" width="24" height="77" rx="2" fill="#050a07" stroke="#040906" stroke-width="1"/>
     <line x1="16" y1="45" x2="32" y2="45" stroke="#14261a" stroke-width="1"/>
     <rect x="39" y="40" width="25" height="76" rx="2" fill="#0d1410" stroke="#040906" stroke-width="1"/>
@@ -225,7 +218,7 @@
     <line x1="879" y1="155" x2="895" y2="155" stroke="#14261a" stroke-width="1"/>
   </g>
 
-  <!-- Layer 2: Colorful Books Illuminated by Torch -->
+  <!-- Layer 2: 100% Vivid Flat Cartoon Books Revealed by Torch -->
   <g clip-path="url(#shelf-torch-clip)">
     <rect x="12" y="39" width="24" height="77" rx="2" fill="#00ff66" stroke="rgba(0,0,0,0.5)" stroke-width="1"/>
     <line x1="16" y1="47" x2="32" y2="47" stroke="rgba(255,255,255,0.6)" stroke-width="1.5"/>
@@ -411,9 +404,9 @@
     <line x1="879" y1="162" x2="895" y2="162" stroke="rgba(255,255,255,0.3)" stroke-width="1"/>
   </g>
 
-  <!-- Moving Ambient Torch Glow Overlay -->
+  <!-- Sharp Cartoon Flashlight Circular Rim Outline -->
   <g class="bg-torch-beam" pointer-events="none">
-    <circle cx="0" cy="0" r="140" fill="url(#torch-glow-ambient)" />
+    <circle cx="0" cy="0" r="130" fill="none" stroke="#00ff66" stroke-width="1.5" opacity="0.6" />
   </g>
 
   <!-- Spooky Eyes Hidden between Books -->
@@ -421,9 +414,6 @@
     <circle cx="564" cy="92" r="3.5" fill="#fff" />
     <circle cx="574" cy="92" r="3.5" fill="#fff" />
   </g>
-
-  <!-- Subtle Dark Tint Overlay over books to guarantee 100% text readability -->
-  <rect x="0" y="0" width="920" height="240" rx="10" fill="rgba(4, 9, 6, 0.35)" pointer-events="none" />
 
   <!-- Header Title -->
   <text x="28" y="28" class="t-title">Terminal Profile:</text>

@@ -174,41 +174,34 @@ def generate_terminal_bookshelf_bg_svg():
       }}
     </style>
 
-    <!-- ClipPath for moving flashlight on background books -->
+    <!-- ClipPath for sharp cartoon flashlight cutout -->
     <clipPath id="shelf-torch-clip">
       <g class="bg-torch-beam">
-        <circle cx="0" cy="0" r="140" fill="#ffffff" />
+        <circle cx="0" cy="0" r="130" fill="#ffffff" />
       </g>
     </clipPath>
-
-    <!-- Soft Torch Light Beam Glow -->
-    <radialGradient id="torch-glow-ambient" cx="50%" cy="50%" r="50%">
-      <stop offset="0%" stop-color="rgba(0, 255, 102, 0.35)" />
-      <stop offset="60%" stop-color="rgba(0, 255, 102, 0.12)" />
-      <stop offset="100%" stop-color="rgba(0, 0, 0, 0)" />
-    </radialGradient>
   </defs>
 
   <!-- Container Box -->
   <rect x="0" y="0" width="{vbox_w}" height="{vbox_h}" rx="10" fill="#040906" stroke="rgba(0,255,102,0.4)" stroke-width="1.5" />
 
   <!-- Shelves Structure -->
-  <rect x="6" y="115" width="{vbox_w - 12}" height="6" rx="1" fill="#0c1811" stroke="#162e1e" stroke-width="1" />
-  <rect x="6" y="230" width="{vbox_w - 12}" height="6" rx="1" fill="#0c1811" stroke="#162e1e" stroke-width="1" />
+  <rect x="6" y="115" width="{vbox_w - 12}" height="6" rx="1" fill="#0a140e" stroke="#14261a" stroke-width="1" />
+  <rect x="6" y="230" width="{vbox_w - 12}" height="6" rx="1" fill="#0a140e" stroke="#14261a" stroke-width="1" />
 
-  <!-- Layer 1: Dark Bookshelf in Shadow -->
-  <g opacity="0.85">
+  <!-- Layer 1: Flat Dark Silhouetted Bookshelf in Shadow -->
+  <g>
     {dark_books_svg}
   </g>
 
-  <!-- Layer 2: Colorful Books Illuminated by Torch -->
+  <!-- Layer 2: 100% Vivid Flat Cartoon Books Revealed by Torch -->
   <g clip-path="url(#shelf-torch-clip)">
     {color_books_svg}
   </g>
 
-  <!-- Moving Ambient Torch Glow Overlay -->
+  <!-- Sharp Cartoon Flashlight Circular Rim Outline -->
   <g class="bg-torch-beam" pointer-events="none">
-    <circle cx="0" cy="0" r="140" fill="url(#torch-glow-ambient)" />
+    <circle cx="0" cy="0" r="130" fill="none" stroke="#00ff66" stroke-width="1.5" opacity="0.6" />
   </g>
 
   <!-- Spooky Eyes Hidden between Books -->
@@ -216,9 +209,6 @@ def generate_terminal_bookshelf_bg_svg():
     <circle cx="564" cy="92" r="3.5" fill="#fff" />
     <circle cx="574" cy="92" r="3.5" fill="#fff" />
   </g>
-
-  <!-- Subtle Dark Tint Overlay over books to guarantee 100% text readability -->
-  <rect x="0" y="0" width="{vbox_w}" height="{vbox_h}" rx="10" fill="rgba(4, 9, 6, 0.35)" pointer-events="none" />
 
   <!-- Header Title -->
   <text x="28" y="28" class="t-title">Terminal Profile:</text>
@@ -230,7 +220,7 @@ def generate_terminal_bookshelf_bg_svg():
 </svg>
 """
 
-    for fname in ["terminal-profile-bg-torch.svg", "terminal-profile-v3.svg"]:
+    for fname in ["terminal-profile-bg-torch.svg", "terminal-profile-v3.svg", "terminal-profile-cartoon.svg"]:
         out_path = os.path.join(assets_dir, fname)
         with open(out_path, "w", encoding="utf-8") as f:
             f.write(svg_content)
