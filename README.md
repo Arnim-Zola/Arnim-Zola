@@ -28,7 +28,7 @@ Terminal Profile:
   Location:        "Bengaluru, Karnataka, India"
   Target Roles:    "Full-Stack AI Developer / GenAI Engineer • SDE"
   Core Pillars:    "DSA • OS & Systems • DBMS • Computer Networks • OOP"
-  Daily Drivers:   "FastAPI (Celery/Redis), pgvector (HNSW), OpenCV + Whisper RAG, Next.js 15 (Three.js WebGL), Docker"
+  Daily Drivers:   "FastAPI, pgvector, OpenCV, Whisper RAG, Next.js 15, Docker"
   Active Pursuits: "Competitive Hackathons & Codeathons, Research Papers, Problem Solving & Full-Stack Projects"
 ```
 
