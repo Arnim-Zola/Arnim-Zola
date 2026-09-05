@@ -1,118 +1,132 @@
 import os
+import re
 
-def generate_v7_svgs():
+def embed_custom_font_in_svgs():
     assets_dir = r"c:\Holidays\Arnim-Zola\assets"
-    os.makedirs(assets_dir, exist_ok=True)
+    
+    # Read base64 font from taglines.svg
+    taglines_path = os.path.join(assets_dir, "taglines.svg")
+    with open(taglines_path, "r", encoding="utf-8") as f:
+        taglines_content = f.read()
 
-    # LinkedIn SVG v7
-    linkedin_svg = """<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 165 42" width="165" height="42">
+    font_match = re.search(r"@font-face\s*\{[^}]*\}", taglines_content, re.DOTALL)
+    if not font_match:
+        print("Could not find @font-face in taglines.svg")
+        return
+    
+    font_face_css = font_match.group(0)
+
+    # LinkedIn SVG v8 with embedded Caacupe One font
+    linkedin_svg = f"""<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 165 42" width="165" height="42">
   <defs>
-    <linearGradient id="bgGradIn7" x1="0%" y1="0%" x2="100%" y2="100%">
+    <linearGradient id="bgGradIn8" x1="0%" y1="0%" x2="100%" y2="100%">
       <stop offset="0%" stop-color="#238636"/>
       <stop offset="100%" stop-color="#1a6328"/>
     </linearGradient>
-    <clipPath id="btnClipIn7">
+    <clipPath id="btnClipIn8">
       <rect x="1" y="1" width="163" height="40" rx="20" ry="20"/>
     </clipPath>
   </defs>
 
   <style>
-    .pill-bg {
-      fill: url(#bgGradIn7);
+    {font_face_css}
+
+    .pill-bg {{
+      fill: url(#bgGradIn8);
       stroke: #39d353;
       stroke-width: 2;
       rx: 20;
       ry: 20;
       animation: pillGlow 6s cubic-bezier(0.4, 0, 0.2, 1) infinite;
-    }
-    .label {
-      font-family: 'Space Grotesk', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-      font-size: 13px;
-      font-weight: 700;
-      letter-spacing: 1.5px;
+    }}
+    .label {{
+      font-family: 'Caacupe One', cursive, sans-serif;
+      font-size: 15px;
+      font-weight: 400;
+      letter-spacing: 2px;
       fill: #ffffff;
       text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
       dominant-baseline: central;
       text-anchor: middle;
-    }
+    }}
 
-    .text-resting {
+    .text-resting {{
       animation: slideExitRight 6s cubic-bezier(0.2, 0.8, 0.25, 1) infinite;
-    }
-    .text-hovered {
+    }}
+    .text-hovered {{
       animation: slideEnterLeft 6s cubic-bezier(0.2, 0.8, 0.25, 1) infinite;
-    }
+    }}
 
-    .icon-anim {
-      animation: iconWatermarkIn7 6s cubic-bezier(0.2, 0.8, 0.25, 1) infinite;
-    }
+    .icon-anim {{
+      animation: iconWatermarkIn8 6s cubic-bezier(0.2, 0.8, 0.25, 1) infinite;
+    }}
 
-    @keyframes slideExitRight {
-      0%, 40% {
+    @keyframes slideExitRight {{
+      0%, 40% {{
         opacity: 1;
         transform: translateX(0);
-      }
-      48%, 90% {
+      }}
+      48%, 90% {{
         opacity: 0;
         transform: translateX(50px);
-      }
-      96%, 100% {
+      }}
+      96%, 100% {{
         opacity: 1;
         transform: translateX(0);
-      }
-    }
+      }}
+    }}
 
-    @keyframes slideEnterLeft {
-      0%, 40% {
+    @keyframes slideEnterLeft {{
+      0%, 40% {{
         opacity: 0;
         transform: translateX(-50px);
-      }
-      48%, 90% {
+      }}
+      48%, 90% {{
         opacity: 1;
         transform: translateX(0);
-      }
-      96%, 100% {
+      }}
+      96%, 100% {{
         opacity: 0;
         transform: translateX(50px);
-      }
-    }
+      }}
+    }}
 
-    @keyframes iconWatermarkIn7 {
-      0%, 40% {
+    @keyframes iconWatermarkIn8 {{
+      0%, 40% {{
         opacity: 1;
         transform: translate(122px, 21px) scale(1);
-      }
-      48%, 90% {
+      }}
+      48%, 90% {{
         opacity: 0.15;
         transform: translate(146px, 21px) scale(3.5);
-      }
-      96%, 100% {
+      }}
+      96%, 100% {{
         opacity: 1;
         transform: translate(122px, 21px) scale(1);
-      }
-    }
+      }}
+    }}
 
-    @keyframes pillGlow {
-      0%, 40% {
+    @keyframes pillGlow {{
+      0%, 40% {{
         stroke: #39d353;
         fill: #238636;
-      }
-      48%, 90% {
+      }}
+      48%, 90% {{
         stroke: #00ff66;
         fill: #2ea043;
-      }
-      96%, 100% {
+      }}
+      96%, 100% {{
         stroke: #39d353;
         fill: #238636;
-      }
-    }
+      }}
+    }}
   </style>
 
   <!-- Button Background -->
   <rect x="1" y="1" width="163" height="40" class="pill-bg"/>
 
   <!-- Clipped Interactive Content -->
-  <g clip-path="url(#btnClipIn7)">
+  <g clip-path="url(#btnClipIn8)">
     <!-- Right-Side Icon anchored at (122, 21) resting, translates to (146, 21) on hover -->
     <g class="icon-anim" transform="translate(122, 21)">
       <svg x="-8" y="-8" width="16" height="16" viewBox="0 0 24 24" fill="#ffffff">
@@ -120,8 +134,8 @@ def generate_v7_svgs():
       </svg>
     </g>
 
-    <!-- Resting State: LINKEDIN centered at x=70 -->
-    <text x="70" y="21.5" class="label text-resting">LINKEDIN</text>
+    <!-- Resting State: LINKEDIN centered at x=68 -->
+    <text x="68" y="21.5" class="label text-resting">LINKEDIN</text>
 
     <!-- Hovered State: CONNECT perfectly centered -->
     <text x="82.5" y="21.5" class="label text-hovered">CONNECT</text>
@@ -129,115 +143,117 @@ def generate_v7_svgs():
 </svg>
 """
 
-    # Email SVG v7
-    email_svg = """<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 165 42" width="165" height="42">
+    # Email SVG v8 with embedded Caacupe One font
+    email_svg = f"""<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 165 42" width="165" height="42">
   <defs>
-    <linearGradient id="bgGradMail7" x1="0%" y1="0%" x2="100%" y2="100%">
+    <linearGradient id="bgGradMail8" x1="0%" y1="0%" x2="100%" y2="100%">
       <stop offset="0%" stop-color="#238636"/>
       <stop offset="100%" stop-color="#1a6328"/>
     </linearGradient>
-    <clipPath id="btnClipMail7">
+    <clipPath id="btnClipMail8">
       <rect x="1" y="1" width="163" height="40" rx="20" ry="20"/>
     </clipPath>
   </defs>
 
   <style>
-    .pill-bg {
-      fill: url(#bgGradMail7);
+    {font_face_css}
+
+    .pill-bg {{
+      fill: url(#bgGradMail8);
       stroke: #39d353;
       stroke-width: 2;
       rx: 20;
       ry: 20;
       animation: pillGlow 6s cubic-bezier(0.4, 0, 0.2, 1) infinite;
-    }
-    .label {
-      font-family: 'Space Grotesk', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-      font-size: 13px;
-      font-weight: 700;
-      letter-spacing: 1.5px;
+    }}
+    .label {{
+      font-family: 'Caacupe One', cursive, sans-serif;
+      font-size: 15px;
+      font-weight: 400;
+      letter-spacing: 2px;
       fill: #ffffff;
       text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
       dominant-baseline: central;
       text-anchor: middle;
-    }
+    }}
 
-    .text-resting {
+    .text-resting {{
       animation: slideExitRight 6s cubic-bezier(0.2, 0.8, 0.25, 1) infinite;
-    }
-    .text-hovered {
+    }}
+    .text-hovered {{
       animation: slideEnterLeft 6s cubic-bezier(0.2, 0.8, 0.25, 1) infinite;
-    }
+    }}
 
-    .icon-anim {
-      animation: iconWatermarkMail7 6s cubic-bezier(0.2, 0.8, 0.25, 1) infinite;
-    }
+    .icon-anim {{
+      animation: iconWatermarkMail8 6s cubic-bezier(0.2, 0.8, 0.25, 1) infinite;
+    }}
 
-    @keyframes slideExitRight {
-      0%, 40% {
+    @keyframes slideExitRight {{
+      0%, 40% {{
         opacity: 1;
         transform: translateX(0);
-      }
-      48%, 90% {
+      }}
+      48%, 90% {{
         opacity: 0;
         transform: translateX(50px);
-      }
-      96%, 100% {
+      }}
+      96%, 100% {{
         opacity: 1;
         transform: translateX(0);
-      }
-    }
+      }}
+    }}
 
-    @keyframes slideEnterLeft {
-      0%, 40% {
+    @keyframes slideEnterLeft {{
+      0%, 40% {{
         opacity: 0;
         transform: translateX(-50px);
-      }
-      48%, 90% {
+      }}
+      48%, 90% {{
         opacity: 1;
         transform: translateX(0);
-      }
-      96%, 100% {
+      }}
+      96%, 100% {{
         opacity: 0;
         transform: translateX(50px);
-      }
-    }
+      }}
+    }}
 
-    @keyframes iconWatermarkMail7 {
-      0%, 40% {
+    @keyframes iconWatermarkMail8 {{
+      0%, 40% {{
         opacity: 1;
         transform: translate(110px, 21px) scale(1);
-      }
-      48%, 90% {
+      }}
+      48%, 90% {{
         opacity: 0.15;
         transform: translate(144px, 21px) scale(3.5);
-      }
-      96%, 100% {
+      }}
+      96%, 100% {{
         opacity: 1;
         transform: translate(110px, 21px) scale(1);
-      }
-    }
+      }}
+    }}
 
-    @keyframes pillGlow {
-      0%, 40% {
+    @keyframes pillGlow {{
+      0%, 40% {{
         stroke: #39d353;
         fill: #238636;
-      }
-      48%, 90% {
+      }}
+      48%, 90% {{
         stroke: #00ff66;
         fill: #2ea043;
-      }
-      96%, 100% {
+      }}
+      96%, 100% {{
         stroke: #39d353;
         fill: #238636;
-      }
-    }
+      }}
+    }}
   </style>
 
   <!-- Button Background -->
   <rect x="1" y="1" width="163" height="40" class="pill-bg"/>
 
   <!-- Clipped Interactive Content -->
-  <g clip-path="url(#btnClipMail7)">
+  <g clip-path="url(#btnClipMail8)">
     <!-- Right-Side Icon anchored at (110, 21) resting, translates to (144, 21) on hover -->
     <g class="icon-anim" transform="translate(110, 21)">
       <svg x="-8" y="-8" width="16" height="16" viewBox="0 0 24 24" fill="#ffffff">
@@ -245,8 +261,8 @@ def generate_v7_svgs():
       </svg>
     </g>
 
-    <!-- Resting State: EMAIL centered at x=70 -->
-    <text x="70" y="21.5" class="label text-resting">EMAIL</text>
+    <!-- Resting State: EMAIL centered at x=68 -->
+    <text x="68" y="21.5" class="label text-resting">EMAIL</text>
 
     <!-- Hovered State: SEND MAIL perfectly centered -->
     <text x="82.5" y="21.5" class="label text-hovered">SEND MAIL</text>
@@ -255,13 +271,13 @@ def generate_v7_svgs():
 """
 
     for fname, content in [("btn-linkedin.svg", linkedin_svg), 
-                           ("btn-linkedin-v7.svg", linkedin_svg),
+                           ("btn-linkedin-v8.svg", linkedin_svg),
                            ("btn-email.svg", email_svg), 
-                           ("btn-email-v7.svg", email_svg)]:
+                           ("btn-email-v8.svg", email_svg)]:
         with open(os.path.join(assets_dir, fname), "w", encoding="utf-8") as f:
             f.write(content)
 
-    print("Created v7 SVGs with deeper rightward watermark icon expansion on hover!")
+    print("Created v8 SVGs with embedded custom Caacupe One font!")
 
 if __name__ == "__main__":
-    generate_v7_svgs()
+    embed_custom_font_in_svgs()
