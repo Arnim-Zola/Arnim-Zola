@@ -2,12 +2,12 @@
 
   <!-- Native Animated Cyberpunk GitHub Dark & Emerald Green Banner -->
   <a href="https://github.com/Arnim-Zola">
-    <img src="assets/header.svg?v=1.1" alt="Mohammed Sahil - Full-Stack & GenAI Engineer" width="100%" />
+    <img src="assets/header.svg?v=1.2" alt="Mohammed Sahil - Full-Stack & GenAI Engineer" width="100%" />
   </a>
 
   <!-- Real-Time Looping Iris Text Subtitle (GitHub Green) -->
   <a href="https://github.com/Arnim-Zola/Eden">
-    <img src="assets/taglines.svg?v=1.1" alt="Mohammed Sahil Technical Taglines - Iris Reveal Animation" width="100%" />
+    <img src="assets/taglines.svg?v=1.2" alt="Mohammed Sahil Technical Taglines - Iris Reveal Animation" width="100%" />
   </a>
 
   <br/><br/>
