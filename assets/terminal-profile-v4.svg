@@ -11,25 +11,23 @@
       .t-title {
         font-family: 'Caacupe One', cursive, sans-serif;
         font-size: 18px;
-        font-weight: 700;
-        letter-spacing: 0.5px;
-        fill: #00ff66;
-        filter: drop-shadow(0 2px 4px rgba(0,0,0,0.95));
+        font-weight: 400;
+        letter-spacing: 0.8px;
+        fill: #7ee787;
+        filter: drop-shadow(0 1px 3px rgba(0,0,0,0.95));
       }
       .t-line {
         font-family: 'Caacupe One', cursive, sans-serif;
-        font-size: 16.5px;
+        font-size: 16px;
         font-weight: 400;
-        letter-spacing: 0.3px;
-        filter: drop-shadow(0 2px 5px rgba(0,0,0,0.95)) drop-shadow(0 1px 2px rgba(0,0,0,1));
+        letter-spacing: 0.2px;
+        filter: drop-shadow(0 1px 3px rgba(0,0,0,0.95));
       }
       .t-key {
-        fill: #00ff66;
-        font-weight: 700;
+        fill: #39d353;
       }
       .t-val {
-        fill: #ffffff;
-        font-weight: 400;
+        fill: #e6edf3;
       }
 
       /* CSS Flashlight Animation directly on the layer with clip-path (Uiverse.io standard) */
@@ -397,26 +395,33 @@
 
   <!-- Terminal Text Floating Directly Over the Bookshelf -->
   <g>
-    <text x="28" y="60" class="t-line">
-      <tspan class="t-key">Engineer:       </tspan> <tspan class="t-val">"Mohammed Sahil (@Arnim-Zola)"</tspan>
+    <text y="60" class="t-line">
+      <tspan x="28" class="t-key">Engineer:</tspan>
+      <tspan x="180" class="t-val">"Mohammed Sahil (@Arnim-Zola)"</tspan>
     </text>
-    <text x="28" y="87" class="t-line">
-      <tspan class="t-key">Institution:    </tspan> <tspan class="t-val">"3rd Year B.E. Computer Science &amp; Engineering @ DSATM (Class of 2028)"</tspan>
+    <text y="87" class="t-line">
+      <tspan x="28" class="t-key">Institution:</tspan>
+      <tspan x="180" class="t-val">"3rd Year B.E. Computer Science &amp; Engineering @ DSATM (Class of 2028)"</tspan>
     </text>
-    <text x="28" y="114" class="t-line">
-      <tspan class="t-key">Location:       </tspan> <tspan class="t-val">"Bengaluru, Karnataka, India"</tspan>
+    <text y="114" class="t-line">
+      <tspan x="28" class="t-key">Location:</tspan>
+      <tspan x="180" class="t-val">"Bengaluru, Karnataka, India"</tspan>
     </text>
-    <text x="28" y="141" class="t-line">
-      <tspan class="t-key">Target Roles:   </tspan> <tspan class="t-val">"Full-Stack AI Developer / GenAI Engineer • SDE"</tspan>
+    <text y="141" class="t-line">
+      <tspan x="28" class="t-key">Target Roles:</tspan>
+      <tspan x="180" class="t-val">"Full-Stack AI Developer / GenAI Engineer • SDE"</tspan>
     </text>
-    <text x="28" y="168" class="t-line">
-      <tspan class="t-key">Core Pillars:   </tspan> <tspan class="t-val">"DSA • OS &amp; Systems • DBMS • Computer Networks • OOP"</tspan>
+    <text y="168" class="t-line">
+      <tspan x="28" class="t-key">Core Pillars:</tspan>
+      <tspan x="180" class="t-val">"DSA • OS &amp; Systems • DBMS • Computer Networks • OOP"</tspan>
     </text>
-    <text x="28" y="195" class="t-line">
-      <tspan class="t-key">Daily Drivers:  </tspan> <tspan class="t-val">"FastAPI, pgvector, OpenCV, Whisper RAG, Next.js 15, Docker"</tspan>
+    <text y="195" class="t-line">
+      <tspan x="28" class="t-key">Daily Drivers:</tspan>
+      <tspan x="180" class="t-val">"FastAPI, pgvector, OpenCV, Whisper RAG, Next.js 15, Docker"</tspan>
     </text>
-    <text x="28" y="222" class="t-line">
-      <tspan class="t-key">Active Pursuits:</tspan> <tspan class="t-val">"Competitive Hackathons, Research Papers, Problem Solving &amp; Full-Stack Projects"</tspan>
+    <text y="222" class="t-line">
+      <tspan x="28" class="t-key">Active Pursuits:</tspan>
+      <tspan x="180" class="t-val">"Competitive Hackathons, Research Papers, Problem Solving &amp; Full-Stack Projects"</tspan>
     </text>
   </g>
 </svg>
