@@ -345,7 +345,7 @@ def generate_telemetry_svg():
         caacupe_font_css = font_match.group(0) if font_match else ""
 
     vbox_w = 920
-    vbox_h = 910
+    vbox_h = 740
     card_w = 872
     card_x = 24
 
@@ -662,29 +662,29 @@ def generate_telemetry_svg():
 
     <!-- ==================== BOTTOM LANDSCAPE (Generous Scenery below Card 3) ==================== -->
     <!-- Horizon Soft Cloud Center -->
-    <path d="M 150,785 C 190,750 250,745 290,767 C 335,735 410,730 455,763 C 500,735 575,735 620,763 C 660,745 715,755 750,781 C 778,803 745,825 688,833 C 570,847 270,847 150,785 Z" fill="url(#cloudGradCenter)" opacity="0.82" />
+    <path d="M 150,615 C 190,580 250,575 290,597 C 335,565 410,560 455,593 C 500,565 575,565 620,593 C 660,575 715,585 750,611 C 778,633 745,655 688,663 C 570,677 270,677 150,615 Z" fill="url(#cloudGradCenter)" opacity="0.82" />
 
     <!-- Distant Misty Rolling Hills -->
-    <path d="M -30,815 Q 200,755 480,815 T 950,790 L 950,920 L -30,920 Z" fill="url(#distantRidgeGrad)" />
-    <path d="M -30,815 Q 200,755 480,815 T 950,790" fill="none" stroke="rgba(134, 239, 172, 0.22)" stroke-width="1.2" />
+    <path d="M -30,645 Q 200,585 480,645 T 950,620 L 950,750 L -30,750 Z" fill="url(#distantRidgeGrad)" />
+    <path d="M -30,645 Q 200,585 480,645 T 950,620" fill="none" stroke="rgba(134, 239, 172, 0.22)" stroke-width="1.2" />
 
     <!-- Mid Rolling Hills -->
-    <path d="M -30,840 Q 250,795 500,850 Q 710,810 950,835 L 950,920 L -30,920 Z" fill="url(#midRidgeGrad)" />
-    <path d="M -30,840 Q 250,795 500,850 Q 710,810 950,835" fill="none" stroke="rgba(110, 231, 183, 0.16)" stroke-width="1.4" />
+    <path d="M -30,670 Q 250,625 500,680 Q 710,640 950,665 L 950,750 L -30,750 Z" fill="url(#midRidgeGrad)" />
+    <path d="M -30,670 Q 250,625 500,680 Q 710,640 950,665" fill="none" stroke="rgba(110, 231, 183, 0.16)" stroke-width="1.4" />
 
     <!-- Foreground Rolling Hills -->
-    <path d="M -30,865 Q 300,830 600,875 Q 780,845 950,878 L 950,920 L -30,920 Z" fill="url(#foreRidgeGrad)" />
+    <path d="M -30,695 Q 300,660 600,705 Q 780,675 950,708 L 950,750 L -30,750 Z" fill="url(#foreRidgeGrad)" />
 
     <!-- Silhouette Pine Trees (Rising in Foreground) -->
     <!-- Left Tree -->
-    <g transform="translate(45, 765) scale(0.68)">
+    <g transform="translate(45, 595) scale(0.68)">
       <rect x="180" y="140" width="12" height="50" fill="#010603" rx="2" />
       <polygon points="186,40 216,145 156,145" fill="#072011" />
       <polygon points="186,20 210,95 162,95" fill="#0b2c18" />
       <polygon points="186,0 204,55 168,55" fill="#0f3c21" />
     </g>
     <!-- Right Trees -->
-    <g transform="translate(825, 770) scale(0.62)">
+    <g transform="translate(825, 600) scale(0.62)">
       <rect x="100" y="140" width="10" height="45" fill="#010603" rx="2" />
       <polygon points="105,45 130,140 80,140" fill="#061c0e" />
       <polygon points="105,25 125,95 85,95" fill="#092514" />
@@ -704,9 +704,9 @@ def generate_telemetry_svg():
     <line x1="0" y1="20" x2="{vbox_w - 48}" y2="20" stroke="#164d27" stroke-width="1" stroke-opacity="0.6" />
   </g>
 
-  <!-- ==================== UNIFIED CARD 1: CONTRIBUTIONS, STREAKS & 365-DAY HEATMAP (Pushed Down to y=135) ==================== -->
+  <!-- ==================== UNIFIED CARD 1: CONTRIBUTIONS & STREAKS (Pushed Down to y=135) ==================== -->
   <g transform="translate({card_x}, 135)" filter="url(#cardShadow)">
-    <rect width="{card_w}" height="300" rx="12" fill="#040906" stroke="#164d27" stroke-width="1.5" />
+    <rect width="{card_w}" height="130" rx="12" fill="#040906" stroke="#164d27" stroke-width="1.5" />
     
     <!-- Top Row Metric Col 1: Total Contributions (Center x=145) -->
     <g transform="translate(145, 12)">
@@ -738,39 +738,10 @@ def generate_telemetry_svg():
       <text x="0" y="76" class="streak-lbl">LONGEST STREAK</text>
       <text x="0" y="102" class="streak-sub">{longest_range}</text>
     </g>
-
-    <!-- Horizontal Chamber Divider -->
-    <line x1="24" y1="126" x2="848" y2="126" stroke="#163d22" stroke-width="1" stroke-dasharray="3 3" />
-
-    <!-- Section 2: 365-Day Contribution Heatmap Matrix Header -->
-    <text x="28" y="146" class="heatmap-header">365-DAY CONTRIBUTION HEATMAP</text>
-    <text x="844" y="146" class="heatmap-total" text-anchor="end">{total_contributions} contributions in the last year</text>
-
-    <!-- Weekday Labels on Left -->
-    <text x="32" y="196" class="day-lbl">Mon</text>
-    <text x="32" y="223" class="day-lbl">Wed</text>
-    <text x="32" y="250" class="day-lbl">Fri</text>
-
-    <!-- Month Labels along Top -->
-    {month_svg}
-
-    <!-- 53 Columns x 7 Rows Contribution Cells -->
-    {cells_svg}
-
-    <!-- Activity Intensity Legend at Bottom Right -->
-    <g transform="translate(680, 276)">
-      <text x="0" y="10" class="legend-lbl">Less</text>
-      <rect x="36" y="1" width="10" height="10" rx="2" fill="#0d2415" stroke="#173f24" stroke-width="0.7" />
-      <rect x="52" y="1" width="10" height="10" rx="2" fill="#005524" />
-      <rect x="68" y="1" width="10" height="10" rx="2" fill="#009940" />
-      <rect x="84" y="1" width="10" height="10" rx="2" fill="#00dd5b" />
-      <rect x="100" y="1" width="10" height="10" rx="2" fill="#00ff66" />
-      <text x="120" y="10" class="legend-lbl">More</text>
-    </g>
   </g>
 
-  <!-- ==================== STACKED CARD 2: GITHUB OVERALL STATS (Pushed Down to y=455) ==================== -->
-  <g transform="translate({card_x}, 455)" filter="url(#cardShadow)">
+  <!-- ==================== STACKED CARD 2: GITHUB OVERALL STATS (Pushed Down to y=285) ==================== -->
+  <g transform="translate({card_x}, 285)" filter="url(#cardShadow)">
     <rect width="{card_w}" height="145" rx="12" fill="#040906" stroke="#164d27" stroke-width="1.5" />
     
     <text x="28" y="28" class="card-title">Mohammed Sahil's GitHub Stats</text>
@@ -822,8 +793,8 @@ def generate_telemetry_svg():
     </g>
   </g>
 
-  <!-- ==================== STACKED CARD 3: MOST USED LANGUAGES (Pushed Down to y=620) ==================== -->
-  <g transform="translate({card_x}, 620)" filter="url(#cardShadow)">
+  <!-- ==================== STACKED CARD 3: MOST USED LANGUAGES (Pushed Down to y=450) ==================== -->
+  <g transform="translate({card_x}, 450)" filter="url(#cardShadow)">
     <rect width="{card_w}" height="150" rx="12" fill="#040906" stroke="#164d27" stroke-width="1.5" />
     
     <text x="28" y="28" class="card-title-green">Most Used Languages</text>
@@ -840,12 +811,12 @@ def generate_telemetry_svg():
   </g>
 </svg>"""
 
-    for fname in ["telemetry-cosmos-card.svg", "telemetry-cosmos-card-v1.svg", "telemetry-cosmos-card-v2.svg", "telemetry-cosmos-card-v3.svg", "telemetry-cosmos-card-v4.svg", "telemetry-cosmos-card-v5.svg", "telemetry-cosmos-card-v6.svg", "telemetry-cosmos-card-v7.svg", "telemetry-cosmos-card-v8.svg"]:
+    for fname in ["telemetry-cosmos-card.svg", "telemetry-cosmos-card-v1.svg", "telemetry-cosmos-card-v2.svg", "telemetry-cosmos-card-v3.svg", "telemetry-cosmos-card-v4.svg", "telemetry-cosmos-card-v5.svg", "telemetry-cosmos-card-v6.svg", "telemetry-cosmos-card-v7.svg", "telemetry-cosmos-card-v8.svg", "telemetry-cosmos-card-v9.svg"]:
         out_path = os.path.join(assets_dir, fname)
         with open(out_path, "w", encoding="utf-8") as f:
             f.write(svg_content)
     ET.fromstring(svg_content)
-    print("Generated & Validated: telemetry-cosmos-card.svg, v1..v8")
+    print("Generated & Validated: telemetry-cosmos-card.svg, v1..v9")
 
 if __name__ == "__main__":
     generate_telemetry_svg()
