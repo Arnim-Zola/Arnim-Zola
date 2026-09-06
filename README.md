@@ -12,7 +12,7 @@
 
   <!-- Unified Emerald Green Social Connect HUD -->
   <p align="center">
-    <a href="https://www.linkedin.com/in/mohammed-sahil-2b0583336/"><img src="assets/btn-linkedin-v9.svg" height="42" alt="Connect on LinkedIn" /></a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="mailto:mohammedsahil0003@gmail.com"><img src="assets/btn-email-v9.svg" height="42" alt="Send Email" /></a>
+    <a href="https://www.linkedin.com/in/mohammed-sahil-2b0583336/"><img src="assets/btn-linkedin-v10.svg" height="48" alt="Connect on LinkedIn" /></a><a href="mailto:mohammedsahil0003@gmail.com"><img src="assets/btn-email-v10.svg" height="48" alt="Send Email" /></a>
   </p>
 
 </div>

@@ -1,11 +1,11 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 165 42" width="165" height="42">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 181 48" width="181" height="48">
   <defs>
-    <linearGradient id="bgGradMail9" x1="0%" y1="0%" x2="100%" y2="100%">
+    <linearGradient id="bgGradMail10" x1="0%" y1="0%" x2="100%" y2="100%">
       <stop offset="0%" stop-color="#238636"/>
       <stop offset="100%" stop-color="#1a6328"/>
     </linearGradient>
-    <clipPath id="btnClipMail9">
-      <rect x="1" y="1" width="163" height="40" rx="20" ry="20"/>
+    <clipPath id="btnClipMail10">
+      <rect x="9" y="4" width="163" height="40" rx="20" ry="20"/>
     </clipPath>
   </defs>
 
@@ -18,7 +18,7 @@
       }
 
     .pill-bg {
-      fill: url(#bgGradMail9);
+      fill: url(#bgGradMail10);
       stroke: #39d353;
       stroke-width: 2;
       rx: 20;
@@ -44,7 +44,7 @@
     }
 
     .icon-anim {
-      animation: iconWatermarkMail9 6s cubic-bezier(0.2, 0.8, 0.25, 1) infinite;
+      animation: iconWatermarkMail10 6s cubic-bezier(0.2, 0.8, 0.25, 1) infinite;
     }
 
     @keyframes slideExitRight {
@@ -77,18 +77,18 @@
       }
     }
 
-    @keyframes iconWatermarkMail9 {
+    @keyframes iconWatermarkMail10 {
       0%, 40% {
         opacity: 1;
-        transform: translate(110px, 21px) scale(1);
+        transform: translate(118px, 24px) scale(1);
       }
       48%, 90% {
         opacity: 0.15;
-        transform: translate(144px, 21px) scale(3.5);
+        transform: translate(152px, 24px) scale(3.5);
       }
       96%, 100% {
         opacity: 1;
-        transform: translate(110px, 21px) scale(1);
+        transform: translate(118px, 24px) scale(1);
       }
     }
 
@@ -109,21 +109,21 @@
   </style>
 
   <!-- Button Background -->
-  <rect x="1" y="1" width="163" height="40" class="pill-bg"/>
+  <rect x="9" y="4" width="163" height="40" class="pill-bg"/>
 
   <!-- Clipped Interactive Content -->
-  <g clip-path="url(#btnClipMail9)">
-    <!-- Right-Side Icon anchored at (110, 21) resting -->
-    <g class="icon-anim" transform="translate(110, 21)">
+  <g clip-path="url(#btnClipMail10)">
+    <!-- Right-Side Icon anchored at (118, 24) resting -->
+    <g class="icon-anim" transform="translate(118, 24)">
       <svg x="-8" y="-8" width="16" height="16" viewBox="0 0 24 24" fill="#ffffff">
         <path d="M24 5.457v13.909c0 .904-.732 1.636-1.636 1.636h-3.819V11.73L12 16.64l-6.545-4.91v9.273H1.636A1.636 1.636 0 0 1 0 19.366V5.457c0-2.023 2.309-3.178 3.927-1.964L5.455 4.64 12 9.548l6.545-4.91 1.528-1.145C21.69 2.28 24 3.434 24 5.457z"/>
       </svg>
     </g>
 
-    <!-- Resting State: EMAIL centered at x=68 -->
-    <text x="68" y="21.5" class="label text-resting">EMAIL</text>
+    <!-- Resting State: EMAIL centered at x=76 -->
+    <text x="76" y="24.5" class="label text-resting">EMAIL</text>
 
-    <!-- Hovered State: SEND MAIL perfectly centered -->
-    <text x="82.5" y="21.5" class="label text-hovered">SEND MAIL</text>
+    <!-- Hovered State: SEND MAIL perfectly centered at x=90.5 -->
+    <text x="90.5" y="24.5" class="label text-hovered">SEND MAIL</text>
   </g>
 </svg>
