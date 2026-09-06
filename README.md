@@ -27,7 +27,7 @@
 
 <img src="assets/green-divider.svg" width="100%" alt="---" />
 
-### PRIMARY FLAGSHIP: EDEN (Autonomous Misinformation Analysis Engine)
+<img src="assets/heading-eden.svg" alt="PRIMARY FLAGSHIP: EDEN (Autonomous Misinformation Analysis Engine)" width="100%" />
 
 <div align="center">
   <a href="https://github.com/Arnim-Zola/Eden">
@@ -70,7 +70,7 @@
 
 <img src="assets/green-divider.svg" width="100%" alt="---" />
 
-### SECONDARY ARSENAL & CREATIVE WEBGL LABS
+<img src="assets/heading-secondary.svg" alt="SECONDARY ARSENAL &amp; CREATIVE WEBGL LABS" width="100%" />
 
 | Project & Domain | Architecture & Systems Highlights | Core Stack | Source Code |
 | :--- | :--- | :--- | :--- |
@@ -81,7 +81,7 @@
 
 <img src="assets/green-divider.svg" width="100%" alt="---" />
 
-### TECHNICAL ARSENAL
+<img src="assets/heading-technical.svg" alt="TECHNICAL ARSENAL" width="100%" />
 
 | System Domain | Core Technologies & Production Tooling |
 | :--- | :--- |
@@ -93,7 +93,7 @@
 
 <img src="assets/green-divider.svg" width="100%" alt="---" />
 
-### REAL-TIME TELEMETRY & CODING STATS
+<img src="assets/heading-telemetry.svg" alt="REAL-TIME TELEMETRY &amp; CODING STATS" width="100%" />
 
 <div align="center">
 
