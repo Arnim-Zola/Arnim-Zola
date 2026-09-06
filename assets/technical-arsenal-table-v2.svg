@@ -75,11 +75,7 @@
   <!-- Table Rows Content -->
   <!-- Row 1: Languages &amp; Shaders -->
   <g>
-    <g>
-      <circle cx="20" cy="91.0" r="3" fill="#00ff66" filter="drop-shadow(0 0 3px #00ff66)" />
-      <circle cx="20" cy="91.0" r="1.5" fill="#ffffff" />
-      <text x="32" y="96.0" class="domain-title">Languages &amp; Shaders</text>
-    </g>
+    <text x="20" y="96.0" class="domain-title">Languages &amp; Shaders</text>
     <g transform="translate(261, 60)">
         <rect width="86" height="26" rx="6" class="badge-bg" />
         <text x="43.0" y="17.5" class="badge-text-hi">Python 3.11</text>
@@ -112,11 +108,7 @@
 
   <!-- Row 2: Applied AI, Vision &amp; NLP -->
   <g>
-    <g>
-      <circle cx="20" cy="179.0" r="3" fill="#00ff66" filter="drop-shadow(0 0 3px #00ff66)" />
-      <circle cx="20" cy="179.0" r="1.5" fill="#ffffff" />
-      <text x="32" y="184.0" class="domain-title">Applied AI, Vision &amp; NLP</text>
-    </g>
+    <text x="20" y="184.0" class="domain-title">Applied AI, Vision &amp; NLP</text>
     <g transform="translate(261, 148)">
         <rect width="126" height="26" rx="6" class="badge-bg" />
         <text x="63.0" y="17.5" class="badge-text-hi">Google Gemini 2.0</text>
@@ -153,11 +145,7 @@
 
   <!-- Row 3: Distributed Backend &amp; Scraping -->
   <g>
-    <g>
-      <circle cx="20" cy="267.0" r="3" fill="#00ff66" filter="drop-shadow(0 0 3px #00ff66)" />
-      <circle cx="20" cy="267.0" r="1.5" fill="#ffffff" />
-      <text x="32" y="272.0" class="domain-title">Distributed Backend &amp; Scraping</text>
-    </g>
+    <text x="20" y="272.0" class="domain-title">Distributed Backend &amp; Scraping</text>
     <g transform="translate(261, 236)">
         <rect width="68" height="26" rx="6" class="badge-bg" />
         <text x="34.0" y="17.5" class="badge-text-hi">FastAPI</text>
@@ -190,11 +178,7 @@
 
   <!-- Row 4: Creative WebGL, 3D &amp; Frontend -->
   <g>
-    <g>
-      <circle cx="20" cy="355.0" r="3" fill="#00ff66" filter="drop-shadow(0 0 3px #00ff66)" />
-      <circle cx="20" cy="355.0" r="1.5" fill="#ffffff" />
-      <text x="32" y="360.0" class="domain-title">Creative WebGL, 3D &amp; Frontend</text>
-    </g>
+    <text x="20" y="360.0" class="domain-title">Creative WebGL, 3D &amp; Frontend</text>
     <g transform="translate(261, 324)">
         <rect width="76" height="26" rx="6" class="badge-bg" />
         <text x="38.0" y="17.5" class="badge-text-hi">Next.js 15</text>
@@ -231,11 +215,7 @@
 
   <!-- Row 5: Databases, DevOps &amp; Media -->
   <g>
-    <g>
-      <circle cx="20" cy="443.0" r="3" fill="#00ff66" filter="drop-shadow(0 0 3px #00ff66)" />
-      <circle cx="20" cy="443.0" r="1.5" fill="#ffffff" />
-      <text x="32" y="448.0" class="domain-title">Databases, DevOps &amp; Media</text>
-    </g>
+    <text x="20" y="448.0" class="domain-title">Databases, DevOps &amp; Media</text>
     <g transform="translate(261, 412)">
         <rect width="86" height="26" rx="6" class="badge-bg" />
         <text x="43.0" y="17.5" class="badge-text-hi">PostgreSQL</text>

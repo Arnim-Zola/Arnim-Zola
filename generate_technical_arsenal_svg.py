@@ -68,12 +68,8 @@ def generate_technical_arsenal_svg():
         y_top = table_top + header_h + idx * row_h
         y_mid = y_top + row_h / 2
 
-        # Col 1: Domain Title (Crisp White with Glowing Emerald Dot)
-        col1_svg = f'''<g>
-      <circle cx="20" cy="{y_mid + 1}" r="3" fill="#00ff66" filter="drop-shadow(0 0 3px #00ff66)" />
-      <circle cx="20" cy="{y_mid + 1}" r="1.5" fill="#ffffff" />
-      <text x="32" y="{y_mid + 6}" class="domain-title">{r["domain"]}</text>
-    </g>'''
+        # Col 1: Domain Title (Clean left aligned text)
+        col1_svg = f'<text x="20" y="{y_mid + 6}" class="domain-title">{r["domain"]}</text>'
 
         # Col 2: Badges (Balanced mix of White and Neon Green text)
         badge_rows = r["badges"]
@@ -175,12 +171,12 @@ def generate_technical_arsenal_svg():
 {all_rows_str}
 </svg>"""
 
-    for fname in ["technical-arsenal-table.svg", "technical-arsenal-table-v1.svg", "technical-arsenal-table-v2.svg"]:
+    for fname in ["technical-arsenal-table.svg", "technical-arsenal-table-v1.svg", "technical-arsenal-table-v2.svg", "technical-arsenal-table-v3.svg"]:
         out_path = os.path.join(assets_dir, fname)
         with open(out_path, "w", encoding="utf-8") as f:
             f.write(svg_content)
     ET.fromstring(svg_content)
-    print(f"Generated & Validated: technical-arsenal-table.svg, v1, v2")
+    print(f"Generated & Validated: technical-arsenal-table.svg, v1..v3")
 
 if __name__ == "__main__":
     generate_technical_arsenal_svg()
