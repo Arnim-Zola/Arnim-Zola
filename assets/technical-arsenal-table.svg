@@ -33,7 +33,7 @@
         font-size: 12px;
         font-weight: 400;
         letter-spacing: 0.2px;
-        fill: #39d353;
+        fill: #7ee787;
         text-anchor: middle;
       }
       .grid-line {

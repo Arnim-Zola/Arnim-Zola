@@ -65,7 +65,7 @@
 
 <img src="assets/heading-technical.svg?v=3.0" alt="TECHNICAL ARSENAL" width="100%" />
 
-<img src="assets/technical-arsenal-table-v4.svg" width="100%" alt="Technical Arsenal" />
+<img src="assets/technical-arsenal-table-v5.svg" width="100%" alt="Technical Arsenal" />
 
 <img src="assets/green-divider.svg" width="100%" alt="---" />
 

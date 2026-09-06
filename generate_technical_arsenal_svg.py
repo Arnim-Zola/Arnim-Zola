@@ -138,7 +138,7 @@ def generate_technical_arsenal_svg():
         font-size: 12px;
         font-weight: 400;
         letter-spacing: 0.2px;
-        fill: #39d353;
+        fill: #7ee787;
         text-anchor: middle;
       }}
       .grid-line {{
@@ -171,12 +171,12 @@ def generate_technical_arsenal_svg():
 {all_rows_str}
 </svg>"""
 
-    for fname in ["technical-arsenal-table.svg", "technical-arsenal-table-v1.svg", "technical-arsenal-table-v2.svg", "technical-arsenal-table-v3.svg", "technical-arsenal-table-v4.svg"]:
+    for fname in ["technical-arsenal-table.svg", "technical-arsenal-table-v1.svg", "technical-arsenal-table-v2.svg", "technical-arsenal-table-v3.svg", "technical-arsenal-table-v4.svg", "technical-arsenal-table-v5.svg"]:
         out_path = os.path.join(assets_dir, fname)
         with open(out_path, "w", encoding="utf-8") as f:
             f.write(svg_content)
     ET.fromstring(svg_content)
-    print(f"Generated & Validated: technical-arsenal-table.svg, v1..v4")
+    print(f"Generated & Validated: technical-arsenal-table.svg, v1..v5")
 
 if __name__ == "__main__":
     generate_technical_arsenal_svg()
