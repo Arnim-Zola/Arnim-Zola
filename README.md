@@ -55,7 +55,11 @@
 
 <img src="assets/heading-secondary.svg?v=3.0" alt="SECONDARY ARSENAL &amp; CREATIVE WEBGL LABS" width="100%" />
 
-<img src="assets/secondary-projects-table-v3.svg" width="100%" alt="Secondary Arsenal &amp; Creative WebGL Labs" />
+<img src="assets/secondary-table-header.svg" width="100%" alt="Secondary Arsenal &amp; Creative WebGL Labs" />
+<a href="https://github.com/Arnim-Zola/CampusCart"><img src="assets/secondary-row-campuscart-v1.svg" width="100%" alt="CampusCart" /></a>
+<a href="https://github.com/Arnim-Zola/Zemo"><img src="assets/secondary-row-zemo-v1.svg" width="100%" alt="Zemo" /></a>
+<a href="https://github.com/Arnim-Zola/Brainiac"><img src="assets/secondary-row-brainiac-v1.svg" width="100%" alt="Brainiac" /></a>
+<a href="https://github.com/Arnim-Zola/Portfolio"><img src="assets/secondary-row-quantum-v1.svg" width="100%" alt="Quantum OS" /></a>
 
 <img src="assets/green-divider.svg" width="100%" alt="---" />
 
