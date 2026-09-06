@@ -106,15 +106,12 @@ def generate_secondary_projects_svg():
         y_top = table_top + header_h + idx * row_h
         y_mid = y_top + row_h / 2
 
-        # Col 1: Project Name & Domain Pill
-        name_y = y_top + 42
-        dom_y = y_top + 64
+        # Col 1: Project Name & Domain Subtitle (Clean Normal Text)
+        name_y = y_top + 52
+        dom_y = y_top + 76
         col1_svg = f'''<g>
       <text x="18" y="{name_y}" class="project-name">{r["name"]}</text>
-      <g transform="translate(18, {dom_y})">
-        <rect width="{r['domain_w']}" height="22" rx="5" class="domain-bg" />
-        <text x="{r['domain_w']/2}" y="15" class="domain-text">{r["domain"]}</text>
-      </g>
+      <text x="18" y="{dom_y}" class="domain-text">{r["domain"]}</text>
     </g>'''
 
         # Col 2: Architecture Highlights Description
@@ -191,18 +188,12 @@ def generate_secondary_projects_svg():
         fill: #00ff66;
         filter: drop-shadow(0 1px 2px rgba(0,0,0,0.8));
       }}
-      .domain-bg {{
-        fill: #06170d;
-        stroke: #164d27;
-        stroke-width: 1;
-      }}
       .domain-text {{
         font-family: 'Caacupe One', cursive, sans-serif;
-        font-size: 12px;
+        font-size: 14px;
         font-weight: 400;
-        letter-spacing: 0.3px;
+        letter-spacing: 0.2px;
         fill: #7ee787;
-        text-anchor: middle;
       }}
       .desc-text {{
         font-family: 'Caacupe One', cursive, sans-serif;
@@ -293,12 +284,12 @@ def generate_secondary_projects_svg():
 {all_rows_str}
 </svg>"""
 
-    for fname in ["secondary-projects-table.svg", "secondary-projects-table-v1.svg", "secondary-projects-table-v2.svg"]:
+    for fname in ["secondary-projects-table.svg", "secondary-projects-table-v1.svg", "secondary-projects-table-v2.svg", "secondary-projects-table-v3.svg"]:
         out_path = os.path.join(assets_dir, fname)
         with open(out_path, "w", encoding="utf-8") as f:
             f.write(svg_content)
     ET.fromstring(svg_content)
-    print(f"Generated & Validated: secondary-projects-table.svg, v1, v2")
+    print(f"Generated & Validated: secondary-projects-table.svg, v1..v3")
 
 if __name__ == "__main__":
     generate_secondary_projects_svg()

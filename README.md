@@ -55,7 +55,7 @@
 
 <img src="assets/heading-secondary.svg?v=3.0" alt="SECONDARY ARSENAL &amp; CREATIVE WEBGL LABS" width="100%" />
 
-<img src="assets/secondary-projects-table-v2.svg" width="100%" alt="Secondary Arsenal &amp; Creative WebGL Labs" />
+<img src="assets/secondary-projects-table-v3.svg" width="100%" alt="Secondary Arsenal &amp; Creative WebGL Labs" />
 
 <img src="assets/green-divider.svg" width="100%" alt="---" />
 
