@@ -32,9 +32,9 @@
       }
       .desc-text {
         font-family: 'Caacupe One', cursive, sans-serif;
-        font-size: 13.2px;
+        font-size: 13.5px;
         font-weight: 400;
-        letter-spacing: 0.05px;
+        letter-spacing: -0.05px;
         fill: #ffffff;
       }
       .hi {
@@ -98,10 +98,10 @@
   <g>
     <text x="18" y="54" class="project-name">CampusCart</text>
     <text x="18" y="78" class="domain-text">Campus Logistics</text>
-    <text x="159" y="26" class="desc-text">Standing in a 20-person line at 8:55 AM just to print two pages before</text>
-    <text x="159" y="50" class="desc-text">submission deadline? Absolutely not. CampusCart kills the campus queue</text>
-    <text x="159" y="74" class="desc-text">with zero-wait client-side <tspan class="hi">PDF.js</tspan> parsing &amp; dynamic pricing calculus, 3s</text>
-    <text x="159" y="98" class="desc-text">automated <tspan class="hi">Django REST</tspan> polling queues, and live <tspan class="hi">Next.js 14</tspan> dashboards.</text>
+    <text x="159" y="26" textLength="412" lengthAdjust="spacing" class="desc-text">Standing in a 20-person line at 8:55 AM just to print two pages before deadline?</text>
+    <text x="159" y="50" textLength="412" lengthAdjust="spacing" class="desc-text">CampusCart kills the campus queue forever with an instantaneous zero-queue</text>
+    <text x="159" y="74" textLength="412" lengthAdjust="spacing" class="desc-text">utility powered by client-side <tspan class="hi">PDF.js</tspan> parsing &amp; dynamic pricing calculus, 3s</text>
+    <text x="159" y="98" textLength="412" lengthAdjust="spacing" class="desc-text">automated <tspan class="hi">Django REST</tspan> polling queues, and live <tspan class="hi">Next.js 14</tspan> vendor dashboards.</text>
     <g transform="translate(593, 32)">
       <rect width="66" height="26" rx="6" class="badge-bg" />
       <text x="33.0" y="17.5" class="badge-text">Next.js 14</text>

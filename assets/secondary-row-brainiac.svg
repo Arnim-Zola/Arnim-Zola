@@ -32,9 +32,9 @@
       }
       .desc-text {
         font-family: 'Caacupe One', cursive, sans-serif;
-        font-size: 13.2px;
+        font-size: 13.5px;
         font-weight: 400;
-        letter-spacing: 0.05px;
+        letter-spacing: -0.05px;
         fill: #ffffff;
       }
       .hi {
@@ -98,10 +98,10 @@
   <g>
     <text x="18" y="54" class="project-name">Brainiac</text>
     <text x="18" y="78" class="domain-text">Cognitive AI</text>
-    <text x="159" y="26" class="desc-text">Ever wondered what 3 AM caffeine-fueled burnout looks like inside your head?</text>
-    <text x="159" y="50" class="desc-text">Brainiac renders cognitive burnout states into a living 3D simulation,</text>
-    <text x="159" y="74" class="desc-text">featuring an interactive <tspan class="hi">@react-three/fiber</tspan> cortical mesh, computing 30-factor</text>
-    <text x="159" y="98" class="desc-text">psychometrics via <tspan class="hi">PyTorch</tspan>, and generating personalized AI protocols.</text>
+    <text x="159" y="26" textLength="412" lengthAdjust="spacing" class="desc-text">Ever wondered what 3 AM caffeine-fueled burnout looks like inside your head?</text>
+    <text x="159" y="50" textLength="412" lengthAdjust="spacing" class="desc-text">Brainiac renders your brain's cognitive chaos into a living 3D simulation,</text>
+    <text x="159" y="74" textLength="412" lengthAdjust="spacing" class="desc-text">featuring an interactive <tspan class="hi">@react-three/fiber</tspan> cortical mesh, computing 30-factor</text>
+    <text x="159" y="98" textLength="412" lengthAdjust="spacing" class="desc-text">psychometric scoring vectors via <tspan class="hi">PyTorch</tspan>, and personalized AI protocols.</text>
     <g transform="translate(593, 32)">
       <rect width="62" height="26" rx="6" class="badge-bg" />
       <text x="31.0" y="17.5" class="badge-text">React 18</text>

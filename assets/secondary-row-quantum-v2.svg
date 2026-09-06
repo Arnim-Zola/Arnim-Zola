@@ -32,9 +32,9 @@
       }
       .desc-text {
         font-family: 'Caacupe One', cursive, sans-serif;
-        font-size: 13.2px;
+        font-size: 13.5px;
         font-weight: 400;
-        letter-spacing: 0.05px;
+        letter-spacing: -0.05px;
         fill: #ffffff;
       }
       .hi {
@@ -98,10 +98,10 @@
   <g>
     <text x="18" y="54" class="project-name">Quantum OS</text>
     <text x="18" y="78" class="domain-text">Interactive Portfolio</text>
-    <text x="159" y="26" class="desc-text">Why should developer portfolios look like another generic resume from 2015?</text>
-    <text x="159" y="50" class="desc-text">Quantum OS transforms my portfolio into a sci-fi cybernetic desktop OS,</text>
-    <text x="159" y="74" class="desc-text">powered by GPU <tspan class="hi">GLSL fragment shaders</tspan> at 60FPS, <tspan class="hi">Web Audio API</tspan> acoustic</text>
-    <text x="159" y="98" class="desc-text">feedback synthesis, and a real-time streaming edge AI terminal shell.</text>
+    <text x="159" y="26" textLength="412" lengthAdjust="spacing" class="desc-text">Why should developer portfolios look like another generic resume from 2015?</text>
+    <text x="159" y="50" textLength="412" lengthAdjust="spacing" class="desc-text">Quantum OS turns my portfolio into a sci-fi cybernetic desktop operating system,</text>
+    <text x="159" y="74" textLength="412" lengthAdjust="spacing" class="desc-text">powered by custom GPU <tspan class="hi">GLSL fragment shaders</tspan> at 60FPS, <tspan class="hi">Web Audio API</tspan> acoustic</text>
+    <text x="159" y="98" textLength="412" lengthAdjust="spacing" class="desc-text">feedback sound synthesis, and a live real-time streaming edge AI terminal shell.</text>
     <g transform="translate(593, 32)">
       <rect width="66" height="26" rx="6" class="badge-bg" />
       <text x="33.0" y="17.5" class="badge-text">Next.js 15</text>

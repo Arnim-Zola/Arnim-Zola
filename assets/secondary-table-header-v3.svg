@@ -32,9 +32,9 @@
       }
       .desc-text {
         font-family: 'Caacupe One', cursive, sans-serif;
-        font-size: 13.2px;
+        font-size: 13.5px;
         font-weight: 400;
-        letter-spacing: 0.05px;
+        letter-spacing: -0.05px;
         fill: #ffffff;
       }
       .hi {
