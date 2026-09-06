@@ -98,7 +98,7 @@
   <g>
     <text x="18" y="54" class="project-name">CampusCart</text>
     <text x="18" y="78" class="domain-text">Campus Logistics</text>
-    <text x="154" y="26" textLength="407" lengthAdjust="spacing" class="desc-text">Standing in a 20-person line at 8:55 AM just to print two pages before deadline?</text>
+    <text x="154" y="26" textLength="407" lengthAdjust="spacing" class="desc-text">Standing in a 20-person line at 9:25 AM just to print two pages before deadline?</text>
     <text x="154" y="50" textLength="407" lengthAdjust="spacing" class="desc-text">CampusCart kills the campus queue forever with an instantaneous zero-queue</text>
     <text x="154" y="74" textLength="407" lengthAdjust="spacing" class="desc-text">utility powered by client-side <tspan class="hi">PDF.js</tspan> parsing &amp; dynamic pricing calculus, 3s</text>
     <text x="154" y="98" textLength="407" lengthAdjust="spacing" class="desc-text">automated <tspan class="hi">Django REST</tspan> polling queues, and live <tspan class="hi">Next.js 14</tspan> vendor dashboards.</text>
