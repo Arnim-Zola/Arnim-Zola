@@ -155,9 +155,17 @@
     <text x="139" y="387.0" class="name-text">Temporal Fusion</text>
     <text x="314" y="370" class="desc-text">Synchronizes spoken words with on-screen visual text at the exact</text>
       <text x="314" y="394" class="desc-text">millisecond so every claim is tied to its precise visual context.</text>
-    <g transform="translate(737, 371.0)">
+    <g transform="translate(737, 356)">
         <rect width="116" height="24" rx="5" class="badge-bg" />
         <text x="58.0" y="16" class="badge-text">Cross-Modal Sync</text>
+      </g>
+      <g transform="translate(737, 386)">
+        <rect width="60" height="24" rx="5" class="badge-bg" />
+        <text x="30.0" y="16" class="badge-text">FFmpeg</text>
+      </g>
+      <g transform="translate(803, 386)">
+        <rect width="60" height="24" rx="5" class="badge-bg" />
+        <text x="30.0" y="16" class="badge-text">Asyncio</text>
       </g>
   </g>
 

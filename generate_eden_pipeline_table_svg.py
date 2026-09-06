@@ -66,7 +66,7 @@ def generate_eden_pipeline_table_svg():
                 ('Synchronizes spoken words with on-screen visual text at the exact',),
                 ('millisecond so every claim is tied to its precise visual context.',)
             ],
-            "badges": [[("Cross-Modal Sync", 116)]]
+            "badges": [[("Cross-Modal Sync", 116)], [("FFmpeg", 60), ("Asyncio", 60)]]
         },
         {
             "stage": "Stage 04",
