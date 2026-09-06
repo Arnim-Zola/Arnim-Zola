@@ -14,18 +14,17 @@ def generate_eden_pipeline_table_svg():
     font_face_css = font_match.group(0) if font_match else ""
 
     vbox_w = 920
-    heading_h = 36
-    table_top = 38
-    header_h = 44
-    row_h = 86
+    table_top = 40
+    header_h = 50
+    row_h = 104
     num_rows = 6
-    total_table_h = header_h + num_rows * row_h  # 44 + 516 = 560
-    total_svg_h = table_top + total_table_h + 4   # 602
+    total_table_h = header_h + num_rows * row_h  # 50 + 624 = 674
+    total_svg_h = table_top + total_table_h + 4   # 718
 
     col1_w = 125
-    col2_w = 175
-    col3_w = 425
-    col4_w = vbox_w - (col1_w + col2_w + col3_w) # 195
+    col2_w = 180
+    col3_w = 415
+    col4_w = vbox_w - (col1_w + col2_w + col3_w) # 200
 
     col2_x = col1_w
     col3_x = col1_w + col2_w
@@ -39,7 +38,7 @@ def generate_eden_pipeline_table_svg():
                 ('Ingests <tspan class="hi">Instagram Reels</tspan>, carousel posts, and raw video files without',),
                 ('crashing the server via asynchronous <tspan class="hi">Celery + Redis</tspan> queues.',)
             ],
-            "badges": [[("Celery", 56), ("Redis", 50)], [("FastAPI", 62)]]
+            "badges": [[("Celery", 60), ("Redis", 54)], [("FastAPI", 66)]]
         },
         {
             "stage": "Stage 02A",
@@ -48,7 +47,7 @@ def generate_eden_pipeline_table_svg():
                 ('Extracts clean image frames (<tspan class="hi">4 frames/sec</tspan>) and uses OCR to scan',),
                 ('and read all on-screen captions, headlines, and overlay text.',)
             ],
-            "badges": [[("OpenCV", 60), ("EasyOCR", 64)]]
+            "badges": [[("OpenCV", 64), ("EasyOCR", 68)]]
         },
         {
             "stage": "Stage 02B",
@@ -57,7 +56,7 @@ def generate_eden_pipeline_table_svg():
                 ('Slices audio track, transcribes spoken speech to text using <tspan class="hi">Whisper</tspan>,',),
                 ('and breaks long audio into time-stamped factual claim sentences.',)
             ],
-            "badges": [[("Whisper", 60), ("FFmpeg", 60)]]
+            "badges": [[("Whisper", 64), ("FFmpeg", 64)]]
         },
         {
             "stage": "Stage 03",
@@ -66,7 +65,7 @@ def generate_eden_pipeline_table_svg():
                 ('Synchronizes spoken words with on-screen visual text at the exact',),
                 ('millisecond so every claim is tied to its precise visual context.',)
             ],
-            "badges": [[("Cross-Modal Sync", 116)], [("FFmpeg", 60), ("Asyncio", 60)]]
+            "badges": [[("Cross-Modal Sync", 126)], [("FFmpeg", 64), ("Asyncio", 64)]]
         },
         {
             "stage": "Stage 04",
@@ -75,7 +74,7 @@ def generate_eden_pipeline_table_svg():
                 ('Autonomous AI agents query live news search APIs and cross-check',),
                 ('verified knowledge bases using sub-120ms <tspan class="hi">pgvector</tspan> retrieval.',)
             ],
-            "badges": [[("Multi-Agent RAG", 112)], [("pgvector", 66)]]
+            "badges": [[("Multi-Agent RAG", 122)], [("pgvector", 70)]]
         },
         {
             "stage": "Stage 05",
@@ -84,7 +83,7 @@ def generate_eden_pipeline_table_svg():
                 ('Evaluates political bias and manipulative framing, calculates an authenticity',),
                 ('score (<tspan class="hi">Truth Index %</tspan>), and compiles a 1-click PDF dossier.',)
             ],
-            "badges": [[("LLM Reasoners", 98)], [("PDF Dossier", 80)]]
+            "badges": [[("LLM Reasoners", 106)], [("PDF Dossier", 86)]]
         }
     ]
 
@@ -94,16 +93,16 @@ def generate_eden_pipeline_table_svg():
         y_mid = y_top + row_h / 2
 
         # Col 1: Stage
-        stage_svg = f'<text x="18" y="{y_mid + 4}" class="stage-text">{r["stage"]}</text>'
+        stage_svg = f'<text x="18" y="{y_mid + 5}" class="stage-text">{r["stage"]}</text>'
 
         # Col 2: Name
-        name_svg = f'<text x="{col2_x + 14}" y="{y_mid + 4}" class="name-text">{r["name"]}</text>'
+        name_svg = f'<text x="{col2_x + 14}" y="{y_mid + 5}" class="name-text">{r["name"]}</text>'
 
         # Col 3: Desc
-        desc_start_y = y_top + 30
+        desc_start_y = y_top + 38
         d_svg_list = []
         for d_idx, d_line in enumerate(r["desc"]):
-            dy = desc_start_y + d_idx * 24
+            dy = desc_start_y + d_idx * 26
             d_svg_list.append(f'<text x="{col3_x + 14}" y="{dy}" class="desc-text">{d_line[0]}</text>')
         desc_svg = "\n      ".join(d_svg_list)
 
@@ -111,17 +110,17 @@ def generate_eden_pipeline_table_svg():
         badge_rows = r["badges"]
         badge_svg_list = []
         if len(badge_rows) == 1:
-            b_start_y = y_mid - 12
+            b_start_y = y_mid - 13
         else:
-            b_start_y = y_top + 16
+            b_start_y = y_top + 22
 
         for b_row_idx, b_list in enumerate(badge_rows):
-            by = b_start_y + b_row_idx * 30
-            bx = col4_x + 12
+            by = b_start_y + b_row_idx * 34
+            bx = col4_x + 10
             for label, bw in b_list:
                 badge_svg_list.append(f'''<g transform="translate({bx}, {by})">
-        <rect width="{bw}" height="24" rx="5" class="badge-bg" />
-        <text x="{bw/2}" y="16" class="badge-text">{label}</text>
+        <rect width="{bw}" height="26" rx="6" class="badge-bg" />
+        <text x="{bw/2}" y="17.5" class="badge-text">{label}</text>
       </g>''')
                 bx += bw + 6
         badges_svg = "\n      ".join(badge_svg_list)
@@ -150,31 +149,32 @@ def generate_eden_pipeline_table_svg():
       }}
       .th-text {{
         font-family: 'Caacupe One', cursive, sans-serif;
-        font-size: 15.5px;
+        font-size: 17px;
         font-weight: 400;
         letter-spacing: 0.6px;
         fill: #7ee787;
       }}
       .stage-text {{
         font-family: 'Caacupe One', cursive, sans-serif;
-        font-size: 15px;
+        font-size: 16px;
         font-weight: 400;
         letter-spacing: 0.3px;
         fill: #00ff66;
+        filter: drop-shadow(0 1px 2px rgba(0,0,0,0.8));
       }}
       .name-text {{
         font-family: 'Caacupe One', cursive, sans-serif;
-        font-size: 14.5px;
+        font-size: 16px;
         font-weight: 400;
         letter-spacing: 0.2px;
         fill: #ffffff;
       }}
       .desc-text {{
         font-family: 'Caacupe One', cursive, sans-serif;
-        font-size: 14px;
+        font-size: 15px;
         font-weight: 400;
-        letter-spacing: 0.1px;
-        fill: #e6edf3;
+        letter-spacing: 0.2px;
+        fill: #ffffff;
       }}
       .hi {{
         fill: #00ff66;
@@ -186,9 +186,9 @@ def generate_eden_pipeline_table_svg():
       }}
       .badge-text {{
         font-family: 'Caacupe One', cursive, sans-serif;
-        font-size: 12px;
+        font-size: 13px;
         font-weight: 400;
-        letter-spacing: 0.2px;
+        letter-spacing: 0.3px;
         fill: #39d353;
         text-anchor: middle;
       }}
@@ -210,10 +210,10 @@ def generate_eden_pipeline_table_svg():
     <path d="M 0 10 Q 0 0 10 0 L {vbox_w - 10} 0 Q {vbox_w} 0 {vbox_w} 10 L {vbox_w} {header_h} L 0 {header_h} Z" fill="#07150c" />
 
     <!-- Header Column Titles -->
-    <text x="18" y="28" class="th-text">Stage &amp; Node</text>
-    <text x="{col2_x + 14}" y="28" class="th-text">Name</text>
-    <text x="{col3_x + 14}" y="28" class="th-text">Plain English Breakdown (What Happens Here)</text>
-    <text x="{col4_x + 12}" y="28" class="th-text">Core Stack</text>
+    <text x="18" y="31" class="th-text">Stage &amp; Node</text>
+    <text x="{col2_x + 14}" y="31" class="th-text">Name</text>
+    <text x="{col3_x + 14}" y="31" class="th-text">Plain English Breakdown (What Happens Here)</text>
+    <text x="{col4_x + 10}" y="31" class="th-text">Core Stack</text>
 
     <!-- Horizontal Grid Lines -->
     <line x1="0" y1="{header_h}" x2="{vbox_w}" y2="{header_h}" class="grid-line" stroke="#184225" stroke-width="1.2" />

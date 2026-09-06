@@ -47,7 +47,7 @@
   <img src="assets/eden-pipeline.svg?v=2.0" width="100%" alt="EDEN Multimodal Architecture Pipeline" />
 </div>
 
-<img src="assets/eden-pipeline-table.svg?v=2.0" width="100%" alt="Multimodal Pipeline Execution (Stage-by-Stage)" />
+<img src="assets/eden-pipeline-table.svg?v=3.0" width="100%" alt="Multimodal Pipeline Execution (Stage-by-Stage)" />
 
 #### Eden Architectural Innovations
 
