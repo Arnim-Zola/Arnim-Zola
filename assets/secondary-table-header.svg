@@ -25,16 +25,16 @@
       }
       .domain-text {
         font-family: 'Caacupe One', cursive, sans-serif;
-        font-size: 14px;
+        font-size: 13.5px;
         font-weight: 400;
         letter-spacing: 0.2px;
         fill: #7ee787;
       }
       .desc-text {
         font-family: 'Caacupe One', cursive, sans-serif;
-        font-size: 14.5px;
+        font-size: 13.2px;
         font-weight: 400;
-        letter-spacing: 0.2px;
+        letter-spacing: 0.05px;
         fill: #ffffff;
       }
       .hi {
@@ -88,11 +88,11 @@
   <rect x="0" y="0" width="920" height="46" rx="8" fill="#07150c" stroke="#163d22" stroke-width="1.5" />
   
   <text x="18" y="29" class="th-text">Project &amp; Domain</text>
-  <text x="179" y="29" class="th-text">Architecture &amp; Systems Highlights</text>
-  <text x="580" y="29" class="th-text">Core Stack</text>
+  <text x="159" y="29" class="th-text">Architecture &amp; Systems Highlights</text>
+  <text x="595" y="29" class="th-text">Core Stack</text>
   <text x="790" y="29" class="th-text">Source Code</text>
 
-  <line x1="165" y1="0" x2="165" y2="46" class="grid-line" />
-  <line x1="570" y1="0" x2="570" y2="46" class="grid-line" />
+  <line x1="145" y1="0" x2="145" y2="46" class="grid-line" />
+  <line x1="585" y1="0" x2="585" y2="46" class="grid-line" />
   <line x1="780" y1="0" x2="780" y2="46" class="grid-line" />
 </svg>

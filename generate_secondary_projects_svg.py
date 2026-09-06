@@ -15,11 +15,11 @@ def generate_secondary_projects_rows():
 
     vbox_w = 920
     header_h = 46
-    row_h = 122
+    row_h = 128
 
-    col1_w = 165
-    col2_w = 405
-    col3_w = 210
+    col1_w = 145
+    col2_w = 440
+    col3_w = 195
     col4_w = vbox_w - (col1_w + col2_w + col3_w) # 140
 
     col2_x = col1_w
@@ -46,16 +46,16 @@ def generate_secondary_projects_rows():
       }}
       .domain-text {{
         font-family: 'Caacupe One', cursive, sans-serif;
-        font-size: 14px;
+        font-size: 13.5px;
         font-weight: 400;
         letter-spacing: 0.2px;
         fill: #7ee787;
       }}
       .desc-text {{
         font-family: 'Caacupe One', cursive, sans-serif;
-        font-size: 14.5px;
+        font-size: 13.2px;
         font-weight: 400;
-        letter-spacing: 0.2px;
+        letter-spacing: 0.05px;
         fill: #ffffff;
       }}
       .hi {{
@@ -123,22 +123,23 @@ def generate_secondary_projects_rows():
   <line x1="{col4_x}" y1="0" x2="{col4_x}" y2="{header_h}" class="grid-line" />
 </svg>"""
 
-    for fname in ["secondary-table-header.svg", "secondary-table-header-v2.svg"]:
+    for fname in ["secondary-table-header.svg", "secondary-table-header-v1.svg", "secondary-table-header-v2.svg", "secondary-table-header-v3.svg"]:
         with open(os.path.join(assets_dir, fname), "w", encoding="utf-8") as f:
             f.write(header_svg)
     ET.fromstring(header_svg)
-    print("Generated: secondary-table-header.svg, v2")
+    print("Generated: secondary-table-header.svg, v1..v3")
 
-    # 2. Individual Rows Data
+    # 2. Individual Rows Data with Authentic Original Hooks
     projects_data = [
         {
             "id": "campuscart",
             "name": "CampusCart",
             "domain": "Campus Logistics",
             "desc": [
-                ('Zero-queue campus print utility eliminating lines before submission deadlines;',),
-                ('powered by client-side <tspan class="hi">PDF.js</tspan> parsing &amp; dynamic pricing calculus,',),
-                ('3s <tspan class="hi">Django REST</tspan> polling queues, and real-time vendor dashboards in <tspan class="hi">Next.js 14</tspan>.',)
+                ('Standing in a 20-person line at 8:55 AM just to print two pages before',),
+                ('submission deadline? Absolutely not. CampusCart kills the campus queue',),
+                ('with zero-wait client-side <tspan class="hi">PDF.js</tspan> parsing &amp; dynamic pricing calculus, 3s',),
+                ('automated <tspan class="hi">Django REST</tspan> polling queues, and live <tspan class="hi">Next.js 14</tspan> dashboards.',)
             ],
             "badges": [
                 [("Next.js 14", 66), ("PostgreSQL", 76)],
@@ -152,9 +153,10 @@ def generate_secondary_projects_rows():
             "name": "Zemo",
             "domain": "E-Commerce Intel",
             "desc": [
-                ('Autonomous radar exposing fake hype and predatory price hikes by automating',),
-                ('headless <tspan class="hi">Playwright</tspan> scraping, synthesizing 100+ raw customer reviews into',),
-                ('sentiment vectors via <tspan class="hi">Meta Llama 3 8B</tspan>, and plotting trends with <tspan class="hi">Plotly.js</tspan>.',)
+                ('That "50% OFF Limited Deal" with 4.8 stars written by bots? Called its bluff.',),
+                ('Zemo is an autonomous radar built to expose fake hype &amp; predatory price hikes',),
+                ('by automating headless <tspan class="hi">Playwright</tspan> scraping across dynamic DOMs, and',),
+                ('synthesizing 100+ reviews via <tspan class="hi">Meta Llama 3 8B</tspan> into <tspan class="hi">Plotly.js</tspan> charts.',)
             ],
             "badges": [
                 [("Meta Llama 3", 88), ("FastAPI", 58)],
@@ -168,9 +170,10 @@ def generate_secondary_projects_rows():
             "name": "Brainiac",
             "domain": "Cognitive AI",
             "desc": [
-                ('Renders cognitive burnout states into a living 3D simulation featuring an interactive',),
-                ('<tspan class="hi">@react-three/fiber</tspan> cortical mesh, computing 30-factor psychometric scoring',),
-                ('vectors via <tspan class="hi">PyTorch</tspan>, and generating personalized AI cognitive protocols.',)
+                ('Ever wondered what 3 AM caffeine-fueled burnout looks like inside your head?',),
+                ('Brainiac renders cognitive burnout states into a living 3D simulation,',),
+                ('featuring an interactive <tspan class="hi">@react-three/fiber</tspan> cortical mesh, computing 30-factor',),
+                ('psychometrics via <tspan class="hi">PyTorch</tspan>, and generating personalized AI protocols.',)
             ],
             "badges": [
                 [("React 18", 62), ("@react-three/fiber", 120)],
@@ -184,9 +187,10 @@ def generate_secondary_projects_rows():
             "name": "Quantum OS",
             "domain": "Interactive Portfolio",
             "desc": [
-                ('Personal portfolio transformed into a sci-fi cybernetic desktop operating system;',),
-                ('powered by custom GPU <tspan class="hi">GLSL fragment shaders</tspan> locked at 60FPS, <tspan class="hi">Web Audio API</tspan>',),
-                ('acoustic feedback synthesis, and a streaming edge AI terminal shell.',)
+                ('Why should developer portfolios look like another generic resume from 2015?',),
+                ('Quantum OS transforms my portfolio into a sci-fi cybernetic desktop OS,',),
+                ('powered by GPU <tspan class="hi">GLSL fragment shaders</tspan> at 60FPS, <tspan class="hi">Web Audio API</tspan> acoustic',),
+                ('feedback synthesis, and a real-time streaming edge AI terminal shell.',)
             ],
             "badges": [
                 [("Next.js 15", 66), ("GLSL Shaders", 86)],
@@ -199,22 +203,22 @@ def generate_secondary_projects_rows():
 
     for p in projects_data:
         # Col 1: Project Name & Domain
-        col1_svg = f'''<text x="18" y="52" class="project-name">{p["name"]}</text>
-    <text x="18" y="76" class="domain-text">{p["domain"]}</text>'''
+        col1_svg = f'''<text x="18" y="54" class="project-name">{p["name"]}</text>
+    <text x="18" y="78" class="domain-text">{p["domain"]}</text>'''
 
         # Col 2: Desc
         d_svg_list = []
         for d_idx, d_line in enumerate(p["desc"]):
-            dy = 34 + d_idx * 26
+            dy = 26 + d_idx * 24
             d_svg_list.append(f'<text x="{col2_x + 14}" y="{dy}" class="desc-text">{d_line[0]}</text>')
         col2_svg = "\n    ".join(d_svg_list)
 
         # Col 3: Badges
         badge_svg_list = []
-        b_start_y = 28
+        b_start_y = 32
         for b_row_idx, b_list in enumerate(p["badges"]):
             by = b_start_y + b_row_idx * 34
-            bx = col3_x + 10
+            bx = col3_x + 8
             for label, bw in b_list:
                 badge_svg_list.append(f'''<g transform="translate({bx}, {by})">
       <rect width="{bw}" height="26" rx="6" class="badge-bg" />
@@ -227,10 +231,10 @@ def generate_secondary_projects_rows():
         btn_w = 124
         btn_h = 30
         btn_x = col4_x + 8
-        btn_y = 30 if p["active"] else 45
+        btn_y = 34 if p["active"] else 48
         active_svg = ""
         if p["active"]:
-            active_svg = f'''<g transform="translate({btn_x}, {btn_y + 38})">
+            active_svg = f'''<g transform="translate({btn_x}, {btn_y + 36})">
       <rect width="{btn_w}" height="20" rx="4" fill="#041208" stroke="#1b4d2e" stroke-width="0.8" />
       <circle cx="12" cy="10" r="3" fill="#00ff66" />
       <text x="22" y="14" class="active-text">Active Build</text>
@@ -264,7 +268,7 @@ def generate_secondary_projects_rows():
   </g>
 </svg>"""
 
-        for ver in ["", "-v1", "-v2"]:
+        for ver in ["", "-v1", "-v2", "-v3"]:
             fname = f"secondary-row-{p['id']}{ver}.svg"
             out_path = os.path.join(assets_dir, fname)
             with open(out_path, "w", encoding="utf-8") as f:
