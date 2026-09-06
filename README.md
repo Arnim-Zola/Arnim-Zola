@@ -49,17 +49,15 @@
 
 <img src="assets/eden-pipeline-table.svg?v=5.0" width="100%" alt="Multimodal Pipeline Execution (Stage-by-Stage)" />
 
-#### Eden Architectural Innovations
+<img src="assets/eden-innovations.svg?v=1.0" width="100%" alt="Eden Architectural Innovations" />
 
-- **Multimodal Perception**: Synchronized **EasyOCR** (on-screen text localization) + **OpenAI Whisper** (temporal speech transcription) + **OpenCV** (4fps keyframe extraction)—watching video frames, reading on-screen captions, and transcribing spoken dialogue simultaneously to match words with visuals at exact seconds.
-- **Political Agenda & Bias Analysis**: Quantifies narrative framing, manipulative bias, and partisan spin using specialized agentic LLM reasoning to detect whether content is pushing biased propaganda, one-sided spin, or intentional exaggeration instead of objective truth.
-- **Real-Time OSINT News Verification**: Dynamically queries live news search APIs and cross-checks authoritative source evidence for every extracted assertion, instantly verifying claims against real-time breaking news and reputable journalism.
-- **Dual-Path Fallback Orchestration**: Asynchronous task chaining via **Celery + Redis** with graceful degradation under API quota limits and GPU constraints, preventing server crashes and slowdowns during viral traffic spikes by queueing requests and rerouting through backup models.
-- **Sub-120ms Vector Retrieval**: Forensic claim embeddings indexed in **PostgreSQL (pgvector)** with **HNSW graphs** for high-speed similarity search, scanning through massive databases of past claims and known hoaxes in under 120 milliseconds to find matching patterns.
-- **Forensic Command HUD & Dossier**: Threat index telemetry, ⌘K command palette, and one-click PDF intelligence dossier generation with verifiable citations, packaging the entire forensic investigation into an exportable, shareable summary report with clickable proof links.
-- **Infrastructure**: Fully containerized multi-container deployment with **Docker Compose**, **FastAPI / Django REST Framework**, and **React 18**, isolating APIs, database services, and frontend interfaces into self-contained Docker containers for consistent deployment anywhere.
+<br/>
 
-**[Access Eden OSINT Pipeline & System Architecture →](https://github.com/Arnim-Zola/Eden)**
+<div align="center">
+  <a href="https://github.com/Arnim-Zola/Eden">
+    <b>Access Eden OSINT Pipeline &amp; System Architecture →</b>
+  </a>
+</div>
 
 <img src="assets/green-divider.svg" width="100%" alt="---" />
 
