@@ -1,3 +1,10 @@
 *.mp4
 __pycache__/
 *.pyc
+
+# Local Python generator scripts & preview files (kept private on local machine)
+generate_*.py
+preview.html
+PROFILE_SECTIONS.md
+test_*.html
+test_*.py
