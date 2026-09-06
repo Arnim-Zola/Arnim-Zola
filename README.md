@@ -38,7 +38,7 @@
 <br/>
 
 <a href="https://github.com/Arnim-Zola/Eden">
-  <img src="assets/eden-desc.svg?v=2.0" alt="Eden Overview" width="100%" />
+  <img src="assets/eden-desc-v2.svg" alt="Eden Overview" width="100%" />
 </a>
 
 <br/>

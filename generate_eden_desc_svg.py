@@ -14,14 +14,14 @@ def generate_eden_desc_svg():
     font_face_css = font_match.group(0) if font_match else ""
 
     vbox_w     = 920
-    font_size  = 18
-    line_h     = 30
-    top_pad    = 30
-    bot_pad    = 24
+    font_size  = 17.5
+    line_h     = 29
+    top_pad    = 28
+    bot_pad    = 22
     num_lines  = 4
 
-    box_height = top_pad + (num_lines - 1) * line_h + bot_pad   # 30 + 90 + 24 = 144
-    svg_height = box_height + 4                                  # 148
+    box_height = top_pad + (num_lines - 1) * line_h + bot_pad   # 28 + 87 + 22 = 137
+    svg_height = box_height + 4                                  # 141
 
     y1 = top_pad
     y2 = top_pad + line_h
@@ -37,7 +37,7 @@ def generate_eden_desc_svg():
         font-family: 'Caacupe One', cursive, sans-serif;
         font-size: {font_size}px;
         font-weight: 400;
-        letter-spacing: 0.3px;
+        letter-spacing: -0.2px;
         fill: #e6edf3;
       }}
       .hi {{
@@ -58,25 +58,26 @@ def generate_eden_desc_svg():
     <!-- Left emerald accent bar -->
     <rect x="0" y="0" width="5" height="{box_height}" rx="2.5" fill="#00ff66"/>
 
-    <!-- Line 1: Natural Left Aligned -->
+    <!-- Line 1 -->
     <text x="26" y="{y1}" class="bt"><tspan class="brand">Eden</tspan><tspan> is a state-of-the-art </tspan><tspan class="hi">forensic media fact-checking &amp; multimodal analysis terminal</tspan><tspan>. It ingests short-form</tspan></text>
 
-    <!-- Line 2: Natural Left Aligned -->
+    <!-- Line 2 -->
     <text x="26" y="{y2}" class="bt"><tspan>social media content (</tspan><tspan class="hi">Instagram Reels, posts, &amp; direct uploads</tspan><tspan>), decomposes </tspan><tspan class="hi">visual &amp; auditory streams</tspan><tspan> into</tspan></text>
 
-    <!-- Line 3: Natural Left Aligned -->
+    <!-- Line 3 -->
     <text x="26" y="{y3}" class="bt"><tspan class="hi">discrete temporal artifacts</tspan><tspan>, detects </tspan><tspan class="hi">political bias &amp; narrative agendas</tspan><tspan>, cross-references claims against </tspan><tspan class="hi">real-time</tspan></text>
 
-    <!-- Line 4: Natural Left Aligned -->
+    <!-- Line 4 -->
     <text x="26" y="{y4}" class="bt"><tspan class="hi">authoritative news sources</tspan><tspan> via </tspan><tspan class="hi">OSINT pipelines</tspan><tspan>, and computes a comprehensive </tspan><tspan class="hi">forensic truth index</tspan><tspan>.</tspan></text>
   </g>
 </svg>"""
 
-    out_path = os.path.join(assets_dir, "eden-desc.svg")
-    with open(out_path, "w", encoding="utf-8") as f:
-        f.write(svg_content)
-    ET.fromstring(svg_content)
-    print(f"Generated and validated XML: {out_path}")
+    for fname in ["eden-desc-v2.svg", "eden-desc.svg"]:
+        out_path = os.path.join(assets_dir, fname)
+        with open(out_path, "w", encoding="utf-8") as f:
+            f.write(svg_content)
+        ET.fromstring(svg_content)
+        print(f"Generated and validated: {out_path}")
 
 if __name__ == "__main__":
     generate_eden_desc_svg()
