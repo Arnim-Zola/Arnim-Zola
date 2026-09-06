@@ -165,12 +165,8 @@
         <text x="31.0" y="17.5" class="badge-text">FFmpeg</text>
       </g>
       <g transform="translate(730, 458)">
-        <rect width="94" height="26" rx="6" class="badge-bg" />
-        <text x="47.0" y="17.5" class="badge-text">Temporal Sync</text>
-      </g>
-      <g transform="translate(830, 458)">
-        <rect width="62" height="26" rx="6" class="badge-bg" />
-        <text x="31.0" y="17.5" class="badge-text">Asyncio</text>
+        <rect width="64" height="26" rx="6" class="badge-bg" />
+        <text x="32.0" y="17.5" class="badge-text">Asyncio</text>
       </g>
   </g>
 
