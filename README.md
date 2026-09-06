@@ -65,13 +65,7 @@
 
 <img src="assets/heading-technical.svg?v=3.0" alt="TECHNICAL ARSENAL" width="100%" />
 
-| System Domain | Core Technologies & Production Tooling |
-| :--- | :--- |
-| **Languages & Shaders** | `Python 3.11` `TypeScript` `JavaScript (ES6+)` `GLSL Shaders` `C++` `SQL` `Bash / Linux` |
-| **Applied AI, Vision & NLP** | `Google Gemini 2.0` `Meta Llama 3 (8B)` `PyTorch` `OpenCV` `OpenAI Whisper` `EasyOCR` `pgvector (HNSW)` `LangChain` |
-| **Distributed Backend & Scraping** | `FastAPI` `Django` `Django REST Framework` `Celery` `Redis` `Playwright` `RESTful APIs` |
-| **Creative WebGL, 3D & Frontend** | `Next.js 15` `React 19` `Three.js` `@react-three/fiber` `Web Audio API` `Plotly.js` `PDF.js` `Tailwind CSS` |
-| **Databases, DevOps & Media** | `PostgreSQL` `SQLite` `MongoDB` `Docker` `Docker Compose` `Git` `GitHub Actions` `FFmpeg` |
+<img src="assets/technical-arsenal-table-v1.svg" width="100%" alt="Technical Arsenal" />
 
 <img src="assets/green-divider.svg" width="100%" alt="---" />
 
