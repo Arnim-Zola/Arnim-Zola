@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 920 141" width="100%" height="141" fill="none">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 920 102" width="100%" height="102" fill="none">
   <defs>
     <style>
       @font-face {
@@ -10,9 +10,9 @@
 
       .bt {
         font-family: 'Caacupe One', cursive, sans-serif;
-        font-size: 17.5px;
+        font-size: 17px;
         font-weight: 400;
-        letter-spacing: -0.2px;
+        letter-spacing: 0.2px;
         fill: #e6edf3;
       }
       .hi {
@@ -20,29 +20,24 @@
       }
       .brand {
         fill: #00ff66;
-        font-weight: 400;
       }
     </style>
   </defs>
 
-  <!-- Quote Box Container -->
+  <!-- Quote Box Container (Identical to About Me) -->
   <g transform="translate(0, 2)">
-    <!-- Card background with subtle green glow and border -->
-    <rect x="0" y="0" width="920" height="137" rx="8" fill="rgba(57,211,83,0.05)" stroke="#1b4d2e" stroke-width="1"/>
-    
+    <!-- Subtle green tint background -->
+    <rect x="0" y="0" width="920" height="98" rx="6" ry="6" fill="rgba(57,211,83,0.05)"/>
     <!-- Left emerald accent bar -->
-    <rect x="0" y="0" width="5" height="137" rx="2.5" fill="#00ff66"/>
+    <rect x="0" y="0" width="4" height="98" rx="2" ry="2" fill="#39d353"/>
 
-    <!-- Line 1 -->
-    <text x="26" y="28" class="bt"><tspan class="brand">Eden</tspan><tspan> is a state-of-the-art </tspan><tspan class="hi">forensic media fact-checking &amp; multimodal analysis terminal</tspan><tspan>. It ingests short-form</tspan></text>
+    <!-- Line 1 (147 chars, justified) -->
+    <text x="20" y="24" textLength="880" lengthAdjust="spacing" class="bt"><tspan class="brand">Eden</tspan><tspan> is a state-of-the-art </tspan><tspan class="hi">forensic media fact-checking &amp; multimodal analysis terminal</tspan><tspan>. It ingests short-form social media content (</tspan><tspan class="hi">Instagram Reels,</tspan></text>
 
-    <!-- Line 2 -->
-    <text x="26" y="57" class="bt"><tspan>social media content (</tspan><tspan class="hi">Instagram Reels, posts, &amp; direct uploads</tspan><tspan>), decomposes </tspan><tspan class="hi">visual &amp; auditory streams</tspan><tspan> into</tspan></text>
+    <!-- Line 2 (146 chars, justified) -->
+    <text x="20" y="51" textLength="880" lengthAdjust="spacing" class="bt"><tspan class="hi">posts, &amp; direct video uploads</tspan><tspan>), decomposes </tspan><tspan class="hi">visual &amp; auditory streams</tspan><tspan> into </tspan><tspan class="hi">discrete temporal artifacts</tspan><tspan>, detects </tspan><tspan class="hi">political bias &amp; narrative agendas,</tspan></text>
 
-    <!-- Line 3 -->
-    <text x="26" y="86" class="bt"><tspan class="hi">discrete temporal artifacts</tspan><tspan>, detects </tspan><tspan class="hi">political bias &amp; narrative agendas</tspan><tspan>, cross-references claims against </tspan><tspan class="hi">real-time</tspan></text>
-
-    <!-- Line 4 -->
-    <text x="26" y="115" class="bt"><tspan class="hi">authoritative news sources</tspan><tspan> via </tspan><tspan class="hi">OSINT pipelines</tspan><tspan>, and computes a comprehensive </tspan><tspan class="hi">forensic truth index</tspan><tspan>.</tspan></text>
+    <!-- Line 3 (138 chars, justified) -->
+    <text x="20" y="78" textLength="880" lengthAdjust="spacing" class="bt"><tspan>cross-references claims against </tspan><tspan class="hi">real-time authoritative news sources</tspan><tspan> via </tspan><tspan class="hi">OSINT pipelines</tspan><tspan>, and computes a comprehensive </tspan><tspan class="hi">forensic truth index</tspan><tspan>.</tspan></text>
   </g>
 </svg>

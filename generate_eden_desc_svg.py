@@ -14,19 +14,18 @@ def generate_eden_desc_svg():
     font_face_css = font_match.group(0) if font_match else ""
 
     vbox_w     = 920
-    font_size  = 17.5
-    line_h     = 29
-    top_pad    = 28
-    bot_pad    = 22
-    num_lines  = 4
+    font_size  = 17
+    line_h     = 27
+    top_pad    = 24
+    bot_pad    = 20
+    num_lines  = 3
 
-    box_height = top_pad + (num_lines - 1) * line_h + bot_pad   # 28 + 87 + 22 = 137
-    svg_height = box_height + 4                                  # 141
+    box_height = top_pad + (num_lines - 1) * line_h + bot_pad   # 24 + 54 + 20 = 98
+    svg_height = box_height + 4                                  # 102
 
     y1 = top_pad
     y2 = top_pad + line_h
     y3 = top_pad + 2 * line_h
-    y4 = top_pad + 3 * line_h
 
     svg_content = f"""<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 {vbox_w} {svg_height}" width="100%" height="{svg_height}" fill="none">
   <defs>
@@ -37,7 +36,7 @@ def generate_eden_desc_svg():
         font-family: 'Caacupe One', cursive, sans-serif;
         font-size: {font_size}px;
         font-weight: 400;
-        letter-spacing: -0.2px;
+        letter-spacing: 0.2px;
         fill: #e6edf3;
       }}
       .hi {{
@@ -45,39 +44,34 @@ def generate_eden_desc_svg():
       }}
       .brand {{
         fill: #00ff66;
-        font-weight: 400;
       }}
     </style>
   </defs>
 
-  <!-- Quote Box Container -->
+  <!-- Quote Box Container (Identical to About Me) -->
   <g transform="translate(0, 2)">
-    <!-- Card background with subtle green glow and border -->
-    <rect x="0" y="0" width="{vbox_w}" height="{box_height}" rx="8" fill="rgba(57,211,83,0.05)" stroke="#1b4d2e" stroke-width="1"/>
-    
+    <!-- Subtle green tint background -->
+    <rect x="0" y="0" width="{vbox_w}" height="{box_height}" rx="6" ry="6" fill="rgba(57,211,83,0.05)"/>
     <!-- Left emerald accent bar -->
-    <rect x="0" y="0" width="5" height="{box_height}" rx="2.5" fill="#00ff66"/>
+    <rect x="0" y="0" width="4" height="{box_height}" rx="2" ry="2" fill="#39d353"/>
 
-    <!-- Line 1 -->
-    <text x="26" y="{y1}" class="bt"><tspan class="brand">Eden</tspan><tspan> is a state-of-the-art </tspan><tspan class="hi">forensic media fact-checking &amp; multimodal analysis terminal</tspan><tspan>. It ingests short-form</tspan></text>
+    <!-- Line 1 (147 chars, justified) -->
+    <text x="20" y="{y1}" textLength="880" lengthAdjust="spacing" class="bt"><tspan class="brand">Eden</tspan><tspan> is a state-of-the-art </tspan><tspan class="hi">forensic media fact-checking &amp; multimodal analysis terminal</tspan><tspan>. It ingests short-form social media content (</tspan><tspan class="hi">Instagram Reels,</tspan></text>
 
-    <!-- Line 2 -->
-    <text x="26" y="{y2}" class="bt"><tspan>social media content (</tspan><tspan class="hi">Instagram Reels, posts, &amp; direct uploads</tspan><tspan>), decomposes </tspan><tspan class="hi">visual &amp; auditory streams</tspan><tspan> into</tspan></text>
+    <!-- Line 2 (146 chars, justified) -->
+    <text x="20" y="{y2}" textLength="880" lengthAdjust="spacing" class="bt"><tspan class="hi">posts, &amp; direct video uploads</tspan><tspan>), decomposes </tspan><tspan class="hi">visual &amp; auditory streams</tspan><tspan> into </tspan><tspan class="hi">discrete temporal artifacts</tspan><tspan>, detects </tspan><tspan class="hi">political bias &amp; narrative agendas,</tspan></text>
 
-    <!-- Line 3 -->
-    <text x="26" y="{y3}" class="bt"><tspan class="hi">discrete temporal artifacts</tspan><tspan>, detects </tspan><tspan class="hi">political bias &amp; narrative agendas</tspan><tspan>, cross-references claims against </tspan><tspan class="hi">real-time</tspan></text>
-
-    <!-- Line 4 -->
-    <text x="26" y="{y4}" class="bt"><tspan class="hi">authoritative news sources</tspan><tspan> via </tspan><tspan class="hi">OSINT pipelines</tspan><tspan>, and computes a comprehensive </tspan><tspan class="hi">forensic truth index</tspan><tspan>.</tspan></text>
+    <!-- Line 3 (138 chars, justified) -->
+    <text x="20" y="{y3}" textLength="880" lengthAdjust="spacing" class="bt"><tspan>cross-references claims against </tspan><tspan class="hi">real-time authoritative news sources</tspan><tspan> via </tspan><tspan class="hi">OSINT pipelines</tspan><tspan>, and computes a comprehensive </tspan><tspan class="hi">forensic truth index</tspan><tspan>.</tspan></text>
   </g>
 </svg>"""
 
-    for fname in ["eden-desc-v2.svg", "eden-desc.svg"]:
+    for fname in ["eden-desc-v3.svg", "eden-desc-v2.svg", "eden-desc.svg"]:
         out_path = os.path.join(assets_dir, fname)
         with open(out_path, "w", encoding="utf-8") as f:
             f.write(svg_content)
         ET.fromstring(svg_content)
-        print(f"Generated and validated: {out_path}")
+        print(f"Generated & Validated: {out_path}")
 
 if __name__ == "__main__":
     generate_eden_desc_svg()
