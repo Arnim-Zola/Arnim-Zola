@@ -47,18 +47,7 @@
   <img src="assets/eden-pipeline.svg?v=2.0" width="100%" alt="EDEN Multimodal Architecture Pipeline" />
 </div>
 
-<br/>
-
-#### Multimodal Pipeline Execution (Stage-by-Stage)
-
-| Stage & Node | Name | Plain English Breakdown (What Happens Here) | Core Stack |
-| :--- | :--- | :--- | :--- |
-| **Stage 01** | **Stream Ingestion** | Ingests Instagram Reels, carousel posts, and raw video files without crashing the server by queueing tasks in background worker pools. | `Celery` `Redis` `FastAPI` |
-| **Stage 02A** | **Visual Perception** | Extracts clean image frames from the video (4 frames/sec) and uses OCR to scan and read all on-screen captions, headlines, and overlay text. | `OpenCV` `EasyOCR` |
-| **Stage 02B** | **Auditory Perception** | Slices the audio track, transcribes spoken speech to text using Whisper, and breaks long audio into time-stamped factual claim sentences. | `OpenAI Whisper` `FFmpeg` |
-| **Stage 03** | **Temporal Fusion** | Synchronizes spoken words with on-screen visual text at the exact millisecond so every claim is tied to its visual context. | `Cross-Modal Alignment` |
-| **Stage 04** | **OSINT Engine** | Autonomous AI agents query live news search APIs and cross-check verified knowledge bases using sub-120ms vector database retrieval. | `Multi-Agent RAG` `pgvector (HNSW)` |
-| **Stage 05** | **Forensic Truth Dossier** | Evaluates political bias and manipulative framing, calculates an authenticity score (Truth Index %), and compiles a 1-click PDF dossier. | `LLM Reasoners` `PDF Dossier` |
+<img src="assets/eden-pipeline-table.svg?v=1.0" width="100%" alt="Multimodal Pipeline Execution (Stage-by-Stage)" />
 
 #### Eden Architectural Innovations
 
