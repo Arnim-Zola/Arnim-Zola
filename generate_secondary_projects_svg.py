@@ -31,10 +31,10 @@ def generate_secondary_projects_rows():
 
       .th-text {{
         font-family: 'Caacupe One', cursive, sans-serif;
-        font-size: 17px;
+        font-size: 16px;
         font-weight: 400;
-        letter-spacing: 0.6px;
-        fill: #7ee787;
+        letter-spacing: 0.5px;
+        fill: #ffffff;
       }}
       .project-name {{
         font-family: 'Caacupe One', cursive, sans-serif;
@@ -71,7 +71,7 @@ def generate_secondary_projects_rows():
         font-size: 12px;
         font-weight: 400;
         letter-spacing: 0.2px;
-        fill: #39d353;
+        fill: #7ee787;
         text-anchor: middle;
       }}
       .btn-bg {{
@@ -123,10 +123,11 @@ def generate_secondary_projects_rows():
   <line x1="{col4_x}" y1="0" x2="{col4_x}" y2="{header_h}" class="grid-line" />
 </svg>"""
 
-    with open(os.path.join(assets_dir, "secondary-table-header.svg"), "w", encoding="utf-8") as f:
-        f.write(header_svg)
+    for fname in ["secondary-table-header.svg", "secondary-table-header-v2.svg"]:
+        with open(os.path.join(assets_dir, fname), "w", encoding="utf-8") as f:
+            f.write(header_svg)
     ET.fromstring(header_svg)
-    print("Generated: secondary-table-header.svg")
+    print("Generated: secondary-table-header.svg, v2")
 
     # 2. Individual Rows Data
     projects_data = [
@@ -263,7 +264,7 @@ def generate_secondary_projects_rows():
   </g>
 </svg>"""
 
-        for ver in ["", "-v1"]:
+        for ver in ["", "-v1", "-v2"]:
             fname = f"secondary-row-{p['id']}{ver}.svg"
             out_path = os.path.join(assets_dir, fname)
             with open(out_path, "w", encoding="utf-8") as f:

@@ -10,10 +10,10 @@
 
       .th-text {
         font-family: 'Caacupe One', cursive, sans-serif;
-        font-size: 17px;
+        font-size: 16px;
         font-weight: 400;
-        letter-spacing: 0.6px;
-        fill: #7ee787;
+        letter-spacing: 0.5px;
+        fill: #ffffff;
       }
       .project-name {
         font-family: 'Caacupe One', cursive, sans-serif;
@@ -50,7 +50,7 @@
         font-size: 12px;
         font-weight: 400;
         letter-spacing: 0.2px;
-        fill: #39d353;
+        fill: #7ee787;
         text-anchor: middle;
       }
       .btn-bg {
