@@ -37,7 +37,11 @@
 
 <br/>
 
-> **[Eden](https://github.com/Arnim-Zola/Eden)** is a state-of-the-art **forensic media fact-checking and multimodal analysis terminal**. It ingests short-form social media content (Instagram Reels, posts, and direct video uploads), decomposes visual & auditory streams into discrete temporal artifacts, detects political bias & narrative agendas, cross-references claims against real-time authoritative news sources via OSINT pipelines, and computes a comprehensive forensic truth index.
+<a href="https://github.com/Arnim-Zola/Eden">
+  <img src="assets/eden-desc.svg?v=1.0" alt="Eden Overview" width="100%" />
+</a>
+
+<br/>
 
 <div align="center">
   <img src="assets/eden-pipeline.svg" width="100%" alt="EDEN Multimodal Architecture Pipeline" />
