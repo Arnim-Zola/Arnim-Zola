@@ -228,13 +228,31 @@ def generate_telemetry_svg():
             ("Shell", 0.08, "#89e051")
         ]
 
-    # Read base64 font from taglines.svg
-    taglines_path = os.path.join(assets_dir, "taglines.svg")
-    with open(taglines_path, "r", encoding="utf-8") as f:
-        taglines_content = f.read()
+    # Read base64 fonts (Space Grotesk + JetBrains Mono)
+    fonts_css_path = os.path.join(assets_dir, "telemetry_fonts.css")
+    embedded_fonts_css = ""
+    if os.path.exists(fonts_css_path):
+        with open(fonts_css_path, "r", encoding="utf-8") as f:
+            embedded_fonts_css = f.read()
 
-    font_match = re.search(r"@font-face\s*\{[^}]*\}", taglines_content, re.DOTALL)
-    font_face_css = font_match.group(0) if font_match else ""
+    # Also include Space Grotesk 800 alias
+    space_800_alias = """@font-face {
+  font-family: 'Space Grotesk';
+  font-style: normal;
+  font-weight: 800;
+  src: local('Space Grotesk Bold'), local('SpaceGrotesk-Bold');
+}"""
+
+    # Read base64 font from taglines.svg for Caacupe One
+    taglines_path = os.path.join(assets_dir, "taglines.svg")
+    caacupe_font_css = ""
+    if os.path.exists(taglines_path):
+        with open(taglines_path, "r", encoding="utf-8") as f:
+            taglines_content = f.read()
+        font_match = re.search(r"@font-face\s*\{[^}]*\}", taglines_content, re.DOTALL)
+        caacupe_font_css = font_match.group(0) if font_match else ""
+
+    combined_fonts_css = f"{embedded_fonts_css}\n{space_800_alias}\n{caacupe_font_css}"
 
     vbox_w = 920
     vbox_h = 550
@@ -285,22 +303,22 @@ def generate_telemetry_svg():
     svg_content = f"""<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 {vbox_w} {vbox_h}" width="100%" height="{vbox_h}" fill="none">
   <defs>
     <style>
-      @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700;800&amp;family=Space+Grotesk:wght@600;700;800&amp;family=Caacupe+One&amp;display=swap');
-      {font_face_css}
+      <![CDATA[
+      {combined_fonts_css}
 
       .card-title {{
-        font-family: 'Space Grotesk', 'Caacupe One', -apple-system, sans-serif;
-        font-size: 15px;
+        font-family: 'Space Grotesk', -apple-system, sans-serif;
+        font-size: 16px;
         font-weight: 700;
         letter-spacing: 0.5px;
-        fill: #ffffff;
+        fill: #a7f3d0;
       }}
       .card-title-green {{
-        font-family: 'Space Grotesk', 'Caacupe One', -apple-system, sans-serif;
-        font-size: 15px;
+        font-family: 'Space Grotesk', -apple-system, sans-serif;
+        font-size: 17px;
         font-weight: 700;
         letter-spacing: 0.5px;
-        fill: #7ee787;
+        fill: #a7f3d0;
       }}
       .telemetry-title {{
         font-family: 'Space Grotesk', -apple-system, sans-serif;
@@ -312,51 +330,68 @@ def generate_telemetry_svg():
       .streak-val {{
         font-family: 'Space Grotesk', -apple-system, sans-serif;
         font-size: 28px;
-        font-weight: 800;
+        font-weight: 700;
+        fill: #ffffff;
+        text-anchor: middle;
+      }}
+      .streak-curr-val {{
+        font-family: 'Space Grotesk', -apple-system, sans-serif;
+        font-size: 24px;
+        font-weight: 700;
         fill: #ffffff;
         text-anchor: middle;
       }}
       .streak-lbl {{
         font-family: 'JetBrains Mono', monospace;
-        font-size: 10px;
+        font-size: 11px;
+        font-weight: 600;
+        letter-spacing: 0.5px;
+        fill: #cbd5e1;
+        text-anchor: middle;
+        text-transform: uppercase;
+      }}
+      .streak-curr-label {{
+        font-family: 'JetBrains Mono', monospace;
+        font-size: 11.5px;
         font-weight: 700;
         letter-spacing: 0.5px;
-        fill: #8b949e;
+        fill: #39ff14;
         text-anchor: middle;
         text-transform: uppercase;
       }}
       .streak-sub {{
         font-family: 'JetBrains Mono', monospace;
-        font-size: 9px;
-        fill: #6e7681;
+        font-size: 10.5px;
+        fill: #94a3b8;
         text-anchor: middle;
       }}
       .stat-lbl {{
         font-family: 'JetBrains Mono', monospace;
         font-size: 12px;
         font-weight: 500;
-        fill: #8b949e;
+        fill: #f1f5f9;
       }}
       .stat-num {{
         font-family: 'JetBrains Mono', monospace;
         font-size: 12px;
         font-weight: 700;
-        fill: #00ff66;
+        fill: #39ff14;
         text-anchor: end;
       }}
       .lang-name {{
         font-family: 'JetBrains Mono', monospace;
         font-size: 12px;
         font-weight: 600;
-        fill: #e6edf3;
+        fill: #f1f5f9;
       }}
       .lang-pct {{
         font-family: 'JetBrains Mono', monospace;
         font-size: 12px;
         font-weight: 600;
-        fill: #8b949e;
+        fill: #94a3b8;
         text-anchor: end;
       }}
+      ]]>
     </style>
 
     <!-- Celestial Nocturnal Emerald Sky Gradient -->
@@ -663,12 +698,12 @@ def generate_telemetry_svg():
   </g>
 </svg>"""
 
-    for fname in ["telemetry-cosmos-card.svg", "telemetry-cosmos-card-v1.svg"]:
+    for fname in ["telemetry-cosmos-card.svg", "telemetry-cosmos-card-v1.svg", "telemetry-cosmos-card-v2.svg"]:
         out_path = os.path.join(assets_dir, fname)
         with open(out_path, "w", encoding="utf-8") as f:
             f.write(svg_content)
     ET.fromstring(svg_content)
-    print("Generated & Validated: telemetry-cosmos-card.svg and v1")
+    print("Generated & Validated: telemetry-cosmos-card.svg, v1, and v2")
 
 if __name__ == "__main__":
     generate_telemetry_svg()
