@@ -44,7 +44,7 @@
 <br/>
 
 <div align="center">
-  <img src="assets/eden-pipeline.svg" width="100%" alt="EDEN Multimodal Architecture Pipeline" />
+  <img src="assets/eden-pipeline.svg?v=2.0" width="100%" alt="EDEN Multimodal Architecture Pipeline" />
 </div>
 
 <br/>
