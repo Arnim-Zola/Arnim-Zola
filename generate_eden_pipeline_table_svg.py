@@ -234,10 +234,13 @@ def generate_eden_pipeline_table_svg():
 </svg>"""
 
     out_path = os.path.join(assets_dir, "eden-pipeline-table.svg")
+    out_path_v2 = os.path.join(assets_dir, "eden-pipeline-table-v2.svg")
     with open(out_path, "w", encoding="utf-8") as f:
         f.write(svg_content)
+    with open(out_path_v2, "w", encoding="utf-8") as f:
+        f.write(svg_content)
     ET.fromstring(svg_content)
-    print(f"Generated & Validated: {out_path}")
+    print(f"Generated & Validated: {out_path} and {out_path_v2}")
 
 if __name__ == "__main__":
     generate_eden_pipeline_table_svg()

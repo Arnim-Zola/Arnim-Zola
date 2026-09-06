@@ -44,10 +44,10 @@
 <br/>
 
 <div align="center">
-  <img src="assets/eden-pipeline.svg?v=2.0" width="100%" alt="EDEN Multimodal Architecture Pipeline" />
+  <img src="assets/eden-pipeline-v2.svg" width="100%" alt="EDEN Multimodal Architecture Pipeline" />
 </div>
 
-<img src="assets/eden-pipeline-table.svg?v=5.0" width="100%" alt="Multimodal Pipeline Execution (Stage-by-Stage)" />
+<img src="assets/eden-pipeline-table-v2.svg" width="100%" alt="Multimodal Pipeline Execution (Stage-by-Stage)" />
 
 <img src="assets/eden-innovations.svg?v=1.0" width="100%" alt="Eden Architectural Innovations" />
 
