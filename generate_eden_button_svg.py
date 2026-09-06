@@ -51,9 +51,9 @@ def generate_eden_button_svg():
 
     .sub-label {{
       font-family: 'Caacupe One', cursive, sans-serif;
-      font-size: 11.5px;
+      font-size: 14.5px;
       font-weight: 400;
-      letter-spacing: 1.2px;
+      letter-spacing: 1.5px;
       fill: #a3e635;
       text-anchor: middle;
       dominant-baseline: central;
@@ -61,9 +61,9 @@ def generate_eden_button_svg():
 
     .main-label {{
       font-family: 'Caacupe One', cursive, sans-serif;
-      font-size: 15px;
+      font-size: 20px;
       font-weight: 400;
-      letter-spacing: 2px;
+      letter-spacing: 2.5px;
       fill: #ffffff;
       text-anchor: middle;
       dominant-baseline: central;
@@ -86,7 +86,7 @@ def generate_eden_button_svg():
         transform: translate(74px, 74px) scale(1);
       }}
       48%, 90% {{
-        transform: translate(74px, 46px) scale(0.62);
+        transform: translate(74px, 42px) scale(0.56);
       }}
       96%, 100% {{
         transform: translate(74px, 74px) scale(1);
@@ -141,12 +141,12 @@ def generate_eden_button_svg():
 
   <!-- Animated Revealed Text (SYNTHETIC LIES / PURGE) -->
   <g class="text-anim">
-    <text x="74" y="98" class="sub-label">SYNTHETIC LIES</text>
-    <text x="74" y="118" class="main-label">PURGE</text>
+    <text x="74" y="96" class="sub-label">SYNTHETIC LIES</text>
+    <text x="74" y="120" class="main-label">PURGE</text>
   </g>
 </svg>"""
 
-    for fname in ["btn-eden-v1.svg", "eden-button.svg", "eden-logo.svg"]:
+    for fname in ["btn-eden-v2.svg", "btn-eden-v1.svg", "eden-button.svg", "eden-logo.svg"]:
         out_path = os.path.join(assets_dir, fname)
         with open(out_path, "w", encoding="utf-8") as f:
             f.write(svg_content)
