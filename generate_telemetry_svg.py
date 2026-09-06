@@ -192,61 +192,56 @@ def fetch_live_stats(username, token):
         print("Error fetching live GitHub stats:", e)
         return None
 
-def generate_fallback_weeks(total_contributions=174):
-    from datetime import datetime, timedelta
-    import random
-    today = datetime.now()
-    days_since_sunday = (today.weekday() + 1) % 7
-    start_of_current_week = today - timedelta(days=days_since_sunday)
-    start_date = start_of_current_week - timedelta(weeks=52)
+def fetch_public_contribution_calendar(username="Arnim-Zola"):
+    import urllib.request
+    import re
+    from datetime import datetime
 
-    random.seed(1337)
-    weeks = []
-    cur = start_date
-    all_days = []
-    for w in range(53):
-        w_days = []
-        for d in range(7):
-            if cur <= today:
-                day_obj = {
-                    "date": cur.strftime("%Y-%m-%d"),
-                    "weekday": (cur.weekday() + 1) % 7,
-                    "contributionCount": 0
-                }
-                w_days.append(day_obj)
-                all_days.append(day_obj)
-            cur += timedelta(days=1)
-        weeks.append({"contributionDays": w_days})
+    url = f"https://github.com/users/{username}/contributions"
+    req = urllib.request.Request(url, headers={"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64)"})
+    try:
+        with urllib.request.urlopen(req, timeout=10) as resp:
+            html = resp.read().decode("utf-8")
 
-    counts = [0] * len(all_days)
-    for idx, day_obj in enumerate(all_days):
-        dt = datetime.strptime(day_obj["date"], "%Y-%m-%d")
-        if dt.month in [6, 7, 8, 9] and dt.year == today.year:
-            if random.random() < 0.42:
-                counts[idx] = random.choice([1, 2, 3, 4, 6])
-        elif dt.year == today.year:
-            if random.random() < 0.16:
-                counts[idx] = random.choice([1, 2, 3])
-        else:
-            if random.random() < 0.08:
-                counts[idx] = random.choice([1, 2])
+        matches = re.findall(r'data-date="([^"]+)"\s+id="([^"]+)"\s+data-level="([^"]+)"', html)
+        tooltips = dict(re.findall(r'for="([^"]+)"[^>]*>([^<]+)</tool-tip>', html))
 
-    cur_tot = sum(counts)
-    diff = total_contributions - cur_tot
-    active_indices = [i for i, c in enumerate(counts) if c > 0]
-    while diff != 0 and active_indices:
-        idx = random.choice(active_indices)
-        if diff > 0:
-            counts[idx] += 1
-            diff -= 1
-        elif counts[idx] > 1:
-            counts[idx] -= 1
-            diff += 1
+        day_map = {}
+        for dt, cid, lvl in matches:
+            tt = tooltips.get(cid, "")
+            cnt_match = re.search(r'(\d+)\s+contribution', tt)
+            cnt = int(cnt_match.group(1)) if cnt_match else 0
+            day_map[dt] = {
+                "date": dt,
+                "contributionCount": cnt,
+                "level": int(lvl),
+                "tooltip": tt
+            }
 
-    for idx, day_obj in enumerate(all_days):
-        day_obj["contributionCount"] = counts[idx]
+        if not day_map:
+            return None, 0
 
-    return weeks
+        sorted_dates = sorted(day_map.keys())
+        weeks = []
+        cur_week = []
+        for dt_str in sorted_dates:
+            dt = datetime.strptime(dt_str, "%Y-%m-%d")
+            weekday = (dt.weekday() + 1) % 7
+            day_data = day_map[dt_str]
+            day_data["weekday"] = weekday
+            cur_week.append(day_data)
+            if weekday == 6:
+                weeks.append({"contributionDays": cur_week})
+                cur_week = []
+        if cur_week:
+            weeks.append({"contributionDays": cur_week})
+
+        total_contribs = sum(d["contributionCount"] for d in day_map.values())
+        print(f"Successfully fetched real public GitHub contributions: {total_contribs} contributions across {len(weeks)} weeks")
+        return weeks, total_contribs
+    except Exception as e:
+        print("Error fetching real public contribution calendar:", e)
+        return None, 0
 
 def build_heatmap_svg(weeks, total_contributions):
     month_svg_parts = []
@@ -270,24 +265,27 @@ def build_heatmap_svg(weeks, total_contributions):
             for day in days:
                 weekday = day.get("weekday", 0)
                 cnt = day.get("contributionCount", 0)
+                lvl = day.get("level", 0)
                 dt_str = day.get("date", "")
+                tooltip_txt = day.get("tooltip") or f"{cnt} contributions on {dt_str}"
                 cell_y = round(172 + weekday * 13.5, 1)
-                if cnt == 0:
+
+                if lvl == 0 and cnt == 0:
                     fill = "#0d2415"
                     stroke = ' stroke="#173f24" stroke-width="0.7"'
-                elif cnt <= 2:
+                elif lvl == 1 or cnt <= 5:
                     fill = "#005524"
                     stroke = ''
-                elif cnt <= 5:
+                elif lvl == 2 or cnt <= 15:
                     fill = "#009940"
                     stroke = ''
-                elif cnt <= 8:
+                elif lvl == 3 or cnt <= 25:
                     fill = "#00dd5b"
                     stroke = ''
                 else:
                     fill = "#00ff66"
                     stroke = ''
-                cells_svg_parts.append(f'<rect x="{col_x}" y="{cell_y}" width="11" height="11" rx="2.5" fill="{fill}"{stroke}><title>{cnt} contributions on {dt_str}</title></rect>')
+                cells_svg_parts.append(f'<rect x="{col_x}" y="{cell_y}" width="11" height="11" rx="2.5" fill="{fill}"{stroke}><title>{tooltip_txt}</title></rect>')
 
     month_svg = "\n    ".join(month_svg_parts)
     cells_svg = "\n    ".join(cells_svg_parts)
@@ -311,11 +309,14 @@ def generate_telemetry_svg():
         curr_streak_date = live_stats["curr_streak_date"]
         longest_streak = live_stats["longest_streak"]
         longest_range = live_stats["longest_range"]
-        languages = live_stats["languages"]
-        weeks = live_stats.get("weeks") or generate_fallback_weeks(total_contributions)
+        public_weeks, real_total = fetch_public_contribution_calendar(username)
+        weeks = live_stats.get("weeks") or public_weeks
+        if real_total > 0:
+            total_contributions = real_total
     else:
         print("Using local default/fallback telemetry values.")
-        total_contributions = 174
+        public_weeks, real_total = fetch_public_contribution_calendar(username)
+        total_contributions = real_total if real_total > 0 else 177
         total_commits = 114
         total_prs = 2
         total_issues = 0
@@ -332,7 +333,7 @@ def generate_telemetry_svg():
             ("Batchfile", 0.09, "#C1F12E"),
             ("Shell", 0.08, "#89e051")
         ]
-        weeks = generate_fallback_weeks(total_contributions)
+        weeks = public_weeks
 
     # Read base64 font from taglines.svg for signature Caacupe One
     taglines_path = os.path.join(assets_dir, "taglines.svg")
@@ -838,12 +839,12 @@ def generate_telemetry_svg():
   </g>
 </svg>"""
 
-    for fname in ["telemetry-cosmos-card.svg", "telemetry-cosmos-card-v1.svg", "telemetry-cosmos-card-v2.svg", "telemetry-cosmos-card-v3.svg", "telemetry-cosmos-card-v4.svg", "telemetry-cosmos-card-v5.svg", "telemetry-cosmos-card-v6.svg"]:
+    for fname in ["telemetry-cosmos-card.svg", "telemetry-cosmos-card-v1.svg", "telemetry-cosmos-card-v2.svg", "telemetry-cosmos-card-v3.svg", "telemetry-cosmos-card-v4.svg", "telemetry-cosmos-card-v5.svg", "telemetry-cosmos-card-v6.svg", "telemetry-cosmos-card-v7.svg"]:
         out_path = os.path.join(assets_dir, fname)
         with open(out_path, "w", encoding="utf-8") as f:
             f.write(svg_content)
     ET.fromstring(svg_content)
-    print("Generated & Validated: telemetry-cosmos-card.svg, v1..v6")
+    print("Generated & Validated: telemetry-cosmos-card.svg, v1..v7")
 
 if __name__ == "__main__":
     generate_telemetry_svg()
