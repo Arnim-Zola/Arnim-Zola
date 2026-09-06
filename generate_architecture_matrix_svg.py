@@ -152,10 +152,10 @@ def generate_architecture_matrix_svg():
 
       .th-text {{
         font-family: 'Caacupe One', cursive, sans-serif;
-        font-size: 17px;
+        font-size: 16px;
         font-weight: 400;
-        letter-spacing: 0.6px;
-        fill: #7ee787;
+        letter-spacing: 0.5px;
+        fill: #ffffff;
       }}
       .pillar-text {{
         font-family: 'Caacupe One', cursive, sans-serif;
@@ -183,10 +183,10 @@ def generate_architecture_matrix_svg():
       }}
       .badge-text {{
         font-family: 'Caacupe One', cursive, sans-serif;
-        font-size: 13px;
+        font-size: 12px;
         font-weight: 400;
-        letter-spacing: 0.3px;
-        fill: #39d353;
+        letter-spacing: 0.2px;
+        fill: #7ee787;
         text-anchor: middle;
       }}
       .grid-line {{
@@ -223,7 +223,7 @@ def generate_architecture_matrix_svg():
 </svg>
 """
 
-    for fname in ["architecture-matrix.svg", "architecture-matrix-v2.svg", "architecture-matrix-v3.svg"]:
+    for fname in ["architecture-matrix.svg", "architecture-matrix-v2.svg", "architecture-matrix-v3.svg", "architecture-matrix-v4.svg"]:
         out_path = os.path.join(assets_dir, fname)
         with open(out_path, "w", encoding="utf-8") as f:
             f.write(svg_content)

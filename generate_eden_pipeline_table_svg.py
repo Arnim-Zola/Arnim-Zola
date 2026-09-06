@@ -149,10 +149,10 @@ def generate_eden_pipeline_table_svg():
       }}
       .th-text {{
         font-family: 'Caacupe One', cursive, sans-serif;
-        font-size: 17px;
+        font-size: 16px;
         font-weight: 400;
-        letter-spacing: 0.6px;
-        fill: #7ee787;
+        letter-spacing: 0.5px;
+        fill: #ffffff;
       }}
       .stage-text {{
         font-family: 'Caacupe One', cursive, sans-serif;
@@ -186,10 +186,10 @@ def generate_eden_pipeline_table_svg():
       }}
       .badge-text {{
         font-family: 'Caacupe One', cursive, sans-serif;
-        font-size: 13px;
+        font-size: 12px;
         font-weight: 400;
-        letter-spacing: 0.3px;
-        fill: #39d353;
+        letter-spacing: 0.2px;
+        fill: #7ee787;
         text-anchor: middle;
       }}
       .grid-line {{
@@ -233,14 +233,12 @@ def generate_eden_pipeline_table_svg():
 {all_rows_str}
 </svg>"""
 
-    out_path = os.path.join(assets_dir, "eden-pipeline-table.svg")
-    out_path_v2 = os.path.join(assets_dir, "eden-pipeline-table-v2.svg")
-    with open(out_path, "w", encoding="utf-8") as f:
-        f.write(svg_content)
-    with open(out_path_v2, "w", encoding="utf-8") as f:
-        f.write(svg_content)
+    for fname in ["eden-pipeline-table.svg", "eden-pipeline-table-v2.svg", "eden-pipeline-table-v3.svg"]:
+        out_path = os.path.join(assets_dir, fname)
+        with open(out_path, "w", encoding="utf-8") as f:
+            f.write(svg_content)
     ET.fromstring(svg_content)
-    print(f"Generated & Validated: {out_path} and {out_path_v2}")
+    print("Generated & Validated: eden-pipeline-table.svg, v2, v3")
 
 if __name__ == "__main__":
     generate_eden_pipeline_table_svg()

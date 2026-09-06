@@ -23,7 +23,7 @@
 
 <img src="assets/terminal-profile-v9.svg" alt="Terminal Profile &amp; Cartoon Green Bookshelf Spotlight" width="100%" />
 
-<img src="assets/architecture-matrix-v3.svg" alt="Architecture &amp; Integration Matrix" width="100%" />
+<img src="assets/architecture-matrix-v4.svg" alt="Architecture &amp; Integration Matrix" width="100%" />
 
 <img src="assets/green-divider-laser-v1.svg" width="100%" alt="---" />
 
@@ -47,7 +47,7 @@
   <img src="assets/eden-pipeline-v2.svg" width="100%" alt="EDEN Multimodal Architecture Pipeline" />
 </div>
 
-<img src="assets/eden-pipeline-table-v2.svg" width="100%" alt="Multimodal Pipeline Execution (Stage-by-Stage)" />
+<img src="assets/eden-pipeline-table-v3.svg" width="100%" alt="Multimodal Pipeline Execution (Stage-by-Stage)" />
 
 <img src="assets/eden-innovations-v10.svg" width="100%" alt="Eden Architectural Innovations" />
 
