@@ -228,21 +228,6 @@ def generate_telemetry_svg():
             ("Shell", 0.08, "#89e051")
         ]
 
-    # Read base64 fonts (Space Grotesk + JetBrains Mono)
-    fonts_css_path = os.path.join(assets_dir, "telemetry_fonts.css")
-    embedded_fonts_css = ""
-    if os.path.exists(fonts_css_path):
-        with open(fonts_css_path, "r", encoding="utf-8") as f:
-            embedded_fonts_css = f.read()
-
-    # Also include Space Grotesk 800 alias
-    space_800_alias = """@font-face {
-  font-family: 'Space Grotesk';
-  font-style: normal;
-  font-weight: 800;
-  src: local('Space Grotesk Bold'), local('SpaceGrotesk-Bold');
-}"""
-
     # Read base64 font from taglines.svg for Caacupe One
     taglines_path = os.path.join(assets_dir, "taglines.svg")
     caacupe_font_css = ""
@@ -251,8 +236,6 @@ def generate_telemetry_svg():
             taglines_content = f.read()
         font_match = re.search(r"@font-face\s*\{[^}]*\}", taglines_content, re.DOTALL)
         caacupe_font_css = font_match.group(0) if font_match else ""
-
-    combined_fonts_css = f"{embedded_fonts_css}\n{space_800_alias}\n{caacupe_font_css}"
 
     vbox_w = 920
     vbox_h = 550
@@ -304,91 +287,93 @@ def generate_telemetry_svg():
   <defs>
     <style>
       <![CDATA[
-      {combined_fonts_css}
+      {caacupe_font_css}
 
       .card-title {{
-        font-family: 'Space Grotesk', -apple-system, sans-serif;
+        font-family: 'Caacupe One', cursive, sans-serif;
         font-size: 16px;
-        font-weight: 700;
+        font-weight: 400;
         letter-spacing: 0.5px;
-        fill: #a7f3d0;
+        fill: #ffffff;
       }}
       .card-title-green {{
-        font-family: 'Space Grotesk', -apple-system, sans-serif;
-        font-size: 17px;
-        font-weight: 700;
+        font-family: 'Caacupe One', cursive, sans-serif;
+        font-size: 16px;
+        font-weight: 400;
         letter-spacing: 0.5px;
-        fill: #a7f3d0;
+        fill: #7ee787;
       }}
       .telemetry-title {{
-        font-family: 'Space Grotesk', -apple-system, sans-serif;
-        font-size: 11.5px;
-        font-weight: 700;
-        letter-spacing: 1.5px;
+        font-family: 'Caacupe One', cursive, sans-serif;
+        font-size: 13px;
+        font-weight: 400;
+        letter-spacing: 1px;
         fill: #7ee787;
       }}
       .streak-val {{
-        font-family: 'Space Grotesk', -apple-system, sans-serif;
-        font-size: 28px;
-        font-weight: 700;
+        font-family: 'Caacupe One', cursive, sans-serif;
+        font-size: 30px;
+        font-weight: 400;
+        letter-spacing: 0.5px;
         fill: #ffffff;
         text-anchor: middle;
       }}
       .streak-curr-val {{
-        font-family: 'Space Grotesk', -apple-system, sans-serif;
+        font-family: 'Caacupe One', cursive, sans-serif;
         font-size: 24px;
-        font-weight: 700;
+        font-weight: 400;
         fill: #ffffff;
         text-anchor: middle;
       }}
       .streak-lbl {{
-        font-family: 'JetBrains Mono', monospace;
-        font-size: 11px;
-        font-weight: 600;
+        font-family: 'Caacupe One', cursive, sans-serif;
+        font-size: 12px;
+        font-weight: 400;
         letter-spacing: 0.5px;
-        fill: #cbd5e1;
+        fill: #7ee787;
         text-anchor: middle;
-        text-transform: uppercase;
       }}
       .streak-curr-label {{
-        font-family: 'JetBrains Mono', monospace;
-        font-size: 11.5px;
-        font-weight: 700;
+        font-family: 'Caacupe One', cursive, sans-serif;
+        font-size: 12px;
+        font-weight: 400;
         letter-spacing: 0.5px;
-        fill: #39ff14;
+        fill: #00ff66;
         text-anchor: middle;
-        text-transform: uppercase;
       }}
       .streak-sub {{
-        font-family: 'JetBrains Mono', monospace;
-        font-size: 10.5px;
-        fill: #94a3b8;
+        font-family: 'Caacupe One', cursive, sans-serif;
+        font-size: 11px;
+        font-weight: 400;
+        fill: #8b949e;
         text-anchor: middle;
       }}
       .stat-lbl {{
-        font-family: 'JetBrains Mono', monospace;
-        font-size: 12px;
-        font-weight: 500;
-        fill: #f1f5f9;
+        font-family: 'Caacupe One', cursive, sans-serif;
+        font-size: 13.5px;
+        font-weight: 400;
+        letter-spacing: 0.2px;
+        fill: #ffffff;
       }}
       .stat-num {{
-        font-family: 'JetBrains Mono', monospace;
-        font-size: 12px;
-        font-weight: 700;
-        fill: #39ff14;
+        font-family: 'Caacupe One', cursive, sans-serif;
+        font-size: 14px;
+        font-weight: 400;
+        fill: #00ff66;
         text-anchor: end;
       }}
       .lang-name {{
-        font-family: 'JetBrains Mono', monospace;
-        font-size: 12px;
-        font-weight: 600;
-        fill: #f1f5f9;
+        font-family: 'Caacupe One', cursive, sans-serif;
+        font-size: 13.5px;
+        font-weight: 400;
+        letter-spacing: 0.2px;
+        fill: #ffffff;
       }}
       .lang-pct {{
-        font-family: 'JetBrains Mono', monospace;
-        font-size: 12px;
-        font-weight: 600;
-        fill: #94a3b8;
+        font-family: 'Caacupe One', cursive, sans-serif;
+        font-size: 13.5px;
+        font-weight: 400;
+        fill: #7ee787;
         text-anchor: end;
       }}
       ]]>
@@ -698,12 +683,12 @@ def generate_telemetry_svg():
   </g>
 </svg>"""
 
-    for fname in ["telemetry-cosmos-card.svg", "telemetry-cosmos-card-v1.svg", "telemetry-cosmos-card-v2.svg"]:
+    for fname in ["telemetry-cosmos-card.svg", "telemetry-cosmos-card-v1.svg", "telemetry-cosmos-card-v2.svg", "telemetry-cosmos-card-v3.svg"]:
         out_path = os.path.join(assets_dir, fname)
         with open(out_path, "w", encoding="utf-8") as f:
             f.write(svg_content)
     ET.fromstring(svg_content)
-    print("Generated & Validated: telemetry-cosmos-card.svg, v1, and v2")
+    print("Generated & Validated: telemetry-cosmos-card.svg, v1, v2, and v3")
 
 if __name__ == "__main__":
     generate_telemetry_svg()
