@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 920 598" width="100%" height="598" fill="none">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 920 640" width="100%" height="640" fill="none">
   <defs>
     <style>
       @font-face {
@@ -17,7 +17,7 @@
       }
       .item-title {
         font-family: 'Caacupe One', cursive, sans-serif;
-        font-size: 16px;
+        font-size: 16.5px;
         font-weight: 400;
         letter-spacing: 0.3px;
         fill: #00ff66;
@@ -25,7 +25,7 @@
       }
       .item-desc {
         font-family: 'Caacupe One', cursive, sans-serif;
-        font-size: 15px;
+        font-size: 16px;
         font-weight: 400;
         letter-spacing: 0.2px;
         fill: #e6edf3;
@@ -41,79 +41,79 @@
 
   <!-- Container Box -->
   <g transform="translate(0, 40)">
-    <rect x="0" y="0" width="920" height="554" rx="10" fill="#040906" stroke="#163d22" stroke-width="1.5" />
+    <rect x="0" y="0" width="920" height="596" rx="10" fill="#040906" stroke="#163d22" stroke-width="1.5" />
     
     <!-- Left Neon Accent Bar -->
-    <rect x="0" y="10" width="4" height="534" rx="2" fill="#00ff66" />
+    <rect x="0" y="10" width="4" height="576" rx="2" fill="#00ff66" />
 
     <!-- Items Content -->
   <!-- Item 1: Multimodal Perception -->
   <g>
-    <circle cx="25" cy="25.5" r="3" fill="#00ff66" filter="drop-shadow(0 0 3px #00ff66)" />
-      <circle cx="25" cy="25.5" r="1.5" fill="#ffffff" />
-    <text x="40" y="30" class="item-title">Multimodal Perception</text>
-    <text x="40" y="52" class="item-desc"><tspan>Synchronized </tspan><tspan class="hi">EasyOCR</tspan><tspan> (on-screen text) + </tspan><tspan class="hi">OpenAI Whisper</tspan><tspan> (speech transcription) + </tspan><tspan class="hi">OpenCV</tspan><tspan> (4fps keyframes)—</tspan></text>
-    <text x="40" y="74" class="item-desc"><tspan>watching video frames, reading captions, and transcribing spoken dialogue simultaneously to match words with visuals.</tspan></text>
-    <line x1="20" y1="88" x2="900" y2="88" stroke="#102618" stroke-width="0.8" stroke-dasharray="4 4" />
+    <circle cx="24" cy="25.5" r="3" fill="#00ff66" filter="drop-shadow(0 0 3px #00ff66)" />
+      <circle cx="24" cy="25.5" r="1.5" fill="#ffffff" />
+    <text x="38" y="30" class="item-title">Multimodal Perception</text>
+    <text x="38" y="54" textLength="860" lengthAdjust="spacing" class="item-desc"><tspan>Synchronized </tspan><tspan class="hi">EasyOCR</tspan><tspan> (on-screen caption OCR) + </tspan><tspan class="hi">OpenAI Whisper</tspan><tspan> (speech-to-text) + </tspan><tspan class="hi">OpenCV</tspan><tspan> (4fps keyframe extraction)—</tspan></text>
+    <text x="38" y="79" textLength="860" lengthAdjust="spacing" class="item-desc"><tspan>watching video frames, reading on-screen captions, and transcribing spoken dialogue simultaneously to match words with visuals.</tspan></text>
+    <line x1="20" y1="94" x2="900" y2="94" stroke="#102618" stroke-width="0.8" stroke-dasharray="4 4" />
   </g>
 
   <!-- Item 2: Political Agenda &amp; Bias Analysis -->
   <g>
-    <circle cx="25" cy="99.5" r="3" fill="#00ff66" filter="drop-shadow(0 0 3px #00ff66)" />
-      <circle cx="25" cy="99.5" r="1.5" fill="#ffffff" />
-    <text x="40" y="104" class="item-title">Political Agenda &amp; Bias Analysis</text>
-    <text x="40" y="126" class="item-desc"><tspan>Quantifies narrative framing, manipulative bias, and partisan spin using specialized agentic LLM reasoning to detect</tspan></text>
-    <text x="40" y="148" class="item-desc"><tspan>whether content is pushing biased propaganda, one-sided spin, or intentional exaggeration instead of objective truth.</tspan></text>
-    <line x1="20" y1="162" x2="900" y2="162" stroke="#102618" stroke-width="0.8" stroke-dasharray="4 4" />
+    <circle cx="24" cy="105.5" r="3" fill="#00ff66" filter="drop-shadow(0 0 3px #00ff66)" />
+      <circle cx="24" cy="105.5" r="1.5" fill="#ffffff" />
+    <text x="38" y="110" class="item-title">Political Agenda &amp; Bias Analysis</text>
+    <text x="38" y="134" textLength="860" lengthAdjust="spacing" class="item-desc"><tspan>Quantifies narrative framing, manipulative bias, and partisan spin using specialized </tspan><tspan class="hi">agentic LLM reasoning engines</tspan><tspan> to detect</tspan></text>
+    <text x="38" y="159" textLength="860" lengthAdjust="spacing" class="item-desc"><tspan>whether content is pushing biased propaganda, one-sided spin, or intentional exaggeration instead of verified objective truth.</tspan></text>
+    <line x1="20" y1="174" x2="900" y2="174" stroke="#102618" stroke-width="0.8" stroke-dasharray="4 4" />
   </g>
 
   <!-- Item 3: Real-Time OSINT News Verification -->
   <g>
-    <circle cx="25" cy="173.5" r="3" fill="#00ff66" filter="drop-shadow(0 0 3px #00ff66)" />
-      <circle cx="25" cy="173.5" r="1.5" fill="#ffffff" />
-    <text x="40" y="178" class="item-title">Real-Time OSINT News Verification</text>
-    <text x="40" y="200" class="item-desc"><tspan>Dynamically queries live news search APIs and cross-checks authoritative source evidence for every extracted assertion,</tspan></text>
-    <text x="40" y="222" class="item-desc"><tspan>instantly verifying claims against real-time breaking news, verified knowledge repositories, and reputable journalism.</tspan></text>
-    <line x1="20" y1="236" x2="900" y2="236" stroke="#102618" stroke-width="0.8" stroke-dasharray="4 4" />
+    <circle cx="24" cy="185.5" r="3" fill="#00ff66" filter="drop-shadow(0 0 3px #00ff66)" />
+      <circle cx="24" cy="185.5" r="1.5" fill="#ffffff" />
+    <text x="38" y="190" class="item-title">Real-Time OSINT News Verification</text>
+    <text x="38" y="214" textLength="860" lengthAdjust="spacing" class="item-desc"><tspan>Dynamically queries live news search APIs and cross-checks authoritative source evidence for every </tspan><tspan class="hi">extracted claim assertion</tspan><tspan>,</tspan></text>
+    <text x="38" y="239" textLength="860" lengthAdjust="spacing" class="item-desc"><tspan>instantly verifying claims against real-time breaking news, verified knowledge repositories, and reputable investigative news.</tspan></text>
+    <line x1="20" y1="254" x2="900" y2="254" stroke="#102618" stroke-width="0.8" stroke-dasharray="4 4" />
   </g>
 
   <!-- Item 4: Dual-Path Fallback Orchestration -->
   <g>
-    <circle cx="25" cy="247.5" r="3" fill="#00ff66" filter="drop-shadow(0 0 3px #00ff66)" />
-      <circle cx="25" cy="247.5" r="1.5" fill="#ffffff" />
-    <text x="40" y="252" class="item-title">Dual-Path Fallback Orchestration</text>
-    <text x="40" y="274" class="item-desc"><tspan>Asynchronous task chaining via </tspan><tspan class="hi">Celery + Redis</tspan><tspan> with graceful degradation under API quota limits and GPU hardware constraints,</tspan></text>
-    <text x="40" y="296" class="item-desc"><tspan>preventing server crashes or slowdowns during viral traffic spikes by prioritizing queue tasks and rerouting models.</tspan></text>
-    <line x1="20" y1="310" x2="900" y2="310" stroke="#102618" stroke-width="0.8" stroke-dasharray="4 4" />
+    <circle cx="24" cy="265.5" r="3" fill="#00ff66" filter="drop-shadow(0 0 3px #00ff66)" />
+      <circle cx="24" cy="265.5" r="1.5" fill="#ffffff" />
+    <text x="38" y="270" class="item-title">Dual-Path Fallback Orchestration</text>
+    <text x="38" y="294" textLength="860" lengthAdjust="spacing" class="item-desc"><tspan>Asynchronous task chaining via </tspan><tspan class="hi">Celery + Redis</tspan><tspan> with graceful degradation under API quota limits and GPU hardware constraints,</tspan></text>
+    <text x="38" y="319" textLength="860" lengthAdjust="spacing" class="item-desc"><tspan>preventing server crashes or slowdowns during viral traffic spikes by queueing worker requests and dynamically rerouting jobs.</tspan></text>
+    <line x1="20" y1="334" x2="900" y2="334" stroke="#102618" stroke-width="0.8" stroke-dasharray="4 4" />
   </g>
 
   <!-- Item 5: Sub-120ms Vector Retrieval -->
   <g>
-    <circle cx="25" cy="321.5" r="3" fill="#00ff66" filter="drop-shadow(0 0 3px #00ff66)" />
-      <circle cx="25" cy="321.5" r="1.5" fill="#ffffff" />
-    <text x="40" y="326" class="item-title">Sub-120ms Vector Retrieval</text>
-    <text x="40" y="348" class="item-desc"><tspan>Forensic claim embeddings indexed in </tspan><tspan class="hi">PostgreSQL (pgvector)</tspan><tspan> with </tspan><tspan class="hi">HNSW graphs</tspan><tspan> for high-speed similarity search,</tspan></text>
-    <text x="40" y="370" class="item-desc"><tspan>scanning massive databases of historical claims, debunked narratives, and viral hoaxes in under 120ms to detect patterns.</tspan></text>
-    <line x1="20" y1="384" x2="900" y2="384" stroke="#102618" stroke-width="0.8" stroke-dasharray="4 4" />
+    <circle cx="24" cy="345.5" r="3" fill="#00ff66" filter="drop-shadow(0 0 3px #00ff66)" />
+      <circle cx="24" cy="345.5" r="1.5" fill="#ffffff" />
+    <text x="38" y="350" class="item-title">Sub-120ms Vector Retrieval</text>
+    <text x="38" y="374" textLength="860" lengthAdjust="spacing" class="item-desc"><tspan>Forensic claim embeddings indexed in </tspan><tspan class="hi">PostgreSQL (pgvector)</tspan><tspan> with high-speed </tspan><tspan class="hi">HNSW indexing graphs</tspan><tspan> for rapid similarity search,</tspan></text>
+    <text x="38" y="399" textLength="860" lengthAdjust="spacing" class="item-desc"><tspan>scanning massive databases of historical claims, debunked narratives, and viral hoaxes in under 120ms to detect exact patterns.</tspan></text>
+    <line x1="20" y1="414" x2="900" y2="414" stroke="#102618" stroke-width="0.8" stroke-dasharray="4 4" />
   </g>
 
   <!-- Item 6: Forensic Command HUD &amp; Dossier -->
   <g>
-    <circle cx="25" cy="395.5" r="3" fill="#00ff66" filter="drop-shadow(0 0 3px #00ff66)" />
-      <circle cx="25" cy="395.5" r="1.5" fill="#ffffff" />
-    <text x="40" y="400" class="item-title">Forensic Command HUD &amp; Dossier</text>
-    <text x="40" y="422" class="item-desc"><tspan>Threat index telemetry, ⌘K command palette, and one-click PDF intelligence dossier generation with verifiable citations,</tspan></text>
-    <text x="40" y="444" class="item-desc"><tspan>packaging the entire forensic investigation into an exportable, shareable summary report with clickable proof links.</tspan></text>
-    <line x1="20" y1="458" x2="900" y2="458" stroke="#102618" stroke-width="0.8" stroke-dasharray="4 4" />
+    <circle cx="24" cy="425.5" r="3" fill="#00ff66" filter="drop-shadow(0 0 3px #00ff66)" />
+      <circle cx="24" cy="425.5" r="1.5" fill="#ffffff" />
+    <text x="38" y="430" class="item-title">Forensic Command HUD &amp; Dossier</text>
+    <text x="38" y="454" textLength="860" lengthAdjust="spacing" class="item-desc"><tspan>Threat index telemetry, ⌘K command palette, and one-click PDF intelligence dossier generation with </tspan><tspan class="hi">verifiable claim citations</tspan><tspan>,</tspan></text>
+    <text x="38" y="479" textLength="860" lengthAdjust="spacing" class="item-desc"><tspan>packaging the entire forensic investigation into an exportable, shareable summary report with clickable cryptographic proofs.</tspan></text>
+    <line x1="20" y1="494" x2="900" y2="494" stroke="#102618" stroke-width="0.8" stroke-dasharray="4 4" />
   </g>
 
   <!-- Item 7: Containerized Infrastructure -->
   <g>
-    <circle cx="25" cy="469.5" r="3" fill="#00ff66" filter="drop-shadow(0 0 3px #00ff66)" />
-      <circle cx="25" cy="469.5" r="1.5" fill="#ffffff" />
-    <text x="40" y="474" class="item-title">Containerized Infrastructure</text>
-    <text x="40" y="496" class="item-desc"><tspan>Fully containerized multi-container deployment with </tspan><tspan class="hi">Docker Compose</tspan><tspan>, </tspan><tspan class="hi">FastAPI / Django REST</tspan><tspan>, and </tspan><tspan class="hi">React 18</tspan><tspan>,</tspan></text>
-    <text x="40" y="518" class="item-desc"><tspan>isolating backend APIs, database services, and frontend client interfaces into self-contained Docker bridge networks.</tspan></text>
+    <circle cx="24" cy="505.5" r="3" fill="#00ff66" filter="drop-shadow(0 0 3px #00ff66)" />
+      <circle cx="24" cy="505.5" r="1.5" fill="#ffffff" />
+    <text x="38" y="510" class="item-title">Containerized Infrastructure</text>
+    <text x="38" y="534" textLength="860" lengthAdjust="spacing" class="item-desc"><tspan>Fully containerized multi-container deployment architecture with </tspan><tspan class="hi">Docker Compose</tspan><tspan>, </tspan><tspan class="hi">FastAPI / Django REST</tspan><tspan>, and </tspan><tspan class="hi">React 18</tspan><tspan>,</tspan></text>
+    <text x="38" y="559" textLength="860" lengthAdjust="spacing" class="item-desc"><tspan>isolating backend APIs, database services, and frontend client interfaces into self-contained Docker networks for safe scaling.</tspan></text>
     
   </g>
   </g>

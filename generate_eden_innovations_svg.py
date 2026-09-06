@@ -15,56 +15,57 @@ def generate_eden_innovations_svg():
 
     vbox_w = 920
     table_top = 40
-    text_len = 855
+    text_len = 860
+    text_x = 38
 
     items_data = [
         {
             "title": "Multimodal Perception",
             "lines": [
-                ('<tspan>Synchronized </tspan><tspan class="hi">EasyOCR</tspan><tspan> (on-screen text) + </tspan><tspan class="hi">OpenAI Whisper</tspan><tspan> (speech transcription) + </tspan><tspan class="hi">OpenCV</tspan><tspan> (4fps keyframes)—</tspan>',),
-                ('<tspan>watching video frames, reading captions, and transcribing spoken dialogue simultaneously to match words with visuals.</tspan>',)
+                ('<tspan>Synchronized </tspan><tspan class="hi">EasyOCR</tspan><tspan> (on-screen caption OCR) + </tspan><tspan class="hi">OpenAI Whisper</tspan><tspan> (speech-to-text) + </tspan><tspan class="hi">OpenCV</tspan><tspan> (4fps keyframe extraction)—</tspan>',),
+                ('<tspan>watching video frames, reading on-screen captions, and transcribing spoken dialogue simultaneously to match words with visuals.</tspan>',)
             ]
         },
         {
             "title": "Political Agenda &amp; Bias Analysis",
             "lines": [
-                ('<tspan>Quantifies narrative framing, manipulative bias, and partisan spin using specialized agentic LLM reasoning to detect</tspan>',),
-                ('<tspan>whether content is pushing biased propaganda, one-sided spin, or intentional exaggeration instead of objective truth.</tspan>',)
+                ('<tspan>Quantifies narrative framing, manipulative bias, and partisan spin using specialized </tspan><tspan class="hi">agentic LLM reasoning engines</tspan><tspan> to detect</tspan>',),
+                ('<tspan>whether content is pushing biased propaganda, one-sided spin, or intentional exaggeration instead of verified objective truth.</tspan>',)
             ]
         },
         {
             "title": "Real-Time OSINT News Verification",
             "lines": [
-                ('<tspan>Dynamically queries live news search APIs and cross-checks authoritative source evidence for every extracted assertion,</tspan>',),
-                ('<tspan>instantly verifying claims against real-time breaking news, verified knowledge repositories, and reputable journalism.</tspan>',)
+                ('<tspan>Dynamically queries live news search APIs and cross-checks authoritative source evidence for every </tspan><tspan class="hi">extracted claim assertion</tspan><tspan>,</tspan>',),
+                ('<tspan>instantly verifying claims against real-time breaking news, verified knowledge repositories, and reputable investigative news.</tspan>',)
             ]
         },
         {
             "title": "Dual-Path Fallback Orchestration",
             "lines": [
                 ('<tspan>Asynchronous task chaining via </tspan><tspan class="hi">Celery + Redis</tspan><tspan> with graceful degradation under API quota limits and GPU hardware constraints,</tspan>',),
-                ('<tspan>preventing server crashes or slowdowns during viral traffic spikes by prioritizing queue tasks and rerouting models.</tspan>',)
+                ('<tspan>preventing server crashes or slowdowns during viral traffic spikes by queueing worker requests and dynamically rerouting jobs.</tspan>',)
             ]
         },
         {
             "title": "Sub-120ms Vector Retrieval",
             "lines": [
-                ('<tspan>Forensic claim embeddings indexed in </tspan><tspan class="hi">PostgreSQL (pgvector)</tspan><tspan> with </tspan><tspan class="hi">HNSW graphs</tspan><tspan> for high-speed similarity search,</tspan>',),
-                ('<tspan>scanning massive databases of historical claims, debunked narratives, and viral hoaxes in under 120ms to detect patterns.</tspan>',)
+                ('<tspan>Forensic claim embeddings indexed in </tspan><tspan class="hi">PostgreSQL (pgvector)</tspan><tspan> with high-speed </tspan><tspan class="hi">HNSW indexing graphs</tspan><tspan> for rapid similarity search,</tspan>',),
+                ('<tspan>scanning massive databases of historical claims, debunked narratives, and viral hoaxes in under 120ms to detect exact patterns.</tspan>',)
             ]
         },
         {
             "title": "Forensic Command HUD &amp; Dossier",
             "lines": [
-                ('<tspan>Threat index telemetry, ⌘K command palette, and one-click PDF intelligence dossier generation with verifiable citations,</tspan>',),
-                ('<tspan>packaging the entire forensic investigation into an exportable, shareable summary report with clickable proof links.</tspan>',)
+                ('<tspan>Threat index telemetry, ⌘K command palette, and one-click PDF intelligence dossier generation with </tspan><tspan class="hi">verifiable claim citations</tspan><tspan>,</tspan>',),
+                ('<tspan>packaging the entire forensic investigation into an exportable, shareable summary report with clickable cryptographic proofs.</tspan>',)
             ]
         },
         {
             "title": "Containerized Infrastructure",
             "lines": [
-                ('<tspan>Fully containerized multi-container deployment with </tspan><tspan class="hi">Docker Compose</tspan><tspan>, </tspan><tspan class="hi">FastAPI / Django REST</tspan><tspan>, and </tspan><tspan class="hi">React 18</tspan><tspan>,</tspan>',),
-                ('<tspan>isolating backend APIs, database services, and frontend client interfaces into self-contained Docker bridge networks.</tspan>',)
+                ('<tspan>Fully containerized multi-container deployment architecture with </tspan><tspan class="hi">Docker Compose</tspan><tspan>, </tspan><tspan class="hi">FastAPI / Django REST</tspan><tspan>, and </tspan><tspan class="hi">React 18</tspan><tspan>,</tspan>',),
+                ('<tspan>isolating backend APIs, database services, and frontend client interfaces into self-contained Docker networks for safe scaling.</tspan>',)
             ]
         }
     ]
@@ -72,20 +73,20 @@ def generate_eden_innovations_svg():
     items_svg = []
     item_y = 30
     for idx, it in enumerate(items_data):
-        # Single glowing bullet point (no duplicate triangle symbol)
-        bullet_svg = f'''<circle cx="25" cy="{item_y - 4.5}" r="3" fill="#00ff66" filter="drop-shadow(0 0 3px #00ff66)" />
-      <circle cx="25" cy="{item_y - 4.5}" r="1.5" fill="#ffffff" />'''
+        # Single glowing tech bullet point
+        bullet_svg = f'''<circle cx="24" cy="{item_y - 4.5}" r="3" fill="#00ff66" filter="drop-shadow(0 0 3px #00ff66)" />
+      <circle cx="24" cy="{item_y - 4.5}" r="1.5" fill="#ffffff" />'''
 
-        t_svg = f'<text x="40" y="{item_y}" class="item-title">{it["title"]}</text>'
+        t_svg = f'<text x="{text_x}" y="{item_y}" class="item-title">{it["title"]}</text>'
 
-        # Natural crisp typography without artificial letter stretching
-        line1_svg = f'<text x="40" y="{item_y + 22}" class="item-desc">{it["lines"][0][0]}</text>'
-        line2_svg = f'<text x="40" y="{item_y + 44}" class="item-desc">{it["lines"][1][0]}</text>'
+        # Balanced justified description lines matching About Me
+        line1_svg = f'<text x="{text_x}" y="{item_y + 24}" textLength="{text_len}" lengthAdjust="spacing" class="item-desc">{it["lines"][0][0]}</text>'
+        line2_svg = f'<text x="{text_x}" y="{item_y + 49}" textLength="{text_len}" lengthAdjust="spacing" class="item-desc">{it["lines"][1][0]}</text>'
         
         # Subtle divider between items (except last)
         div_svg = ""
         if idx < len(items_data) - 1:
-            div_svg = f'<line x1="20" y1="{item_y + 58}" x2="{vbox_w - 20}" y2="{item_y + 58}" stroke="#102618" stroke-width="0.8" stroke-dasharray="4 4" />'
+            div_svg = f'<line x1="20" y1="{item_y + 64}" x2="{vbox_w - 20}" y2="{item_y + 64}" stroke="#102618" stroke-width="0.8" stroke-dasharray="4 4" />'
 
         items_svg.append(f"""  <!-- Item {idx + 1}: {it['title']} -->
   <g>
@@ -96,7 +97,7 @@ def generate_eden_innovations_svg():
     {div_svg}
   </g>""")
 
-        item_y += 74
+        item_y += 80
 
     card_h = item_y + 6
     total_svg_h = table_top + card_h + 4
@@ -117,7 +118,7 @@ def generate_eden_innovations_svg():
       }}
       .item-title {{
         font-family: 'Caacupe One', cursive, sans-serif;
-        font-size: 16px;
+        font-size: 16.5px;
         font-weight: 400;
         letter-spacing: 0.3px;
         fill: #00ff66;
@@ -125,7 +126,7 @@ def generate_eden_innovations_svg():
       }}
       .item-desc {{
         font-family: 'Caacupe One', cursive, sans-serif;
-        font-size: 15px;
+        font-size: 16px;
         font-weight: 400;
         letter-spacing: 0.2px;
         fill: #e6edf3;
@@ -151,12 +152,12 @@ def generate_eden_innovations_svg():
   </g>
 </svg>"""
 
-    for fname in ["eden-innovations.svg", "eden-innovations-v2.svg", "eden-innovations-v3.svg"]:
+    for fname in ["eden-innovations.svg", "eden-innovations-v2.svg", "eden-innovations-v3.svg", "eden-innovations-v4.svg"]:
         out_path = os.path.join(assets_dir, fname)
         with open(out_path, "w", encoding="utf-8") as f:
             f.write(svg_content)
     ET.fromstring(svg_content)
-    print(f"Generated & Validated: eden-innovations.svg, v2, v3")
+    print(f"Generated & Validated: eden-innovations.svg, v2, v3, v4")
 
 if __name__ == "__main__":
     generate_eden_innovations_svg()
