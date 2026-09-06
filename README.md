@@ -19,7 +19,7 @@
 
 <img src="assets/green-divider.svg" width="100%" alt="---" />
 
-<img src="assets/about-me-perfect.svg" alt="About Me &amp; Identity" width="100%" />
+<img src="assets/about-me-perfect.svg?v=2.0" alt="About Me &amp; Identity" width="100%" />
 
 <img src="assets/terminal-profile-v9.svg" alt="Terminal Profile &amp; Cartoon Green Bookshelf Spotlight" width="100%" />
 

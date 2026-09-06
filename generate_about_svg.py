@@ -12,16 +12,6 @@ def generate_about_me_svg():
     font_match = re.search(r"@font-face\s*\{[^}]*\}", taglines_content, re.DOTALL)
     font_face_css = font_match.group(0) if font_match else ""
 
-    # Strategy: viewBox="0 0 920 ..." with width="100%"
-    # → On an 850px GitHub container, 20px font renders at ~18-19px actual (big!)
-    # → At 20px Caacupe One, avg char ~7.6px → (920-20)/7.6 ≈ 118 chars per line
-    #
-    # 4 balanced lines — keeps "intersection of" + "core CS systems" on the SAME line:
-    # L1 (~99):  "I am a 3rd-year ... DSATM, Bengaluru (Class of 2028),"
-    # L2 (~102): "building at the intersection of core CS systems ... production-grade GenAI &"
-    # L3 (~104): "Full-Stack engineering. My work bridges ... (FastAPI, Celery, Redis,"
-    # L4 (~101): "pgvector) with interactive ... (TypeScript, React, Next.js, Three.js)."
-
     vbox_w     = 920
     font_size  = 17
     line_h     = 27    # line height in px
@@ -30,9 +20,9 @@ def generate_about_me_svg():
     num_lines  = 3
 
     box_height = top_pad + (num_lines - 1) * line_h + bot_pad   # 24+54+20 = 98
-    heading_y  = 20
-    box_top    = 32
-    svg_height = box_top + box_height + 2                        # 32+98+2 = 132
+    heading_y  = 25
+    box_top    = 42
+    svg_height = box_top + box_height + 4                        # 42+98+4 = 144
 
     # line y positions (relative to the box group)
     y1 = top_pad
@@ -46,9 +36,9 @@ def generate_about_me_svg():
 
       .sh {{
         font-family: 'Caacupe One', cursive, sans-serif;
-        font-size: 18px;
+        font-size: 28px;
         font-weight: 400;
-        letter-spacing: 1px;
+        letter-spacing: 0.8px;
         fill: #7ee787;
       }}
       .bt {{
@@ -92,9 +82,7 @@ def generate_about_me_svg():
             f.write(svg_content)
         print(f"  Written: {fname}")
 
-    print(f"\nDone — viewBox {vbox_w}x{svg_height}, font {font_size}px, {num_lines} balanced lines")
-    print("Matches localhost blockquote 3-line natural wrap distribution.")
+    print(f"\nDone — viewBox {vbox_w}x{svg_height}, headline 28px #7ee787")
 
 if __name__ == "__main__":
     generate_about_me_svg()
-
