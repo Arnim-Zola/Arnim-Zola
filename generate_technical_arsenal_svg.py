@@ -29,36 +29,36 @@ def generate_technical_arsenal_svg():
         {
             "domain": "Languages &amp; Shaders",
             "badges": [
-                [("Python 3.11", 86), ("TypeScript", 84), ("JavaScript (ES6+)", 124), ("GLSL Shaders", 98)],
-                [("C++", 48), ("SQL", 46), ("Bash / Linux", 92)]
+                [("Python 3.11", 86, True), ("TypeScript", 84, False), ("JavaScript (ES6+)", 124, False), ("GLSL Shaders", 98, True)],
+                [("C++", 48, False), ("SQL", 46, False), ("Bash / Linux", 92, False)]
             ]
         },
         {
             "domain": "Applied AI, Vision &amp; NLP",
             "badges": [
-                [("Google Gemini 2.0", 126), ("Meta Llama 3 (8B)", 126), ("PyTorch", 68), ("OpenCV", 68)],
-                [("OpenAI Whisper", 108), ("EasyOCR", 74), ("pgvector (HNSW)", 118), ("LangChain", 86)]
+                [("Google Gemini 2.0", 126, True), ("Meta Llama 3 (8B)", 126, True), ("PyTorch", 68, True), ("OpenCV", 68, False)],
+                [("OpenAI Whisper", 108, False), ("EasyOCR", 74, False), ("pgvector (HNSW)", 118, True), ("LangChain", 86, False)]
             ]
         },
         {
             "domain": "Distributed Backend &amp; Scraping",
             "badges": [
-                [("FastAPI", 68), ("Django", 66), ("Django REST", 92), ("Celery", 64)],
-                [("Redis", 58), ("Playwright", 82), ("RESTful APIs", 96)]
+                [("FastAPI", 68, True), ("Django", 66, False), ("Django REST", 92, False), ("Celery", 64, True)],
+                [("Redis", 58, True), ("Playwright", 82, False), ("RESTful APIs", 96, False)]
             ]
         },
         {
             "domain": "Creative WebGL, 3D &amp; Frontend",
             "badges": [
-                [("Next.js 15", 76), ("React 19", 70), ("Three.js", 68), ("@react-three/fiber", 126)],
-                [("Web Audio API", 102), ("Plotly.js", 70), ("PDF.js", 60), ("Tailwind CSS", 94)]
+                [("Next.js 15", 76, True), ("React 19", 70, False), ("Three.js", 68, True), ("@react-three/fiber", 126, False)],
+                [("Web Audio API", 102, False), ("Plotly.js", 70, False), ("PDF.js", 60, False), ("Tailwind CSS", 94, False)]
             ]
         },
         {
             "domain": "Databases, DevOps &amp; Media",
             "badges": [
-                [("PostgreSQL", 86), ("SQLite", 60), ("MongoDB", 76), ("Docker", 66)],
-                [("Docker Compose", 114), ("Git", 46), ("GitHub Actions", 106), ("FFmpeg", 70)]
+                [("PostgreSQL", 86, True), ("SQLite", 60, False), ("MongoDB", 76, False), ("Docker", 66, True)],
+                [("Docker Compose", 114, False), ("Git", 46, False), ("GitHub Actions", 106, True), ("FFmpeg", 70, False)]
             ]
         }
     ]
@@ -68,20 +68,28 @@ def generate_technical_arsenal_svg():
         y_top = table_top + header_h + idx * row_h
         y_mid = y_top + row_h / 2
 
-        # Col 1: Domain Title
-        col1_svg = f'<text x="20" y="{y_mid + 6}" class="domain-title">{r["domain"]}</text>'
+        # Col 1: Domain Title (Crisp White with Glowing Emerald Dot)
+        col1_svg = f'''<g>
+      <circle cx="20" cy="{y_mid + 1}" r="3" fill="#00ff66" filter="drop-shadow(0 0 3px #00ff66)" />
+      <circle cx="20" cy="{y_mid + 1}" r="1.5" fill="#ffffff" />
+      <text x="32" y="{y_mid + 6}" class="domain-title">{r["domain"]}</text>
+    </g>'''
 
-        # Col 2: Badges (2 rows per domain)
+        # Col 2: Badges (Balanced mix of White and Neon Green text)
         badge_rows = r["badges"]
         badge_svg_list = []
         b_start_y = y_top + 14
         for b_row_idx, b_list in enumerate(badge_rows):
             by = b_start_y + b_row_idx * 33
             bx = col2_x + 16
-            for label, bw in b_list:
+            for item in b_list:
+                label = item[0]
+                bw = item[1]
+                is_hi = item[2] if len(item) > 2 else False
+                text_cls = "badge-text-hi" if is_hi else "badge-text"
                 badge_svg_list.append(f'''<g transform="translate({bx}, {by})">
         <rect width="{bw}" height="26" rx="6" class="badge-bg" />
-        <text x="{bw/2}" y="17.5" class="badge-text">{label}</text>
+        <text x="{bw/2}" y="17.5" class="{text_cls}">{label}</text>
       </g>''')
                 bx += bw + 8
         col2_svg = "\n      ".join(badge_svg_list)
@@ -110,9 +118,8 @@ def generate_technical_arsenal_svg():
         font-family: 'Caacupe One', cursive, sans-serif;
         font-size: 16.5px;
         font-weight: 400;
-        letter-spacing: 0.3px;
-        fill: #00ff66;
-        filter: drop-shadow(0 1px 2px rgba(0,0,0,0.8));
+        letter-spacing: 0.2px;
+        fill: #ffffff;
       }}
       .badge-bg {{
         fill: #06170d;
@@ -124,7 +131,15 @@ def generate_technical_arsenal_svg():
         font-size: 12.5px;
         font-weight: 400;
         letter-spacing: 0.2px;
-        fill: #39d353;
+        fill: #ffffff;
+        text-anchor: middle;
+      }}
+      .badge-text-hi {{
+        font-family: 'Caacupe One', cursive, sans-serif;
+        font-size: 12.5px;
+        font-weight: 400;
+        letter-spacing: 0.2px;
+        fill: #00ff66;
         text-anchor: middle;
       }}
       .grid-line {{
@@ -160,12 +175,12 @@ def generate_technical_arsenal_svg():
 {all_rows_str}
 </svg>"""
 
-    for fname in ["technical-arsenal-table.svg", "technical-arsenal-table-v1.svg"]:
+    for fname in ["technical-arsenal-table.svg", "technical-arsenal-table-v1.svg", "technical-arsenal-table-v2.svg"]:
         out_path = os.path.join(assets_dir, fname)
         with open(out_path, "w", encoding="utf-8") as f:
             f.write(svg_content)
     ET.fromstring(svg_content)
-    print(f"Generated & Validated: technical-arsenal-table.svg, v1")
+    print(f"Generated & Validated: technical-arsenal-table.svg, v1, v2")
 
 if __name__ == "__main__":
     generate_technical_arsenal_svg()
