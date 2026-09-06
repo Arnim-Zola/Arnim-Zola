@@ -1626,8 +1626,8 @@
       display: flex !important;
       align-items: center !important;
       justify-content: space-around !important;
-      padding: 22px 16px !important;
-      min-height: 195px;
+      padding: 20px 24px !important;
+      min-height: 145px;
       box-sizing: border-box;
       width: 100%;
     }
@@ -1640,32 +1640,34 @@
     }
     .streak-divider {
       width: 1px;
-      height: 120px;
+      height: 96px;
       background: rgba(0, 255, 102, 0.25);
     }
     .streak-num {
-      font-family: 'Space Grotesk', -apple-system, sans-serif;
-      font-weight: 800;
-      font-size: 28px;
+      font-family: 'Caacupe One', cursive, sans-serif;
+      font-weight: 400;
+      font-size: 36px;
       color: #ffffff;
       text-shadow: 0 2px 8px rgba(0, 0, 0, 0.95);
       line-height: 1.1;
       margin-bottom: 6px;
+      letter-spacing: 0.5px;
     }
     .streak-label {
-      font-family: 'JetBrains Mono', monospace;
-      font-size: 11px;
-      font-weight: 600;
-      color: #cbd5e1;
+      font-family: 'Caacupe One', cursive, sans-serif;
+      font-size: 13px;
+      font-weight: 400;
+      color: #7ee787;
       text-shadow: 0 1px 3px rgba(0, 0, 0, 0.8);
       margin-bottom: 4px;
       text-transform: uppercase;
       letter-spacing: 0.5px;
     }
     .streak-date {
-      font-family: 'JetBrains Mono', monospace;
-      font-size: 10.5px;
-      color: #94a3b8;
+      font-family: 'Caacupe One', cursive, sans-serif;
+      font-size: 11.5px;
+      font-weight: 400;
+      color: #8b949e;
     }
     .streak-ring-wrap {
       position: relative;
@@ -1684,19 +1686,19 @@
       transform: rotate(-90deg);
     }
     .streak-curr-val {
-      font-family: 'Space Grotesk', -apple-system, sans-serif;
-      font-weight: 800;
-      font-size: 24px;
+      font-family: 'Caacupe One', cursive, sans-serif;
+      font-weight: 400;
+      font-size: 28px;
       color: #ffffff;
       text-shadow: 0 2px 8px rgba(0, 0, 0, 0.95);
       z-index: 2;
     }
     .streak-curr-label {
-      font-family: 'JetBrains Mono', monospace;
-      font-size: 11.5px;
-      font-weight: 700;
-      color: #39ff14;
-      text-shadow: 0 1px 4px rgba(0, 0, 0, 0.9), 0 0 10px rgba(57, 255, 20, 0.6);
+      font-family: 'Caacupe One', cursive, sans-serif;
+      font-size: 13px;
+      font-weight: 400;
+      color: #00ff66;
+      text-shadow: 0 1px 4px rgba(0, 0, 0, 0.9), 0 0 10px rgba(0, 255, 102, 0.6);
       text-transform: uppercase;
       letter-spacing: 0.5px;
       margin-bottom: 4px;
@@ -1704,38 +1706,34 @@
 
     /* Overall Stats Card Custom */
     .stats-card-custom {
-      display: flex !important;
-      align-items: center !important;
-      justify-content: space-between !important;
-      padding: 20px 24px !important;
-      min-height: 195px;
+      display: block !important;
+      padding: 20px 28px !important;
+      min-height: 145px;
       box-sizing: border-box;
       width: 100%;
     }
-    .stats-left {
-      flex: 1;
-    }
     .stats-card-title {
-      font-family: 'Space Grotesk', -apple-system, sans-serif;
+      font-family: 'Caacupe One', cursive, sans-serif;
       font-size: 16px;
-      font-weight: 700;
-      color: #a7f3d0;
-      text-shadow: 0 1px 4px rgba(0, 0, 0, 0.9), 0 0 10px rgba(0, 255, 102, 0.4);
-      margin-bottom: 12px;
+      font-weight: 400;
+      color: #ffffff;
+      text-shadow: 0 1px 4px rgba(0, 0, 0, 0.9);
+      margin-bottom: 14px;
       letter-spacing: 0.5px;
     }
     .stats-list {
       display: flex;
       flex-direction: column;
-      gap: 7px;
+      gap: 9px;
     }
     .stats-item {
       display: flex;
       align-items: center;
-      font-family: 'JetBrains Mono', monospace;
-      font-size: 12px;
+      font-family: 'Caacupe One', cursive, sans-serif;
+      font-size: 13.5px;
+      font-weight: 400;
       color: #f1f5f9;
-      gap: 8px;
+      gap: 10px;
     }
     .stats-item-icon {
       color: #00ff66;
@@ -1745,31 +1743,32 @@
       filter: drop-shadow(0 0 5px rgba(0, 255, 102, 0.8));
     }
     .stats-item-name {
-      color: #f1f5f9;
-      font-weight: 500;
+      color: #ffffff;
+      font-weight: 400;
       text-shadow: 0 1px 3px rgba(0, 0, 0, 0.8);
     }
     .stats-item-val {
-      font-weight: 700;
-      color: #39ff14;
-      text-shadow: 0 1px 4px rgba(0, 0, 0, 0.9), 0 0 8px rgba(57, 255, 20, 0.5);
+      font-weight: 400;
+      color: #00ff66;
+      text-shadow: 0 1px 4px rgba(0, 0, 0, 0.9), 0 0 8px rgba(0, 255, 102, 0.5);
       margin-left: auto;
       padding-right: 18px;
     }
 
-    /* Top Languages Custom Card (Velocity Matched to Cards 1 & 2) */
+    /* Top Languages Custom Card */
     .langs-card-custom {
       display: block !important;
-      padding: 22px 28px !important;
+      padding: 20px 28px !important;
+      min-height: 145px;
       box-sizing: border-box;
       width: 100%;
     }
     .langs-card-custom::before {
-      transition: transform 2.8s cubic-bezier(0.16, 1, 0.3, 1) !important; /* Matched reverse leave duration */
+      transition: transform 2.8s cubic-bezier(0.16, 1, 0.3, 1) !important;
     }
     .langs-card-custom:hover::before,
     .langs-card-custom.card-focused::before {
-      transition: transform 3.8s cubic-bezier(0.16, 1, 0.3, 1) !important; /* Matched slow fill-in speed */
+      transition: transform 3.8s cubic-bezier(0.16, 1, 0.3, 1) !important;
     }
     .langs-card-custom:hover .langs-title,
     .langs-card-custom:hover .lang-name,
@@ -1784,10 +1783,10 @@
                   border-color 1.8s cubic-bezier(0.16, 1, 0.3, 1);
     }
     .langs-title {
-      font-family: 'Space Grotesk', -apple-system, sans-serif;
-      font-size: 17px;
-      font-weight: 700;
-      color: #a7f3d0;
+      font-family: 'Caacupe One', cursive, sans-serif;
+      font-size: 16px;
+      font-weight: 400;
+      color: #7ee787;
       text-shadow: 0 1px 4px rgba(0, 0, 0, 0.9), 0 0 10px rgba(0, 255, 102, 0.4);
       margin-bottom: 14px;
       letter-spacing: 0.5px;
@@ -1795,7 +1794,7 @@
     .langs-progress-bar {
       display: flex;
       width: 100%;
-      height: 9px;
+      height: 10px;
       border-radius: 5px;
       overflow: hidden;
       background: #020c06;
@@ -1809,16 +1808,17 @@
     }
     .langs-grid {
       display: grid;
-      grid-template-columns: 1fr 1fr;
-      column-gap: 32px;
-      row-gap: 10px;
+      grid-template-columns: repeat(3, 1fr);
+      column-gap: 28px;
+      row-gap: 12px;
     }
     .lang-item {
       display: flex;
       align-items: center;
-      gap: 10px;
-      font-family: 'JetBrains Mono', monospace;
-      font-size: 12.5px;
+      gap: 8px;
+      font-family: 'Caacupe One', cursive, sans-serif;
+      font-size: 13.5px;
+      font-weight: 400;
     }
     .lang-dot {
       width: 9px;
@@ -1829,14 +1829,14 @@
       box-shadow: 0 0 5px rgba(255, 255, 255, 0.3);
     }
     .lang-name {
-      color: #f8fafc;
-      font-weight: 600;
+      color: #ffffff;
+      font-weight: 400;
       text-shadow: 0 1px 3px rgba(0, 0, 0, 0.8);
     }
     .lang-pct {
       color: #cbd5e1;
-      margin-left: auto;
-      font-weight: 500;
+      margin-left: 12px;
+      font-weight: 400;
       text-shadow: 0 1px 3px rgba(0, 0, 0, 0.8);
     }
   </style>
@@ -2721,10 +2721,10 @@
                 </div>
               </div>
 
-              <!-- 2-Column Grid: Streak + Overall Stats -->
-              <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin: 16px 0 20px 0; align-items: stretch; position: relative; z-index: 4;">
+              <!-- Stacked Vertical Chamber: All 3 Cards (One Below Another) -->
+              <div style="display: flex; flex-direction: column; gap: 16px; margin: 16px 0 20px 0; position: relative; z-index: 4;">
                 
-                <!-- Card 1: GitHub Streak Stats (Space Grotesk + JetBrains Mono) -->
+                <!-- Stacked Card 1: GitHub Streak Stats (Caacupe One) -->
                 <div class="cosmos-card-glass streak-card-custom">
                   <div class="streak-col">
                     <div class="streak-num">174</div>
@@ -2751,59 +2751,69 @@
                   </div>
                 </div>
 
-                <!-- Card 2: Overall GitHub Stats (Space Grotesk + JetBrains Mono) -->
+                <!-- Stacked Card 2: Overall GitHub Stats (Caacupe One, 2-Column Wide Layout) -->
                 <div class="cosmos-card-glass stats-card-custom">
-                  <div class="stats-left">
+                  <div style="width: 100%;">
                     <div class="stats-card-title">Mohammed Sahil's GitHub Stats</div>
-                    <div class="stats-list">
-                      <div class="stats-item">
-                        <span class="stats-item-icon"><svg width="14" height="14" viewBox="0 0 16 16" fill="#00ff66"><path d="M8 .25a.75.75 0 0 1 .673.418l1.882 3.815 4.21.612a.751.751 0 0 1 .416 1.279l-3.046 2.97.719 4.192a.751.751 0 0 1-1.088.791L8 12.347l-3.766 1.98a.75.75 0 0 1-1.088-.79l.72-4.194L.818 6.374a.75.75 0 0 1 .416-1.28l4.21-.611L7.327.668A.75.75 0 0 1 8 .25Z"/></svg></span>
-                        <span class="stats-item-name">Total Stars Earned:</span>
-                        <span class="stats-item-val">0</span>
+                    <div style="display: grid; grid-template-columns: 1fr 1px 1fr; column-gap: 24px; align-items: center;">
+                      <!-- Left Column -->
+                      <div class="stats-list">
+                        <div class="stats-item">
+                          <span class="stats-item-icon"><svg width="14" height="14" viewBox="0 0 16 16" fill="#00ff66"><path d="M8 .25a.75.75 0 0 1 .673.418l1.882 3.815 4.21.612a.751.751 0 0 1 .416 1.279l-3.046 2.97.719 4.192a.751.751 0 0 1-1.088.791L8 12.347l-3.766 1.98a.75.75 0 0 1-1.088-.79l.72-4.194L.818 6.374a.75.75 0 0 1 .416-1.28l4.21-.611L7.327.668A.75.75 0 0 1 8 .25Z"/></svg></span>
+                          <span class="stats-item-name">Total Stars Earned:</span>
+                          <span class="stats-item-val">0</span>
+                        </div>
+                        <div class="stats-item">
+                          <span class="stats-item-icon"><svg width="14" height="14" viewBox="0 0 16 16" fill="#00ff66"><path d="M1.5 8a6.5 6.5 0 1 1 13 0 6.5 6.5 0 0 1-13 0ZM8 0a8 8 0 1 0 0 16A8 8 0 0 0 8 0Zm.5 4.75a.75.75 0 0 0-1.5 0v3.5a.75.75 0 0 0 .37.65l2.5 1.5a.75.75 0 1 0 .76-1.3L8.5 7.92V4.75Z"/></svg></span>
+                          <span class="stats-item-name">Total Commits:</span>
+                          <span class="stats-item-val">174</span>
+                        </div>
+                        <div class="stats-item">
+                          <span class="stats-item-icon"><svg width="14" height="14" viewBox="0 0 16 16" fill="#00ff66"><path d="M5 3.25a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Zm0 2.122V11.5a.75.75 0 0 1-1.5 0V5.372A2.25 2.25 0 1 1 5 3.25Zm6.5 6.128a.75.75 0 1 0-1.5 0 .75.75 0 0 0 1.5 0Zm0-2.122a2.25 2.25 0 1 0-1.5 0v2.122a2.25 2.25 0 1 0 1.5 0V7.25Z"/></svg></span>
+                          <span class="stats-item-name">Total PRs:</span>
+                          <span class="stats-item-val">2</span>
+                        </div>
                       </div>
-                      <div class="stats-item">
-                        <span class="stats-item-icon"><svg width="14" height="14" viewBox="0 0 16 16" fill="#00ff66"><path d="M1.5 8a6.5 6.5 0 1 1 13 0 6.5 6.5 0 0 1-13 0ZM8 0a8 8 0 1 0 0 16A8 8 0 0 0 8 0Zm.5 4.75a.75.75 0 0 0-1.5 0v3.5a.75.75 0 0 0 .37.65l2.5 1.5a.75.75 0 1 0 .76-1.3L8.5 7.92V4.75Z"/></svg></span>
-                        <span class="stats-item-name">Total Commits:</span>
-                        <span class="stats-item-val">114</span>
-                      </div>
-                      <div class="stats-item">
-                        <span class="stats-item-icon"><svg width="14" height="14" viewBox="0 0 16 16" fill="#00ff66"><path d="M5 3.25a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Zm0 2.122V11.5a.75.75 0 0 1-1.5 0V5.372A2.25 2.25 0 1 1 5 3.25Zm6.5 6.128a.75.75 0 1 0-1.5 0 .75.75 0 0 0 1.5 0Zm0-2.122a2.25 2.25 0 1 0-1.5 0v2.122a2.25 2.25 0 1 0 1.5 0V7.25Z"/></svg></span>
-                        <span class="stats-item-name">Total PRs:</span>
-                        <span class="stats-item-val">2</span>
-                      </div>
-                      <div class="stats-item">
-                        <span class="stats-item-icon"><svg width="14" height="14" viewBox="0 0 16 16" fill="#00ff66"><path d="M8 1.5a6.5 6.5 0 1 0 0 13 6.5 6.5 0 0 0 0-13ZM0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8Zm9 3a1 1 0 1 1-2 0 1 1 0 0 1 2 0Zm-.25-6.25a.75.75 0 0 0-1.5 0v3.5a.75.75 0 0 0 1.5 0v-3.5Z"/></svg></span>
-                        <span class="stats-item-name">Total Issues:</span>
-                        <span class="stats-item-val">0</span>
-                      </div>
-                      <div class="stats-item">
-                        <span class="stats-item-icon"><svg width="14" height="14" viewBox="0 0 16 16" fill="#00ff66"><path d="M2 2.5A2.5 2.5 0 0 1 4.5 0h8.75a.75.75 0 0 1 .75.75v12.5a.75.75 0 0 1-.75.75h-2.5a.75.75 0 0 1 0-1.5h1.75v-2h-8a1 1 0 0 0-.714 1.7.75.75 0 1 1-1.072 1.05A2.495 2.495 0 0 1 2 11.5v-9Zm10.5-1h-8a1 1 0 0 0-1 1v6.708A2.486 2.486 0 0 1 4.5 9h8V1.5Z"/></svg></span>
-                        <span class="stats-item-name">Contributed to (last year):</span>
-                        <span class="stats-item-val">0</span>
+
+                      <!-- Center Subtle Divider -->
+                      <div style="width: 1px; height: 92px; background: rgba(0, 255, 102, 0.25);"></div>
+
+                      <!-- Right Column -->
+                      <div class="stats-list">
+                        <div class="stats-item">
+                          <span class="stats-item-icon"><svg width="14" height="14" viewBox="0 0 16 16" fill="#00ff66"><path d="M8 1.5a6.5 6.5 0 1 0 0 13 6.5 6.5 0 0 0 0-13ZM0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8Zm9 3a1 1 0 1 1-2 0 1 1 0 0 1 2 0Zm-.25-6.25a.75.75 0 0 0-1.5 0v3.5a.75.75 0 0 0 1.5 0v-3.5Z"/></svg></span>
+                          <span class="stats-item-name">Total Issues:</span>
+                          <span class="stats-item-val">0</span>
+                        </div>
+                        <div class="stats-item">
+                          <span class="stats-item-icon"><svg width="14" height="14" viewBox="0 0 16 16" fill="#00ff66"><path d="M2 2.5A2.5 2.5 0 0 1 4.5 0h8.75a.75.75 0 0 1 .75.75v12.5a.75.75 0 0 1-.75.75h-2.5a.75.75 0 0 1 0-1.5h1.75v-2h-8a1 1 0 0 0-.714 1.7.75.75 0 1 1-1.072 1.05A2.495 2.495 0 0 1 2 11.5v-9Zm10.5-1h-8a1 1 0 0 0-1 1v6.708A2.486 2.486 0 0 1 4.5 9h8V1.5Z"/></svg></span>
+                          <span class="stats-item-name">Contributed to (last year):</span>
+                          <span class="stats-item-val">0</span>
+                        </div>
                       </div>
                     </div>
                   </div>
                 </div>
-              </div>
 
-              <!-- Centered Top Languages Card (Space Grotesk + JetBrains Mono) -->
-              <div class="cosmos-card-glass langs-card-custom" style="margin: 0 auto; max-width: 540px;">
-                <div class="langs-title">Most Used Languages</div>
-                <div class="langs-progress-bar">
-                  <div class="lang-bar-segment" style="width: 80.33%; background: #f1e05a;"></div>
-                  <div class="lang-bar-segment" style="width: 16.74%; background: #3572A5;"></div>
-                  <div class="lang-bar-segment" style="width: 2.38%; background: #663399;"></div>
-                  <div class="lang-bar-segment" style="width: 0.38%; background: #e34c26;"></div>
-                  <div class="lang-bar-segment" style="width: 0.09%; background: #C1F12E;"></div>
-                  <div class="lang-bar-segment" style="width: 0.08%; background: #89e051;"></div>
-                </div>
-                <div class="langs-grid">
-                  <div class="lang-item"><span class="lang-dot" style="background: #f1e05a;"></span><span class="lang-name">JavaScript</span> <span class="lang-pct">80.33%</span></div>
-                  <div class="lang-item"><span class="lang-dot" style="background: #e34c26;"></span><span class="lang-name">HTML</span> <span class="lang-pct">0.38%</span></div>
-                  <div class="lang-item"><span class="lang-dot" style="background: #3572A5;"></span><span class="lang-name">Python</span> <span class="lang-pct">16.74%</span></div>
-                  <div class="lang-item"><span class="lang-dot" style="background: #C1F12E;"></span><span class="lang-name">Batchfile</span> <span class="lang-pct">0.09%</span></div>
-                  <div class="lang-item"><span class="lang-dot" style="background: #663399;"></span><span class="lang-name">CSS</span> <span class="lang-pct">2.38%</span></div>
-                  <div class="lang-item"><span class="lang-dot" style="background: #89e051;"></span><span class="lang-name">Shell</span> <span class="lang-pct">0.08%</span></div>
+                <!-- Stacked Card 3: Top Languages (Caacupe One, Wide 3-Column Grid) -->
+                <div class="cosmos-card-glass langs-card-custom">
+                  <div class="langs-title">Most Used Languages</div>
+                  <div class="langs-progress-bar">
+                    <div class="lang-bar-segment" style="width: 80.33%; background: #f1e05a;"></div>
+                    <div class="lang-bar-segment" style="width: 16.74%; background: #3572A5;"></div>
+                    <div class="lang-bar-segment" style="width: 2.38%; background: #663399;"></div>
+                    <div class="lang-bar-segment" style="width: 0.38%; background: #e34c26;"></div>
+                    <div class="lang-bar-segment" style="width: 0.09%; background: #C1F12E;"></div>
+                    <div class="lang-bar-segment" style="width: 0.08%; background: #89e051;"></div>
+                  </div>
+                  <div class="langs-grid">
+                    <div class="lang-item"><span class="lang-dot" style="background: #f1e05a;"></span><span class="lang-name">JavaScript</span> <span class="lang-pct">80.33%</span></div>
+                    <div class="lang-item"><span class="lang-dot" style="background: #3572A5;"></span><span class="lang-name">Python</span> <span class="lang-pct">16.74%</span></div>
+                    <div class="lang-item"><span class="lang-dot" style="background: #663399;"></span><span class="lang-name">CSS</span> <span class="lang-pct">2.38%</span></div>
+                    <div class="lang-item"><span class="lang-dot" style="background: #e34c26;"></span><span class="lang-name">HTML</span> <span class="lang-pct">0.38%</span></div>
+                    <div class="lang-item"><span class="lang-dot" style="background: #C1F12E;"></span><span class="lang-name">Batchfile</span> <span class="lang-pct">0.09%</span></div>
+                    <div class="lang-item"><span class="lang-dot" style="background: #89e051;"></span><span class="lang-name">Shell</span> <span class="lang-pct">0.08%</span></div>
+                  </div>
                 </div>
               </div>
             </div>

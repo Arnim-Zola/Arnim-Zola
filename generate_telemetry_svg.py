@@ -228,7 +228,7 @@ def generate_telemetry_svg():
             ("Shell", 0.08, "#89e051")
         ]
 
-    # Read base64 font from taglines.svg for Caacupe One
+    # Read base64 font from taglines.svg for signature Caacupe One
     taglines_path = os.path.join(assets_dir, "taglines.svg")
     caacupe_font_css = ""
     if os.path.exists(taglines_path):
@@ -238,17 +238,18 @@ def generate_telemetry_svg():
         caacupe_font_css = font_match.group(0) if font_match else ""
 
     vbox_w = 920
-    vbox_h = 475
+    vbox_h = 555
+    card_w = 872
+    card_x = 24
 
-    # Build progress bar segments for languages
-    bar_width_total = 478
+    # Build progress bar segments for languages (Wide 816px bar across Card 3)
+    bar_width_total = 816
     cur_x = 0
     bar_rects = []
     for idx, (lname, pct, col) in enumerate(languages):
         if pct <= 0:
             continue
         seg_w = max(1.5, round((pct / 100.0) * bar_width_total, 1))
-        # Clamp to avoid overflow
         if cur_x + seg_w > bar_width_total:
             seg_w = bar_width_total - cur_x
         rx_attr = ' rx="5"' if (idx == 0 or idx == len(languages)-1) else ''
@@ -256,29 +257,20 @@ def generate_telemetry_svg():
         cur_x += seg_w
     bar_svg = "\n      ".join(bar_rects)
 
-    # Build language breakdown grid with tighter, balanced spacing
-    col1_items = languages[0:3]
-    col2_items = languages[3:6]
-
+    # 3 Columns x 2 Rows for Languages Grid (Wide layout)
+    # Col 0: x=28, Col 1: x=316, Col 2: x=604
+    col_x_offsets = [28, 316, 604]
     lang_grid_lines = []
-    # Col 1 items (Row spacing 30px instead of 44px)
-    for idx, (lname, pct, col) in enumerate(col1_items):
-        y_pos = 84 + idx * 30
+    for idx, (lname, pct, col) in enumerate(languages):
+        col_idx = idx % 3
+        row_idx = idx // 3
+        bx = col_x_offsets[col_idx]
+        by = 82 + row_idx * 34
         pct_str = f"{pct:.2f}%" if pct > 0 else "0.0%"
-        lang_grid_lines.append(f'''<g transform="translate(26, {y_pos})">
+        lang_grid_lines.append(f'''<g transform="translate({bx}, {by})">
       <circle cx="5" cy="5" r="4.5" fill="{col}" />
       <text x="18" y="9" class="lang-name">{lname}</text>
-      <text x="210" y="9" class="lang-pct">{pct_str}</text>
-    </g>''')
-
-    # Col 2 items
-    for idx, (lname, pct, col) in enumerate(col2_items):
-        y_pos = 84 + idx * 30
-        pct_str = f"{pct:.2f}%" if pct > 0 else "0.0%"
-        lang_grid_lines.append(f'''<g transform="translate(280, {y_pos})">
-      <circle cx="5" cy="5" r="4.5" fill="{col}" />
-      <text x="18" y="9" class="lang-name">{lname}</text>
-      <text x="210" y="9" class="lang-pct">{pct_str}</text>
+      <text x="240" y="9" class="lang-pct">{pct_str}</text>
     </g>''')
 
     lang_grid_svg = "\n    ".join(lang_grid_lines)
@@ -320,14 +312,14 @@ def generate_telemetry_svg():
       }}
       .streak-curr-val {{
         font-family: 'Caacupe One', cursive, sans-serif;
-        font-size: 30px;
+        font-size: 28px;
         font-weight: 400;
         fill: #ffffff;
         text-anchor: middle;
       }}
       .streak-lbl {{
         font-family: 'Caacupe One', cursive, sans-serif;
-        font-size: 12px;
+        font-size: 12.5px;
         font-weight: 400;
         letter-spacing: 0.5px;
         fill: #7ee787;
@@ -335,7 +327,7 @@ def generate_telemetry_svg():
       }}
       .streak-curr-label {{
         font-family: 'Caacupe One', cursive, sans-serif;
-        font-size: 12px;
+        font-size: 12.5px;
         font-weight: 400;
         letter-spacing: 0.5px;
         fill: #00ff66;
@@ -343,7 +335,7 @@ def generate_telemetry_svg():
       }}
       .streak-sub {{
         font-family: 'Caacupe One', cursive, sans-serif;
-        font-size: 11px;
+        font-size: 11.5px;
         font-weight: 400;
         fill: #8b949e;
         text-anchor: middle;
@@ -479,14 +471,14 @@ def generate_telemetry_svg():
     <!-- 1. Nocturnal Emerald Sky Canvas -->
     <rect width="{vbox_w}" height="{vbox_h}" fill="url(#skyMasterGrad)" />
 
-    <!-- 2. Atmospheric Moonlight Glow (Centered on Moon at x:670, y:95) -->
-    <ellipse cx="670" cy="95" rx="240" ry="160" fill="url(#moonRadialHaze)" />
+    <!-- 2. Atmospheric Moonlight Glow (Centered on Moon at x:730, y:80) -->
+    <ellipse cx="730" cy="80" rx="240" ry="160" fill="url(#moonRadialHaze)" />
 
     <!-- 3. Ambient Radiant Moon Bloom -->
-    <path d="M 684,51 A 45 45 0 1 1 639,121 A 43 43 0 0 0 684,51 Z" fill="#34d399" opacity="0.48" filter="url(#moonAura)" />
+    <path d="M 744,36 A 45 45 0 1 1 699,106 A 43 43 0 0 0 744,36 Z" fill="#34d399" opacity="0.48" filter="url(#moonAura)" />
 
     <!-- 4. Celestial Emerald Crescent Moon -->
-    <path d="M 684,51 A 45 45 0 1 1 639,121 A 43 43 0 0 0 684,51 Z" fill="url(#naturalMoonGrad)" filter="url(#moonBloom)" stroke="rgba(244, 255, 247, 0.7)" stroke-width="0.8" />
+    <path d="M 744,36 A 45 45 0 1 1 699,106 A 43 43 0 0 0 744,36 Z" fill="url(#naturalMoonGrad)" filter="url(#moonBloom)" stroke="rgba(244, 255, 247, 0.7)" stroke-width="0.8" />
 
     <!-- 5. Diamond Sparkle Stars -->
     <g>
@@ -499,12 +491,12 @@ def generate_telemetry_svg():
       <circle cx="400" cy="132" r="1.8" fill="#f0fff4" />
 
       <!-- Sparkle 3 (Near Moon) -->
-      <path d="M 550,95 Q 550,105 553,105 Q 550,105 550,115 Q 550,105 547,105 Q 550,105 550,95 Z" fill="#d1fae5" filter="url(#sparkleGlow)" />
-      <circle cx="550" cy="105" r="1.8" fill="#f0fff4" />
+      <path d="M 600,85 Q 600,95 603,95 Q 600,95 600,105 Q 600,95 597,95 Q 600,95 600,85 Z" fill="#d1fae5" filter="url(#sparkleGlow)" />
+      <circle cx="600" cy="95" r="1.8" fill="#f0fff4" />
 
       <!-- Sparkle 4 (Right) -->
-      <path d="M 830,125 Q 830,135 833,135 Q 830,135 830,145 Q 830,135 827,135 Q 830,135 830,125 Z" fill="#a7f3d0" filter="url(#sparkleGlow)" />
-      <circle cx="830" cy="135" r="1.8" fill="#f0fff4" />
+      <path d="M 870,115 Q 870,125 873,125 Q 870,125 870,135 Q 870,125 867,125 Q 870,125 870,115 Z" fill="#a7f3d0" filter="url(#sparkleGlow)" />
+      <circle cx="870" cy="125" r="1.8" fill="#f0fff4" />
     </g>
 
     <!-- 6. Stardust Ambient Dots -->
@@ -526,34 +518,34 @@ def generate_telemetry_svg():
       <path d="M -40,160 C -15,125 45,120 80,142 C 115,115 178,115 214,142 C 250,128 290,150 304,178" fill="none" stroke="url(#cloudRimLight)" stroke-width="2" opacity="0.8" />
 
       <!-- Cloud Right -->
-      <path d="M 600,210 C 610,175 668,160 708,180 C 744,158 808,158 844,180 C 880,166 925,175 960,198 L 960,234 C 930,248 865,248 815,230 C 765,248 700,244 650,226 C 620,230 600,220 600,210 Z" fill="url(#cloudGradSoft2)" opacity="0.85" />
-      <path d="M 600,210 C 610,175 668,160 708,180 C 744,158 808,158 844,180 C 880,166 925,175 960,198" fill="none" stroke="url(#cloudRimLight)" stroke-width="2" opacity="0.85" />
+      <path d="M 640,190 C 650,155 708,140 748,160 C 784,138 848,138 884,160 C 920,146 965,155 1000,178 L 1000,214 C 970,228 905,228 855,210 C 805,228 740,224 690,206 C 660,210 640,200 640,190 Z" fill="url(#cloudGradSoft2)" opacity="0.85" />
+      <path d="M 640,190 C 650,155 708,140 748,160 C 784,138 848,138 884,160 C 920,146 965,155 1000,178" fill="none" stroke="url(#cloudRimLight)" stroke-width="2" opacity="0.85" />
 
       <!-- Horizon Cloud Center -->
-      <path d="M 150,400 C 190,365 250,360 290,382 C 335,350 410,345 455,378 C 500,350 575,350 620,378 C 660,360 715,370 750,396 C 778,418 745,440 688,448 C 570,462 270,462 150,400 Z" fill="url(#cloudGradCenter)" opacity="0.82" />
+      <path d="M 150,470 C 190,435 250,430 290,452 C 335,420 410,415 455,448 C 500,420 575,420 620,448 C 660,430 715,440 750,466 C 778,488 745,510 688,518 C 570,532 270,532 150,470 Z" fill="url(#cloudGradCenter)" opacity="0.82" />
     </g>
 
     <!-- 8. Distant Misty Rolling Hills -->
-    <path d="M -30,400 Q 200,340 480,400 T 950,375 L 950,485 L -30,485 Z" fill="url(#distantRidgeGrad)" />
-    <path d="M -30,400 Q 200,340 480,400 T 950,375" fill="none" stroke="rgba(134, 239, 172, 0.22)" stroke-width="1.2" />
+    <path d="M -30,470 Q 200,410 480,470 T 950,445 L 950,565 L -30,565 Z" fill="url(#distantRidgeGrad)" />
+    <path d="M -30,470 Q 200,410 480,470 T 950,445" fill="none" stroke="rgba(134, 239, 172, 0.22)" stroke-width="1.2" />
 
     <!-- 9. Mid Rolling Hills -->
-    <path d="M -30,425 Q 250,380 500,435 Q 710,395 950,420 L 950,485 L -30,485 Z" fill="url(#midRidgeGrad)" />
-    <path d="M -30,425 Q 250,380 500,435 Q 710,395 950,420" fill="none" stroke="rgba(110, 231, 183, 0.16)" stroke-width="1.4" />
+    <path d="M -30,495 Q 250,450 500,505 Q 710,465 950,490 L 950,565 L -30,565 Z" fill="url(#midRidgeGrad)" />
+    <path d="M -30,495 Q 250,450 500,505 Q 710,465 950,490" fill="none" stroke="rgba(110, 231, 183, 0.16)" stroke-width="1.4" />
 
     <!-- 10. Foreground Rolling Hills -->
-    <path d="M -30,450 Q 300,415 600,460 Q 780,430 950,463 L 950,485 L -30,485 Z" fill="url(#foreRidgeGrad)" />
+    <path d="M -30,520 Q 300,485 600,530 Q 780,500 950,533 L 950,565 L -30,565 Z" fill="url(#foreRidgeGrad)" />
 
     <!-- 11. Silhouette Pine Trees (Left & Right) -->
     <!-- Left Tree -->
-    <g transform="translate(45, 360) scale(0.55)">
+    <g transform="translate(45, 430) scale(0.6)">
       <rect x="180" y="140" width="12" height="50" fill="#010603" rx="2" />
       <polygon points="186,40 216,145 156,145" fill="#072011" />
       <polygon points="186,20 210,95 162,95" fill="#0b2c18" />
       <polygon points="186,0 204,55 168,55" fill="#0f3c21" />
     </g>
     <!-- Right Trees -->
-    <g transform="translate(830, 365) scale(0.5)">
+    <g transform="translate(830, 435) scale(0.55)">
       <rect x="100" y="140" width="10" height="45" fill="#010603" rx="2" />
       <polygon points="105,45 130,140 80,140" fill="#061c0e" />
       <polygon points="105,25 125,95 85,95" fill="#092514" />
@@ -573,122 +565,119 @@ def generate_telemetry_svg():
     <line x1="0" y1="20" x2="{vbox_w - 48}" y2="20" stroke="#164d27" stroke-width="1" stroke-opacity="0.6" />
   </g>
 
-  <!-- ==================== ROW 1: CARDS (STREAK + OVERALL STATS) ==================== -->
-  <!-- 1. STREAK STATS CARD (Enhanced Size) -->
-  <g transform="translate(24, 54)" filter="url(#cardShadow)">
-    <rect width="422" height="195" rx="12" fill="#040906" stroke="#164d27" stroke-width="1.5" />
+  <!-- ==================== STACKED CARD 1: STREAK & CONTRIBUTIONS ==================== -->
+  <g transform="translate({card_x}, 54)" filter="url(#cardShadow)">
+    <rect width="{card_w}" height="145" rx="12" fill="#040906" stroke="#164d27" stroke-width="1.5" />
     
-    <!-- Col 1: Total Contributions -->
-    <g transform="translate(70, 44)">
+    <!-- Col 1: Total Contributions (Center x=145) -->
+    <g transform="translate(145, 12)">
       <text x="0" y="44" class="streak-val">{total_contributions}</text>
-      <text x="0" y="74" class="streak-lbl">TOTAL</text>
-      <text x="0" y="88" class="streak-lbl">CONTRIBUTIONS</text>
-      <text x="0" y="110" class="streak-sub">Jul 7, 2025 &#8211; Present</text>
+      <text x="0" y="76" class="streak-lbl">TOTAL CONTRIBUTIONS</text>
+      <text x="0" y="102" class="streak-sub">Jul 7, 2025 &#8211; Present</text>
     </g>
 
     <!-- Vertical Divider 1 -->
-    <line x1="140" y1="20" x2="140" y2="175" stroke="#163d22" stroke-width="1" />
+    <line x1="290" y1="18" x2="290" y2="127" stroke="#163d22" stroke-width="1" />
 
-    <!-- Col 2: Current Streak Ring (Larger r=32) -->
-    <g transform="translate(211, 44)">
+    <!-- Col 2: Current Streak Ring (Center x=436) -->
+    <g transform="translate(436, 12)">
       <!-- SVG Ring -->
-      <circle cx="0" cy="24" r="32" stroke="#163d22" stroke-width="4" fill="none" />
-      <circle cx="0" cy="24" r="32" stroke="#00ff66" stroke-width="4" stroke-dasharray="201" stroke-dashoffset="201" stroke-linecap="round" fill="none" />
-      <text x="0" y="34" class="streak-curr-val">{current_streak}</text>
+      <circle cx="0" cy="30" r="28" stroke="#163d22" stroke-width="3.5" fill="none" />
+      <circle cx="0" cy="30" r="28" stroke="#00ff66" stroke-width="3.5" stroke-dasharray="176" stroke-dashoffset="176" stroke-linecap="round" fill="none" />
+      <text x="0" y="39" class="streak-curr-val">{current_streak}</text>
       
-      <text x="0" y="82" class="streak-curr-label">CURRENT STREAK</text>
-      <text x="0" y="108" class="streak-sub">{curr_streak_date}</text>
+      <text x="0" y="76" class="streak-curr-label">CURRENT STREAK</text>
+      <text x="0" y="102" class="streak-sub">{curr_streak_date}</text>
     </g>
 
     <!-- Vertical Divider 2 -->
-    <line x1="282" y1="20" x2="282" y2="175" stroke="#163d22" stroke-width="1" />
+    <line x1="582" y1="18" x2="582" y2="127" stroke="#163d22" stroke-width="1" />
 
-    <!-- Col 3: Longest Streak -->
-    <g transform="translate(352, 44)">
+    <!-- Col 3: Longest Streak (Center x=727) -->
+    <g transform="translate(727, 12)">
       <text x="0" y="44" class="streak-val">{longest_streak}</text>
-      <text x="0" y="82" class="streak-lbl">LONGEST STREAK</text>
-      <text x="0" y="108" class="streak-sub">{longest_range}</text>
+      <text x="0" y="76" class="streak-lbl">LONGEST STREAK</text>
+      <text x="0" y="102" class="streak-sub">{longest_range}</text>
     </g>
   </g>
 
-  <!-- 2. OVERALL STATS CARD -->
-  <g transform="translate(474, 54)" filter="url(#cardShadow)">
-    <rect width="422" height="195" rx="12" fill="#040906" stroke="#164d27" stroke-width="1.5" />
+  <!-- ==================== STACKED CARD 2: GITHUB OVERALL STATS ==================== -->
+  <g transform="translate({card_x}, 214)" filter="url(#cardShadow)">
+    <rect width="{card_w}" height="145" rx="12" fill="#040906" stroke="#164d27" stroke-width="1.5" />
     
-    <text x="24" y="32" class="card-title">Mohammed Sahil's GitHub Stats</text>
+    <text x="28" y="28" class="card-title">Mohammed Sahil's GitHub Stats</text>
 
-    <!-- Stats Items List -->
+    <!-- Left Column (3 items) -->
     <!-- Item 1: Total Stars -->
-    <g transform="translate(24, 62)">
-      <!-- Star Icon -->
+    <g transform="translate(36, 44)">
       <path d="M7 0.5 L8.8 4.2 L13 4.8 L9.9 7.8 L10.6 12 L7 10 L3.4 12 L4.1 7.8 L1 4.8 L5.2 4.2 Z" fill="#00ff66" />
       <text x="24" y="10" class="stat-lbl">Total Stars Earned:</text>
-      <text x="374" y="10" class="stat-num">{total_stars}</text>
+      <text x="360" y="10" class="stat-num">{total_stars}</text>
     </g>
 
     <!-- Item 2: Total Commits -->
-    <g transform="translate(24, 88)">
-      <!-- Clock/Commit Icon -->
+    <g transform="translate(36, 74)">
       <circle cx="7" cy="7" r="6" stroke="#00ff66" stroke-width="1.5" fill="none" />
       <path d="M7 3.5 L7 7 L9.5 8.5" stroke="#00ff66" stroke-width="1.5" fill="none" stroke-linecap="round" />
       <text x="24" y="11" class="stat-lbl">Total Commits:</text>
-      <text x="374" y="11" class="stat-num">{total_commits}</text>
+      <text x="360" y="11" class="stat-num">{total_commits}</text>
     </g>
 
     <!-- Item 3: Total PRs -->
-    <g transform="translate(24, 114)">
-      <!-- PR Icon -->
+    <g transform="translate(36, 104)">
       <circle cx="4" cy="3" r="2" fill="#00ff66" />
       <circle cx="4" cy="11" r="2" fill="#00ff66" />
       <circle cx="10" cy="7" r="2" fill="#00ff66" />
       <path d="M4 3 L4 11 M10 7 L10 5 C10 3.5 8 3.5 4 3.5" stroke="#00ff66" stroke-width="1.2" fill="none" />
       <text x="24" y="11" class="stat-lbl">Total PRs:</text>
-      <text x="374" y="11" class="stat-num">{total_prs}</text>
+      <text x="360" y="11" class="stat-num">{total_prs}</text>
     </g>
 
+    <!-- Center Subtle Divider -->
+    <line x1="436" y1="36" x2="436" y2="128" stroke="#163d22" stroke-width="1" />
+
+    <!-- Right Column (2 items) -->
     <!-- Item 4: Total Issues -->
-    <g transform="translate(24, 140)">
-      <!-- Issue Icon -->
+    <g transform="translate(476, 44)">
       <circle cx="7" cy="7" r="6" stroke="#00ff66" stroke-width="1.5" fill="none" />
       <circle cx="7" cy="7" r="1.5" fill="#00ff66" />
       <text x="24" y="11" class="stat-lbl">Total Issues:</text>
-      <text x="374" y="11" class="stat-num">{total_issues}</text>
+      <text x="360" y="11" class="stat-num">{total_issues}</text>
     </g>
 
     <!-- Item 5: Contributed to -->
-    <g transform="translate(24, 166)">
-      <!-- Repo Icon -->
+    <g transform="translate(476, 74)">
       <rect x="2" y="2" width="10" height="10" rx="1.5" stroke="#00ff66" stroke-width="1.3" fill="none" />
       <line x1="5" y1="2" x2="5" y2="12" stroke="#00ff66" stroke-width="1" />
       <text x="24" y="11" class="stat-lbl">Contributed to (Last year):</text>
-      <text x="374" y="11" class="stat-num">0</text>
+      <text x="360" y="11" class="stat-num">0</text>
     </g>
   </g>
 
-  <!-- ==================== ROW 2: MOST USED LANGUAGES CARD (Tight, Balanced, No Dead Space) ==================== -->
-  <g transform="translate(195, 268)" filter="url(#cardShadow)">
-    <rect width="530" height="180" rx="12" fill="#040906" stroke="#164d27" stroke-width="1.5" />
+  <!-- ==================== STACKED CARD 3: MOST USED LANGUAGES ==================== -->
+  <g transform="translate({card_x}, 374)" filter="url(#cardShadow)">
+    <rect width="{card_w}" height="150" rx="12" fill="#040906" stroke="#164d27" stroke-width="1.5" />
     
-    <text x="26" y="32" class="card-title-green">Most Used Languages</text>
+    <text x="28" y="28" class="card-title-green">Most Used Languages</text>
 
-    <!-- Multi-Segment Progress Bar -->
-    <g transform="translate(26, 48)">
+    <!-- Wide Multi-Segment Progress Bar -->
+    <g transform="translate(28, 44)">
       <!-- Track Background -->
-      <rect width="478" height="10" rx="5" fill="#0e2617" />
+      <rect width="{bar_width_total}" height="10" rx="5" fill="#0e2617" />
       {bar_svg}
     </g>
 
-    <!-- Language Grid Breakdown (2 Columns x 3 Rows, clean 30px spacing) -->
+    <!-- Language Grid Breakdown (3 Columns x 2 Rows) -->
     {lang_grid_svg}
   </g>
 </svg>"""
 
-    for fname in ["telemetry-cosmos-card.svg", "telemetry-cosmos-card-v1.svg", "telemetry-cosmos-card-v2.svg", "telemetry-cosmos-card-v3.svg", "telemetry-cosmos-card-v4.svg"]:
+    for fname in ["telemetry-cosmos-card.svg", "telemetry-cosmos-card-v1.svg", "telemetry-cosmos-card-v2.svg", "telemetry-cosmos-card-v3.svg", "telemetry-cosmos-card-v4.svg", "telemetry-cosmos-card-v5.svg"]:
         out_path = os.path.join(assets_dir, fname)
         with open(out_path, "w", encoding="utf-8") as f:
             f.write(svg_content)
     ET.fromstring(svg_content)
-    print("Generated & Validated: telemetry-cosmos-card.svg, v1..v4")
+    print("Generated & Validated: telemetry-cosmos-card.svg, v1..v5")
 
 if __name__ == "__main__":
     generate_telemetry_svg()
