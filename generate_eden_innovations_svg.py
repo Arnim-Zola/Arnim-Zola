@@ -99,7 +99,10 @@ def generate_eden_innovations_svg():
 
         item_y += 80
 
-    card_h = item_y + 6
+    last_line_y = 510 + 49 # 559
+    bar_y = 16
+    bar_h = (last_line_y + 1) - bar_y  # 560 - 16 = 544 (ends exactly with text)
+    card_h = last_line_y + 21          # 580 (balanced padding)
     total_svg_h = table_top + card_h + 4
 
     all_items_str = "\n\n".join(items_svg)
@@ -144,20 +147,20 @@ def generate_eden_innovations_svg():
   <g transform="translate(0, {table_top})">
     <rect x="0" y="0" width="{vbox_w}" height="{card_h}" rx="10" fill="#040906" stroke="#163d22" stroke-width="1.5" />
     
-    <!-- Left Neon Accent Bar -->
-    <rect x="0" y="10" width="4" height="{card_h - 20}" rx="2" fill="#00ff66" />
+    <!-- Left Neon Accent Bar (Aligns exactly with text block) -->
+    <rect x="0" y="{bar_y}" width="4" height="{bar_h}" rx="2" fill="#00ff66" />
 
     <!-- Items Content -->
 {all_items_str}
   </g>
 </svg>"""
 
-    for fname in ["eden-innovations.svg", "eden-innovations-v2.svg", "eden-innovations-v3.svg", "eden-innovations-v4.svg", "eden-innovations-v5.svg", "eden-innovations-v6.svg"]:
+    for fname in ["eden-innovations.svg", "eden-innovations-v2.svg", "eden-innovations-v3.svg", "eden-innovations-v4.svg", "eden-innovations-v5.svg", "eden-innovations-v6.svg", "eden-innovations-v7.svg"]:
         out_path = os.path.join(assets_dir, fname)
         with open(out_path, "w", encoding="utf-8") as f:
             f.write(svg_content)
     ET.fromstring(svg_content)
-    print(f"Generated & Validated: eden-innovations.svg, v2..v6")
+    print(f"Generated & Validated: eden-innovations.svg, v2..v7")
 
 if __name__ == "__main__":
     generate_eden_innovations_svg()
