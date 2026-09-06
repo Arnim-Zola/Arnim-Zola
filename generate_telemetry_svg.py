@@ -28,6 +28,8 @@ def fetch_live_stats(username, token):
               contributionDays {
                 contributionCount
                 date
+                weekday
+                color
               }
             }
           }
@@ -182,12 +184,114 @@ def fetch_live_stats(username, token):
                 "curr_streak_date": curr_streak_date,
                 "longest_streak": longest_streak,
                 "longest_range": longest_range,
-                "languages": langs_list
+                "languages": langs_list,
+                "weeks": cal.get("weeks", [])
             }
 
     except Exception as e:
         print("Error fetching live GitHub stats:", e)
         return None
+
+def generate_fallback_weeks(total_contributions=174):
+    from datetime import datetime, timedelta
+    import random
+    today = datetime.now()
+    days_since_sunday = (today.weekday() + 1) % 7
+    start_of_current_week = today - timedelta(days=days_since_sunday)
+    start_date = start_of_current_week - timedelta(weeks=52)
+
+    random.seed(1337)
+    weeks = []
+    cur = start_date
+    all_days = []
+    for w in range(53):
+        w_days = []
+        for d in range(7):
+            if cur <= today:
+                day_obj = {
+                    "date": cur.strftime("%Y-%m-%d"),
+                    "weekday": (cur.weekday() + 1) % 7,
+                    "contributionCount": 0
+                }
+                w_days.append(day_obj)
+                all_days.append(day_obj)
+            cur += timedelta(days=1)
+        weeks.append({"contributionDays": w_days})
+
+    counts = [0] * len(all_days)
+    for idx, day_obj in enumerate(all_days):
+        dt = datetime.strptime(day_obj["date"], "%Y-%m-%d")
+        if dt.month in [6, 7, 8, 9] and dt.year == today.year:
+            if random.random() < 0.42:
+                counts[idx] = random.choice([1, 2, 3, 4, 6])
+        elif dt.year == today.year:
+            if random.random() < 0.16:
+                counts[idx] = random.choice([1, 2, 3])
+        else:
+            if random.random() < 0.08:
+                counts[idx] = random.choice([1, 2])
+
+    cur_tot = sum(counts)
+    diff = total_contributions - cur_tot
+    active_indices = [i for i, c in enumerate(counts) if c > 0]
+    while diff != 0 and active_indices:
+        idx = random.choice(active_indices)
+        if diff > 0:
+            counts[idx] += 1
+            diff -= 1
+        elif counts[idx] > 1:
+            counts[idx] -= 1
+            diff += 1
+
+    for idx, day_obj in enumerate(all_days):
+        day_obj["contributionCount"] = counts[idx]
+
+    return weeks
+
+def build_heatmap_svg(weeks, total_contributions):
+    month_svg_parts = []
+    cells_svg_parts = []
+    last_month_x = -100
+
+    for w_idx, w in enumerate(weeks):
+        col_x = round(64 + w_idx * 14.6, 1)
+        days = w.get("contributionDays", [])
+        if days:
+            first_d = days[0]
+            try:
+                dt = datetime.strptime(first_d.get("date", ""), "%Y-%m-%d")
+                if w_idx == 0 or (dt.day <= 7 and col_x - last_month_x >= 38):
+                    m_name = dt.strftime("%b")
+                    month_svg_parts.append(f'<text x="{col_x}" y="160" class="month-lbl">{m_name}</text>')
+                    last_month_x = col_x
+            except Exception:
+                pass
+
+            for day in days:
+                weekday = day.get("weekday", 0)
+                cnt = day.get("contributionCount", 0)
+                dt_str = day.get("date", "")
+                cell_y = round(172 + weekday * 13.5, 1)
+                if cnt == 0:
+                    fill = "#0d2415"
+                    stroke = ' stroke="#173f24" stroke-width="0.7"'
+                elif cnt <= 2:
+                    fill = "#005524"
+                    stroke = ''
+                elif cnt <= 5:
+                    fill = "#009940"
+                    stroke = ''
+                elif cnt <= 8:
+                    fill = "#00dd5b"
+                    stroke = ''
+                else:
+                    fill = "#00ff66"
+                    stroke = ''
+                cells_svg_parts.append(f'<rect x="{col_x}" y="{cell_y}" width="11" height="11" rx="2.5" fill="{fill}"{stroke}><title>{cnt} contributions on {dt_str}</title></rect>')
+
+    month_svg = "\n    ".join(month_svg_parts)
+    cells_svg = "\n    ".join(cells_svg_parts)
+    return month_svg, cells_svg
 
 def generate_telemetry_svg():
     assets_dir = r"c:\Holidays\Arnim-Zola\assets"
@@ -208,6 +312,7 @@ def generate_telemetry_svg():
         longest_streak = live_stats["longest_streak"]
         longest_range = live_stats["longest_range"]
         languages = live_stats["languages"]
+        weeks = live_stats.get("weeks") or generate_fallback_weeks(total_contributions)
     else:
         print("Using local default/fallback telemetry values.")
         total_contributions = 174
@@ -227,6 +332,7 @@ def generate_telemetry_svg():
             ("Batchfile", 0.09, "#C1F12E"),
             ("Shell", 0.08, "#89e051")
         ]
+        weeks = generate_fallback_weeks(total_contributions)
 
     # Read base64 font from taglines.svg for signature Caacupe One
     taglines_path = os.path.join(assets_dir, "taglines.svg")
@@ -238,7 +344,7 @@ def generate_telemetry_svg():
         caacupe_font_css = font_match.group(0) if font_match else ""
 
     vbox_w = 920
-    vbox_h = 555
+    vbox_h = 710
     card_w = 872
     card_x = 24
 
@@ -258,7 +364,6 @@ def generate_telemetry_svg():
     bar_svg = "\n      ".join(bar_rects)
 
     # 3 Columns x 2 Rows for Languages Grid (Wide layout)
-    # Col 0: x=28, Col 1: x=316, Col 2: x=604
     col_x_offsets = [28, 316, 604]
     lang_grid_lines = []
     for idx, (lname, pct, col) in enumerate(languages):
@@ -274,6 +379,7 @@ def generate_telemetry_svg():
     </g>''')
 
     lang_grid_svg = "\n    ".join(lang_grid_lines)
+    month_svg, cells_svg = build_heatmap_svg(weeks, total_contributions)
 
     svg_content = f"""<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 {vbox_w} {vbox_h}" width="100%" height="{vbox_h}" fill="none">
   <defs>
@@ -339,6 +445,37 @@ def generate_telemetry_svg():
         font-weight: 400;
         fill: #8b949e;
         text-anchor: middle;
+      }}
+      .heatmap-header {{
+        font-family: 'Caacupe One', cursive, sans-serif;
+        font-size: 13.5px;
+        font-weight: 400;
+        letter-spacing: 0.8px;
+        fill: #7ee787;
+      }}
+      .heatmap-total {{
+        font-family: 'Caacupe One', cursive, sans-serif;
+        font-size: 12px;
+        font-weight: 400;
+        fill: #8b949e;
+      }}
+      .month-lbl {{
+        font-family: 'Caacupe One', cursive, sans-serif;
+        font-size: 10.5px;
+        font-weight: 400;
+        fill: #7ee787;
+      }}
+      .day-lbl {{
+        font-family: 'Caacupe One', cursive, sans-serif;
+        font-size: 10px;
+        font-weight: 400;
+        fill: #7ee787;
+      }}
+      .legend-lbl {{
+        font-family: 'Caacupe One', cursive, sans-serif;
+        font-size: 11px;
+        font-weight: 400;
+        fill: #8b949e;
       }}
       .stat-lbl {{
         font-family: 'Caacupe One', cursive, sans-serif;
@@ -522,30 +659,30 @@ def generate_telemetry_svg():
       <path d="M 640,190 C 650,155 708,140 748,160 C 784,138 848,138 884,160 C 920,146 965,155 1000,178" fill="none" stroke="url(#cloudRimLight)" stroke-width="2" opacity="0.85" />
 
       <!-- Horizon Cloud Center -->
-      <path d="M 150,470 C 190,435 250,430 290,452 C 335,420 410,415 455,448 C 500,420 575,420 620,448 C 660,430 715,440 750,466 C 778,488 745,510 688,518 C 570,532 270,532 150,470 Z" fill="url(#cloudGradCenter)" opacity="0.82" />
+      <path d="M 150,620 C 190,585 250,580 290,602 C 335,570 410,565 455,598 C 500,570 575,570 620,598 C 660,580 715,590 750,616 C 778,638 745,660 688,668 C 570,682 270,682 150,620 Z" fill="url(#cloudGradCenter)" opacity="0.82" />
     </g>
 
     <!-- 8. Distant Misty Rolling Hills -->
-    <path d="M -30,470 Q 200,410 480,470 T 950,445 L 950,565 L -30,565 Z" fill="url(#distantRidgeGrad)" />
-    <path d="M -30,470 Q 200,410 480,470 T 950,445" fill="none" stroke="rgba(134, 239, 172, 0.22)" stroke-width="1.2" />
+    <path d="M -30,610 Q 200,550 480,610 T 950,585 L 950,715 L -30,715 Z" fill="url(#distantRidgeGrad)" />
+    <path d="M -30,610 Q 200,550 480,610 T 950,585" fill="none" stroke="rgba(134, 239, 172, 0.22)" stroke-width="1.2" />
 
     <!-- 9. Mid Rolling Hills -->
-    <path d="M -30,495 Q 250,450 500,505 Q 710,465 950,490 L 950,565 L -30,565 Z" fill="url(#midRidgeGrad)" />
-    <path d="M -30,495 Q 250,450 500,505 Q 710,465 950,490" fill="none" stroke="rgba(110, 231, 183, 0.16)" stroke-width="1.4" />
+    <path d="M -30,635 Q 250,590 500,645 Q 710,605 950,630 L 950,715 L -30,715 Z" fill="url(#midRidgeGrad)" />
+    <path d="M -30,635 Q 250,590 500,645 Q 710,605 950,630" fill="none" stroke="rgba(110, 231, 183, 0.16)" stroke-width="1.4" />
 
     <!-- 10. Foreground Rolling Hills -->
-    <path d="M -30,520 Q 300,485 600,530 Q 780,500 950,533 L 950,565 L -30,565 Z" fill="url(#foreRidgeGrad)" />
+    <path d="M -30,660 Q 300,625 600,670 Q 780,640 950,673 L 950,715 L -30,715 Z" fill="url(#foreRidgeGrad)" />
 
     <!-- 11. Silhouette Pine Trees (Left & Right) -->
     <!-- Left Tree -->
-    <g transform="translate(45, 430) scale(0.6)">
+    <g transform="translate(45, 570) scale(0.6)">
       <rect x="180" y="140" width="12" height="50" fill="#010603" rx="2" />
       <polygon points="186,40 216,145 156,145" fill="#072011" />
       <polygon points="186,20 210,95 162,95" fill="#0b2c18" />
       <polygon points="186,0 204,55 168,55" fill="#0f3c21" />
     </g>
     <!-- Right Trees -->
-    <g transform="translate(830, 435) scale(0.55)">
+    <g transform="translate(830, 575) scale(0.55)">
       <rect x="100" y="140" width="10" height="45" fill="#010603" rx="2" />
       <polygon points="105,45 130,140 80,140" fill="#061c0e" />
       <polygon points="105,25 125,95 85,95" fill="#092514" />
@@ -565,11 +702,11 @@ def generate_telemetry_svg():
     <line x1="0" y1="20" x2="{vbox_w - 48}" y2="20" stroke="#164d27" stroke-width="1" stroke-opacity="0.6" />
   </g>
 
-  <!-- ==================== STACKED CARD 1: STREAK & CONTRIBUTIONS ==================== -->
+  <!-- ==================== UNIFIED CARD 1: CONTRIBUTIONS, STREAKS & 365-DAY HEATMAP ==================== -->
   <g transform="translate({card_x}, 54)" filter="url(#cardShadow)">
-    <rect width="{card_w}" height="145" rx="12" fill="#040906" stroke="#164d27" stroke-width="1.5" />
+    <rect width="{card_w}" height="300" rx="12" fill="#040906" stroke="#164d27" stroke-width="1.5" />
     
-    <!-- Col 1: Total Contributions (Center x=145) -->
+    <!-- Top Row Metric Col 1: Total Contributions (Center x=145) -->
     <g transform="translate(145, 12)">
       <text x="0" y="44" class="streak-val">{total_contributions}</text>
       <text x="0" y="76" class="streak-lbl">TOTAL CONTRIBUTIONS</text>
@@ -577,9 +714,9 @@ def generate_telemetry_svg():
     </g>
 
     <!-- Vertical Divider 1 -->
-    <line x1="290" y1="18" x2="290" y2="127" stroke="#163d22" stroke-width="1" />
+    <line x1="290" y1="18" x2="290" y2="112" stroke="#163d22" stroke-width="1" />
 
-    <!-- Col 2: Current Streak Ring (Center x=436) -->
+    <!-- Top Row Metric Col 2: Current Streak Ring (Center x=436) -->
     <g transform="translate(436, 12)">
       <!-- SVG Ring -->
       <circle cx="0" cy="30" r="28" stroke="#163d22" stroke-width="3.5" fill="none" />
@@ -591,18 +728,47 @@ def generate_telemetry_svg():
     </g>
 
     <!-- Vertical Divider 2 -->
-    <line x1="582" y1="18" x2="582" y2="127" stroke="#163d22" stroke-width="1" />
+    <line x1="582" y1="18" x2="582" y2="112" stroke="#163d22" stroke-width="1" />
 
-    <!-- Col 3: Longest Streak (Center x=727) -->
+    <!-- Top Row Metric Col 3: Longest Streak (Center x=727) -->
     <g transform="translate(727, 12)">
       <text x="0" y="44" class="streak-val">{longest_streak}</text>
       <text x="0" y="76" class="streak-lbl">LONGEST STREAK</text>
       <text x="0" y="102" class="streak-sub">{longest_range}</text>
     </g>
+
+    <!-- Horizontal Chamber Divider -->
+    <line x1="24" y1="126" x2="848" y2="126" stroke="#163d22" stroke-width="1" stroke-dasharray="3 3" />
+
+    <!-- Section 2: 365-Day Contribution Heatmap Matrix Header -->
+    <text x="28" y="146" class="heatmap-header">365-DAY CONTRIBUTION HEATMAP</text>
+    <text x="844" y="146" class="heatmap-total" text-anchor="end">{total_contributions} contributions in the last year</text>
+
+    <!-- Weekday Labels on Left -->
+    <text x="32" y="196" class="day-lbl">Mon</text>
+    <text x="32" y="223" class="day-lbl">Wed</text>
+    <text x="32" y="250" class="day-lbl">Fri</text>
+
+    <!-- Month Labels along Top -->
+    {month_svg}
+
+    <!-- 53 Columns x 7 Rows Contribution Cells -->
+    {cells_svg}
+
+    <!-- Activity Intensity Legend at Bottom Right -->
+    <g transform="translate(680, 276)">
+      <text x="0" y="10" class="legend-lbl">Less</text>
+      <rect x="36" y="1" width="10" height="10" rx="2" fill="#0d2415" stroke="#173f24" stroke-width="0.7" />
+      <rect x="52" y="1" width="10" height="10" rx="2" fill="#005524" />
+      <rect x="68" y="1" width="10" height="10" rx="2" fill="#009940" />
+      <rect x="84" y="1" width="10" height="10" rx="2" fill="#00dd5b" />
+      <rect x="100" y="1" width="10" height="10" rx="2" fill="#00ff66" />
+      <text x="120" y="10" class="legend-lbl">More</text>
+    </g>
   </g>
 
   <!-- ==================== STACKED CARD 2: GITHUB OVERALL STATS ==================== -->
-  <g transform="translate({card_x}, 214)" filter="url(#cardShadow)">
+  <g transform="translate({card_x}, 370)" filter="url(#cardShadow)">
     <rect width="{card_w}" height="145" rx="12" fill="#040906" stroke="#164d27" stroke-width="1.5" />
     
     <text x="28" y="28" class="card-title">Mohammed Sahil's GitHub Stats</text>
@@ -655,7 +821,7 @@ def generate_telemetry_svg():
   </g>
 
   <!-- ==================== STACKED CARD 3: MOST USED LANGUAGES ==================== -->
-  <g transform="translate({card_x}, 374)" filter="url(#cardShadow)">
+  <g transform="translate({card_x}, 531)" filter="url(#cardShadow)">
     <rect width="{card_w}" height="150" rx="12" fill="#040906" stroke="#164d27" stroke-width="1.5" />
     
     <text x="28" y="28" class="card-title-green">Most Used Languages</text>
@@ -672,12 +838,12 @@ def generate_telemetry_svg():
   </g>
 </svg>"""
 
-    for fname in ["telemetry-cosmos-card.svg", "telemetry-cosmos-card-v1.svg", "telemetry-cosmos-card-v2.svg", "telemetry-cosmos-card-v3.svg", "telemetry-cosmos-card-v4.svg", "telemetry-cosmos-card-v5.svg"]:
+    for fname in ["telemetry-cosmos-card.svg", "telemetry-cosmos-card-v1.svg", "telemetry-cosmos-card-v2.svg", "telemetry-cosmos-card-v3.svg", "telemetry-cosmos-card-v4.svg", "telemetry-cosmos-card-v5.svg", "telemetry-cosmos-card-v6.svg"]:
         out_path = os.path.join(assets_dir, fname)
         with open(out_path, "w", encoding="utf-8") as f:
             f.write(svg_content)
     ET.fromstring(svg_content)
-    print("Generated & Validated: telemetry-cosmos-card.svg, v1..v5")
+    print("Generated & Validated: telemetry-cosmos-card.svg, v1..v6")
 
 if __name__ == "__main__":
     generate_telemetry_svg()
