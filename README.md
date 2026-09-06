@@ -55,12 +55,7 @@
 
 <img src="assets/heading-secondary.svg?v=3.0" alt="SECONDARY ARSENAL &amp; CREATIVE WEBGL LABS" width="100%" />
 
-| Project & Domain | Architecture & Systems Highlights | Core Stack | Source Code |
-| :--- | :--- | :--- | :--- |
-| **CampusCart**<br/>`Campus Logistics` | Standing in a 40-person line at 8:55 AM just to print two pages before submission deadline? Absolutely not. CampusCart kills the campus queue forever with an instantaneous zero-queue utility powered by client-side **PDF.js** page parsing & dynamic pricing calculus, 3s automated polling queues via **Django REST**, and real-time vendor ticketing dashboards in **Next.js 14** + **PostgreSQL**. | `Next.js 14` `Django REST` `PostgreSQL` `PDF.js` | [Arnim-Zola/CampusCart](https://github.com/Arnim-Zola/CampusCart) |
-| **Zemo**<br/>`E-Commerce Intel` | That "50% OFF Limited Deal" with 4.8 stars written by bots? We called its bluff. Zemo is an autonomous radar built to expose fake hype and predatory price hikes by automating headless **Playwright** scraping across dynamic DOMs, synthesizing 100+ raw customer reviews into structured sentiment vectors via **Meta Llama 3 8B**, and plotting historical price trends with **Plotly.js**. | `Python` `Playwright` `Meta Llama 3` `FastAPI` `Plotly.js` | [Arnim-Zola/Zemo](https://github.com/Arnim-Zola/Zemo) |
-| **Brainiac**<br/>`Cognitive AI` | Ever wondered what 3 AM caffeine-fueled burnout actually looks like inside your head? Brainiac renders your brain's cognitive chaos into a living 3D simulation, featuring an interactive **@react-three/fiber** brain cortex mesh, computing 30-factor psychometric scoring vectors via **PyTorch**, and generating personalized AI improvement protocols. | `React 18` `@react-three/fiber` `Three.js` `FastAPI` `PyTorch` | [Arnim-Zola/Brainiac](https://github.com/Arnim-Zola/Brainiac) |
-| **Quantum OS**<br/>`Interactive Portfolio` | Why should developer portfolios look like another generic resume template from 2015? Quantum OS turns my personal portfolio into a full-blown sci-fi cybernetic desktop operating system, powered by custom GPU **GLSL fragment shaders** locked at 60FPS, **Web Audio API** synthesis for real-time acoustic feedback, and a streaming edge AI terminal shell. | `Next.js 15` `React 19` `Three.js` `GLSL Shaders` `Web Audio` | [Arnim-Zola/Portfolio](https://github.com/Arnim-Zola/Portfolio)<br/>*(Active Build)* |
+<img src="assets/secondary-projects-table-v1.svg" width="100%" alt="Secondary Arsenal &amp; Creative WebGL Labs" />
 
 <img src="assets/green-divider.svg" width="100%" alt="---" />
 
