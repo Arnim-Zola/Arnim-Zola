@@ -65,7 +65,7 @@ def generate_eden_pipeline_table_svg():
                 ('Synchronizes spoken words with on-screen visual text at the exact',),
                 ('millisecond so every claim is tied to its precise visual context.',)
             ],
-            "badges": [[("Cross-Modal Sync", 126)], [("FFmpeg", 64), ("Asyncio", 64)]]
+            "badges": [[("Cross-Modal", 88), ("FFmpeg", 62)], [("Temporal Sync", 94), ("Asyncio", 62)]]
         },
         {
             "stage": "Stage 04",
@@ -74,7 +74,7 @@ def generate_eden_pipeline_table_svg():
                 ('Autonomous AI agents query live news search APIs and cross-check',),
                 ('verified knowledge bases using sub-120ms <tspan class="hi">pgvector</tspan> retrieval.',)
             ],
-            "badges": [[("Multi-Agent RAG", 122)], [("pgvector", 70)]]
+            "badges": [[("Multi-Agent RAG", 122)], [("pgvector", 70), ("LangChain", 78)]]
         },
         {
             "stage": "Stage 05",

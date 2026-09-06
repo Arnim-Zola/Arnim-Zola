@@ -157,16 +157,20 @@
     <text x="319" y="440" class="desc-text">Synchronizes spoken words with on-screen visual text at the exact</text>
       <text x="319" y="466" class="desc-text">millisecond so every claim is tied to its precise visual context.</text>
     <g transform="translate(730, 424)">
-        <rect width="126" height="26" rx="6" class="badge-bg" />
-        <text x="63.0" y="17.5" class="badge-text">Cross-Modal Sync</text>
+        <rect width="88" height="26" rx="6" class="badge-bg" />
+        <text x="44.0" y="17.5" class="badge-text">Cross-Modal</text>
+      </g>
+      <g transform="translate(824, 424)">
+        <rect width="62" height="26" rx="6" class="badge-bg" />
+        <text x="31.0" y="17.5" class="badge-text">FFmpeg</text>
       </g>
       <g transform="translate(730, 458)">
-        <rect width="64" height="26" rx="6" class="badge-bg" />
-        <text x="32.0" y="17.5" class="badge-text">FFmpeg</text>
+        <rect width="94" height="26" rx="6" class="badge-bg" />
+        <text x="47.0" y="17.5" class="badge-text">Temporal Sync</text>
       </g>
-      <g transform="translate(800, 458)">
-        <rect width="64" height="26" rx="6" class="badge-bg" />
-        <text x="32.0" y="17.5" class="badge-text">Asyncio</text>
+      <g transform="translate(830, 458)">
+        <rect width="62" height="26" rx="6" class="badge-bg" />
+        <text x="31.0" y="17.5" class="badge-text">Asyncio</text>
       </g>
   </g>
 
@@ -183,6 +187,10 @@
       <g transform="translate(730, 562)">
         <rect width="70" height="26" rx="6" class="badge-bg" />
         <text x="35.0" y="17.5" class="badge-text">pgvector</text>
+      </g>
+      <g transform="translate(806, 562)">
+        <rect width="78" height="26" rx="6" class="badge-bg" />
+        <text x="39.0" y="17.5" class="badge-text">LangChain</text>
       </g>
   </g>
 
