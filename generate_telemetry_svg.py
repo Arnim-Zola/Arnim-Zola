@@ -238,7 +238,7 @@ def generate_telemetry_svg():
         caacupe_font_css = font_match.group(0) if font_match else ""
 
     vbox_w = 920
-    vbox_h = 550
+    vbox_h = 475
 
     # Build progress bar segments for languages
     bar_width_total = 478
@@ -256,14 +256,14 @@ def generate_telemetry_svg():
         cur_x += seg_w
     bar_svg = "\n      ".join(bar_rects)
 
-    # Build language breakdown grid
+    # Build language breakdown grid with tighter, balanced spacing
     col1_items = languages[0:3]
     col2_items = languages[3:6]
 
     lang_grid_lines = []
-    # Col 1 items
+    # Col 1 items (Row spacing 30px instead of 44px)
     for idx, (lname, pct, col) in enumerate(col1_items):
-        y_pos = 96 + idx * 44
+        y_pos = 84 + idx * 30
         pct_str = f"{pct:.2f}%" if pct > 0 else "0.0%"
         lang_grid_lines.append(f'''<g transform="translate(26, {y_pos})">
       <circle cx="5" cy="5" r="4.5" fill="{col}" />
@@ -273,7 +273,7 @@ def generate_telemetry_svg():
 
     # Col 2 items
     for idx, (lname, pct, col) in enumerate(col2_items):
-        y_pos = 96 + idx * 44
+        y_pos = 84 + idx * 30
         pct_str = f"{pct:.2f}%" if pct > 0 else "0.0%"
         lang_grid_lines.append(f'''<g transform="translate(280, {y_pos})">
       <circle cx="5" cy="5" r="4.5" fill="{col}" />
@@ -312,7 +312,7 @@ def generate_telemetry_svg():
       }}
       .streak-val {{
         font-family: 'Caacupe One', cursive, sans-serif;
-        font-size: 30px;
+        font-size: 38px;
         font-weight: 400;
         letter-spacing: 0.5px;
         fill: #ffffff;
@@ -320,7 +320,7 @@ def generate_telemetry_svg():
       }}
       .streak-curr-val {{
         font-family: 'Caacupe One', cursive, sans-serif;
-        font-size: 24px;
+        font-size: 30px;
         font-weight: 400;
         fill: #ffffff;
         text-anchor: middle;
@@ -530,30 +530,30 @@ def generate_telemetry_svg():
       <path d="M 600,210 C 610,175 668,160 708,180 C 744,158 808,158 844,180 C 880,166 925,175 960,198" fill="none" stroke="url(#cloudRimLight)" stroke-width="2" opacity="0.85" />
 
       <!-- Horizon Cloud Center -->
-      <path d="M 150,440 C 190,405 250,400 290,422 C 335,390 410,385 455,418 C 500,390 575,390 620,418 C 660,400 715,410 750,436 C 778,458 745,480 688,488 C 570,502 270,502 150,440 Z" fill="url(#cloudGradCenter)" opacity="0.82" />
+      <path d="M 150,400 C 190,365 250,360 290,382 C 335,350 410,345 455,378 C 500,350 575,350 620,378 C 660,360 715,370 750,396 C 778,418 745,440 688,448 C 570,462 270,462 150,400 Z" fill="url(#cloudGradCenter)" opacity="0.82" />
     </g>
 
     <!-- 8. Distant Misty Rolling Hills -->
-    <path d="M -30,470 Q 200,405 480,465 T 950,440 L 950,560 L -30,560 Z" fill="url(#distantRidgeGrad)" />
-    <path d="M -30,470 Q 200,405 480,465 T 950,440" fill="none" stroke="rgba(134, 239, 172, 0.22)" stroke-width="1.2" />
+    <path d="M -30,400 Q 200,340 480,400 T 950,375 L 950,485 L -30,485 Z" fill="url(#distantRidgeGrad)" />
+    <path d="M -30,400 Q 200,340 480,400 T 950,375" fill="none" stroke="rgba(134, 239, 172, 0.22)" stroke-width="1.2" />
 
     <!-- 9. Mid Rolling Hills -->
-    <path d="M -30,500 Q 250,455 500,510 Q 710,470 950,495 L 950,560 L -30,560 Z" fill="url(#midRidgeGrad)" />
-    <path d="M -30,500 Q 250,455 500,510 Q 710,470 950,495" fill="none" stroke="rgba(110, 231, 183, 0.16)" stroke-width="1.4" />
+    <path d="M -30,425 Q 250,380 500,435 Q 710,395 950,420 L 950,485 L -30,485 Z" fill="url(#midRidgeGrad)" />
+    <path d="M -30,425 Q 250,380 500,435 Q 710,395 950,420" fill="none" stroke="rgba(110, 231, 183, 0.16)" stroke-width="1.4" />
 
     <!-- 10. Foreground Rolling Hills -->
-    <path d="M -30,530 Q 300,495 600,545 Q 780,515 950,548 L 950,560 L -30,560 Z" fill="url(#foreRidgeGrad)" />
+    <path d="M -30,450 Q 300,415 600,460 Q 780,430 950,463 L 950,485 L -30,485 Z" fill="url(#foreRidgeGrad)" />
 
     <!-- 11. Silhouette Pine Trees (Left & Right) -->
     <!-- Left Tree -->
-    <g transform="translate(45, 430) scale(0.6)">
+    <g transform="translate(45, 360) scale(0.55)">
       <rect x="180" y="140" width="12" height="50" fill="#010603" rx="2" />
       <polygon points="186,40 216,145 156,145" fill="#072011" />
       <polygon points="186,20 210,95 162,95" fill="#0b2c18" />
       <polygon points="186,0 204,55 168,55" fill="#0f3c21" />
     </g>
     <!-- Right Trees -->
-    <g transform="translate(830, 435) scale(0.55)">
+    <g transform="translate(830, 365) scale(0.5)">
       <rect x="100" y="140" width="10" height="45" fill="#010603" rx="2" />
       <polygon points="105,45 130,140 80,140" fill="#061c0e" />
       <polygon points="105,25 125,95 85,95" fill="#092514" />
@@ -574,45 +574,45 @@ def generate_telemetry_svg():
   </g>
 
   <!-- ==================== ROW 1: CARDS (STREAK + OVERALL STATS) ==================== -->
-  <!-- 1. STREAK STATS CARD -->
-  <g transform="translate(24, 56)" filter="url(#cardShadow)">
+  <!-- 1. STREAK STATS CARD (Enhanced Size) -->
+  <g transform="translate(24, 54)" filter="url(#cardShadow)">
     <rect width="422" height="195" rx="12" fill="#040906" stroke="#164d27" stroke-width="1.5" />
     
     <!-- Col 1: Total Contributions -->
-    <g transform="translate(70, 48)">
-      <text x="0" y="38" class="streak-val">{total_contributions}</text>
-      <text x="0" y="68" class="streak-lbl">TOTAL</text>
-      <text x="0" y="82" class="streak-lbl">CONTRIBUTIONS</text>
-      <text x="0" y="104" class="streak-sub">Jul 7, 2025 &#8211; Present</text>
+    <g transform="translate(70, 44)">
+      <text x="0" y="44" class="streak-val">{total_contributions}</text>
+      <text x="0" y="74" class="streak-lbl">TOTAL</text>
+      <text x="0" y="88" class="streak-lbl">CONTRIBUTIONS</text>
+      <text x="0" y="110" class="streak-sub">Jul 7, 2025 &#8211; Present</text>
     </g>
 
     <!-- Vertical Divider 1 -->
-    <line x1="140" y1="24" x2="140" y2="170" stroke="#163d22" stroke-width="1" />
+    <line x1="140" y1="20" x2="140" y2="175" stroke="#163d22" stroke-width="1" />
 
-    <!-- Col 2: Current Streak Ring -->
-    <g transform="translate(211, 48)">
+    <!-- Col 2: Current Streak Ring (Larger r=32) -->
+    <g transform="translate(211, 44)">
       <!-- SVG Ring -->
-      <circle cx="0" cy="24" r="26" stroke="#163d22" stroke-width="3.5" fill="none" />
-      <circle cx="0" cy="24" r="26" stroke="#00ff66" stroke-width="3.5" stroke-dasharray="163" stroke-dashoffset="163" stroke-linecap="round" fill="none" />
-      <text x="0" y="32" class="streak-val">{current_streak}</text>
+      <circle cx="0" cy="24" r="32" stroke="#163d22" stroke-width="4" fill="none" />
+      <circle cx="0" cy="24" r="32" stroke="#00ff66" stroke-width="4" stroke-dasharray="201" stroke-dashoffset="201" stroke-linecap="round" fill="none" />
+      <text x="0" y="34" class="streak-curr-val">{current_streak}</text>
       
-      <text x="0" y="78" class="streak-lbl" fill="#00ff66" style="fill:#00ff66;">CURRENT STREAK</text>
-      <text x="0" y="104" class="streak-sub">{curr_streak_date}</text>
+      <text x="0" y="82" class="streak-curr-label">CURRENT STREAK</text>
+      <text x="0" y="108" class="streak-sub">{curr_streak_date}</text>
     </g>
 
     <!-- Vertical Divider 2 -->
-    <line x1="282" y1="24" x2="282" y2="170" stroke="#163d22" stroke-width="1" />
+    <line x1="282" y1="20" x2="282" y2="175" stroke="#163d22" stroke-width="1" />
 
     <!-- Col 3: Longest Streak -->
-    <g transform="translate(352, 48)">
-      <text x="0" y="38" class="streak-val">{longest_streak}</text>
-      <text x="0" y="78" class="streak-lbl">LONGEST STREAK</text>
-      <text x="0" y="104" class="streak-sub">{longest_range}</text>
+    <g transform="translate(352, 44)">
+      <text x="0" y="44" class="streak-val">{longest_streak}</text>
+      <text x="0" y="82" class="streak-lbl">LONGEST STREAK</text>
+      <text x="0" y="108" class="streak-sub">{longest_range}</text>
     </g>
   </g>
 
   <!-- 2. OVERALL STATS CARD -->
-  <g transform="translate(474, 56)" filter="url(#cardShadow)">
+  <g transform="translate(474, 54)" filter="url(#cardShadow)">
     <rect width="422" height="195" rx="12" fill="#040906" stroke="#164d27" stroke-width="1.5" />
     
     <text x="24" y="32" class="card-title">Mohammed Sahil's GitHub Stats</text>
@@ -665,30 +665,30 @@ def generate_telemetry_svg():
     </g>
   </g>
 
-  <!-- ==================== ROW 2: MOST USED LANGUAGES CARD (CENTERED) ==================== -->
-  <g transform="translate(195, 275)" filter="url(#cardShadow)">
-    <rect width="530" height="245" rx="12" fill="#040906" stroke="#164d27" stroke-width="1.5" />
+  <!-- ==================== ROW 2: MOST USED LANGUAGES CARD (Tight, Balanced, No Dead Space) ==================== -->
+  <g transform="translate(195, 268)" filter="url(#cardShadow)">
+    <rect width="530" height="180" rx="12" fill="#040906" stroke="#164d27" stroke-width="1.5" />
     
-    <text x="26" y="36" class="card-title-green">Most Used Languages</text>
+    <text x="26" y="32" class="card-title-green">Most Used Languages</text>
 
     <!-- Multi-Segment Progress Bar -->
-    <g transform="translate(26, 56)">
+    <g transform="translate(26, 48)">
       <!-- Track Background -->
       <rect width="478" height="10" rx="5" fill="#0e2617" />
       {bar_svg}
     </g>
 
-    <!-- Language Grid Breakdown (2 Columns x 3 Rows) -->
+    <!-- Language Grid Breakdown (2 Columns x 3 Rows, clean 30px spacing) -->
     {lang_grid_svg}
   </g>
 </svg>"""
 
-    for fname in ["telemetry-cosmos-card.svg", "telemetry-cosmos-card-v1.svg", "telemetry-cosmos-card-v2.svg", "telemetry-cosmos-card-v3.svg"]:
+    for fname in ["telemetry-cosmos-card.svg", "telemetry-cosmos-card-v1.svg", "telemetry-cosmos-card-v2.svg", "telemetry-cosmos-card-v3.svg", "telemetry-cosmos-card-v4.svg"]:
         out_path = os.path.join(assets_dir, fname)
         with open(out_path, "w", encoding="utf-8") as f:
             f.write(svg_content)
     ET.fromstring(svg_content)
-    print("Generated & Validated: telemetry-cosmos-card.svg, v1, v2, and v3")
+    print("Generated & Validated: telemetry-cosmos-card.svg, v1..v4")
 
 if __name__ == "__main__":
     generate_telemetry_svg()
