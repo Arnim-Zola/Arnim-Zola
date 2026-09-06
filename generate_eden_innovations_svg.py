@@ -15,8 +15,8 @@ def generate_eden_innovations_svg():
 
     vbox_w = 920
     table_top = 40
-    text_len = 860
-    text_x = 38
+    text_len = 844
+    text_x = 36
 
     items_data = [
         {
@@ -74,12 +74,12 @@ def generate_eden_innovations_svg():
     item_y = 30
     for idx, it in enumerate(items_data):
         # Single glowing tech bullet point
-        bullet_svg = f'''<circle cx="24" cy="{item_y - 4.5}" r="3" fill="#00ff66" filter="drop-shadow(0 0 3px #00ff66)" />
-      <circle cx="24" cy="{item_y - 4.5}" r="1.5" fill="#ffffff" />'''
+        bullet_svg = f'''<circle cx="23" cy="{item_y - 4.5}" r="3" fill="#00ff66" filter="drop-shadow(0 0 3px #00ff66)" />
+      <circle cx="23" cy="{item_y - 4.5}" r="1.5" fill="#ffffff" />'''
 
         t_svg = f'<text x="{text_x}" y="{item_y}" class="item-title">{it["title"]}</text>'
 
-        # Balanced justified description lines matching About Me
+        # Balanced flush description lines with natural character spacing
         line1_svg = f'<text x="{text_x}" y="{item_y + 24}" textLength="{text_len}" lengthAdjust="spacing" class="item-desc">{it["lines"][0][0]}</text>'
         line2_svg = f'<text x="{text_x}" y="{item_y + 49}" textLength="{text_len}" lengthAdjust="spacing" class="item-desc">{it["lines"][1][0]}</text>'
         
@@ -120,15 +120,15 @@ def generate_eden_innovations_svg():
         font-family: 'Caacupe One', cursive, sans-serif;
         font-size: 16.5px;
         font-weight: 400;
-        letter-spacing: 0.3px;
+        letter-spacing: 0.2px;
         fill: #00ff66;
         filter: drop-shadow(0 1px 2px rgba(0,0,0,0.8));
       }}
       .item-desc {{
         font-family: 'Caacupe One', cursive, sans-serif;
-        font-size: 16px;
+        font-size: 16.5px;
         font-weight: 400;
-        letter-spacing: 0.2px;
+        letter-spacing: 0px;
         fill: #e6edf3;
       }}
       .hi {{
@@ -152,12 +152,12 @@ def generate_eden_innovations_svg():
   </g>
 </svg>"""
 
-    for fname in ["eden-innovations.svg", "eden-innovations-v2.svg", "eden-innovations-v3.svg", "eden-innovations-v4.svg"]:
+    for fname in ["eden-innovations.svg", "eden-innovations-v2.svg", "eden-innovations-v3.svg", "eden-innovations-v4.svg", "eden-innovations-v5.svg"]:
         out_path = os.path.join(assets_dir, fname)
         with open(out_path, "w", encoding="utf-8") as f:
             f.write(svg_content)
     ET.fromstring(svg_content)
-    print(f"Generated & Validated: eden-innovations.svg, v2, v3, v4")
+    print(f"Generated & Validated: eden-innovations.svg, v2..v5")
 
 if __name__ == "__main__":
     generate_eden_innovations_svg()
