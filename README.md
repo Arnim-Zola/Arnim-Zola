@@ -31,7 +31,7 @@
 
 <div align="center">
   <a href="https://github.com/Arnim-Zola/Eden">
-    <img src="assets/eden-button.svg?v=2.0" width="140" alt="EDEN — Autonomous Multimodal Misinformation &amp; Media Forensics Engine" />
+    <img src="assets/btn-eden-v1.svg" width="140" height="140" alt="EDEN — Autonomous Multimodal Misinformation &amp; Media Forensics Engine" />
   </a>
 </div>
 
