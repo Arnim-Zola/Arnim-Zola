@@ -17,7 +17,7 @@
 
 </div>
 
----
+<img src="assets/green-divider.svg" width="100%" alt="---" />
 
 <img src="assets/about-me-perfect.svg" alt="About Me &amp; Identity" width="100%" />
 
@@ -25,7 +25,7 @@
 
 <img src="assets/architecture-matrix-v3.svg" alt="Architecture &amp; Integration Matrix" width="100%" />
 
----
+<img src="assets/green-divider.svg" width="100%" alt="---" />
 
 ### PRIMARY FLAGSHIP: EDEN (Autonomous Misinformation Analysis Engine)
 
@@ -68,7 +68,7 @@
 
 **[Access Eden OSINT Pipeline & System Architecture →](https://github.com/Arnim-Zola/Eden)**
 
----
+<img src="assets/green-divider.svg" width="100%" alt="---" />
 
 ### SECONDARY ARSENAL & CREATIVE WEBGL LABS
 
@@ -79,7 +79,7 @@
 | **Brainiac**<br/>`Cognitive AI` | Ever wondered what 3 AM caffeine-fueled burnout actually looks like inside your head? Brainiac renders your brain's cognitive chaos into a living 3D simulation, featuring an interactive **@react-three/fiber** brain cortex mesh, computing 30-factor psychometric scoring vectors via **PyTorch**, and generating personalized AI improvement protocols. | `React 18` `@react-three/fiber` `Three.js` `FastAPI` `PyTorch` | [Arnim-Zola/Brainiac](https://github.com/Arnim-Zola/Brainiac) |
 | **Quantum OS**<br/>`Interactive Portfolio` | Why should developer portfolios look like another generic resume template from 2015? Quantum OS turns my personal portfolio into a full-blown sci-fi cybernetic desktop operating system, powered by custom GPU **GLSL fragment shaders** locked at 60FPS, **Web Audio API** synthesis for real-time acoustic feedback, and a streaming edge AI terminal shell. | `Next.js 15` `React 19` `Three.js` `GLSL Shaders` `Web Audio` | [Arnim-Zola/Portfolio](https://github.com/Arnim-Zola/Portfolio)<br/>*(Active Build)* |
 
----
+<img src="assets/green-divider.svg" width="100%" alt="---" />
 
 ### TECHNICAL ARSENAL
 
@@ -91,7 +91,7 @@
 | **Creative WebGL, 3D & Frontend** | `Next.js 15` `React 19` `Three.js` `@react-three/fiber` `Web Audio API` `Plotly.js` `PDF.js` `Tailwind CSS` |
 | **Databases, DevOps & Media** | `PostgreSQL` `SQLite` `MongoDB` `Docker` `Docker Compose` `Git` `GitHub Actions` `FFmpeg` |
 
----
+<img src="assets/green-divider.svg" width="100%" alt="---" />
 
 ### REAL-TIME TELEMETRY & CODING STATS
 
@@ -110,7 +110,7 @@
 
 </div>
 
----
+<img src="assets/green-divider.svg" width="100%" alt="---" />
 
 <div align="center">
   <p><b>Engineered by Mohammed Sahil • 3rd Year CSE @ DSATM, Bengaluru</b></p>

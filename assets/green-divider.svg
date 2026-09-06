@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 12" fill="none" width="100%" height="12">
+  <defs>
+    <!-- Core Bright Emerald Neon Gradient -->
+    <linearGradient id="neonBeam" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#00ff88" stop-opacity="0" />
+      <stop offset="10%" stop-color="#059669" stop-opacity="0.3" />
+      <stop offset="30%" stop-color="#10b981" stop-opacity="0.8" />
+      <stop offset="50%" stop-color="#00ff88" stop-opacity="1" />
+      <stop offset="70%" stop-color="#10b981" stop-opacity="0.8" />
+      <stop offset="90%" stop-color="#059669" stop-opacity="0.3" />
+      <stop offset="100%" stop-color="#00ff88" stop-opacity="0" />
+    </linearGradient>
+
+    <!-- Outer Ambient Glow Gradient -->
+    <linearGradient id="ambientGlow" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#00ff88" stop-opacity="0" />
+      <stop offset="25%" stop-color="#00ff88" stop-opacity="0.15" />
+      <stop offset="50%" stop-color="#00ff88" stop-opacity="0.4" />
+      <stop offset="75%" stop-color="#00ff88" stop-opacity="0.15" />
+      <stop offset="100%" stop-color="#00ff88" stop-opacity="0" />
+    </linearGradient>
+  </defs>
+
+  <!-- Ambient Outer Glow Layer -->
+  <line x1="10" y1="6" x2="1190" y2="6" stroke="url(#ambientGlow)" stroke-width="6" stroke-linecap="round" />
+  
+  <!-- Mid-intensity Neon Beam -->
+  <line x1="30" y1="6" x2="1170" y2="6" stroke="url(#neonBeam)" stroke-width="2.5" opacity="0.7" stroke-linecap="round" />
+  
+  <!-- Crisp Center Laser Core -->
+  <line x1="50" y1="6" x2="1150" y2="6" stroke="url(#neonBeam)" stroke-width="1.2" stroke-linecap="round" />
+
+  <!-- Center Cyber Tech Node -->
+  <circle cx="600" cy="6" r="5" fill="#00ff88" opacity="0.25" />
+  <circle cx="600" cy="6" r="3" fill="#00ff88" opacity="0.7" />
+  <circle cx="600" cy="6" r="1.5" fill="#ffffff" />
+
+  <!-- Flanking Tech Accents -->
+  <polygon points="572,6 577,3.5 581,6 577,8.5" fill="#00ff88" opacity="0.75" />
+  <polygon points="628,6 623,3.5 619,6 623,8.5" fill="#00ff88" opacity="0.75" />
+</svg>
