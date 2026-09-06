@@ -21,10 +21,10 @@ def generate_secondary_projects_svg():
     total_table_h = header_h + num_rows * row_h  # 50 + 488 = 538
     total_svg_h = table_top + total_table_h + 4   # 542
 
-    col1_w = 175
-    col2_w = 415
-    col3_w = 180
-    col4_w = vbox_w - (col1_w + col2_w + col3_w) # 150
+    col1_w = 165
+    col2_w = 405
+    col3_w = 210
+    col4_w = vbox_w - (col1_w + col2_w + col3_w) # 140
 
     col2_x = col1_w
     col3_x = col1_w + col2_w
@@ -75,8 +75,8 @@ def generate_secondary_projects_svg():
                 ('vectors via <tspan class="hi">PyTorch</tspan>, and generating personalized AI cognitive protocols.',)
             ],
             "badges": [
-                [("React 18", 60), ("@react-three/fiber", 112)],
-                [("Three.js", 60), ("PyTorch", 60), ("FastAPI", 58)]
+                [("React 18", 62), ("@react-three/fiber", 120)],
+                [("Three.js", 58), ("PyTorch", 58), ("FastAPI", 56)]
             ],
             "repo": "Brainiac",
             "url": "https://github.com/Arnim-Zola/Brainiac",
@@ -140,14 +140,14 @@ def generate_secondary_projects_svg():
                 bx += bw + 6
         col3_svg = "\n      ".join(badge_svg_list)
 
-        # Col 4: Source Code Button & Status
-        btn_w = 130
-        btn_h = 32
-        btn_x = col4_x + 10
+        # Col 4: Source Code Button & Status (Arrow right next to repo name)
+        btn_w = 124
+        btn_h = 30
+        btn_x = col4_x + 8
         btn_y = y_top + (30 if r["active"] else 45)
         active_svg = ""
         if r["active"]:
-            active_svg = f'''<g transform="translate({btn_x}, {btn_y + 40})">
+            active_svg = f'''<g transform="translate({btn_x}, {btn_y + 38})">
         <rect width="{btn_w}" height="20" rx="4" fill="#041208" stroke="#1b4d2e" stroke-width="0.8" />
         <circle cx="12" cy="10" r="3" fill="#00ff66" />
         <text x="22" y="14" class="active-text">Active Build</text>
@@ -156,8 +156,7 @@ def generate_secondary_projects_svg():
         col4_svg = f'''<a href="{r['url']}" target="_blank">
       <g transform="translate({btn_x}, {btn_y})" class="btn-group">
         <rect width="{btn_w}" height="{btn_h}" rx="6" class="btn-bg" />
-        <text x="{btn_w/2 - 7}" y="20.5" class="btn-text">Arnim-Zola/{r['repo']}</text>
-        <text x="{btn_w - 14}" y="20" class="btn-arrow">↗</text>
+        <text x="{btn_w/2}" y="19.5" class="btn-text">Arnim-Zola/{r['repo']} <tspan class="btn-arrow">↗</tspan></text>
       </g>
       {active_svg}
     </a>'''
@@ -222,9 +221,9 @@ def generate_secondary_projects_svg():
       }}
       .badge-text {{
         font-family: 'Caacupe One', cursive, sans-serif;
-        font-size: 12.5px;
+        font-size: 12px;
         font-weight: 400;
-        letter-spacing: 0.3px;
+        letter-spacing: 0.2px;
         fill: #39d353;
         text-anchor: middle;
       }}
@@ -239,16 +238,16 @@ def generate_secondary_projects_svg():
       }}
       .btn-text {{
         font-family: 'Caacupe One', cursive, sans-serif;
-        font-size: 11.5px;
+        font-size: 11px;
         font-weight: 400;
-        letter-spacing: 0.2px;
+        letter-spacing: 0.15px;
         fill: #ffffff;
         text-anchor: middle;
       }}
       .btn-arrow {{
         font-family: 'Caacupe One', cursive, sans-serif;
-        font-size: 13px;
-        font-weight: 400;
+        font-size: 12px;
+        font-weight: 700;
         fill: #00ff66;
       }}
       .active-text {{
@@ -294,12 +293,12 @@ def generate_secondary_projects_svg():
 {all_rows_str}
 </svg>"""
 
-    for fname in ["secondary-projects-table.svg", "secondary-projects-table-v1.svg"]:
+    for fname in ["secondary-projects-table.svg", "secondary-projects-table-v1.svg", "secondary-projects-table-v2.svg"]:
         out_path = os.path.join(assets_dir, fname)
         with open(out_path, "w", encoding="utf-8") as f:
             f.write(svg_content)
     ET.fromstring(svg_content)
-    print(f"Generated & Validated: secondary-projects-table.svg")
+    print(f"Generated & Validated: secondary-projects-table.svg, v1, v2")
 
 if __name__ == "__main__":
     generate_secondary_projects_svg()
