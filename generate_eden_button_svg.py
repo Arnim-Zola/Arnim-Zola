@@ -19,7 +19,7 @@ def generate_eden_button_svg():
     </clipPath>
   </defs>
 
-  <style>
+  <style><![CDATA[
     {font_face_css}
 
     /* Outer Card Drop Shadow (Brutalist) */
@@ -27,7 +27,7 @@ def generate_eden_button_svg():
       fill: #000000;
     }}
 
-    /* Brutalist Card Background & Color Shift */
+    /* Brutalist Card Background and Color Shift */
     .card-bg {{
       animation: cardColorShift 6s cubic-bezier(0.4, 0, 0.2, 1) infinite;
       stroke: #000000;
@@ -46,7 +46,7 @@ def generate_eden_button_svg():
       }}
     }}
 
-    /* Circular Badge Transform & Move */
+    /* Circular Badge Transform and Move */
     .logo-badge-group {{
       animation: badgeMoveScale 6s cubic-bezier(0.68, -0.55, 0.265, 1.55) infinite;
     }}
@@ -117,7 +117,7 @@ def generate_eden_button_svg():
       fill: #ffffff;
       text-anchor: middle;
     }}
-  </style>
+  ]]></style>
 
   <!-- Brutalist Hard Shadow -->
   <rect x="11" y="11" width="134" height="134" rx="16" class="brutalist-shadow" />
