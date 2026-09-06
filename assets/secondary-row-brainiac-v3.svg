@@ -32,7 +32,7 @@
       }
       .desc-text {
         font-family: 'Caacupe One', cursive, sans-serif;
-        font-size: 13.5px;
+        font-size: 13.3px;
         font-weight: 400;
         letter-spacing: -0.05px;
         fill: #ffffff;
@@ -90,37 +90,37 @@
   <rect x="0" y="0" width="920" height="128" rx="8" fill="#040906" stroke="#163d22" stroke-width="1.5" />
 
   <!-- Vertical Column Lines -->
-  <line x1="145" y1="0" x2="145" y2="128" class="grid-line" />
-  <line x1="585" y1="0" x2="585" y2="128" class="grid-line" />
+  <line x1="140" y1="0" x2="140" y2="128" class="grid-line" />
+  <line x1="575" y1="0" x2="575" y2="128" class="grid-line" />
   <line x1="780" y1="0" x2="780" y2="128" class="grid-line" />
 
   <!-- Columns Content -->
   <g>
     <text x="18" y="54" class="project-name">Brainiac</text>
     <text x="18" y="78" class="domain-text">Cognitive AI</text>
-    <text x="159" y="26" textLength="412" lengthAdjust="spacing" class="desc-text">Ever wondered what 3 AM caffeine-fueled burnout looks like inside your head?</text>
-    <text x="159" y="50" textLength="412" lengthAdjust="spacing" class="desc-text">Brainiac renders your brain's cognitive chaos into a living 3D simulation,</text>
-    <text x="159" y="74" textLength="412" lengthAdjust="spacing" class="desc-text">featuring an interactive <tspan class="hi">@react-three/fiber</tspan> cortical mesh, computing 30-factor</text>
-    <text x="159" y="98" textLength="412" lengthAdjust="spacing" class="desc-text">psychometric scoring vectors via <tspan class="hi">PyTorch</tspan>, and personalized AI protocols.</text>
-    <g transform="translate(593, 32)">
-      <rect width="62" height="26" rx="6" class="badge-bg" />
-      <text x="31.0" y="17.5" class="badge-text">React 18</text>
+    <text x="154" y="26" textLength="407" lengthAdjust="spacing" class="desc-text">Ever wondered what 3 AM caffeine-fueled burnout looks like inside your head?</text>
+    <text x="154" y="50" textLength="407" lengthAdjust="spacing" class="desc-text">Brainiac renders your brain's cognitive chaos into a living 3D simulation,</text>
+    <text x="154" y="74" textLength="407" lengthAdjust="spacing" class="desc-text">featuring an interactive <tspan class="hi">@react-three/fiber</tspan> cortical mesh, computing 30-factor</text>
+    <text x="154" y="98" textLength="407" lengthAdjust="spacing" class="desc-text">psychometric scoring vectors via <tspan class="hi">PyTorch</tspan>, and personalized AI protocols.</text>
+    <g transform="translate(583, 32)">
+      <rect width="54" height="26" rx="6" class="badge-bg" />
+      <text x="27.0" y="17.5" class="badge-text">React 18</text>
     </g>
-    <g transform="translate(661, 32)">
-      <rect width="120" height="26" rx="6" class="badge-bg" />
-      <text x="60.0" y="17.5" class="badge-text">@react-three/fiber</text>
+    <g transform="translate(643, 32)">
+      <rect width="110" height="26" rx="6" class="badge-bg" />
+      <text x="55.0" y="17.5" class="badge-text">@react-three/fiber</text>
     </g>
-    <g transform="translate(593, 66)">
-      <rect width="58" height="26" rx="6" class="badge-bg" />
-      <text x="29.0" y="17.5" class="badge-text">Three.js</text>
+    <g transform="translate(583, 66)">
+      <rect width="52" height="26" rx="6" class="badge-bg" />
+      <text x="26.0" y="17.5" class="badge-text">Three.js</text>
     </g>
-    <g transform="translate(657, 66)">
-      <rect width="58" height="26" rx="6" class="badge-bg" />
-      <text x="29.0" y="17.5" class="badge-text">PyTorch</text>
+    <g transform="translate(641, 66)">
+      <rect width="52" height="26" rx="6" class="badge-bg" />
+      <text x="26.0" y="17.5" class="badge-text">PyTorch</text>
     </g>
-    <g transform="translate(721, 66)">
-      <rect width="56" height="26" rx="6" class="badge-bg" />
-      <text x="28.0" y="17.5" class="badge-text">FastAPI</text>
+    <g transform="translate(699, 66)">
+      <rect width="52" height="26" rx="6" class="badge-bg" />
+      <text x="26.0" y="17.5" class="badge-text">FastAPI</text>
     </g>
     <g transform="translate(788, 48)">
       <rect width="124" height="30" rx="6" class="btn-bg" />

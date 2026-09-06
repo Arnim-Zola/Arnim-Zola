@@ -32,7 +32,7 @@
       }
       .desc-text {
         font-family: 'Caacupe One', cursive, sans-serif;
-        font-size: 13.5px;
+        font-size: 13.3px;
         font-weight: 400;
         letter-spacing: -0.05px;
         fill: #ffffff;
@@ -90,33 +90,33 @@
   <rect x="0" y="0" width="920" height="128" rx="8" fill="#040906" stroke="#163d22" stroke-width="1.5" />
 
   <!-- Vertical Column Lines -->
-  <line x1="145" y1="0" x2="145" y2="128" class="grid-line" />
-  <line x1="585" y1="0" x2="585" y2="128" class="grid-line" />
+  <line x1="140" y1="0" x2="140" y2="128" class="grid-line" />
+  <line x1="575" y1="0" x2="575" y2="128" class="grid-line" />
   <line x1="780" y1="0" x2="780" y2="128" class="grid-line" />
 
   <!-- Columns Content -->
   <g>
     <text x="18" y="54" class="project-name">Quantum OS</text>
     <text x="18" y="78" class="domain-text">Interactive Portfolio</text>
-    <text x="159" y="26" textLength="412" lengthAdjust="spacing" class="desc-text">Why should developer portfolios look like another generic resume from 2015?</text>
-    <text x="159" y="50" textLength="412" lengthAdjust="spacing" class="desc-text">Quantum OS turns my portfolio into a sci-fi cybernetic desktop operating system,</text>
-    <text x="159" y="74" textLength="412" lengthAdjust="spacing" class="desc-text">powered by custom GPU <tspan class="hi">GLSL fragment shaders</tspan> at 60FPS, <tspan class="hi">Web Audio API</tspan> acoustic</text>
-    <text x="159" y="98" textLength="412" lengthAdjust="spacing" class="desc-text">feedback sound synthesis, and a live real-time streaming edge AI terminal shell.</text>
-    <g transform="translate(593, 32)">
+    <text x="154" y="26" textLength="407" lengthAdjust="spacing" class="desc-text">Why should developer portfolios look like another generic resume from 2015?</text>
+    <text x="154" y="50" textLength="407" lengthAdjust="spacing" class="desc-text">Quantum OS turns my portfolio into a sci-fi cybernetic desktop operating system,</text>
+    <text x="154" y="74" textLength="407" lengthAdjust="spacing" class="desc-text">powered by custom GPU <tspan class="hi">GLSL fragment shaders</tspan> at 60FPS, <tspan class="hi">Web Audio API</tspan> acoustic</text>
+    <text x="154" y="98" textLength="407" lengthAdjust="spacing" class="desc-text">feedback sound synthesis, and a live real-time streaming edge AI terminal shell.</text>
+    <g transform="translate(583, 32)">
       <rect width="66" height="26" rx="6" class="badge-bg" />
       <text x="33.0" y="17.5" class="badge-text">Next.js 15</text>
     </g>
-    <g transform="translate(665, 32)">
-      <rect width="86" height="26" rx="6" class="badge-bg" />
-      <text x="43.0" y="17.5" class="badge-text">GLSL Shaders</text>
+    <g transform="translate(655, 32)">
+      <rect width="84" height="26" rx="6" class="badge-bg" />
+      <text x="42.0" y="17.5" class="badge-text">GLSL Shaders</text>
     </g>
-    <g transform="translate(593, 66)">
-      <rect width="60" height="26" rx="6" class="badge-bg" />
-      <text x="30.0" y="17.5" class="badge-text">Three.js</text>
+    <g transform="translate(583, 66)">
+      <rect width="58" height="26" rx="6" class="badge-bg" />
+      <text x="29.0" y="17.5" class="badge-text">Three.js</text>
     </g>
-    <g transform="translate(659, 66)">
-      <rect width="74" height="26" rx="6" class="badge-bg" />
-      <text x="37.0" y="17.5" class="badge-text">Web Audio</text>
+    <g transform="translate(647, 66)">
+      <rect width="72" height="26" rx="6" class="badge-bg" />
+      <text x="36.0" y="17.5" class="badge-text">Web Audio</text>
     </g>
     <g transform="translate(788, 34)">
       <rect width="124" height="30" rx="6" class="btn-bg" />

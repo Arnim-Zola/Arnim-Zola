@@ -32,7 +32,7 @@
       }
       .desc-text {
         font-family: 'Caacupe One', cursive, sans-serif;
-        font-size: 13.5px;
+        font-size: 13.3px;
         font-weight: 400;
         letter-spacing: -0.05px;
         fill: #ffffff;
@@ -90,33 +90,33 @@
   <rect x="0" y="0" width="920" height="128" rx="8" fill="#040906" stroke="#163d22" stroke-width="1.5" />
 
   <!-- Vertical Column Lines -->
-  <line x1="145" y1="0" x2="145" y2="128" class="grid-line" />
-  <line x1="585" y1="0" x2="585" y2="128" class="grid-line" />
+  <line x1="140" y1="0" x2="140" y2="128" class="grid-line" />
+  <line x1="575" y1="0" x2="575" y2="128" class="grid-line" />
   <line x1="780" y1="0" x2="780" y2="128" class="grid-line" />
 
   <!-- Columns Content -->
   <g>
     <text x="18" y="54" class="project-name">Zemo</text>
     <text x="18" y="78" class="domain-text">E-Commerce Intel</text>
-    <text x="159" y="26" textLength="412" lengthAdjust="spacing" class="desc-text">That "50% OFF Limited Deal" with 4.8 stars written by bots? We called its bluff.</text>
-    <text x="159" y="50" textLength="412" lengthAdjust="spacing" class="desc-text">Zemo is an autonomous radar built to expose fake hype and predatory price hikes</text>
-    <text x="159" y="74" textLength="412" lengthAdjust="spacing" class="desc-text">by automating headless <tspan class="hi">Playwright</tspan> scraping across dynamic e-commerce DOMs, and</text>
-    <text x="159" y="98" textLength="412" lengthAdjust="spacing" class="desc-text">synthesizing 100+ customer reviews via <tspan class="hi">Meta Llama 3 8B</tspan> into <tspan class="hi">Plotly.js</tspan> charts.</text>
-    <g transform="translate(593, 32)">
-      <rect width="88" height="26" rx="6" class="badge-bg" />
-      <text x="44.0" y="17.5" class="badge-text">Meta Llama 3</text>
+    <text x="154" y="26" textLength="407" lengthAdjust="spacing" class="desc-text">That "50% OFF Limited Deal" with 4.8 stars written by bots? We called its bluff.</text>
+    <text x="154" y="50" textLength="407" lengthAdjust="spacing" class="desc-text">Zemo is an autonomous radar built to expose fake hype and predatory price hikes</text>
+    <text x="154" y="74" textLength="407" lengthAdjust="spacing" class="desc-text">by automating headless <tspan class="hi">Playwright</tspan> scraping across dynamic e-commerce DOMs, and</text>
+    <text x="154" y="98" textLength="407" lengthAdjust="spacing" class="desc-text">synthesizing 100+ customer reviews via <tspan class="hi">Meta Llama 3 8B</tspan> into <tspan class="hi">Plotly.js</tspan> charts.</text>
+    <g transform="translate(583, 32)">
+      <rect width="84" height="26" rx="6" class="badge-bg" />
+      <text x="42.0" y="17.5" class="badge-text">Meta Llama 3</text>
     </g>
-    <g transform="translate(687, 32)">
-      <rect width="58" height="26" rx="6" class="badge-bg" />
-      <text x="29.0" y="17.5" class="badge-text">FastAPI</text>
+    <g transform="translate(673, 32)">
+      <rect width="56" height="26" rx="6" class="badge-bg" />
+      <text x="28.0" y="17.5" class="badge-text">FastAPI</text>
     </g>
-    <g transform="translate(593, 66)">
-      <rect width="76" height="26" rx="6" class="badge-bg" />
-      <text x="38.0" y="17.5" class="badge-text">Playwright</text>
+    <g transform="translate(583, 66)">
+      <rect width="74" height="26" rx="6" class="badge-bg" />
+      <text x="37.0" y="17.5" class="badge-text">Playwright</text>
     </g>
-    <g transform="translate(675, 66)">
-      <rect width="64" height="26" rx="6" class="badge-bg" />
-      <text x="32.0" y="17.5" class="badge-text">Plotly.js</text>
+    <g transform="translate(663, 66)">
+      <rect width="62" height="26" rx="6" class="badge-bg" />
+      <text x="31.0" y="17.5" class="badge-text">Plotly.js</text>
     </g>
     <g transform="translate(788, 48)">
       <rect width="124" height="30" rx="6" class="btn-bg" />

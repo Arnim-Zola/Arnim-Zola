@@ -17,18 +17,18 @@ def generate_secondary_projects_rows():
     header_h = 46
     row_h = 128
 
-    col1_w = 145
-    col2_w = 440
-    col3_w = 195
+    col1_w = 140
+    col2_w = 435
+    col3_w = 205
     col4_w = vbox_w - (col1_w + col2_w + col3_w) # 140
 
-    col2_x = col1_w
-    col3_x = col1_w + col2_w
-    col4_x = col1_w + col2_w + col3_w
+    col2_x = col1_w                      # 140
+    col3_x = col1_w + col2_w             # 575
+    col4_x = col1_w + col2_w + col3_w     # 780
     
-    # Exact justified width matching right column margin
-    text_x = col2_x + 14
-    text_len = 412
+    # Exact justified width matching right column margin (575 - 14 - 154 = 407)
+    text_x = col2_x + 14                 # 154
+    text_len = 407
 
     shared_css = f"""
       {font_face_css}
@@ -57,7 +57,7 @@ def generate_secondary_projects_rows():
       }}
       .desc-text {{
         font-family: 'Caacupe One', cursive, sans-serif;
-        font-size: 13.5px;
+        font-size: 13.3px;
         font-weight: 400;
         letter-spacing: -0.05px;
         fill: #ffffff;
@@ -127,11 +127,11 @@ def generate_secondary_projects_rows():
   <line x1="{col4_x}" y1="0" x2="{col4_x}" y2="{header_h}" class="grid-line" />
 </svg>"""
 
-    for fname in ["secondary-table-header.svg", "secondary-table-header-v1.svg", "secondary-table-header-v2.svg", "secondary-table-header-v3.svg", "secondary-table-header-v4.svg"]:
+    for fname in ["secondary-table-header.svg", "secondary-table-header-v1.svg", "secondary-table-header-v2.svg", "secondary-table-header-v3.svg", "secondary-table-header-v4.svg", "secondary-table-header-v5.svg"]:
         with open(os.path.join(assets_dir, fname), "w", encoding="utf-8") as f:
             f.write(header_svg)
     ET.fromstring(header_svg)
-    print("Generated: secondary-table-header.svg, v1..v4")
+    print("Generated: secondary-table-header.svg, v1..v5")
 
     # 2. Individual Rows Data with Balanced Full Justification
     projects_data = [
@@ -163,8 +163,8 @@ def generate_secondary_projects_rows():
                 ('synthesizing 100+ customer reviews via <tspan class="hi">Meta Llama 3 8B</tspan> into <tspan class="hi">Plotly.js</tspan> charts.',)
             ],
             "badges": [
-                [("Meta Llama 3", 88), ("FastAPI", 58)],
-                [("Playwright", 76), ("Plotly.js", 64)]
+                [("Meta Llama 3", 84), ("FastAPI", 56)],
+                [("Playwright", 74), ("Plotly.js", 62)]
             ],
             "repo": "Zemo",
             "active": False
@@ -180,8 +180,8 @@ def generate_secondary_projects_rows():
                 ('psychometric scoring vectors via <tspan class="hi">PyTorch</tspan>, and personalized AI protocols.',)
             ],
             "badges": [
-                [("React 18", 62), ("@react-three/fiber", 120)],
-                [("Three.js", 58), ("PyTorch", 58), ("FastAPI", 56)]
+                [("React 18", 54), ("@react-three/fiber", 110)],
+                [("Three.js", 52), ("PyTorch", 52), ("FastAPI", 52)]
             ],
             "repo": "Brainiac",
             "active": False
@@ -197,8 +197,8 @@ def generate_secondary_projects_rows():
                 ('feedback sound synthesis, and a live real-time streaming edge AI terminal shell.',)
             ],
             "badges": [
-                [("Next.js 15", 66), ("GLSL Shaders", 86)],
-                [("Three.js", 60), ("Web Audio", 74)]
+                [("Next.js 15", 66), ("GLSL Shaders", 84)],
+                [("Three.js", 58), ("Web Audio", 72)]
             ],
             "repo": "Portfolio",
             "active": True
@@ -272,7 +272,7 @@ def generate_secondary_projects_rows():
   </g>
 </svg>"""
 
-        for ver in ["", "-v1", "-v2", "-v3", "-v4"]:
+        for ver in ["", "-v1", "-v2", "-v3", "-v4", "-v5"]:
             fname = f"secondary-row-{p['id']}{ver}.svg"
             out_path = os.path.join(assets_dir, fname)
             with open(out_path, "w", encoding="utf-8") as f:
