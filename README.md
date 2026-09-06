@@ -71,20 +71,7 @@
 
 <img src="assets/heading-telemetry.svg?v=3.0" alt="REAL-TIME TELEMETRY &amp; CODING STATS" width="100%" />
 
-<div align="center">
-
-  <!-- GitHub Streak Stats (Obsidian & Emerald Neon Theme) -->
-  <img src="https://streak-stats.demolab.com/?user=Arnim-Zola&theme=dark&background=040906&border=1b4d2e&stroke=1b4d2e&ring=00ff66&fire=00ff66&currStreakLabel=00ff66&currStreakNum=ffffff&sideNums=ffffff&sideLabels=8b949e&dates=8b949e&border_radius=8" alt="GitHub Streak" width="48%" />
-  
-  <!-- GitHub Overall Stats (Obsidian & Emerald Neon Theme) -->
-  <img src="https://github-stats-extended.vercel.app/api?username=Arnim-Zola&show_icons=true&bg_color=040906&border_color=1b4d2e&icon_color=00ff66&title_color=00ff66&text_color=e6edf3&border_radius=8&include_all_commits=true&count_private=true" alt="GitHub Stats" width="48%" />
-
-  <br/><br/>
-
-  <!-- Top Languages Card (Obsidian & Emerald Neon Theme) -->
-  <img src="https://github-stats-extended.vercel.app/api/top-langs/?username=Arnim-Zola&layout=compact&bg_color=040906&border_color=1b4d2e&title_color=00ff66&text_color=e6edf3&border_radius=8" alt="Top Languages" width="55%" />
-
-</div>
+<img src="assets/telemetry-cosmos-card-v1.svg" width="100%" alt="Real-Time Telemetry &amp; Coding Stats" />
 
 <img src="assets/green-divider-laser-v1.svg" width="100%" alt="---" />
 
