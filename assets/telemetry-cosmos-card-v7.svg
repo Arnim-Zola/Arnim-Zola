@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 920 710" width="100%" height="710" fill="none">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 920 910" width="100%" height="910" fill="none">
   <defs>
     <style>
       <![CDATA[
@@ -221,90 +221,91 @@
 
     <!-- Clip Path for Outer Chamber Rounded Rectangle -->
     <clipPath id="chamberClip">
-      <rect x="0" y="0" width="920" height="710" rx="14" />
+      <rect x="0" y="0" width="920" height="910" rx="14" />
     </clipPath>
   </defs>
 
   <!-- ==================== OUTER CHAMBER CONTAINER ==================== -->
   <g clip-path="url(#chamberClip)">
     <!-- 1. Nocturnal Emerald Sky Canvas -->
-    <rect width="920" height="710" fill="url(#skyMasterGrad)" />
+    <rect width="920" height="910" fill="url(#skyMasterGrad)" />
 
-    <!-- 2. Atmospheric Moonlight Glow (Centered on Moon at x:730, y:80) -->
-    <ellipse cx="730" cy="80" rx="240" ry="160" fill="url(#moonRadialHaze)" />
+    <!-- 2. Atmospheric Moonlight Glow (Centered on Moon at x:740, y:72) -->
+    <ellipse cx="740" cy="72" rx="260" ry="170" fill="url(#moonRadialHaze)" />
 
     <!-- 3. Ambient Radiant Moon Bloom -->
-    <path d="M 744,36 A 45 45 0 1 1 699,106 A 43 43 0 0 0 744,36 Z" fill="#34d399" opacity="0.48" filter="url(#moonAura)" />
+    <path d="M 754,28 A 45 45 0 1 1 709,98 A 43 43 0 0 0 754,28 Z" fill="#34d399" opacity="0.48" filter="url(#moonAura)" />
 
     <!-- 4. Celestial Emerald Crescent Moon -->
-    <path d="M 744,36 A 45 45 0 1 1 699,106 A 43 43 0 0 0 744,36 Z" fill="url(#naturalMoonGrad)" filter="url(#moonBloom)" stroke="rgba(244, 255, 247, 0.7)" stroke-width="0.8" />
+    <path d="M 754,28 A 45 45 0 1 1 709,98 A 43 43 0 0 0 754,28 Z" fill="url(#naturalMoonGrad)" filter="url(#moonBloom)" stroke="rgba(244, 255, 247, 0.7)" stroke-width="0.8" />
 
-    <!-- 5. Diamond Sparkle Stars -->
+    <!-- 5. Diamond Sparkle Stars in Headroom -->
     <g>
       <!-- Sparkle 1 (Top Left) -->
-      <path d="M 145,100 Q 145,115 150,115 Q 145,115 145,130 Q 145,115 140,115 Q 145,115 145,100 Z" fill="#d1fae5" filter="url(#sparkleGlow)" />
-      <circle cx="145" cy="115" r="2.2" fill="#f0fff4" />
+      <path d="M 145,70 Q 145,85 150,85 Q 145,85 145,100 Q 145,85 140,85 Q 145,85 145,70 Z" fill="#d1fae5" filter="url(#sparkleGlow)" />
+      <circle cx="145" cy="85" r="2.2" fill="#f0fff4" />
       
       <!-- Sparkle 2 (Mid Sky) -->
-      <path d="M 400,120 Q 400,132 404,132 Q 400,132 400,144 Q 400,132 396,132 Q 400,132 400,120 Z" fill="#d1fae5" filter="url(#sparkleGlow)" />
-      <circle cx="400" cy="132" r="1.8" fill="#f0fff4" />
+      <path d="M 420,80 Q 420,92 424,92 Q 420,92 420,104 Q 420,92 416,92 Q 420,92 420,80 Z" fill="#d1fae5" filter="url(#sparkleGlow)" />
+      <circle cx="420" cy="92" r="1.8" fill="#f0fff4" />
 
       <!-- Sparkle 3 (Near Moon) -->
-      <path d="M 600,85 Q 600,95 603,95 Q 600,95 600,105 Q 600,95 597,95 Q 600,95 600,85 Z" fill="#d1fae5" filter="url(#sparkleGlow)" />
-      <circle cx="600" cy="95" r="1.8" fill="#f0fff4" />
+      <path d="M 610,55 Q 610,65 613,65 Q 610,65 610,75 Q 610,65 607,65 Q 610,65 610,55 Z" fill="#d1fae5" filter="url(#sparkleGlow)" />
+      <circle cx="610" cy="65" r="1.8" fill="#f0fff4" />
 
       <!-- Sparkle 4 (Right) -->
-      <path d="M 870,115 Q 870,125 873,125 Q 870,125 870,135 Q 870,125 867,125 Q 870,125 870,115 Z" fill="#a7f3d0" filter="url(#sparkleGlow)" />
-      <circle cx="870" cy="125" r="1.8" fill="#f0fff4" />
+      <path d="M 870,75 Q 870,85 873,85 Q 870,85 870,95 Q 870,85 867,85 Q 870,85 870,75 Z" fill="#a7f3d0" filter="url(#sparkleGlow)" />
+      <circle cx="870" cy="85" r="1.8" fill="#f0fff4" />
     </g>
 
-    <!-- 6. Stardust Ambient Dots -->
+    <!-- 6. Stardust Ambient Dots in Headroom -->
     <g opacity="0.8">
       <circle cx="210" cy="38" r="1.5" fill="#86efac" />
-      <circle cx="310" cy="68" r="1.4" fill="#d1fae5" />
-      <circle cx="390" cy="40" r="1.8" fill="#86efac" />
+      <circle cx="280" cy="68" r="1.4" fill="#d1fae5" />
+      <circle cx="360" cy="40" r="1.8" fill="#86efac" />
       <circle cx="510" cy="50" r="1.6" fill="#f0fff4" />
-      <circle cx="750" cy="85" r="1.6" fill="#86efac" />
-      <circle cx="810" cy="130" r="1.4" fill="#d1fae5" />
-      <circle cx="680" cy="310" r="1.5" fill="#86efac" />
-      <circle cx="440" cy="340" r="1.4" fill="#f0fff4" />
+      <circle cx="750" cy="65" r="1.6" fill="#86efac" />
+      <circle cx="810" cy="95" r="1.4" fill="#d1fae5" />
+      <circle cx="680" cy="85" r="1.5" fill="#86efac" />
+      <circle cx="490" cy="88" r="1.4" fill="#f0fff4" />
     </g>
 
-    <!-- 7. Painterly Clouds -->
+    <!-- 7. Upper Drifting Clouds in Headroom -->
     <g>
       <!-- Cloud Left -->
-      <path d="M -40,160 C -15,125 45,120 80,142 C 115,115 178,115 214,142 C 250,128 290,150 304,178 C 270,192 130,196 -40,188 Z" fill="url(#cloudGradSoft1)" opacity="0.85" />
-      <path d="M -40,160 C -15,125 45,120 80,142 C 115,115 178,115 214,142 C 250,128 290,150 304,178" fill="none" stroke="url(#cloudRimLight)" stroke-width="2" opacity="0.8" />
+      <path d="M -40,110 C -15,75 45,70 80,92 C 115,65 178,65 214,92 C 250,78 290,100 304,128 C 270,142 130,146 -40,138 Z" fill="url(#cloudGradSoft1)" opacity="0.85" />
+      <path d="M -40,110 C -15,75 45,70 80,92 C 115,65 178,65 214,92 C 250,78 290,100 304,128" fill="none" stroke="url(#cloudRimLight)" stroke-width="2" opacity="0.8" />
 
       <!-- Cloud Right -->
-      <path d="M 640,190 C 650,155 708,140 748,160 C 784,138 848,138 884,160 C 920,146 965,155 1000,178 L 1000,214 C 970,228 905,228 855,210 C 805,228 740,224 690,206 C 660,210 640,200 640,190 Z" fill="url(#cloudGradSoft2)" opacity="0.85" />
-      <path d="M 640,190 C 650,155 708,140 748,160 C 784,138 848,138 884,160 C 920,146 965,155 1000,178" fill="none" stroke="url(#cloudRimLight)" stroke-width="2" opacity="0.85" />
-
-      <!-- Horizon Cloud Center -->
-      <path d="M 150,620 C 190,585 250,580 290,602 C 335,570 410,565 455,598 C 500,570 575,570 620,598 C 660,580 715,590 750,616 C 778,638 745,660 688,668 C 570,682 270,682 150,620 Z" fill="url(#cloudGradCenter)" opacity="0.82" />
+      <path d="M 640,110 C 650,75 708,60 748,80 C 784,58 848,58 884,80 C 920,66 965,75 1000,98 L 1000,134 C 970,148 905,148 855,130 C 805,148 740,144 690,126 C 660,130 640,120 640,110 Z" fill="url(#cloudGradSoft2)" opacity="0.85" />
+      <path d="M 640,110 C 650,75 708,60 748,80 C 784,58 848,58 884,80 C 920,66 965,75 1000,98" fill="none" stroke="url(#cloudRimLight)" stroke-width="2" opacity="0.85" />
     </g>
 
-    <!-- 8. Distant Misty Rolling Hills -->
-    <path d="M -30,610 Q 200,550 480,610 T 950,585 L 950,715 L -30,715 Z" fill="url(#distantRidgeGrad)" />
-    <path d="M -30,610 Q 200,550 480,610 T 950,585" fill="none" stroke="rgba(134, 239, 172, 0.22)" stroke-width="1.2" />
+    <!-- ==================== BOTTOM LANDSCAPE (Generous Scenery below Card 3) ==================== -->
+    <!-- Horizon Soft Cloud Center -->
+    <path d="M 150,785 C 190,750 250,745 290,767 C 335,735 410,730 455,763 C 500,735 575,735 620,763 C 660,745 715,755 750,781 C 778,803 745,825 688,833 C 570,847 270,847 150,785 Z" fill="url(#cloudGradCenter)" opacity="0.82" />
 
-    <!-- 9. Mid Rolling Hills -->
-    <path d="M -30,635 Q 250,590 500,645 Q 710,605 950,630 L 950,715 L -30,715 Z" fill="url(#midRidgeGrad)" />
-    <path d="M -30,635 Q 250,590 500,645 Q 710,605 950,630" fill="none" stroke="rgba(110, 231, 183, 0.16)" stroke-width="1.4" />
+    <!-- Distant Misty Rolling Hills -->
+    <path d="M -30,815 Q 200,755 480,815 T 950,790 L 950,920 L -30,920 Z" fill="url(#distantRidgeGrad)" />
+    <path d="M -30,815 Q 200,755 480,815 T 950,790" fill="none" stroke="rgba(134, 239, 172, 0.22)" stroke-width="1.2" />
 
-    <!-- 10. Foreground Rolling Hills -->
-    <path d="M -30,660 Q 300,625 600,670 Q 780,640 950,673 L 950,715 L -30,715 Z" fill="url(#foreRidgeGrad)" />
+    <!-- Mid Rolling Hills -->
+    <path d="M -30,840 Q 250,795 500,850 Q 710,810 950,835 L 950,920 L -30,920 Z" fill="url(#midRidgeGrad)" />
+    <path d="M -30,840 Q 250,795 500,850 Q 710,810 950,835" fill="none" stroke="rgba(110, 231, 183, 0.16)" stroke-width="1.4" />
 
-    <!-- 11. Silhouette Pine Trees (Left & Right) -->
+    <!-- Foreground Rolling Hills -->
+    <path d="M -30,865 Q 300,830 600,875 Q 780,845 950,878 L 950,920 L -30,920 Z" fill="url(#foreRidgeGrad)" />
+
+    <!-- Silhouette Pine Trees (Rising in Foreground) -->
     <!-- Left Tree -->
-    <g transform="translate(45, 570) scale(0.6)">
+    <g transform="translate(45, 765) scale(0.68)">
       <rect x="180" y="140" width="12" height="50" fill="#010603" rx="2" />
       <polygon points="186,40 216,145 156,145" fill="#072011" />
       <polygon points="186,20 210,95 162,95" fill="#0b2c18" />
       <polygon points="186,0 204,55 168,55" fill="#0f3c21" />
     </g>
     <!-- Right Trees -->
-    <g transform="translate(830, 575) scale(0.55)">
+    <g transform="translate(825, 770) scale(0.62)">
       <rect x="100" y="140" width="10" height="45" fill="#010603" rx="2" />
       <polygon points="105,45 130,140 80,140" fill="#061c0e" />
       <polygon points="105,25 125,95 85,95" fill="#092514" />
@@ -313,10 +314,10 @@
   </g>
 
   <!-- Container Outline Border & Inner Glow -->
-  <rect x="0" y="0" width="920" height="710" rx="14" fill="none" stroke="#164d27" stroke-width="1.5" />
+  <rect x="0" y="0" width="920" height="910" rx="14" fill="none" stroke="#164d27" stroke-width="1.5" />
 
   <!-- ==================== TOP TELEMETRY BAR ==================== -->
-  <g transform="translate(24, 20)">
+  <g transform="translate(24, 22)">
     <!-- Pulsing Beacon Dot -->
     <circle cx="4" cy="5" r="4" fill="#00ff66" filter="url(#sparkleGlow)" />
     <circle cx="4" cy="5" r="2" fill="#ffffff" />
@@ -324,8 +325,8 @@
     <line x1="0" y1="20" x2="872" y2="20" stroke="#164d27" stroke-width="1" stroke-opacity="0.6" />
   </g>
 
-  <!-- ==================== UNIFIED CARD 1: CONTRIBUTIONS, STREAKS & 365-DAY HEATMAP ==================== -->
-  <g transform="translate(24, 54)" filter="url(#cardShadow)">
+  <!-- ==================== UNIFIED CARD 1: CONTRIBUTIONS, STREAKS & 365-DAY HEATMAP (Pushed Down to y=135) ==================== -->
+  <g transform="translate(24, 135)" filter="url(#cardShadow)">
     <rect width="872" height="300" rx="12" fill="#040906" stroke="#164d27" stroke-width="1.5" />
     
     <!-- Top Row Metric Col 1: Total Contributions (Center x=145) -->
@@ -765,8 +766,8 @@
     </g>
   </g>
 
-  <!-- ==================== STACKED CARD 2: GITHUB OVERALL STATS ==================== -->
-  <g transform="translate(24, 370)" filter="url(#cardShadow)">
+  <!-- ==================== STACKED CARD 2: GITHUB OVERALL STATS (Pushed Down to y=455) ==================== -->
+  <g transform="translate(24, 455)" filter="url(#cardShadow)">
     <rect width="872" height="145" rx="12" fill="#040906" stroke="#164d27" stroke-width="1.5" />
     
     <text x="28" y="28" class="card-title">Mohammed Sahil's GitHub Stats</text>
@@ -818,8 +819,8 @@
     </g>
   </g>
 
-  <!-- ==================== STACKED CARD 3: MOST USED LANGUAGES ==================== -->
-  <g transform="translate(24, 531)" filter="url(#cardShadow)">
+  <!-- ==================== STACKED CARD 3: MOST USED LANGUAGES (Pushed Down to y=620) ==================== -->
+  <g transform="translate(24, 620)" filter="url(#cardShadow)">
     <rect width="872" height="150" rx="12" fill="#040906" stroke="#164d27" stroke-width="1.5" />
     
     <text x="28" y="28" class="card-title-green">Most Used Languages</text>

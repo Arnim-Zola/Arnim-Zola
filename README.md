@@ -71,7 +71,7 @@
 
 <img src="assets/heading-telemetry.svg?v=3.0" alt="REAL-TIME TELEMETRY &amp; CODING STATS" width="100%" />
 
-<img src="assets/telemetry-cosmos-card-v7.svg" width="100%" alt="Real-Time Telemetry &amp; Coding Stats" />
+<img src="assets/telemetry-cosmos-card-v8.svg" width="100%" alt="Real-Time Telemetry &amp; Coding Stats" />
 
 <img src="assets/green-divider-laser-v1.svg" width="100%" alt="---" />
 
