@@ -376,59 +376,40 @@
     <g transform="translate(26, 56)">
       <!-- Track Background -->
       <rect width="478" height="10" rx="5" fill="#0e2617" />
-      
-      <!-- Colored Segments -->
-      <!-- JavaScript: 80.33% = 384px -->
-      <rect x="0" y="0" width="384" height="10" rx="5" fill="#f1e05a" />
-      <!-- Python: 16.74% = 80px -->
-      <rect x="385" y="0" width="80" height="10" fill="#3572A5" />
-      <!-- CSS: 2.38% = 11.4px -->
-      <rect x="466" y="0" width="11" height="10" fill="#663399" />
-      <!-- HTML: 0.38% = 1.8px -->
-      <rect x="474" y="0" width="2" height="10" fill="#e34c26" />
-      <!-- Batchfile: 0.09% -->
-      <rect x="476" y="0" width="1" height="10" fill="#C1F12E" />
-      <!-- Shell: 0.08% -->
-      <rect x="477" y="0" width="1" height="10" rx="5" fill="#89e051" />
+      <rect x="0" y="0" width="384.0" height="10" rx="5" fill="#f1e05a" />
+      <rect x="384.0" y="0" width="80.0" height="10" fill="#3572A5" />
+      <rect x="464.0" y="0" width="11.4" height="10" fill="#663399" />
+      <rect x="475.4" y="0" width="1.8" height="10" fill="#e34c26" />
+      <rect x="477.2" y="0" width="0.8000000000000114" height="10" fill="#C1F12E" />
+      <rect x="478.0" y="0" width="0.0" height="10" rx="5" fill="#89e051" />
     </g>
 
     <!-- Language Grid Breakdown (2 Columns x 3 Rows) -->
-    <!-- Row 1 -->
-    <!-- JavaScript -->
     <g transform="translate(26, 96)">
       <circle cx="5" cy="5" r="4.5" fill="#f1e05a" />
       <text x="18" y="9" class="lang-name">JavaScript</text>
       <text x="210" y="9" class="lang-pct">80.33%</text>
     </g>
-    <!-- HTML -->
-    <g transform="translate(280, 96)">
-      <circle cx="5" cy="5" r="4.5" fill="#e34c26" />
-      <text x="18" y="9" class="lang-name">HTML</text>
-      <text x="210" y="9" class="lang-pct">0.38%</text>
-    </g>
-
-    <!-- Row 2 -->
-    <!-- Python -->
     <g transform="translate(26, 140)">
       <circle cx="5" cy="5" r="4.5" fill="#3572A5" />
       <text x="18" y="9" class="lang-name">Python</text>
       <text x="210" y="9" class="lang-pct">16.74%</text>
     </g>
-    <!-- Batchfile -->
-    <g transform="translate(280, 140)">
-      <circle cx="5" cy="5" r="4.5" fill="#C1F12E" />
-      <text x="18" y="9" class="lang-name">Batchfile</text>
-      <text x="210" y="9" class="lang-pct">0.09%</text>
-    </g>
-
-    <!-- Row 3 -->
-    <!-- CSS -->
     <g transform="translate(26, 184)">
       <circle cx="5" cy="5" r="4.5" fill="#663399" />
       <text x="18" y="9" class="lang-name">CSS</text>
       <text x="210" y="9" class="lang-pct">2.38%</text>
     </g>
-    <!-- Shell -->
+    <g transform="translate(280, 96)">
+      <circle cx="5" cy="5" r="4.5" fill="#e34c26" />
+      <text x="18" y="9" class="lang-name">HTML</text>
+      <text x="210" y="9" class="lang-pct">0.38%</text>
+    </g>
+    <g transform="translate(280, 140)">
+      <circle cx="5" cy="5" r="4.5" fill="#C1F12E" />
+      <text x="18" y="9" class="lang-name">Batchfile</text>
+      <text x="210" y="9" class="lang-pct">0.09%</text>
+    </g>
     <g transform="translate(280, 184)">
       <circle cx="5" cy="5" r="4.5" fill="#89e051" />
       <text x="18" y="9" class="lang-name">Shell</text>

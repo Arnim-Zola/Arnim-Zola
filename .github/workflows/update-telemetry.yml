@@ -1,0 +1,47 @@
+name: Sync Live Telemetry & GitHub Stats
+
+on:
+  schedule:
+    # Runs automatically every 6 hours
+    - cron: '0 */6 * * *'
+  workflow_dispatch: # Allows 1-click manual trigger from GitHub Actions tab
+  push:
+    branches:
+      - main
+    paths-ignore:
+      - 'assets/telemetry-cosmos-card*'
+      - '.github/**'
+
+jobs:
+  update-telemetry:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Generate Updated Telemetry Artwork
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_USERNAME: ${{ github.repository_owner }}
+        run: |
+          python generate_telemetry_svg.py
+
+      - name: Commit & Push Changes
+        run: |
+          git config --local user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "github-actions[bot]"
+          git add assets/telemetry-cosmos-card*
+          if git diff --staged --quiet; then
+            echo "Telemetry is already fully up to date. No changes needed."
+          else
+            git commit -m "chore(telemetry): auto-update live coding telemetry stats [skip ci]"
+            git push
+          fi

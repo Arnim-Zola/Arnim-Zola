@@ -1,9 +1,232 @@
 import os
 import re
+import json
+import urllib.request
+from datetime import datetime
 import xml.etree.ElementTree as ET
+
+def fetch_live_stats(username, token):
+    """
+    Fetches real-time GitHub stats via GitHub GraphQL API.
+    Returns dictionary with parsed values or None on error.
+    """
+    if not token:
+        return None
+
+    query = """
+    query($login: String!) {
+      user(login: $login) {
+        name
+        contributionsCollection {
+          totalCommitContributions
+          totalPullRequestContributions
+          totalIssueContributions
+          restrictedContributionsCount
+          contributionCalendar {
+            totalContributions
+            weeks {
+              contributionDays {
+                contributionCount
+                date
+              }
+            }
+          }
+        }
+        repositories(first: 100, ownerAffiliations: OWNER, isFork: false) {
+          nodes {
+            name
+            stargazerCount
+            languages(first: 10, orderBy: {field: SIZE, direction: DESC}) {
+              edges {
+                size
+                node {
+                  name
+                  color
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+    """
+    req_body = json.dumps({"query": query, "variables": {"login": username}}).encode("utf-8")
+    req = urllib.request.Request(
+        "https://api.github.com/graphql",
+        data=req_body,
+        headers={
+          "Authorization": f"bearer {token}",
+          "User-Agent": "Arnim-Zola-Telemetry-Bot",
+          "Content-Type": "application/json"
+        }
+    )
+
+    try:
+        with urllib.request.urlopen(req, timeout=10) as response:
+            res_data = json.loads(response.read().decode("utf-8"))
+            if "errors" in res_data:
+                print("GraphQL Error:", res_data["errors"])
+                return None
+            user_data = res_data.get("data", {}).get("user")
+            if not user_data:
+                return None
+
+            col = user_data.get("contributionsCollection", {})
+            cal = col.get("contributionCalendar", {})
+            repos = user_data.get("repositories", {}).get("nodes", [])
+
+            # 1. Basic Stats
+            total_contributions = cal.get("totalContributions", 174)
+            total_commits = col.get("totalCommitContributions", 0) + col.get("restrictedContributionsCount", 0)
+            total_prs = col.get("totalPullRequestContributions", 0)
+            total_issues = col.get("totalIssueContributions", 0)
+            total_stars = sum(r.get("stargazerCount", 0) for r in repos)
+
+            # 2. Streaks calculation from calendar days
+            all_days = []
+            for w in cal.get("weeks", []):
+                for d in w.get("contributionDays", []):
+                    all_days.append(d)
+
+            current_streak = 0
+            curr_streak_date = "Today"
+            longest_streak = 0
+            longest_start = None
+            longest_end = None
+
+            temp_streak = 0
+            temp_start = None
+
+            for i, day in enumerate(all_days):
+                cnt = day.get("contributionCount", 0)
+                dt_str = day.get("date")
+                if cnt > 0:
+                    if temp_streak == 0:
+                        temp_start = dt_str
+                    temp_streak += 1
+                    if temp_streak > longest_streak:
+                        longest_streak = temp_streak
+                        longest_start = temp_start
+                        longest_end = dt_str
+                else:
+                    temp_streak = 0
+
+            # Current streak ending at the end of calendar
+            if all_days:
+                today_day = all_days[-1]
+                if today_day.get("contributionCount", 0) > 0:
+                    current_streak = 1
+                    for d in reversed(all_days[:-1]):
+                        if d.get("contributionCount", 0) > 0:
+                            current_streak += 1
+                        else:
+                            break
+                    curr_streak_date = datetime.strptime(today_day.get("date"), "%Y-%m-%d").strftime("%b %d").lstrip("0")
+                elif len(all_days) > 1 and all_days[-2].get("contributionCount", 0) > 0:
+                    current_streak = 1
+                    for d in reversed(all_days[:-2]):
+                        if d.get("contributionCount", 0) > 0:
+                            current_streak += 1
+                        else:
+                            break
+                    curr_streak_date = datetime.strptime(all_days[-2].get("date"), "%Y-%m-%d").strftime("%b %d").lstrip("0")
+
+            longest_range = "Active"
+            if longest_start and longest_end:
+                s_dt = datetime.strptime(longest_start, "%Y-%m-%d").strftime("%b %d").lstrip("0")
+                e_dt = datetime.strptime(longest_end, "%Y-%m-%d").strftime("%b %d").lstrip("0")
+                longest_range = f"{s_dt} &#8211; {e_dt}"
+
+            # 3. Languages aggregation
+            lang_sizes = {}
+            lang_colors = {}
+            color_fallbacks = {
+                "JavaScript": "#f1e05a",
+                "Python": "#3572A5",
+                "CSS": "#663399",
+                "HTML": "#e34c26",
+                "Batchfile": "#C1F12E",
+                "Shell": "#89e051",
+                "TypeScript": "#3178c6",
+                "C++": "#f34b7d",
+                "ShaderLab": "#222c37",
+                "GLSL": "#5686a5"
+            }
+
+            for r in repos:
+                for edge in r.get("languages", {}).get("edges", []):
+                    lname = edge.get("node", {}).get("name")
+                    lcolor = edge.get("node", {}).get("color") or color_fallbacks.get(lname, "#00ff66")
+                    lsize = edge.get("size", 0)
+                    lang_sizes[lname] = lang_sizes.get(lname, 0) + lsize
+                    lang_colors[lname] = lcolor
+
+            sorted_langs = sorted(lang_sizes.items(), key=lambda x: x[1], reverse=True)
+            total_code_size = sum(lang_sizes.values()) or 1
+
+            langs_list = []
+            for lname, lsize in sorted_langs[:6]:
+                pct = round((lsize / total_code_size) * 100, 2)
+                langs_list.append((lname, pct, lang_colors.get(lname, color_fallbacks.get(lname, "#00ff66"))))
+
+            while len(langs_list) < 6:
+                langs_list.append(("-", 0.0, "#1b4d2e"))
+
+            return {
+                "total_contributions": total_contributions,
+                "total_commits": total_commits,
+                "total_prs": total_prs,
+                "total_issues": total_issues,
+                "total_stars": total_stars,
+                "current_streak": current_streak,
+                "curr_streak_date": curr_streak_date,
+                "longest_streak": longest_streak,
+                "longest_range": longest_range,
+                "languages": langs_list
+            }
+
+    except Exception as e:
+        print("Error fetching live GitHub stats:", e)
+        return None
 
 def generate_telemetry_svg():
     assets_dir = r"c:\Holidays\Arnim-Zola\assets"
+    token = os.environ.get("GITHUB_TOKEN")
+    username = os.environ.get("GITHUB_USERNAME", "Arnim-Zola")
+
+    live_stats = fetch_live_stats(username, token)
+
+    if live_stats:
+        print("Using freshly fetched live GitHub telemetry stats!")
+        total_contributions = live_stats["total_contributions"]
+        total_commits = live_stats["total_commits"]
+        total_prs = live_stats["total_prs"]
+        total_issues = live_stats["total_issues"]
+        total_stars = live_stats["total_stars"]
+        current_streak = live_stats["current_streak"]
+        curr_streak_date = live_stats["curr_streak_date"]
+        longest_streak = live_stats["longest_streak"]
+        longest_range = live_stats["longest_range"]
+        languages = live_stats["languages"]
+    else:
+        print("Using local default/fallback telemetry values.")
+        total_contributions = 174
+        total_commits = 114
+        total_prs = 2
+        total_issues = 0
+        total_stars = 0
+        current_streak = 0
+        curr_streak_date = "Sep 5"
+        longest_streak = 3
+        longest_range = "Jun 19 &#8211; Jun 21"
+        languages = [
+            ("JavaScript", 80.33, "#f1e05a"),
+            ("Python", 16.74, "#3572A5"),
+            ("CSS", 2.38, "#663399"),
+            ("HTML", 0.38, "#e34c26"),
+            ("Batchfile", 0.09, "#C1F12E"),
+            ("Shell", 0.08, "#89e051")
+        ]
 
     # Read base64 font from taglines.svg
     taglines_path = os.path.join(assets_dir, "taglines.svg")
@@ -15,6 +238,49 @@ def generate_telemetry_svg():
 
     vbox_w = 920
     vbox_h = 550
+
+    # Build progress bar segments for languages
+    bar_width_total = 478
+    cur_x = 0
+    bar_rects = []
+    for idx, (lname, pct, col) in enumerate(languages):
+        if pct <= 0:
+            continue
+        seg_w = max(1.5, round((pct / 100.0) * bar_width_total, 1))
+        # Clamp to avoid overflow
+        if cur_x + seg_w > bar_width_total:
+            seg_w = bar_width_total - cur_x
+        rx_attr = ' rx="5"' if (idx == 0 or idx == len(languages)-1) else ''
+        bar_rects.append(f'<rect x="{cur_x}" y="0" width="{seg_w}" height="10"{rx_attr} fill="{col}" />')
+        cur_x += seg_w
+    bar_svg = "\n      ".join(bar_rects)
+
+    # Build language breakdown grid
+    col1_items = languages[0:3]
+    col2_items = languages[3:6]
+
+    lang_grid_lines = []
+    # Col 1 items
+    for idx, (lname, pct, col) in enumerate(col1_items):
+        y_pos = 96 + idx * 44
+        pct_str = f"{pct:.2f}%" if pct > 0 else "0.0%"
+        lang_grid_lines.append(f'''<g transform="translate(26, {y_pos})">
+      <circle cx="5" cy="5" r="4.5" fill="{col}" />
+      <text x="18" y="9" class="lang-name">{lname}</text>
+      <text x="210" y="9" class="lang-pct">{pct_str}</text>
+    </g>''')
+
+    # Col 2 items
+    for idx, (lname, pct, col) in enumerate(col2_items):
+        y_pos = 96 + idx * 44
+        pct_str = f"{pct:.2f}%" if pct > 0 else "0.0%"
+        lang_grid_lines.append(f'''<g transform="translate(280, {y_pos})">
+      <circle cx="5" cy="5" r="4.5" fill="{col}" />
+      <text x="18" y="9" class="lang-name">{lname}</text>
+      <text x="210" y="9" class="lang-pct">{pct_str}</text>
+    </g>''')
+
+    lang_grid_svg = "\n    ".join(lang_grid_lines)
 
     svg_content = f"""<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 {vbox_w} {vbox_h}" width="100%" height="{vbox_h}" fill="none">
   <defs>
@@ -294,7 +560,7 @@ def generate_telemetry_svg():
     
     <!-- Col 1: Total Contributions -->
     <g transform="translate(70, 48)">
-      <text x="0" y="38" class="streak-val">174</text>
+      <text x="0" y="38" class="streak-val">{total_contributions}</text>
       <text x="0" y="68" class="streak-lbl">TOTAL</text>
       <text x="0" y="82" class="streak-lbl">CONTRIBUTIONS</text>
       <text x="0" y="104" class="streak-sub">Jul 7, 2025 &#8211; Present</text>
@@ -308,10 +574,10 @@ def generate_telemetry_svg():
       <!-- SVG Ring -->
       <circle cx="0" cy="24" r="26" stroke="#163d22" stroke-width="3.5" fill="none" />
       <circle cx="0" cy="24" r="26" stroke="#00ff66" stroke-width="3.5" stroke-dasharray="163" stroke-dashoffset="163" stroke-linecap="round" fill="none" />
-      <text x="0" y="32" class="streak-val">0</text>
+      <text x="0" y="32" class="streak-val">{current_streak}</text>
       
       <text x="0" y="78" class="streak-lbl" fill="#00ff66" style="fill:#00ff66;">CURRENT STREAK</text>
-      <text x="0" y="104" class="streak-sub">Sep 5</text>
+      <text x="0" y="104" class="streak-sub">{curr_streak_date}</text>
     </g>
 
     <!-- Vertical Divider 2 -->
@@ -319,9 +585,9 @@ def generate_telemetry_svg():
 
     <!-- Col 3: Longest Streak -->
     <g transform="translate(352, 48)">
-      <text x="0" y="38" class="streak-val">3</text>
+      <text x="0" y="38" class="streak-val">{longest_streak}</text>
       <text x="0" y="78" class="streak-lbl">LONGEST STREAK</text>
-      <text x="0" y="104" class="streak-sub">Jun 19 &#8211; Jun 21</text>
+      <text x="0" y="104" class="streak-sub">{longest_range}</text>
     </g>
   </g>
 
@@ -337,7 +603,7 @@ def generate_telemetry_svg():
       <!-- Star Icon -->
       <path d="M7 0.5 L8.8 4.2 L13 4.8 L9.9 7.8 L10.6 12 L7 10 L3.4 12 L4.1 7.8 L1 4.8 L5.2 4.2 Z" fill="#00ff66" />
       <text x="24" y="10" class="stat-lbl">Total Stars Earned:</text>
-      <text x="374" y="10" class="stat-num">0</text>
+      <text x="374" y="10" class="stat-num">{total_stars}</text>
     </g>
 
     <!-- Item 2: Total Commits -->
@@ -346,7 +612,7 @@ def generate_telemetry_svg():
       <circle cx="7" cy="7" r="6" stroke="#00ff66" stroke-width="1.5" fill="none" />
       <path d="M7 3.5 L7 7 L9.5 8.5" stroke="#00ff66" stroke-width="1.5" fill="none" stroke-linecap="round" />
       <text x="24" y="11" class="stat-lbl">Total Commits:</text>
-      <text x="374" y="11" class="stat-num">114</text>
+      <text x="374" y="11" class="stat-num">{total_commits}</text>
     </g>
 
     <!-- Item 3: Total PRs -->
@@ -357,7 +623,7 @@ def generate_telemetry_svg():
       <circle cx="10" cy="7" r="2" fill="#00ff66" />
       <path d="M4 3 L4 11 M10 7 L10 5 C10 3.5 8 3.5 4 3.5" stroke="#00ff66" stroke-width="1.2" fill="none" />
       <text x="24" y="11" class="stat-lbl">Total PRs:</text>
-      <text x="374" y="11" class="stat-num">2</text>
+      <text x="374" y="11" class="stat-num">{total_prs}</text>
     </g>
 
     <!-- Item 4: Total Issues -->
@@ -366,7 +632,7 @@ def generate_telemetry_svg():
       <circle cx="7" cy="7" r="6" stroke="#00ff66" stroke-width="1.5" fill="none" />
       <circle cx="7" cy="7" r="1.5" fill="#00ff66" />
       <text x="24" y="11" class="stat-lbl">Total Issues:</text>
-      <text x="374" y="11" class="stat-num">0</text>
+      <text x="374" y="11" class="stat-num">{total_issues}</text>
     </g>
 
     <!-- Item 5: Contributed to -->
@@ -389,64 +655,11 @@ def generate_telemetry_svg():
     <g transform="translate(26, 56)">
       <!-- Track Background -->
       <rect width="478" height="10" rx="5" fill="#0e2617" />
-      
-      <!-- Colored Segments -->
-      <!-- JavaScript: 80.33% = 384px -->
-      <rect x="0" y="0" width="384" height="10" rx="5" fill="#f1e05a" />
-      <!-- Python: 16.74% = 80px -->
-      <rect x="385" y="0" width="80" height="10" fill="#3572A5" />
-      <!-- CSS: 2.38% = 11.4px -->
-      <rect x="466" y="0" width="11" height="10" fill="#663399" />
-      <!-- HTML: 0.38% = 1.8px -->
-      <rect x="474" y="0" width="2" height="10" fill="#e34c26" />
-      <!-- Batchfile: 0.09% -->
-      <rect x="476" y="0" width="1" height="10" fill="#C1F12E" />
-      <!-- Shell: 0.08% -->
-      <rect x="477" y="0" width="1" height="10" rx="5" fill="#89e051" />
+      {bar_svg}
     </g>
 
     <!-- Language Grid Breakdown (2 Columns x 3 Rows) -->
-    <!-- Row 1 -->
-    <!-- JavaScript -->
-    <g transform="translate(26, 96)">
-      <circle cx="5" cy="5" r="4.5" fill="#f1e05a" />
-      <text x="18" y="9" class="lang-name">JavaScript</text>
-      <text x="210" y="9" class="lang-pct">80.33%</text>
-    </g>
-    <!-- HTML -->
-    <g transform="translate(280, 96)">
-      <circle cx="5" cy="5" r="4.5" fill="#e34c26" />
-      <text x="18" y="9" class="lang-name">HTML</text>
-      <text x="210" y="9" class="lang-pct">0.38%</text>
-    </g>
-
-    <!-- Row 2 -->
-    <!-- Python -->
-    <g transform="translate(26, 140)">
-      <circle cx="5" cy="5" r="4.5" fill="#3572A5" />
-      <text x="18" y="9" class="lang-name">Python</text>
-      <text x="210" y="9" class="lang-pct">16.74%</text>
-    </g>
-    <!-- Batchfile -->
-    <g transform="translate(280, 140)">
-      <circle cx="5" cy="5" r="4.5" fill="#C1F12E" />
-      <text x="18" y="9" class="lang-name">Batchfile</text>
-      <text x="210" y="9" class="lang-pct">0.09%</text>
-    </g>
-
-    <!-- Row 3 -->
-    <!-- CSS -->
-    <g transform="translate(26, 184)">
-      <circle cx="5" cy="5" r="4.5" fill="#663399" />
-      <text x="18" y="9" class="lang-name">CSS</text>
-      <text x="210" y="9" class="lang-pct">2.38%</text>
-    </g>
-    <!-- Shell -->
-    <g transform="translate(280, 184)">
-      <circle cx="5" cy="5" r="4.5" fill="#89e051" />
-      <text x="18" y="9" class="lang-name">Shell</text>
-      <text x="210" y="9" class="lang-pct">0.08%</text>
-    </g>
+    {lang_grid_svg}
   </g>
 </svg>"""
 
