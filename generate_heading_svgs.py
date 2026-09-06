@@ -13,7 +13,7 @@ def generate_heading_svgs():
     font_face_css = font_match.group(0) if font_match else ""
 
     vbox_w = 920
-    vbox_h = 32
+    vbox_h = 36
 
     headings = {
         "heading-eden.svg": "PRIMARY FLAGSHIP: EDEN (Autonomous Misinformation Analysis Engine)",
@@ -30,14 +30,14 @@ def generate_heading_svgs():
       {font_face_css}
       .h3-text {{
         font-family: 'Caacupe One', cursive, sans-serif;
-        font-size: 20px;
+        font-size: 23px;
         font-weight: 400;
-        letter-spacing: 1px;
+        letter-spacing: 0.8px;
         fill: #7ee787;
       }}
     </style>
   </defs>
-  <text x="0" y="23" class="h3-text">{text}</text>
+  <text x="0" y="26" class="h3-text">{text}</text>
 </svg>"""
         out_path = os.path.join(assets_dir, fname)
         with open(out_path, "w", encoding="utf-8") as f:
