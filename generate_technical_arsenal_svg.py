@@ -15,79 +15,84 @@ def generate_technical_arsenal_svg():
 
     vbox_w = 920
     table_top = 0
-    header_h = 46
-    row_h = 88
-    num_rows = 5
-    total_table_h = header_h + num_rows * row_h  # 46 + 440 = 486
-    total_svg_h = table_top + total_table_h + 4   # 490
+    header_h = 44
 
-    col1_w = 245
-    col2_w = vbox_w - col1_w                      # 675
+    col1_w = 210
+    col2_w = vbox_w - col1_w                      # 710
     col2_x = col1_w
 
     domains_data = [
         {
             "domain": "Languages &amp; Shaders",
+            "row_h": 64,
             "badges": [
-                [("Python 3.11", 86, True), ("TypeScript", 84, False), ("JavaScript (ES6+)", 124, False), ("GLSL Shaders", 98, True)],
-                [("C++", 48, False), ("SQL", 46, False), ("Bash / Linux", 92, False)]
+                [("Python 3.11", 80), ("TypeScript", 76), ("JavaScript (ES6+)", 116), ("GLSL Shaders", 92), ("C++", 42), ("SQL", 42), ("Bash / Linux", 88)]
             ]
         },
         {
             "domain": "Applied AI, Vision &amp; NLP",
+            "row_h": 92,
             "badges": [
-                [("Google Gemini 2.0", 126, True), ("Meta Llama 3 (8B)", 126, True), ("PyTorch", 68, True), ("OpenCV", 68, False)],
-                [("OpenAI Whisper", 108, False), ("EasyOCR", 74, False), ("pgvector (HNSW)", 118, True), ("LangChain", 86, False)]
+                [("Google Gemini 2.0", 118), ("Meta Llama 3 (8B)", 120), ("PyTorch", 62), ("OpenCV", 62), ("OpenAI Whisper", 104), ("EasyOCR", 68)],
+                [("pgvector (HNSW)", 112), ("LangChain", 78)]
             ]
         },
         {
             "domain": "Distributed Backend &amp; Scraping",
+            "row_h": 64,
             "badges": [
-                [("FastAPI", 68, True), ("Django", 66, False), ("Django REST", 92, False), ("Celery", 64, True)],
-                [("Redis", 58, True), ("Playwright", 82, False), ("RESTful APIs", 96, False)]
+                [("FastAPI", 62), ("Django", 60), ("Django REST Framework", 144), ("Celery", 58), ("Redis", 52), ("Playwright", 78), ("RESTful APIs", 92)]
             ]
         },
         {
             "domain": "Creative WebGL, 3D &amp; Frontend",
+            "row_h": 92,
             "badges": [
-                [("Next.js 15", 76, True), ("React 19", 70, False), ("Three.js", 68, True), ("@react-three/fiber", 126, False)],
-                [("Web Audio API", 102, False), ("Plotly.js", 70, False), ("PDF.js", 60, False), ("Tailwind CSS", 94, False)]
+                [("Next.js 15", 70), ("React 19", 64), ("Three.js", 64), ("@react-three/fiber", 122), ("Web Audio API", 98), ("Plotly.js", 66), ("PDF.js", 54)],
+                [("Tailwind CSS", 88)]
             ]
         },
         {
             "domain": "Databases, DevOps &amp; Media",
+            "row_h": 64,
             "badges": [
-                [("PostgreSQL", 86, True), ("SQLite", 60, False), ("MongoDB", 76, False), ("Docker", 66, True)],
-                [("Docker Compose", 114, False), ("Git", 46, False), ("GitHub Actions", 106, True), ("FFmpeg", 70, False)]
+                [("PostgreSQL", 78), ("SQLite", 56), ("MongoDB", 72), ("Docker", 60), ("Docker Compose", 106), ("Git", 40), ("GitHub Actions", 98), ("FFmpeg", 64)]
             ]
         }
     ]
 
+    total_table_h = header_h + sum(d["row_h"] for d in domains_data)
+    total_svg_h = table_top + total_table_h + 4
+
     rows_svg = []
+    current_y = table_top + header_h
+    h_lines = []
+
     for idx, r in enumerate(domains_data):
-        y_top = table_top + header_h + idx * row_h
+        y_top = current_y
+        row_h = r["row_h"]
         y_mid = y_top + row_h / 2
 
-        # Col 1: Domain Title (Clean left aligned text)
-        col1_svg = f'<text x="20" y="{y_mid + 6}" class="domain-title">{r["domain"]}</text>'
+        # Col 1: Domain Title (Emerald Green text matching screenshot)
+        col1_svg = f'<text x="18" y="{y_mid + 5}" class="domain-title">{r["domain"]}</text>'
 
-        # Col 2: Badges (Balanced mix of White and Neon Green text)
+        # Col 2: Badges
         badge_rows = r["badges"]
         badge_svg_list = []
-        b_start_y = y_top + 14
+        if len(badge_rows) == 1:
+            b_start_y = y_mid - 13
+        else:
+            b_start_y = y_top + 14
+
         for b_row_idx, b_list in enumerate(badge_rows):
             by = b_start_y + b_row_idx * 33
-            bx = col2_x + 16
-            for item in b_list:
-                label = item[0]
-                bw = item[1]
-                is_hi = item[2] if len(item) > 2 else False
-                text_cls = "badge-text-hi" if is_hi else "badge-text"
+            bx = col2_x + 14
+            for label, bw in b_list:
                 badge_svg_list.append(f'''<g transform="translate({bx}, {by})">
         <rect width="{bw}" height="26" rx="6" class="badge-bg" />
-        <text x="{bw/2}" y="17.5" class="{text_cls}">{label}</text>
+        <text x="{bw/2}" y="17.5" class="badge-text">{label}</text>
       </g>''')
-                bx += bw + 8
+                bx += bw + 6
         col2_svg = "\n      ".join(badge_svg_list)
 
         rows_svg.append(f"""  <!-- Row {idx + 1}: {r['domain']} -->
@@ -96,7 +101,12 @@ def generate_technical_arsenal_svg():
     {col2_svg}
   </g>""")
 
+        current_y += row_h
+        if idx < len(domains_data) - 1:
+            h_lines.append(f'<line x1="0" y1="{current_y}" x2="{vbox_w}" y2="{current_y}" class="grid-line" />')
+
     all_rows_str = "\n\n".join(rows_svg)
+    all_h_lines = "\n    ".join(h_lines)
 
     svg_content = f"""<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 {vbox_w} {total_svg_h}" width="100%" height="{total_svg_h}" fill="none">
   <defs>
@@ -105,17 +115,18 @@ def generate_technical_arsenal_svg():
 
       .th-text {{
         font-family: 'Caacupe One', cursive, sans-serif;
-        font-size: 17px;
+        font-size: 16px;
         font-weight: 400;
-        letter-spacing: 0.6px;
-        fill: #7ee787;
+        letter-spacing: 0.5px;
+        fill: #ffffff;
       }}
       .domain-title {{
         font-family: 'Caacupe One', cursive, sans-serif;
-        font-size: 16.5px;
+        font-size: 15px;
         font-weight: 400;
-        letter-spacing: 0.2px;
-        fill: #ffffff;
+        letter-spacing: 0.3px;
+        fill: #00ff66;
+        filter: drop-shadow(0 1px 2px rgba(0,0,0,0.8));
       }}
       .badge-bg {{
         fill: #06170d;
@@ -124,18 +135,10 @@ def generate_technical_arsenal_svg():
       }}
       .badge-text {{
         font-family: 'Caacupe One', cursive, sans-serif;
-        font-size: 12.5px;
+        font-size: 12px;
         font-weight: 400;
         letter-spacing: 0.2px;
-        fill: #ffffff;
-        text-anchor: middle;
-      }}
-      .badge-text-hi {{
-        font-family: 'Caacupe One', cursive, sans-serif;
-        font-size: 12.5px;
-        font-weight: 400;
-        letter-spacing: 0.2px;
-        fill: #00ff66;
+        fill: #39d353;
         text-anchor: middle;
       }}
       .grid-line {{
@@ -153,15 +156,12 @@ def generate_technical_arsenal_svg():
     <path d="M 0 10 Q 0 0 10 0 L {vbox_w - 10} 0 Q {vbox_w} 0 {vbox_w} 10 L {vbox_w} {header_h} L 0 {header_h} Z" fill="#07150c" />
 
     <!-- Header Column Titles -->
-    <text x="20" y="29" class="th-text">System Domain</text>
-    <text x="{col2_x + 16}" y="29" class="th-text">Core Technologies &amp; Production Tooling</text>
+    <text x="18" y="28" class="th-text">System Domain</text>
+    <text x="{col2_x + 14}" y="28" class="th-text">Core Technologies &amp; Production Tooling</text>
 
     <!-- Horizontal Grid Lines -->
     <line x1="0" y1="{header_h}" x2="{vbox_w}" y2="{header_h}" class="grid-line" stroke="#184225" stroke-width="1.2" />
-    <line x1="0" y1="{header_h + row_h}" x2="{vbox_w}" y2="{header_h + row_h}" class="grid-line" />
-    <line x1="0" y1="{header_h + row_h * 2}" x2="{vbox_w}" y2="{header_h + row_h * 2}" class="grid-line" />
-    <line x1="0" y1="{header_h + row_h * 3}" x2="{vbox_w}" y2="{header_h + row_h * 3}" class="grid-line" />
-    <line x1="0" y1="{header_h + row_h * 4}" x2="{vbox_w}" y2="{header_h + row_h * 4}" class="grid-line" />
+    {all_h_lines}
 
     <!-- Vertical Column Line -->
     <line x1="{col2_x}" y1="0" x2="{col2_x}" y2="{total_table_h}" class="grid-line" />
@@ -171,12 +171,12 @@ def generate_technical_arsenal_svg():
 {all_rows_str}
 </svg>"""
 
-    for fname in ["technical-arsenal-table.svg", "technical-arsenal-table-v1.svg", "technical-arsenal-table-v2.svg", "technical-arsenal-table-v3.svg"]:
+    for fname in ["technical-arsenal-table.svg", "technical-arsenal-table-v1.svg", "technical-arsenal-table-v2.svg", "technical-arsenal-table-v3.svg", "technical-arsenal-table-v4.svg"]:
         out_path = os.path.join(assets_dir, fname)
         with open(out_path, "w", encoding="utf-8") as f:
             f.write(svg_content)
     ET.fromstring(svg_content)
-    print(f"Generated & Validated: technical-arsenal-table.svg, v1..v3")
+    print(f"Generated & Validated: technical-arsenal-table.svg, v1..v4")
 
 if __name__ == "__main__":
     generate_technical_arsenal_svg()
