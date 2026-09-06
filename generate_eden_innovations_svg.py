@@ -79,9 +79,9 @@ def generate_eden_innovations_svg():
 
         t_svg = f'<text x="{text_x}" y="{item_y}" class="item-title">{it["title"]}</text>'
 
-        # Perfectly flush, justified description lines reaching the right margin
-        line1_svg = f'<text x="{text_x}" y="{item_y + 24}" textLength="{text_len}" lengthAdjust="spacing" class="item-desc">{it["lines"][0][0]}</text>'
-        line2_svg = f'<text x="{text_x}" y="{item_y + 49}" textLength="{text_len}" lengthAdjust="spacing" class="item-desc">{it["lines"][1][0]}</text>'
+        # Natural crisp typography with exact same letter spacing as headline
+        line1_svg = f'<text x="{text_x}" y="{item_y + 24}" class="item-desc">{it["lines"][0][0]}</text>'
+        line2_svg = f'<text x="{text_x}" y="{item_y + 49}" class="item-desc">{it["lines"][1][0]}</text>'
         
         # Subtle divider between items (except last)
         div_svg = ""
@@ -129,9 +129,9 @@ def generate_eden_innovations_svg():
       }}
       .item-desc {{
         font-family: 'Caacupe One', cursive, sans-serif;
-        font-size: 17px;
+        font-size: 15.5px;
         font-weight: 400;
-        letter-spacing: 0.05px;
+        letter-spacing: 0.2px;
         fill: #e6edf3;
       }}
       .hi {{
@@ -155,12 +155,12 @@ def generate_eden_innovations_svg():
   </g>
 </svg>"""
 
-    for fname in ["eden-innovations.svg", "eden-innovations-v2.svg", "eden-innovations-v3.svg", "eden-innovations-v4.svg", "eden-innovations-v5.svg", "eden-innovations-v6.svg", "eden-innovations-v7.svg", "eden-innovations-v8.svg"]:
+    for fname in ["eden-innovations.svg", "eden-innovations-v2.svg", "eden-innovations-v3.svg", "eden-innovations-v4.svg", "eden-innovations-v5.svg", "eden-innovations-v6.svg", "eden-innovations-v7.svg", "eden-innovations-v8.svg", "eden-innovations-v9.svg"]:
         out_path = os.path.join(assets_dir, fname)
         with open(out_path, "w", encoding="utf-8") as f:
             f.write(svg_content)
     ET.fromstring(svg_content)
-    print(f"Generated & Validated: eden-innovations.svg, v2..v8")
+    print(f"Generated & Validated: eden-innovations.svg, v2..v9")
 
 if __name__ == "__main__":
     generate_eden_innovations_svg()
