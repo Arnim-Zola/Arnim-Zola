@@ -51,14 +51,6 @@
 
 <img src="assets/eden-innovations-v6.svg" width="100%" alt="Eden Architectural Innovations" />
 
-<br/>
-
-<div align="center">
-  <a href="https://github.com/Arnim-Zola/Eden">
-    <b>Access Eden OSINT Pipeline &amp; System Architecture →</b>
-  </a>
-</div>
-
 <img src="assets/green-divider.svg" width="100%" alt="---" />
 
 <img src="assets/heading-secondary.svg?v=3.0" alt="SECONDARY ARSENAL &amp; CREATIVE WEBGL LABS" width="100%" />
