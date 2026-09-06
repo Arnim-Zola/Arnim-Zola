@@ -78,9 +78,9 @@ def generate_eden_innovations_svg():
 
         t_svg = f'<text x="40" y="{item_y}" class="item-title">{it["title"]}</text>'
 
-        # Justified and distributed description lines matching About Me
-        line1_svg = f'<text x="40" y="{item_y + 22}" textLength="{text_len}" lengthAdjust="spacing" class="item-desc">{it["lines"][0][0]}</text>'
-        line2_svg = f'<text x="40" y="{item_y + 44}" textLength="{text_len}" lengthAdjust="spacing" class="item-desc">{it["lines"][1][0]}</text>'
+        # Natural crisp typography without artificial letter stretching
+        line1_svg = f'<text x="40" y="{item_y + 22}" class="item-desc">{it["lines"][0][0]}</text>'
+        line2_svg = f'<text x="40" y="{item_y + 44}" class="item-desc">{it["lines"][1][0]}</text>'
         
         # Subtle divider between items (except last)
         div_svg = ""
@@ -119,15 +119,15 @@ def generate_eden_innovations_svg():
         font-family: 'Caacupe One', cursive, sans-serif;
         font-size: 16px;
         font-weight: 400;
-        letter-spacing: 0.4px;
+        letter-spacing: 0.3px;
         fill: #00ff66;
         filter: drop-shadow(0 1px 2px rgba(0,0,0,0.8));
       }}
       .item-desc {{
         font-family: 'Caacupe One', cursive, sans-serif;
-        font-size: 14.5px;
+        font-size: 15px;
         font-weight: 400;
-        letter-spacing: 0.15px;
+        letter-spacing: 0.2px;
         fill: #e6edf3;
       }}
       .hi {{
@@ -151,14 +151,12 @@ def generate_eden_innovations_svg():
   </g>
 </svg>"""
 
-    out_path = os.path.join(assets_dir, "eden-innovations.svg")
-    out_path_v2 = os.path.join(assets_dir, "eden-innovations-v2.svg")
-    with open(out_path, "w", encoding="utf-8") as f:
-        f.write(svg_content)
-    with open(out_path_v2, "w", encoding="utf-8") as f:
-        f.write(svg_content)
+    for fname in ["eden-innovations.svg", "eden-innovations-v2.svg", "eden-innovations-v3.svg"]:
+        out_path = os.path.join(assets_dir, fname)
+        with open(out_path, "w", encoding="utf-8") as f:
+            f.write(svg_content)
     ET.fromstring(svg_content)
-    print(f"Generated & Validated: {out_path} and {out_path_v2}")
+    print(f"Generated & Validated: eden-innovations.svg, v2, v3")
 
 if __name__ == "__main__":
     generate_eden_innovations_svg()
