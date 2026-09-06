@@ -17,7 +17,7 @@
 
 </div>
 
-<img src="assets/green-divider.svg" width="100%" alt="---" />
+<img src="assets/green-divider-laser-v1.svg" width="100%" alt="---" />
 
 <img src="assets/about-me-perfect.svg?v=2.0" alt="About Me &amp; Identity" width="100%" />
 
@@ -25,7 +25,7 @@
 
 <img src="assets/architecture-matrix-v3.svg" alt="Architecture &amp; Integration Matrix" width="100%" />
 
-<img src="assets/green-divider.svg" width="100%" alt="---" />
+<img src="assets/green-divider-laser-v1.svg" width="100%" alt="---" />
 
 <img src="assets/heading-eden.svg?v=3.0" alt="PRIMARY FLAGSHIP: EDEN (Autonomous Misinformation Analysis Engine)" width="100%" />
 
@@ -51,7 +51,7 @@
 
 <img src="assets/eden-innovations-v10.svg" width="100%" alt="Eden Architectural Innovations" />
 
-<img src="assets/green-divider.svg" width="100%" alt="---" />
+<img src="assets/green-divider-laser-v1.svg" width="100%" alt="---" />
 
 <img src="assets/heading-secondary.svg?v=3.0" alt="SECONDARY ARSENAL &amp; CREATIVE WEBGL LABS" width="100%" />
 
@@ -61,13 +61,13 @@
 <a href="https://github.com/Arnim-Zola/Brainiac"><img src="assets/secondary-row-brainiac-v1.svg" width="100%" alt="Brainiac" /></a>
 <a href="https://github.com/Arnim-Zola/Portfolio"><img src="assets/secondary-row-quantum-v1.svg" width="100%" alt="Quantum OS" /></a>
 
-<img src="assets/green-divider.svg" width="100%" alt="---" />
+<img src="assets/green-divider-laser-v1.svg" width="100%" alt="---" />
 
 <img src="assets/heading-technical.svg?v=3.0" alt="TECHNICAL ARSENAL" width="100%" />
 
 <img src="assets/technical-arsenal-table-v5.svg" width="100%" alt="Technical Arsenal" />
 
-<img src="assets/green-divider.svg" width="100%" alt="---" />
+<img src="assets/green-divider-laser-v1.svg" width="100%" alt="---" />
 
 <img src="assets/heading-telemetry.svg?v=3.0" alt="REAL-TIME TELEMETRY &amp; CODING STATS" width="100%" />
 
@@ -86,7 +86,7 @@
 
 </div>
 
-<img src="assets/green-divider.svg" width="100%" alt="---" />
+<img src="assets/green-divider-laser-v1.svg" width="100%" alt="---" />
 
 <div align="center">
   <p><b>Engineered by Mohammed Sahil • 3rd Year CSE @ DSATM, Bengaluru</b></p>
