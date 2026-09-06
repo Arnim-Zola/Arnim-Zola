@@ -49,7 +49,7 @@
 
 <img src="assets/eden-pipeline-table-v2.svg" width="100%" alt="Multimodal Pipeline Execution (Stage-by-Stage)" />
 
-<img src="assets/eden-innovations.svg?v=1.0" width="100%" alt="Eden Architectural Innovations" />
+<img src="assets/eden-innovations-v2.svg" width="100%" alt="Eden Architectural Innovations" />
 
 <br/>
 
