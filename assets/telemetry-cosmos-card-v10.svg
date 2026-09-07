@@ -130,7 +130,6 @@
       ]]>
     </style>
 
-    <!-- Celestial Nocturnal Emerald Sky Gradient -->
     <linearGradient id="skyMasterGrad" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#020d06" />
       <stop offset="18%" stop-color="#041c0d" />
@@ -140,7 +139,6 @@
       <stop offset="100%" stop-color="#268d4a" />
     </linearGradient>
 
-    <!-- Moon Atmospheric Radial Glow -->
     <radialGradient id="moonRadialHaze" cx="50%" cy="50%" r="50%">
       <stop offset="0%" stop-color="#a7f3d0" stop-opacity="0.36" />
       <stop offset="30%" stop-color="#34d399" stop-opacity="0.22" />
@@ -148,7 +146,6 @@
       <stop offset="100%" stop-color="#020d06" stop-opacity="0" />
     </radialGradient>
 
-    <!-- Celestial Crescent Moon Gradient -->
     <linearGradient id="naturalMoonGrad" x1="100%" y1="0%" x2="0%" y2="100%">
       <stop offset="0%" stop-color="#f4fff7" />
       <stop offset="18%" stop-color="#dcfce7" />
@@ -158,7 +155,6 @@
       <stop offset="100%" stop-color="#14532d" />
     </linearGradient>
 
-    <!-- Painterly Volumetric Cloud Gradients -->
     <linearGradient id="cloudGradSoft1" x1="0" y1="0" x2="1" y2="1">
       <stop offset="0%" stop-color="#0e381f" stop-opacity="0.95" />
       <stop offset="52%" stop-color="#1a5631" stop-opacity="0.88" />
@@ -176,14 +172,12 @@
       <stop offset="100%" stop-color="#0a2e18" stop-opacity="0.4" />
     </linearGradient>
 
-    <!-- Cloud Rim Highlight -->
     <linearGradient id="cloudRimLight" x1="0" y1="0" x2="1" y2="0">
       <stop offset="0%" stop-color="#a7f3d0" stop-opacity="0.85" />
       <stop offset="45%" stop-color="#4ade80" stop-opacity="0.6" />
       <stop offset="100%" stop-color="#10b981" stop-opacity="0.15" />
     </linearGradient>
 
-    <!-- Mountain Ridge Gradients -->
     <linearGradient id="distantRidgeGrad" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#154728" />
       <stop offset="100%" stop-color="#0d321c" />
@@ -197,7 +191,6 @@
       <stop offset="100%" stop-color="#010a04" />
     </linearGradient>
 
-    <!-- Moon Halo Filter -->
     <filter id="moonAura" x="-50%" y="-50%" width="200%" height="200%">
       <feGaussianBlur in="SourceGraphic" stdDeviation="18" />
     </filter>
@@ -219,46 +212,29 @@
       <feDropShadow dx="0" dy="8" stdDeviation="12" flood-color="#000000" flood-opacity="0.85" />
     </filter>
 
-    <!-- Clip Path for Outer Chamber Rounded Rectangle -->
     <clipPath id="chamberClip">
       <rect x="0" y="0" width="920" height="740" rx="14" />
     </clipPath>
   </defs>
 
-  <!-- ==================== OUTER CHAMBER CONTAINER ==================== -->
+  <!-- OUTER CONTAINER -->
   <g clip-path="url(#chamberClip)">
-    <!-- 1. Nocturnal Emerald Sky Canvas -->
     <rect width="920" height="740" fill="url(#skyMasterGrad)" />
-
-    <!-- 2. Atmospheric Moonlight Glow (Centered on Moon at x:740, y:72) -->
     <ellipse cx="740" cy="72" rx="260" ry="170" fill="url(#moonRadialHaze)" />
-
-    <!-- 3. Ambient Radiant Moon Bloom -->
     <path d="M 754,28 A 45 45 0 1 1 709,98 A 43 43 0 0 0 754,28 Z" fill="#34d399" opacity="0.48" filter="url(#moonAura)" />
-
-    <!-- 4. Celestial Emerald Crescent Moon -->
     <path d="M 754,28 A 45 45 0 1 1 709,98 A 43 43 0 0 0 754,28 Z" fill="url(#naturalMoonGrad)" filter="url(#moonBloom)" stroke="rgba(244, 255, 247, 0.7)" stroke-width="0.8" />
 
-    <!-- 5. Diamond Sparkle Stars in Headroom -->
     <g>
-      <!-- Sparkle 1 (Top Left) -->
       <path d="M 145,70 Q 145,85 150,85 Q 145,85 145,100 Q 145,85 140,85 Q 145,85 145,70 Z" fill="#d1fae5" filter="url(#sparkleGlow)" />
       <circle cx="145" cy="85" r="2.2" fill="#f0fff4" />
-      
-      <!-- Sparkle 2 (Mid Sky) -->
       <path d="M 420,80 Q 420,92 424,92 Q 420,92 420,104 Q 420,92 416,92 Q 420,92 420,80 Z" fill="#d1fae5" filter="url(#sparkleGlow)" />
       <circle cx="420" cy="92" r="1.8" fill="#f0fff4" />
-
-      <!-- Sparkle 3 (Near Moon) -->
       <path d="M 610,55 Q 610,65 613,65 Q 610,65 610,75 Q 610,65 607,65 Q 610,65 610,55 Z" fill="#d1fae5" filter="url(#sparkleGlow)" />
       <circle cx="610" cy="65" r="1.8" fill="#f0fff4" />
-
-      <!-- Sparkle 4 (Right) -->
       <path d="M 870,75 Q 870,85 873,85 Q 870,85 870,95 Q 870,85 867,85 Q 870,85 870,75 Z" fill="#a7f3d0" filter="url(#sparkleGlow)" />
       <circle cx="870" cy="85" r="1.8" fill="#f0fff4" />
     </g>
 
-    <!-- 6. Stardust Ambient Dots in Headroom -->
     <g opacity="0.8">
       <circle cx="210" cy="38" r="1.5" fill="#86efac" />
       <circle cx="280" cy="68" r="1.4" fill="#d1fae5" />
@@ -270,41 +246,26 @@
       <circle cx="490" cy="88" r="1.4" fill="#f0fff4" />
     </g>
 
-    <!-- 7. Upper Drifting Clouds in Headroom -->
     <g>
-      <!-- Cloud Left -->
       <path d="M -40,110 C -15,75 45,70 80,92 C 115,65 178,65 214,92 C 250,78 290,100 304,128 C 270,142 130,146 -40,138 Z" fill="url(#cloudGradSoft1)" opacity="0.85" />
       <path d="M -40,110 C -15,75 45,70 80,92 C 115,65 178,65 214,92 C 250,78 290,100 304,128" fill="none" stroke="url(#cloudRimLight)" stroke-width="2" opacity="0.8" />
-
-      <!-- Cloud Right -->
       <path d="M 640,110 C 650,75 708,60 748,80 C 784,58 848,58 884,80 C 920,66 965,75 1000,98 L 1000,134 C 970,148 905,148 855,130 C 805,148 740,144 690,126 C 660,130 640,120 640,110 Z" fill="url(#cloudGradSoft2)" opacity="0.85" />
       <path d="M 640,110 C 650,75 708,60 748,80 C 784,58 848,58 884,80 C 920,66 965,75 1000,98" fill="none" stroke="url(#cloudRimLight)" stroke-width="2" opacity="0.85" />
     </g>
 
-    <!-- ==================== BOTTOM LANDSCAPE (Generous Scenery below Card 3) ==================== -->
-    <!-- Horizon Soft Cloud Center -->
     <path d="M 150,615 C 190,580 250,575 290,597 C 335,565 410,560 455,593 C 500,565 575,565 620,593 C 660,575 715,585 750,611 C 778,633 745,655 688,663 C 570,677 270,677 150,615 Z" fill="url(#cloudGradCenter)" opacity="0.82" />
-
-    <!-- Distant Misty Rolling Hills -->
     <path d="M -30,645 Q 200,585 480,645 T 950,620 L 950,750 L -30,750 Z" fill="url(#distantRidgeGrad)" />
     <path d="M -30,645 Q 200,585 480,645 T 950,620" fill="none" stroke="rgba(134, 239, 172, 0.22)" stroke-width="1.2" />
-
-    <!-- Mid Rolling Hills -->
     <path d="M -30,670 Q 250,625 500,680 Q 710,640 950,665 L 950,750 L -30,750 Z" fill="url(#midRidgeGrad)" />
     <path d="M -30,670 Q 250,625 500,680 Q 710,640 950,665" fill="none" stroke="rgba(110, 231, 183, 0.16)" stroke-width="1.4" />
-
-    <!-- Foreground Rolling Hills -->
     <path d="M -30,695 Q 300,660 600,705 Q 780,675 950,708 L 950,750 L -30,750 Z" fill="url(#foreRidgeGrad)" />
 
-    <!-- Silhouette Pine Trees (Rising in Foreground) -->
-    <!-- Left Tree -->
     <g transform="translate(45, 595) scale(0.68)">
       <rect x="180" y="140" width="12" height="50" fill="#010603" rx="2" />
       <polygon points="186,40 216,145 156,145" fill="#072011" />
       <polygon points="186,20 210,95 162,95" fill="#0b2c18" />
       <polygon points="186,0 204,55 168,55" fill="#0f3c21" />
     </g>
-    <!-- Right Trees -->
     <g transform="translate(825, 600) scale(0.62)">
       <rect x="100" y="140" width="10" height="45" fill="#010603" rx="2" />
       <polygon points="105,45 130,140 80,140" fill="#061c0e" />
@@ -313,35 +274,29 @@
     </g>
   </g>
 
-  <!-- Container Outline Border & Inner Glow -->
   <rect x="0" y="0" width="920" height="740" rx="14" fill="none" stroke="#164d27" stroke-width="1.5" />
 
-  <!-- ==================== TOP TELEMETRY BAR ==================== -->
+  <!-- TOP TELEMETRY BAR -->
   <g transform="translate(24, 22)">
-    <!-- Pulsing Beacon Dot -->
     <circle cx="4" cy="5" r="4" fill="#00ff66" filter="url(#sparkleGlow)" />
     <circle cx="4" cy="5" r="2" fill="#ffffff" />
     <text x="16" y="9" class="telemetry-title">CORE TELEMETRY &#8226; SYNCHRONIZED</text>
     <line x1="0" y1="20" x2="872" y2="20" stroke="#164d27" stroke-width="1" stroke-opacity="0.6" />
   </g>
 
-  <!-- ==================== UNIFIED CARD 1: CONTRIBUTIONS & STREAKS (Pushed Down to y=135) ==================== -->
+  <!-- CARD 1: CONTRIBUTIONS & STREAKS -->
   <g transform="translate(24, 135)" filter="url(#cardShadow)">
     <rect width="872" height="130" rx="12" fill="#040906" stroke="#164d27" stroke-width="1.5" />
     
-    <!-- Top Row Metric Col 1: Total Contributions (Center x=145) -->
     <g transform="translate(145, 12)">
-      <text x="0" y="44" class="streak-val">324</text>
+      <text x="0" y="44" class="streak-val">326</text>
       <text x="0" y="76" class="streak-lbl">TOTAL CONTRIBUTIONS</text>
       <text x="0" y="102" class="streak-sub">Jul 7, 2025 &#8211; Present</text>
     </g>
 
-    <!-- Vertical Divider 1 -->
     <line x1="290" y1="18" x2="290" y2="112" stroke="#163d22" stroke-width="1" />
 
-    <!-- Top Row Metric Col 2: Current Streak Ring (Center x=436) -->
     <g transform="translate(436, 12)">
-      <!-- SVG Ring -->
       <circle cx="0" cy="30" r="28" stroke="#163d22" stroke-width="3.5" fill="none" />
       <circle cx="0" cy="30" r="28" stroke="#00ff66" stroke-width="3.5" stroke-dasharray="176" stroke-dashoffset="176" stroke-linecap="round" fill="none" />
       <text x="0" y="39" class="streak-curr-val">3</text>
@@ -350,10 +305,8 @@
       <text x="0" y="102" class="streak-sub">Sep 07</text>
     </g>
 
-    <!-- Vertical Divider 2 -->
     <line x1="582" y1="18" x2="582" y2="112" stroke="#163d22" stroke-width="1" />
 
-    <!-- Top Row Metric Col 3: Longest Streak (Center x=727) -->
     <g transform="translate(727, 12)">
       <text x="0" y="44" class="streak-val">3</text>
       <text x="0" y="76" class="streak-lbl">LONGEST STREAK</text>
@@ -361,29 +314,25 @@
     </g>
   </g>
 
-  <!-- ==================== STACKED CARD 2: GITHUB OVERALL STATS (Pushed Down to y=285) ==================== -->
+  <!-- CARD 2: GITHUB OVERALL STATS -->
   <g transform="translate(24, 285)" filter="url(#cardShadow)">
     <rect width="872" height="145" rx="12" fill="#040906" stroke="#164d27" stroke-width="1.5" />
     
     <text x="28" y="28" class="card-title">Mohammed Sahil's GitHub Stats</text>
 
-    <!-- Left Column (3 items) -->
-    <!-- Item 1: Total Stars -->
     <g transform="translate(36, 44)">
       <path d="M7 0.5 L8.8 4.2 L13 4.8 L9.9 7.8 L10.6 12 L7 10 L3.4 12 L4.1 7.8 L1 4.8 L5.2 4.2 Z" fill="#00ff66" />
       <text x="24" y="10" class="stat-lbl">Total Stars Earned:</text>
       <text x="360" y="10" class="stat-num">5</text>
     </g>
 
-    <!-- Item 2: Total Commits -->
     <g transform="translate(36, 74)">
       <circle cx="7" cy="7" r="6" stroke="#00ff66" stroke-width="1.5" fill="none" />
       <path d="M7 3.5 L7 7 L9.5 8.5" stroke="#00ff66" stroke-width="1.5" fill="none" stroke-linecap="round" />
       <text x="24" y="11" class="stat-lbl">Total Commits:</text>
-      <text x="360" y="11" class="stat-num">280</text>
+      <text x="360" y="11" class="stat-num">329</text>
     </g>
 
-    <!-- Item 3: Total PRs -->
     <g transform="translate(36, 104)">
       <circle cx="4" cy="3" r="2" fill="#00ff66" />
       <circle cx="4" cy="11" r="2" fill="#00ff66" />
@@ -393,11 +342,8 @@
       <text x="360" y="11" class="stat-num">3</text>
     </g>
 
-    <!-- Center Subtle Divider -->
     <line x1="436" y1="36" x2="436" y2="128" stroke="#163d22" stroke-width="1" />
 
-    <!-- Right Column (2 items) -->
-    <!-- Item 4: Total Issues -->
     <g transform="translate(476, 44)">
       <circle cx="7" cy="7" r="6" stroke="#00ff66" stroke-width="1.5" fill="none" />
       <circle cx="7" cy="7" r="1.5" fill="#00ff66" />
@@ -405,7 +351,6 @@
       <text x="360" y="11" class="stat-num">1</text>
     </g>
 
-    <!-- Item 5: Contributed to -->
     <g transform="translate(476, 74)">
       <rect x="2" y="2" width="10" height="10" rx="1.5" stroke="#00ff66" stroke-width="1.3" fill="none" />
       <line x1="5" y1="2" x2="5" y2="12" stroke="#00ff66" stroke-width="1" />
@@ -414,15 +359,13 @@
     </g>
   </g>
 
-  <!-- ==================== STACKED CARD 3: MOST USED LANGUAGES (Pushed Down to y=450) ==================== -->
+  <!-- CARD 3: MOST USED LANGUAGES -->
   <g transform="translate(24, 450)" filter="url(#cardShadow)">
     <rect width="872" height="150" rx="12" fill="#040906" stroke="#164d27" stroke-width="1.5" />
     
     <text x="28" y="28" class="card-title-green">Most Used Languages</text>
 
-    <!-- Wide Multi-Segment Progress Bar -->
     <g transform="translate(28, 44)">
-      <!-- Track Background -->
       <rect width="816" height="10" rx="5" fill="#0e2617" />
       <rect x="0" y="0" width="655.5" height="10" rx="5" fill="#f1e05a" />
       <rect x="655.5" y="0" width="136.6" height="10" fill="#3572A5" />
@@ -432,7 +375,6 @@
       <rect x="816.0" y="0" width="0.0" height="10" rx="5" fill="#89e051" />
     </g>
 
-    <!-- Language Grid Breakdown (3 Columns x 2 Rows) -->
     <g transform="translate(28, 82)">
       <circle cx="5" cy="5" r="4.5" fill="#f1e05a" />
       <text x="18" y="9" class="lang-name">JavaScript</text>

@@ -1,0 +1,49 @@
+name: Sync Core Telemetry & Stats
+
+on:
+  schedule:
+    # Automatically runs every 6 hours to sync contributions, commits, and streaks
+    - cron: '0 */6 * * *'
+  push:
+    branches:
+      - main
+    paths:
+      - '.github/scripts/sync_telemetry.py'
+      - '.github/workflows/sync-telemetry.yml'
+  workflow_dispatch: # Allows 1-click manual trigger from GitHub Actions tab
+
+permissions:
+  contents: write
+
+jobs:
+  sync-telemetry:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Fetch Live Stats & Generate Telemetry Card
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_USERNAME: ${{ github.repository_owner }}
+        run: |
+          python .github/scripts/sync_telemetry.py
+
+      - name: Commit & Push Updated Telemetry
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git add assets/telemetry-cosmos-card*.svg
+          if git diff --staged --quiet; then
+            echo "No telemetry changes detected. Everything is up to date."
+          else
+            git commit -m "chore(telemetry): auto-sync live stats & contribution metrics [skip ci]"
+            git push
+          fi
