@@ -331,7 +331,7 @@
     
     <!-- Top Row Metric Col 1: Total Contributions (Center x=145) -->
     <g transform="translate(145, 12)">
-      <text x="0" y="44" class="streak-val">178</text>
+      <text x="0" y="44" class="streak-val">323</text>
       <text x="0" y="76" class="streak-lbl">TOTAL CONTRIBUTIONS</text>
       <text x="0" y="102" class="streak-sub">Jul 7, 2025 &#8211; Present</text>
     </g>
@@ -344,10 +344,10 @@
       <!-- SVG Ring -->
       <circle cx="0" cy="30" r="28" stroke="#163d22" stroke-width="3.5" fill="none" />
       <circle cx="0" cy="30" r="28" stroke="#00ff66" stroke-width="3.5" stroke-dasharray="176" stroke-dashoffset="176" stroke-linecap="round" fill="none" />
-      <text x="0" y="39" class="streak-curr-val">0</text>
+      <text x="0" y="39" class="streak-curr-val">3</text>
       
       <text x="0" y="76" class="streak-curr-label">CURRENT STREAK</text>
-      <text x="0" y="102" class="streak-sub">Sep 5</text>
+      <text x="0" y="102" class="streak-sub">Sep 07</text>
     </g>
 
     <!-- Vertical Divider 2 -->
@@ -372,7 +372,7 @@
     <g transform="translate(36, 44)">
       <path d="M7 0.5 L8.8 4.2 L13 4.8 L9.9 7.8 L10.6 12 L7 10 L3.4 12 L4.1 7.8 L1 4.8 L5.2 4.2 Z" fill="#00ff66" />
       <text x="24" y="10" class="stat-lbl">Total Stars Earned:</text>
-      <text x="360" y="10" class="stat-num">0</text>
+      <text x="360" y="10" class="stat-num">5</text>
     </g>
 
     <!-- Item 2: Total Commits -->
@@ -380,7 +380,7 @@
       <circle cx="7" cy="7" r="6" stroke="#00ff66" stroke-width="1.5" fill="none" />
       <path d="M7 3.5 L7 7 L9.5 8.5" stroke="#00ff66" stroke-width="1.5" fill="none" stroke-linecap="round" />
       <text x="24" y="11" class="stat-lbl">Total Commits:</text>
-      <text x="360" y="11" class="stat-num">114</text>
+      <text x="360" y="11" class="stat-num">280</text>
     </g>
 
     <!-- Item 3: Total PRs -->
@@ -390,7 +390,7 @@
       <circle cx="10" cy="7" r="2" fill="#00ff66" />
       <path d="M4 3 L4 11 M10 7 L10 5 C10 3.5 8 3.5 4 3.5" stroke="#00ff66" stroke-width="1.2" fill="none" />
       <text x="24" y="11" class="stat-lbl">Total PRs:</text>
-      <text x="360" y="11" class="stat-num">2</text>
+      <text x="360" y="11" class="stat-num">3</text>
     </g>
 
     <!-- Center Subtle Divider -->
@@ -402,7 +402,7 @@
       <circle cx="7" cy="7" r="6" stroke="#00ff66" stroke-width="1.5" fill="none" />
       <circle cx="7" cy="7" r="1.5" fill="#00ff66" />
       <text x="24" y="11" class="stat-lbl">Total Issues:</text>
-      <text x="360" y="11" class="stat-num">0</text>
+      <text x="360" y="11" class="stat-num">1</text>
     </g>
 
     <!-- Item 5: Contributed to -->
